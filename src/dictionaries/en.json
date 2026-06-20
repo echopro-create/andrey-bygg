@@ -244,7 +244,7 @@
     "accent": "book a session",
     "subtitle": "Book your session online or reach out via phone. Our private studio is located in the heart of Cherkasy.",
     "address": "48 Gogolya St, Cherkasy, Ukraine",
-    "phone": "+46 8 123 45 67",
+    "phone": "+46 737 584 372",
     "email": "info@olegmassage.se",
     "hours": "Mon - Sun: 09:00 - 21:00",
     "formTitle": "Send a Request",
@@ -265,7 +265,8 @@
       "timeRequired": "Please select a time for the session"
     },
     "addressLabel": "Address",
-    "phoneLabel": "Phone",
+    "phoneLabel": "Calls",
+    "messengersLabel": "Messengers",
     "emailLabel": "Email",
     "hoursLabel": "Hours",
     "copy": "Copy",

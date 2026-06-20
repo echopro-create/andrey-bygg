@@ -57,10 +57,18 @@ export default function Footer({ dict, lng }: FooterProps) {
               <span>{dict.contacts.address}</span>
             </li>
             <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="info-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="info-icon" style={{ marginTop: '4px' }}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.82-1.587-5.18-3.95-6.77-6.77l1.293-.97c.362-.271.528-.833.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
               </svg>
-              <a href={`tel:${dict.contacts.phone}`} className="hover-gold">{dict.contacts.phone}</a>
+              <div>
+                <a href={`tel:${dict.contacts.phone}`} className="hover-gold" style={{ display: 'block' }}>{dict.contacts.phone}</a>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginTop: '4px' }}>
+                  WA/TG/Viber:{' '}
+                  <a href="https://wa.me/4748614204" target="_blank" rel="noopener noreferrer" className="hover-gold">
+                    +47 486 14 204
+                  </a>
+                </span>
+              </div>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="info-icon">

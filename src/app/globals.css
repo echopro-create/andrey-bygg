@@ -683,17 +683,18 @@ select.form-control {
   top: 0;
   right: 0;
   width: 100%;
-  max-width: 320px;
+  max-width: 360px;
   height: 100vh;
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-left: 1px solid var(--glass-border);
+  background: #080908;
+  border-left: 1px solid rgba(var(--primary-rgb), 0.15);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
   z-index: 99;
   transform: translateX(100%);
   visibility: hidden;
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.4s;
-  padding: 100px 32px 40px;
+  padding: calc(80px + env(safe-area-inset-top, 20px)) 24px calc(30px + env(safe-area-inset-bottom, 20px));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-drawer.active {
@@ -704,32 +705,45 @@ select.form-control {
 .mobile-nav {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
   height: 100%;
 }
 
 .mobile-nav-link {
-  font-family: var(--font-body);
-  font-size: 1.1rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-color);
   padding: 8px 0;
-  border-bottom: 1px solid rgba(var(--text-color-rgb), 0.05);
+  border-bottom: none;
+  transition: color var(--transition-fast);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+  color: var(--primary);
 }
 
 .mobile-book-btn {
-  margin-top: 16px;
+  margin-top: 12px;
+  width: 100%;
+  text-align: center;
+  padding: 14px 28px;
 }
 
 .mobile-lang-wrapper {
-  margin-top: auto;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
-  border-top: 1px solid rgba(var(--text-color-rgb), 0.1);
+  border-top: 1px solid rgba(var(--primary-rgb), 0.15);
   padding-top: 24px;
+  width: 100%;
 }
 
 .mobile-lang-label {
@@ -769,6 +783,25 @@ select.form-control {
   background: var(--primary);
   color: var(--background);
   box-shadow: 0 4px 10px rgba(var(--primary-rgb), 0.2);
+}
+
+@media (max-width: 576px) {
+  .mobile-drawer {
+    max-width: 100%;
+    border-left: none;
+  }
+}
+
+body.mobile-drawer-open .logo {
+  position: relative;
+  z-index: 101;
+}
+
+body.mobile-drawer-open .custom-lang-selector {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 @media (max-width: 1024px) {
@@ -2307,6 +2340,57 @@ select.form-control {
   .copy-btn { align-self: flex-start; }
 }
 
+/* Messengers styles (Calls and Social links) */
+.messengers-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.messenger-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(var(--primary-rgb), 0.08);
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
+  color: var(--primary);
+  transition: all var(--transition-fast);
+}
+
+.messenger-link:hover {
+  background: var(--primary);
+  color: var(--background);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+}
+
+.messenger-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.messengers-number {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-left: 4px;
+}
+
+@media (max-width: 480px) {
+  .messengers-container {
+    gap: 8px;
+  }
+  .messengers-number {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+}
+
 /* ------------------ Footer ------------------ */
 .site-footer {
   background-color: var(--footer-bg);
@@ -2468,7 +2552,9 @@ select.form-control {
     display: block;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     z-index: 98;
   }
 }
