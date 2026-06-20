@@ -17,10 +17,12 @@
   --footer-bg: #050605;
   
   /* Glassmorphism */
-  --glass-bg: rgba(8, 9, 8, 0.82);
+  --glass-bg: rgba(var(--background-rgb), 0.82);
   --glass-blur: 24px;
   --glass-border: rgba(var(--primary-rgb), 0.12);
   --glass-shadow: rgba(0, 0, 0, 0.6);
+  --card-bg-rgb: 18, 19, 18;
+  --text-color-rgb: 244, 245, 244;
 
   /* Button Styles */
   --btn-primary-bg-start: #e5d1b1;
@@ -57,6 +59,8 @@ html.theme-zen {
   --glass-blur: 24px;
   --glass-border: rgba(var(--primary-rgb), 0.12);
   --glass-shadow: rgba(0, 0, 0, 0.7);
+  --card-bg-rgb: 16, 22, 17;
+  --text-color-rgb: 242, 245, 242;
 
   /* Button Styles */
   --btn-primary-bg-start: #b4c9aa;
@@ -93,6 +97,8 @@ html.theme-light {
   --glass-blur: 24px;
   --glass-border: rgba(var(--primary-rgb), 0.15);
   --glass-shadow: rgba(143, 118, 79, 0.08);
+  --card-bg-rgb: 255, 255, 255;
+  --text-color-rgb: 42, 39, 36;
 
   /* Button Styles */
   --btn-primary-bg-start: #8f764f;
@@ -351,7 +357,7 @@ textarea:focus-visible,
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: 32px;
-  box-shadow: 0 30px 60px var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 30px 60px var(--glass-shadow), inset 0 1px 0 rgba(var(--text-color-rgb), 0.05);
   transition: var(--transition-luxury);
 }
 
@@ -378,8 +384,8 @@ textarea:focus-visible,
 .form-control {
   width: 100%;
   padding: 14px 16px;
-  background-color: rgba(18, 19, 18, 0.6);
-  border: 1px solid rgba(244, 245, 244, 0.15);
+  background-color: rgba(var(--card-bg-rgb), 0.6);
+  border: 1px solid rgba(var(--text-color-rgb), 0.15);
   border-radius: 8px;
   color: var(--text-color);
   font-family: var(--font-body);
@@ -391,7 +397,7 @@ textarea:focus-visible,
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.25);
-  background-color: rgba(18, 19, 18, 0.8);
+  background-color: rgba(var(--card-bg-rgb), 0.8);
 }
 
 select.form-control {
@@ -449,7 +455,7 @@ select.form-control {
   display: inline-block;
   width: 20px;
   height: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(var(--text-color-rgb), 0.3);
   border-radius: 50%;
   border-top-color: currentColor;
   animation: spin 0.8s linear infinite;
@@ -461,8 +467,8 @@ select.form-control {
 
 /* Theme Toggle */
 .theme-toggle-btn {
-  background: rgba(244, 245, 244, 0.05);
-  border: 1px solid rgba(244, 245, 244, 0.1);
+  background: rgba(var(--text-color-rgb), 0.05);
+  border: 1px solid rgba(var(--text-color-rgb), 0.1);
   color: var(--primary);
   padding: 8px 16px;
   border-radius: 20px;
@@ -571,8 +577,8 @@ select.form-control {
 }
 
 .lang-trigger-btn {
-  background: rgba(244, 245, 244, 0.05);
-  border: 1px solid rgba(244, 245, 244, 0.1);
+  background: rgba(var(--text-color-rgb), 0.05);
+  border: 1px solid rgba(var(--text-color-rgb), 0.1);
   color: var(--text-color);
   padding: 8px 16px;
   border-radius: 20px;
@@ -742,7 +748,7 @@ select.form-control {
   text-transform: uppercase;
   color: var(--text-color);
   padding: 8px 0;
-  border-bottom: 1px solid rgba(244, 245, 244, 0.05);
+  border-bottom: 1px solid rgba(var(--text-color-rgb), 0.05);
 }
 
 .mobile-book-btn {
@@ -754,7 +760,7 @@ select.form-control {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border-top: 1px solid rgba(244, 245, 244, 0.1);
+  border-top: 1px solid rgba(var(--text-color-rgb), 0.1);
   padding-top: 24px;
 }
 
@@ -768,8 +774,8 @@ select.form-control {
 
 .mobile-lang-control {
   display: flex;
-  background: rgba(244, 245, 244, 0.04);
-  border: 1px solid rgba(244, 245, 244, 0.08);
+  background: rgba(var(--text-color-rgb), 0.04);
+  border: 1px solid rgba(var(--text-color-rgb), 0.08);
   border-radius: 20px;
   padding: 3px;
   width: 100%;
@@ -893,7 +899,7 @@ select.form-control {
   align-items: center;
   width: 100%;
   padding: 24px 60px;
-  background: rgba(18, 19, 18, 0.55);
+  background: rgba(var(--card-bg-rgb), 0.55);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
@@ -939,7 +945,7 @@ select.form-control {
 .metric-col-divider {
   width: 1px;
   height: 50px;
-  background-color: rgba(244, 245, 244, 0.08);
+  background-color: rgba(var(--text-color-rgb), 0.08);
 }
 
 @media (max-width: 1024px) {
@@ -1026,7 +1032,7 @@ select.form-control {
   position: absolute;
   bottom: 20px;
   right: -20px;
-  background: rgba(18, 19, 18, 0.85);
+  background: rgba(var(--card-bg-rgb), 0.85);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border: 1px solid rgba(var(--primary-rgb), 0.2);
@@ -1193,13 +1199,11 @@ select.form-control {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.015) 0%, rgba(255, 255, 255, 0.003) 100%);
+  background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(var(--primary-rgb), 0.07);
-  box-shadow: 
-    0 10px 30px rgba(0, 0, 0, 0.4), 
-    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px var(--glass-shadow);
   transition: var(--transition-luxury);
 }
 
@@ -1264,7 +1268,7 @@ select.form-control {
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.6), 
     0 0 30px rgba(var(--primary-rgb), 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    inset 0 1px 0 rgba(var(--text-color-rgb), 0.04);
 }
 
 .advantage-card:hover .advantage-number {
@@ -1291,7 +1295,7 @@ select.form-control {
 }
 
 .service-card {
-  background: linear-gradient(135deg, rgba(244, 245, 244, 0.02) 0%, rgba(244, 245, 244, 0.005) 100%);
+  background: linear-gradient(135deg, rgba(var(--text-color-rgb), 0.02) 0%, rgba(var(--text-color-rgb), 0.005) 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(var(--primary-rgb), 0.08);
@@ -1299,15 +1303,15 @@ select.form-control {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(var(--text-color-rgb), 0.03);
   transition: var(--transition-luxury);
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  background: linear-gradient(135deg, rgba(244, 245, 244, 0.03) 0%, rgba(244, 245, 244, 0.01) 100%);
+  background: linear-gradient(135deg, rgba(var(--text-color-rgb), 0.03) 0%, rgba(var(--text-color-rgb), 0.01) 100%);
   border-color: rgba(var(--primary-rgb), 0.25);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(var(--primary-rgb), 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(var(--primary-rgb), 0.05), inset 0 1px 0 rgba(var(--text-color-rgb), 0.06);
 }
 
 .service-img-wrapper {
@@ -1335,7 +1339,7 @@ select.form-control {
   position: absolute;
   bottom: 12px;
   right: 12px;
-  background: rgba(8, 9, 8, 0.85);
+  background: rgba(var(--background-rgb), 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(var(--primary-rgb), 0.25);
@@ -1412,13 +1416,11 @@ select.form-control {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.015) 0%, rgba(255, 255, 255, 0.003) 100%);
+  background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(var(--primary-rgb), 0.07);
-  box-shadow: 
-    0 10px 30px rgba(0, 0, 0, 0.4), 
-    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px var(--glass-shadow);
   transition: var(--transition-luxury);
 }
 
@@ -1457,7 +1459,7 @@ select.form-control {
   font-family: var(--font-body);
   font-size: 0.98rem;
   font-style: italic;
-  color: rgba(244, 245, 244, 0.82);
+  color: rgba(var(--text-color-rgb), 0.82);
   line-height: 1.7;
   margin-bottom: 30px;
   flex-grow: 1;
@@ -1517,7 +1519,7 @@ select.form-control {
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.6), 
     0 0 30px rgba(var(--primary-rgb), 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    inset 0 1px 0 rgba(var(--text-color-rgb), 0.04);
 }
 
 .review-card:hover .quote-mark {
@@ -1670,7 +1672,7 @@ select.form-control {
   display: flex;
   align-items: center;
   gap: 32px;
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(var(--text-color-rgb), 0.01);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(var(--primary-rgb), 0.08);
   padding: 18px 28px;
@@ -1718,15 +1720,15 @@ select.form-control {
 .service-short-desc {
   font-size: 1.12rem;
   line-height: 1.7;
-  color: rgba(244, 245, 244, 0.9);
+  color: rgba(var(--text-color-rgb), 0.9);
   margin-bottom: 24px;
 }
 
 .service-benefit-card {
   padding: 28px 32px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(var(--text-color-rgb), 0.02);
+  border: 1px solid rgba(var(--text-color-rgb), 0.05);
   margin-bottom: 32px;
   display: flow-root;
 }
@@ -1788,7 +1790,7 @@ select.form-control {
   gap: 10px;
   font-size: 0.98rem;
   line-height: 1.45;
-  color: rgba(244, 245, 244, 0.85);
+  color: rgba(var(--text-color-rgb), 0.85);
 }
 
 .indication-check {
@@ -1827,7 +1829,7 @@ select.form-control {
 .service-block-text-small {
   font-size: 0.85rem;
   line-height: 1.5;
-  color: rgba(244, 245, 244, 0.6);
+  color: rgba(var(--text-color-rgb), 0.6);
 }
 
 .book-service-btn {
@@ -2014,7 +2016,7 @@ select.form-control {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(8, 9, 8, 0.6);
+  background: rgba(var(--background-rgb), 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2056,7 +2058,7 @@ select.form-control {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(8, 9, 8, 0.95);
+  background-color: rgba(var(--background-rgb), 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 1000;
@@ -2097,8 +2099,8 @@ select.form-control {
   position: absolute;
   top: 30px;
   right: 30px;
-  background: rgba(244, 245, 244, 0.05);
-  border: 1px solid rgba(244, 245, 244, 0.1);
+  background: rgba(var(--text-color-rgb), 0.05);
+  border: 1px solid rgba(var(--text-color-rgb), 0.1);
   color: var(--text-color);
   width: 48px;
   height: 48px;
@@ -2122,8 +2124,8 @@ select.form-control {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(244, 245, 244, 0.03);
-  border: 1px solid rgba(244, 245, 244, 0.08);
+  background: rgba(var(--text-color-rgb), 0.03);
+  border: 1px solid rgba(var(--text-color-rgb), 0.08);
   color: var(--text-color);
   width: 56px;
   height: 56px;
@@ -2222,8 +2224,8 @@ select.form-control {
 }
 
 .copy-btn {
-  background: rgba(244, 245, 244, 0.05);
-  border: 1px solid rgba(244, 245, 244, 0.1);
+  background: rgba(var(--text-color-rgb), 0.05);
+  border: 1px solid rgba(var(--text-color-rgb), 0.1);
   color: var(--primary);
   font-family: var(--font-body);
   font-size: 0.75rem;
@@ -2258,8 +2260,8 @@ select.form-control {
   height: 100%;
   background-image: 
     radial-gradient(circle, rgba(var(--primary-rgb), 0.05) 1px, transparent 1px),
-    linear-gradient(rgba(244, 245, 244, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(244, 245, 244, 0.02) 1px, transparent 1px);
+    linear-gradient(rgba(var(--text-color-rgb), 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--text-color-rgb), 0.02) 1px, transparent 1px);
   background-size: 16px 16px;
   display: flex;
   align-items: center;
@@ -2292,7 +2294,7 @@ select.form-control {
 }
 
 .map-card-footer {
-  background: rgba(8, 9, 8, 0.9);
+  background: rgba(var(--background-rgb), 0.9);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-top: 1px solid var(--glass-border);
@@ -2342,7 +2344,7 @@ select.form-control {
 /* ------------------ Footer ------------------ */
 .site-footer {
   background-color: var(--footer-bg);
-  border-top: 1px solid rgba(244, 245, 244, 0.05);
+  border-top: 1px solid rgba(var(--text-color-rgb), 0.05);
   padding: 80px 0 0;
   color: var(--text-muted);
   font-family: var(--font-body);
@@ -2417,7 +2419,7 @@ select.form-control {
 .hover-gold:hover { color: var(--primary); }
 
 .footer-bottom {
-  border-top: 1px solid rgba(244, 245, 244, 0.05);
+  border-top: 1px solid rgba(var(--text-color-rgb), 0.05);
   padding: 30px 0;
   font-size: 0.85rem;
 }
@@ -2483,7 +2485,7 @@ select.form-control {
 }
 
 .breadcrumbs-separator {
-  color: rgba(244, 245, 244, 0.2);
+  color: rgba(var(--text-color-rgb), 0.2);
   user-select: none;
 }
 
