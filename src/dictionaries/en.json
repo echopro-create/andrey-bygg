@@ -57,7 +57,7 @@
       "classic": {
         "title": "Classic Massage",
         "desc": "A traditional Swedish massage designed for deep relaxation, muscle spasm relief, and comprehensive energy recovery.",
-        "price": "850 UAH",
+        "price": "850 SEK",
         "duration": "60 min / 90 min",
         "benefit": "Effectively releases muscle tension, restores fiber elasticity, normalizes sleep, and reduces daily stress levels.",
         "seo_title": "Classic Swedish Massage Cherkasy | Oleh Massage",
@@ -77,7 +77,7 @@
       "anti-cellulite": {
         "title": "Anti-Cellulite Massage",
         "desc": "An intensive sculpting technique aimed at combating local fat deposits and improving skin elasticity.",
-        "price": "950 UAH",
+        "price": "950 SEK",
         "duration": "60 min",
         "benefit": "Activates microcirculation in tissues, reduces swelling, promotes lymphatic drainage, and sculpts harmonious body contours.",
         "seo_title": "Anti-Cellulite Massage Cherkasy | Body Sculpting & Firming",
@@ -97,7 +97,7 @@
       "sports": {
         "title": "Sports Massage",
         "desc": "An intensive deep-tissue massage designed to prepare muscles for training, accelerate recovery, and prevent injuries.",
-        "price": "950 UAH",
+        "price": "950 SEK",
         "duration": "60 min / 90 min",
         "benefit": "Effectively relieves muscle hypertonus, eliminates trigger points, speeds up lactic acid clearance, and increases flexibility.",
         "seo_title": "Sports Massage Cherkasy | Post-Workout Recovery",
@@ -117,7 +117,7 @@
       "lymphatic-drainage": {
         "title": "Lymphatic Drainage",
         "desc": "A gentle manual technique aimed at stimulating lymphatic circulation, detoxifying the body, and reducing fluid retention.",
-        "price": "900 UAH",
+        "price": "900 SEK",
         "duration": "75 min",
         "benefit": "Effectively reduces swelling in the face and limbs, strengthens the immune system, and restores body lightness.",
         "seo_title": "Lymphatic Drainage Massage Cherkasy | Detox & De-puff",
@@ -137,7 +137,7 @@
       "cupping": {
         "title": "Cupping Massage",
         "desc": "A therapeutic technique combining classic massage and vacuum cupping for deep-muscle tension release.",
-        "price": "800 UAH",
+        "price": "800 SEK",
         "duration": "60 min",
         "benefit": "Relieves chronic back and neck pain, releases fascia, improves blood circulation, and resolves muscular stiffness.",
         "seo_title": "Vacuum Cupping Massage Cherkasy | Oleh Massage",
@@ -157,7 +157,7 @@
       "hot-stone": {
         "title": "Hot Stone Massage",
         "desc": "An exclusive spa treatment using heated volcanic basalt stones to provide deep warming and relaxation.",
-        "price": "1100 UAH",
+        "price": "1100 SEK",
         "duration": "90 min",
         "benefit": "Completely relieves mental tension, warms deep muscle layers, improves sleep, and balances the nervous system.",
         "seo_title": "Hot Stone Massage Cherkasy | Premium Stone Therapy",
@@ -177,7 +177,7 @@
       "turkish-foam": {
         "title": "Turkish Foam Massage",
         "desc": "A spa ritual in the hammam, combining a silk Kese glove exfoliation and a massage in a cloud of organic soap foam.",
-        "price": "1200 UAH",
+        "price": "1200 SEK",
         "duration": "90 min",
         "benefit": "Gently removes dead skin cells, cleanses pores, eliminates toxins, and gives a sensation of absolute cleanliness.",
         "seo_title": "Turkish Foam Massage Cherkasy | Luxurious Spa Ritual",
@@ -197,7 +197,7 @@
       "natural-massage": {
         "title": "Eco-Organic Massage",
         "desc": "A delicate rejuvenating treatment for the face and body using 100% organic cold-pressed botanical oils.",
-        "price": "900 UAH",
+        "price": "900 SEK",
         "duration": "60 min / 90 min",
         "benefit": "Relieves facial muscle tension, improves skin tone, reduces puffiness, and deeply nourishes the skin.",
         "seo_title": "Eco-Organic Massage Cherkasy | Oleh Massage",

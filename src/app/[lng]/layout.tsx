@@ -178,9 +178,9 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
         closes: '21:00',
       },
     ],
-    priceRange: '850-1200 UAH',
-    currenciesAccepted: 'UAH',
-    paymentAccepted: 'Cash, Credit Card',
+    priceRange: '850-1200 SEK',
+    currenciesAccepted: 'SEK',
+    paymentAccepted: 'Cash, Credit Card, Swish',
     areaServed: {
       '@type': 'City',
       name: 'Cherkasy',

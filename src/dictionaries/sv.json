@@ -57,7 +57,7 @@
       "classic": {
         "title": "Klassisk massage",
         "desc": "En traditionell svensk massage för djup avslappning, lindring av muskelspasmer och fullständig återhämtning av krafter.",
-        "price": "850 UAH",
+        "price": "850 SEK",
         "duration": "60 min / 90 min",
         "benefit": "Lindrar effektivt muskelspänningar, återställer fibrernas elasticitet, normaliserar sömnen och minskar stressnivåerna.",
         "seo_title": "Klassisk svensk massage i Tjerkasy | Oleh Massage",
@@ -77,7 +77,7 @@
       "anti-cellulite": {
         "title": "Anticellulitmassage",
         "desc": "En intensiv skulpterande teknik som syftar till att bekämpa lokala fettdepåer och förbättra hudens elasticitet.",
-        "price": "950 UAH",
+        "price": "950 SEK",
         "duration": "60 min",
         "benefit": "Aktiverar mikrokirkulationen i vävnaderna, minskar svullnad, främjar lymfdränage och skulpterar harmoniska kroppskonturer.",
         "seo_title": "Anticellulitmassage Tjerkasy | Effektiv kroppsskulptering",
@@ -97,7 +97,7 @@
       "sports": {
         "title": "Sportmassage",
         "desc": "En intensiv djupgående massage utformad för att förbereda muskler inför träning, påskynda återhämtning och förebygga skador.",
-        "price": "950 UAH",
+        "price": "950 SEK",
         "duration": "60 min / 90 min",
         "benefit": "Lindrar effektivt muskelhypertonus, eliminerar triggerpunkter, påskyndar utrensningen av mjölksyra och ökar flexibiliteten.",
         "seo_title": "Idrottsmassage Tjerkasy | Återhämtning efter träning",
@@ -117,7 +117,7 @@
       "lymphatic-drainage": {
         "title": "Lymfmassage",
         "desc": "En mild manuell teknik som syftar till att stimulera lymfflödet, rena kroppen från toxiner och reducera svullnad.",
-        "price": "900 UAH",
+        "price": "900 SEK",
         "duration": "75 min",
         "benefit": "Minskar effektivt svullnad i ansikte och lemmar, stärker immunförsvaret och ger en känsla av lätthet i hela kroppen.",
         "seo_title": "Lymfmassage Tjerkasy | Detox & Minska svullnad",
@@ -137,7 +137,7 @@
       "cupping": {
         "title": "Koppningsmassage",
         "desc": "En terapeutisk teknik som kombinerar klassisk massage och vakuumsug med koppar för djupgående muskelavspänning.",
-        "price": "800 UAH",
+        "price": "800 SEK",
         "duration": "60 min",
         "benefit": "Lindrar kronisk rygg- och nacksmärta, frigör bindväv, förbättrar blodcirkulationen och löser upp blockeringar.",
         "seo_title": "Koppningsmassage Tjerkasy | Djupgående vakuumbehandling",
@@ -157,7 +157,7 @@
       "hot-stone": {
         "title": "Massage med heta stenar",
         "desc": "En exklusiv spabehandling med varma vulkaniska basaltstenar för att ge djup uppvärmning och avslappning.",
-        "price": "1100 UAH",
+        "price": "1100 SEK",
         "duration": "90 min",
         "benefit": "Lindrar helt mental spänning, värmer djupa muskellager, förbättrar sömnen och balanserar nervsystemet.",
         "seo_title": "Hot Stone Massage Tjerkasy | Lyxig stenmassage",
@@ -177,7 +177,7 @@
       "turkish-foam": {
         "title": "Turkisk skummassage",
         "desc": "En spa-ritual i hamam, som kombinerar exfoliering med en Kese-silkesvante och massage i ett moln av ekologiskt tvålskum.",
-        "price": "1200 UAH",
+        "price": "1200 SEK",
         "duration": "90 min",
         "benefit": "Avlägsnar skonsamt döda hudceller, rengör porerna, rensar ut toxiner och ger en känsla av absolut renhet.",
         "seo_title": "Turkisk Skummassage Tjerkasy | Lyxigt spa-ritual",
@@ -197,7 +197,7 @@
       "natural-massage": {
         "title": "Ekologisk massage",
         "desc": "En mild, föryngrande behandling för ansikte och kropp med 100% ekologiska kallpressade växtoljor.",
-        "price": "900 UAH",
+        "price": "900 SEK",
         "duration": "60 min / 90 min",
         "benefit": "Lindrar spänningar i ansiktsmusklerna, förbättrar hudtonen, dämpar svullnad och ger djup näring till huden.",
         "seo_title": "Eko-Ekologisk Massage Tjerkasy | Oleh Massage",
