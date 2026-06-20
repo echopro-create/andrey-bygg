@@ -70,7 +70,9 @@ html[data-theme='dark'] {
 }
 
 html {
+  background: var(--background);
   overflow-x: clip;
+  transition: background-color var(--transition-normal);
 }
 
 body {
