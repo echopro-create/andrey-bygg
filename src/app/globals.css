@@ -254,12 +254,12 @@ textarea:focus-visible,
 }
 
 .section-spacing {
-  padding: 100px 0;
+  padding: 60px 0;
 }
 
 @media (max-width: 768px) {
   .section-spacing {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 }
 
@@ -820,7 +820,7 @@ body.mobile-drawer-open .custom-lang-selector {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 120px;
+  padding: 100px 0 80px;
   position: relative;
   background-image: 
     var(--hero-overlay), 
