@@ -1995,24 +1995,13 @@ select.form-control {
   cursor: pointer;
 }
 
-.gallery-item-featured {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
 .gallery-item-frame {
   position: relative;
-  aspect-ratio: 1 / 1;
   border-radius: 8px;
   border: 1px solid var(--glass-border);
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   transition: var(--transition-smooth);
-}
-
-.gallery-item-featured .gallery-item-frame {
-  aspect-ratio: auto;
-  height: 100%;
 }
 
 .gallery-img {
@@ -2056,33 +2045,11 @@ select.form-control {
 .gallery-item-frame:hover .zoom-icon { transform: scale(1); }
 
 @media (max-width: 1024px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  .gallery-item-featured {
-    grid-column: span 2;
-    grid-row: span 1;
-  }
-  .gallery-item-featured .gallery-item-frame {
-    aspect-ratio: 1.6;
-    height: auto;
-  }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 }
 
 @media (max-width: 600px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .gallery-item-featured {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-  .gallery-item-featured .gallery-item-frame {
-    aspect-ratio: 1 / 1;
-    height: auto;
-  }
+  .gallery-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 
 /* Lightbox overlay */

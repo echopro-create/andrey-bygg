@@ -29,13 +29,10 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
     <>
       <div className="gallery-grid">
         {images.map((img, index) => {
-          const isFeatured = index === 0;
+          const isVertical = index < 3;
+          const ratio = isVertical ? '3 / 4' : '1 / 1';
           return (
-            <div 
-              key={index} 
-              className={`gallery-item-wrapper reveal ${isFeatured ? 'gallery-item-featured' : ''}`} 
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+            <div key={index} className="gallery-item-wrapper reveal" style={{ animationDelay: `${index * 0.1}s` }}>
               <button
                 type="button"
                 className="gallery-item-frame"
@@ -49,19 +46,17 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
                   cursor: 'pointer',
                   textAlign: 'left',
                   display: 'block',
+                  aspectRatio: ratio,
                 }}
               >
                 <img
                   src={img.src}
                   alt={img.alt}
                   className="gallery-img"
-                  width={isFeatured ? 1000 : 600}
-                  height={isFeatured ? 1000 : 600}
+                  width={600}
+                  height={isVertical ? 800 : 600}
                   loading={index < 3 ? undefined : "lazy"}
-                  style={{ 
-                    objectFit: 'cover',
-                    objectPosition: isFeatured ? 'center 35%' : 'center center'
-                  }}
+                  style={{ objectFit: 'cover' }}
                 />
                 <div className="gallery-item-hover">
                   <span className="zoom-icon" role="img" aria-hidden="true">🔍</span>
