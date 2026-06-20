@@ -9,10 +9,10 @@
   "hero": {
     "title": "Exklusiv massage för din",
     "accent": "kropp & själ",
-    "subtitle": "Professionell massage i Stockholm. Hitta din balans, lindra spänningar och återuppbygg din energi i en lyxig spa-atmosfär.",
+    "subtitle": "Professionell massage i Tjerkasy. Hitta din balans, lindra spänningar och återuppbygg din energi i en lyxig spa-atmosfär.",
     "bookBtn": "Boka tid",
     "servicesBtn": "Våra tjänster",
-    "badge": "• STOCKHOLM PREMIUM SPA",
+    "badge": "• TJERKASY PREMIUM SPA",
     "metrics": {
       "m1_val": "10+ ÅR",
       "m1_lbl": "Erfarenhet",
@@ -56,11 +56,11 @@
       "classic": {
         "title": "Klassisk massage",
         "desc": "En traditionell svensk massage för djup avslappning, lindring av muskelspasmer och fullständig återhämtning av krafter.",
-        "price": "850 SEK",
+        "price": "850 UAH",
         "duration": "60 min / 90 min",
         "benefit": "Lindrar effektivt muskelspänningar, återställer fibrernas elasticitet, normaliserar sömnen och minskar stressnivåerna.",
-        "seo_title": "Klassisk svensk massage i Stockholm | Oleg Massage",
-        "seo_desc": "Traditionell svensk massage för djup avslappning och förbättrad blodcirkulation. Professionell massör Oleg i Stockholm.",
+        "seo_title": "Klassisk svensk massage i Tjerkasy | Oleg Massage",
+        "seo_desc": "Traditionell svensk massage för djup avslappning och förbättrad blodcirkulation. Professionell massör Oleg i Tjerkasy.",
         "indications_title": "Indikationer för behandling",
         "indications_list": [
           "Muskelspänningar och stelhet",
@@ -76,11 +76,11 @@
       "anti-cellulite": {
         "title": "Anticellulitmassage",
         "desc": "En intensiv skulpterande teknik som syftar till att bekämpa lokala fettdepåer och förbättra hudens elasticitet.",
-        "price": "950 SEK",
+        "price": "950 UAH",
         "duration": "60 min",
         "benefit": "Aktiverar mikrokirkulationen i vävnaderna, minskar svullnad, främjar lymfdränage och skulpterar harmoniska kroppskonturer.",
-        "seo_title": "Anticellulitmassage Stockholm | Effektiv kroppsskulptering",
-        "seo_desc": "Professionell anticellulitmassage i Stockholm. Förbättra hudens elasticitet, öka lymfflödet och skulptera kroppens konturer.",
+        "seo_title": "Anticellulitmassage Tjerkasy | Effektiv kroppsskulptering",
+        "seo_desc": "Professionell anticellulitmassage i Tjerkasy. Förbättra hudens elasticitet, öka lymfflödet och skulptera kroppens konturer.",
         "indications_title": "Indikationer för behandling",
         "indications_list": [
           "Celluliter i alla stadier",
@@ -96,11 +96,11 @@
       "sports": {
         "title": "Sportmassage",
         "desc": "En intensiv djupgående massage utformad för att förbereda muskler inför träning, påskynda återhämtning och förebygga skador.",
-        "price": "950 SEK",
+        "price": "950 UAH",
         "duration": "60 min / 90 min",
         "benefit": "Lindrar effektivt muskelhypertonus, eliminerar triggerpunkter, påskyndar utrensningen av mjölksyra och ökar flexibiliteten.",
-        "seo_title": "Idrottsmassage Stockholm | Återhämtning efter träning",
-        "seo_desc": "Djupgående idrottsmassage för idrottare och aktiva. Minska muskelspänningar, förebygg skador och påskynda återhämtning i Stockholm.",
+        "seo_title": "Idrottsmassage Tjerkasy | Återhämtning efter träning",
+        "seo_desc": "Djupgående idrottsmassage för idrottare och aktiva. Minska muskelspänningar, förebygg skador och påskynda återhämtning i Tjerkasy.",
         "indications_title": "Indikationer för behandling",
         "indications_list": [
           "Intensiv fysisk träning",
@@ -116,11 +116,11 @@
       "lymphatic-drainage": {
         "title": "Lymfmassage",
         "desc": "En mild manuell teknik som syftar till att stimulera lymfflödet, rena kroppen från toxiner och reducera svullnad.",
-        "price": "900 SEK",
+        "price": "900 UAH",
         "duration": "75 min",
         "benefit": "Minskar effektivt svullnad i ansikte och lemmar, stärker immunförsvaret och ger en känsla av lätthet i hela kroppen.",
-        "seo_title": "Lymfmassage Stockholm | Detox & Minska svullnad",
-        "seo_desc": "Mjuk lymfmassage för att rensa ut toxiner, stärka immunförsvaret och minska svullnad. Professionell lymfterapi i Stockholm.",
+        "seo_title": "Lymfmassage Tjerkasy | Detox & Minska svullnad",
+        "seo_desc": "Mjuk lymfmassage för att rensa ut toxiner, stärka immunförsvaret och minska svullnad. Professionell lymfterapi i Tjerkasy.",
         "indications_title": "Indikationer för behandling",
         "indications_list": [
           "Svullnad i ansikte eller kropp",
@@ -136,11 +136,11 @@
       "cupping": {
         "title": "Koppningsmassage",
         "desc": "En terapeutisk teknik som kombinerar klassisk massage och vakuumsug med koppar för djupgående muskelavspänning.",
-        "price": "800 SEK",
+        "price": "800 UAH",
         "duration": "60 min",
         "benefit": "Lindrar kronisk rygg- och nacksmärta, frigör bindväv, förbättrar blodcirkulationen och löser upp blockeringar.",
-        "seo_title": "Koppningsmassage Stockholm | Djupgående vakuumbehandling",
-        "seo_desc": "Effektiv koppningsmassage (vakuumbehandling) för att öka cirkulationen, lindra ryggsmärta och lösa upp triggerpunkter i Stockholm.",
+        "seo_title": "Koppningsmassage Tjerkasy | Djupgående vakuumbehandling",
+        "seo_desc": "Effektiv koppningsmassage (vakuumbehandling) för att öka cirkulationen, lindra ryggsmärta och lösa upp triggerpunkter i Tjerkasy.",
         "indications_title": "Indikationer för behandling",
         "indications_list": [
           "Kronisk rygg- och nacksmärta",
@@ -156,11 +156,11 @@
       "hot-stone": {
         "title": "Massage med heta stenar",
         "desc": "En exklusiv spabehandling med varma vulkaniska basaltstenar för att ge djup uppvärmning och avslappning.",
-        "price": "1100 SEK",
+        "price": "1100 UAH",
         "duration": "90 min",
         "benefit": "Lindrar helt mental spänning, värmer djupa muskellager, förbättrar sömnen och balanserar nervsystemet.",
-        "seo_title": "Hot Stone Massage Stockholm | Lyxig stenmassage",
-        "seo_desc": "Lyxig massage med varma lavastenar för djup muskeluppvärmning, stresslindring och energibalansering i Stockholm.",
+        "seo_title": "Hot Stone Massage Tjerkasy | Lyxig stenmassage",
+        "seo_desc": "Lyxig massage med varma lavastenar för djup muskeluppvärmning, stresslindring och energibalansering i Tjerkasy.",
         "indications_title": "Indikationer för behandling",
         "indications_list": [
           "Djup stress och utmattning",
@@ -176,10 +176,10 @@
       "turkish-foam": {
         "title": "Turkisk skummassage",
         "desc": "En spa-ritual i hamam, som kombinerar exfoliering med en Kese-silkesvante och massage i ett moln av ekologiskt tvålskum.",
-        "price": "1200 SEK",
+        "price": "1200 UAH",
         "duration": "90 min",
         "benefit": "Avlägsnar skonsamt döda hudceller, rengör porerna, rensar ut toxiner och ger en känsla av absolut renhet.",
-        "seo_title": "Turkisk Skummassage Stockholm | Lyxigt spa-ritual",
+        "seo_title": "Turkisk Skummassage Tjerkasy | Lyxigt spa-ritual",
         "seo_desc": "Traditionell skummassage på varm stenbänk. Mild peeling med Kese-vante och avslappnande massage med fluffigt skum av olivoljetvål.",
         "indications_title": "Indikationer för behandling",
         "indications_list": [
@@ -196,11 +196,11 @@
       "natural-massage": {
         "title": "Ekologisk massage",
         "desc": "En mild, föryngrande behandling för ansikte och kropp med 100% ekologiska kallpressade växtoljor.",
-        "price": "900 SEK",
+        "price": "900 UAH",
         "duration": "60 min / 90 min",
         "benefit": "Lindrar spänningar i ansiktsmusklerna, förbättrar hudtonen, dämpar svullnad och ger djup näring till huden.",
-        "seo_title": "Eko-Ekologisk Massage Stockholm | Oleg Massage",
-        "seo_desc": "Mjuk och återbyggande ekologisk massage med 100% naturliga, kallpressade oljor och skräddarsydd aromaterapi i Stockholm.",
+        "seo_title": "Eko-Ekologisk Massage Tjerkasy | Oleg Massage",
+        "seo_desc": "Mjuk och återbyggande ekologisk massage med 100% naturliga, kallpressade oljor och skräddarsydd aromaterapi i Tjerkasy.",
         "indications_title": "Indikationer för behandling",
         "indications_list": [
           "Torr och uttorkad hud",
@@ -241,8 +241,8 @@
   "contacts": {
     "title": "Kontakta oss",
     "accent": "boka tid",
-    "subtitle": "Boka din tid online eller kontakta oss via telefon. Vår privata studio ligger i hjärtat av Stockholm.",
-    "address": "Birger Jarlsgatan 42, 114 29 Stockholm",
+    "subtitle": "Boka din tid online eller kontakta oss via telefon. Vår privata studio ligger i hjärtat av Tjerkasy.",
+    "address": "Gogolya St 48, Tjerkasy, Ukraina",
     "phone": "+46 8 123 45 67",
     "email": "info@olegmassage.se",
     "hours": "Mån - Sön: 09:00 - 21:00",
@@ -274,11 +274,14 @@
     "namePlaceholder": "Ditt namn",
     "messagePlaceholder": "Önskat datum och tid, eller andra önskemål...",
     "formDate": "Önskat datum",
-    "formTime": "Önskad tid"
+    "formTime": "Önskad tid",
+    "street": "Gogolya St 48",
+    "city": "Tjerkasy",
+    "mapLink": "https://maps.google.com/?q=Gogolya+St+48,+Cherkasy"
   },
   "gallery": {
     "studio": "Studio",
-    "subtitle": "Ta en titt inuti vår premiummassagestudio i Stockholm. En fristad av lugn, utrustad för din absoluta komfort."
+    "subtitle": "Ta en titt inuti vår premiummassagestudio i Tjerkasy. En fristad av lugn, utrustad för din absoluta komfort."
   },
   "breadcrumbs": {
     "home": "Hem",
@@ -303,7 +306,7 @@
     "section2_title": "2. Hur vi använder din information",
     "section2_text": "Dessa uppgifter används endast för att bekräfta din bokning, kontakta dig och organisera sessionen. Vi delar inte dina uppgifter med tredje part och använder dem inte för marknadsföring.",
     "section3_title": "3. GDPR-efterlevnad (EU)",
-    "section3_text": "Vår studio ligger i Stockholm, Sverige, och vi följer dataskyddsförordningen (GDPR) till fullo. Du har rätt att när som helst begära tillgång till, rättelse av eller radering av dina uppgifter.",
+    "section3_text": "Vår studio ligger i Tjerkasy, Ukraina, och vi följer dataskyddsförordningen (GDPR) till fullo. Du har rätt att när som helst begära tillgång till, rättelse av eller radering av dina uppgifter.",
     "section4_title": "4. Kontakta oss",
     "section4_text": "Om du har några frågor om personuppgiftsbehandling eller vill begära radering, vänligen kontakta oss via e-post: info@olegmassage.se.",
     "backToHome": "Tillbaka till startsidan"

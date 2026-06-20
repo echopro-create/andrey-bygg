@@ -81,7 +81,7 @@ export default function Footer({ dict, lng }: FooterProps) {
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
           <p>
-            &copy; {currentYear} OLEG MASSAGE. All rights reserved. Birger Jarlsgatan 42, Stockholm, Sweden.
+            &copy; {currentYear} OLEG MASSAGE. All rights reserved. {dict.contacts.address}.
             {' | '}
             <Link href={`/${lng}/privacy`} className="footer-bottom-link" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>
               {dict.privacyLink}

@@ -9,10 +9,10 @@
   "hero": {
     "title": "Exclusive massage for your",
     "accent": "body & soul",
-    "subtitle": "Professional massage therapy in Stockholm. Find your balance, release tension, and restore your energy in a luxurious spa atmosphere.",
+    "subtitle": "Professional massage therapy in Cherkasy. Find your balance, release tension, and restore your energy in a luxurious spa atmosphere.",
     "bookBtn": "Book Now",
     "servicesBtn": "Our Services",
-    "badge": "• STOCKHOLM PREMIUM SPA",
+    "badge": "• CHERKASY PREMIUM SPA",
     "metrics": {
       "m1_val": "10+ YEARS",
       "m1_lbl": "Experience",
@@ -56,11 +56,11 @@
       "classic": {
         "title": "Classic Massage",
         "desc": "A traditional Swedish massage designed for deep relaxation, muscle spasm relief, and comprehensive energy recovery.",
-        "price": "850 SEK",
+        "price": "850 UAH",
         "duration": "60 min / 90 min",
         "benefit": "Effectively releases muscle tension, restores fiber elasticity, normalizes sleep, and reduces daily stress levels.",
-        "seo_title": "Classic Swedish Massage Stockholm | Oleg Massage",
-        "seo_desc": "Traditional Swedish massage for deep relaxation and blood circulation improvement. Professional massage therapist Oleg in Stockholm.",
+        "seo_title": "Classic Swedish Massage Cherkasy | Oleg Massage",
+        "seo_desc": "Traditional Swedish massage for deep relaxation and blood circulation improvement. Professional massage therapist Oleg in Cherkasy.",
         "indications_title": "Indications for Treatment",
         "indications_list": [
           "Muscle tension and stiffness",
@@ -76,11 +76,11 @@
       "anti-cellulite": {
         "title": "Anti-Cellulite Massage",
         "desc": "An intensive sculpting technique aimed at combating local fat deposits and improving skin elasticity.",
-        "price": "950 SEK",
+        "price": "950 UAH",
         "duration": "60 min",
         "benefit": "Activates microcirculation in tissues, reduces swelling, promotes lymphatic drainage, and sculpts harmonious body contours.",
-        "seo_title": "Anti-Cellulite Massage Stockholm | Body Sculpting & Firming",
-        "seo_desc": "Professional anti-cellulite massage in Stockholm. Improve skin elasticity, boost lymphatic flow, and sculpt body contours.",
+        "seo_title": "Anti-Cellulite Massage Cherkasy | Body Sculpting & Firming",
+        "seo_desc": "Professional anti-cellulite massage in Cherkasy. Improve skin elasticity, boost lymphatic flow, and sculpt body contours.",
         "indications_title": "Indications for Treatment",
         "indications_list": [
           "Any stage of cellulite",
@@ -96,11 +96,11 @@
       "sports": {
         "title": "Sports Massage",
         "desc": "An intensive deep-tissue massage designed to prepare muscles for training, accelerate recovery, and prevent injuries.",
-        "price": "950 SEK",
+        "price": "950 UAH",
         "duration": "60 min / 90 min",
         "benefit": "Effectively relieves muscle hypertonus, eliminates trigger points, speeds up lactic acid clearance, and increases flexibility.",
-        "seo_title": "Sports Massage Stockholm | Post-Workout Recovery",
-        "seo_desc": "Deep sports massage for athletes and active individuals. Relieve muscle tension, prepare for exercise, and recover faster in Stockholm.",
+        "seo_title": "Sports Massage Cherkasy | Post-Workout Recovery",
+        "seo_desc": "Deep sports massage for athletes and active individuals. Relieve muscle tension, prepare for exercise, and recover faster in Cherkasy.",
         "indications_title": "Indications for Treatment",
         "indications_list": [
           "Intense physical activity",
@@ -116,11 +116,11 @@
       "lymphatic-drainage": {
         "title": "Lymphatic Drainage",
         "desc": "A gentle manual technique aimed at stimulating lymphatic circulation, detoxifying the body, and reducing fluid retention.",
-        "price": "900 SEK",
+        "price": "900 UAH",
         "duration": "75 min",
         "benefit": "Effectively reduces swelling in the face and limbs, strengthens the immune system, and restores body lightness.",
-        "seo_title": "Lymphatic Drainage Massage Stockholm | Detox & De-puff",
-        "seo_desc": "Gentle lymphatic drainage massage to eliminate toxins, boost immunity, and reduce swelling. Professional therapy in Stockholm.",
+        "seo_title": "Lymphatic Drainage Massage Cherkasy | Detox & De-puff",
+        "seo_desc": "Gentle lymphatic drainage massage to eliminate toxins, boost immunity, and reduce swelling. Professional therapy in Cherkasy.",
         "indications_title": "Indications for Treatment",
         "indications_list": [
           "Facial or body swelling",
@@ -136,11 +136,11 @@
       "cupping": {
         "title": "Cupping Massage",
         "desc": "A therapeutic technique combining classic massage and vacuum cupping for deep-muscle tension release.",
-        "price": "800 SEK",
+        "price": "800 UAH",
         "duration": "60 min",
         "benefit": "Relieves chronic back and neck pain, releases fascia, improves blood circulation, and resolves muscular stiffness.",
-        "seo_title": "Vacuum Cupping Massage Stockholm | Oleg Massage",
-        "seo_desc": "Deep vacuum cupping massage to boost microcirculation, relieve chronic back pain, and release muscle spasms in Stockholm.",
+        "seo_title": "Vacuum Cupping Massage Cherkasy | Oleg Massage",
+        "seo_desc": "Deep vacuum cupping massage to boost microcirculation, relieve chronic back pain, and release muscle spasms in Cherkasy.",
         "indications_title": "Indications for Treatment",
         "indications_list": [
           "Chronic back and neck pain",
@@ -156,11 +156,11 @@
       "hot-stone": {
         "title": "Hot Stone Massage",
         "desc": "An exclusive spa treatment using heated volcanic basalt stones to provide deep warming and relaxation.",
-        "price": "1100 SEK",
+        "price": "1100 UAH",
         "duration": "90 min",
         "benefit": "Completely relieves mental tension, warms deep muscle layers, improves sleep, and balances the nervous system.",
-        "seo_title": "Hot Stone Massage Stockholm | Premium Stone Therapy",
-        "seo_desc": "Luxurious hot basalt stone massage for deep muscle heating, stress relief, and energy restoration in Stockholm.",
+        "seo_title": "Hot Stone Massage Cherkasy | Premium Stone Therapy",
+        "seo_desc": "Luxurious hot basalt stone massage for deep muscle heating, stress relief, and energy restoration in Cherkasy.",
         "indications_title": "Indications for Treatment",
         "indications_list": [
           "Deep stress and anxiety",
@@ -176,10 +176,10 @@
       "turkish-foam": {
         "title": "Turkish Foam Massage",
         "desc": "A spa ritual in the hammam, combining a silk Kese glove exfoliation and a massage in a cloud of organic soap foam.",
-        "price": "1200 SEK",
+        "price": "1200 UAH",
         "duration": "90 min",
         "benefit": "Gently removes dead skin cells, cleanses pores, eliminates toxins, and gives a sensation of absolute cleanliness.",
-        "seo_title": "Turkish Foam Massage Stockholm | Luxurious Spa Ritual",
+        "seo_title": "Turkish Foam Massage Cherkasy | Luxurious Spa Ritual",
         "seo_desc": "Indulgent foam massage on a heated stone bed. Gentle scrub with Kese glove and relaxing massage with organic olive oil soap foam.",
         "indications_title": "Indications for Treatment",
         "indications_list": [
@@ -196,11 +196,11 @@
       "natural-massage": {
         "title": "Eco-Organic Massage",
         "desc": "A delicate rejuvenating treatment for the face and body using 100% organic cold-pressed botanical oils.",
-        "price": "900 SEK",
+        "price": "900 UAH",
         "duration": "60 min / 90 min",
         "benefit": "Relieves facial muscle tension, improves skin tone, reduces puffiness, and deeply nourishes the skin.",
-        "seo_title": "Eco-Organic Massage Stockholm | Oleg Massage",
-        "seo_desc": "Gentle restorative eco-massage using 100% natural, cold-pressed organic oils and aromatherapy in Stockholm.",
+        "seo_title": "Eco-Organic Massage Cherkasy | Oleg Massage",
+        "seo_desc": "Gentle restorative eco-massage using 100% natural, cold-pressed organic oils and aromatherapy in Cherkasy.",
         "indications_title": "Indications for Treatment",
         "indications_list": [
           "Dry and dehydrated skin",
@@ -241,8 +241,8 @@
   "contacts": {
     "title": "Contact Us",
     "accent": "book a session",
-    "subtitle": "Book your session online or reach out via phone. Our private studio is located in the heart of Stockholm.",
-    "address": "Birger Jarlsgatan 42, 114 29 Stockholm",
+    "subtitle": "Book your session online or reach out via phone. Our private studio is located in the heart of Cherkasy.",
+    "address": "48 Gogolya St, Cherkasy, Ukraine",
     "phone": "+46 8 123 45 67",
     "email": "info@olegmassage.se",
     "hours": "Mon - Sun: 09:00 - 21:00",
@@ -274,11 +274,14 @@
     "namePlaceholder": "Your name",
     "messagePlaceholder": "Your preferred date and time, or any additional requests...",
     "formDate": "Preferred date",
-    "formTime": "Preferred time"
+    "formTime": "Preferred time",
+    "street": "48 Gogolya St",
+    "city": "Cherkasy",
+    "mapLink": "https://maps.google.com/?q=Gogolya+St+48,+Cherkasy"
   },
   "gallery": {
     "studio": "Studio",
-    "subtitle": "Take a look inside our premium private massage studio in Stockholm. A sanctuary of peace, equipped for your absolute comfort."
+    "subtitle": "Take a look inside our premium private massage studio in Cherkasy. A sanctuary of peace, equipped for your absolute comfort."
   },
   "breadcrumbs": {
     "home": "Home",
@@ -303,7 +306,7 @@
     "section2_title": "2. How we use your data",
     "section2_text": "This data is used solely to confirm your appointment, contact you, and organize the session. We do not share your data with third parties and do not use it for marketing mailings.",
     "section3_title": "3. GDPR Compliance (EU)",
-    "section3_text": "Our studio is located in Stockholm, Sweden, and we fully comply with the General Data Protection Regulation (GDPR). You have the right to request access to, correction of, or deletion of your data at any time.",
+    "section3_text": "Our studio is located in Cherkasy, Ukraine, and we fully comply with the General Data Protection Regulation (GDPR). You have the right to request access to, correction of, or deletion of your data at any time.",
     "section4_title": "4. Contact Us",
     "section4_text": "For any questions regarding personal data processing or to request data deletion, please contact us by email: info@olegmassage.se.",
     "backToHome": "Back to Home"

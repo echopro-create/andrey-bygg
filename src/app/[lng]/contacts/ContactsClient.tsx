@@ -353,11 +353,11 @@ function ContactsForm({ dict }: ContactsClientProps) {
             </div>
             <div className="map-card-footer">
               <div className="map-footer-text">
-                <h6>Birger Jarlsgatan 42</h6>
-                <p>Östermalm, Stockholm</p>
+                <h6>{dict.contacts.street || 'Gogolya St, 48'}</h6>
+                <p>{dict.contacts.city || 'Cherkasy'}</p>
               </div>
               <a
-                href="https://maps.google.com/?q=Birger+Jarlsgatan+42,+Stockholm"
+                href={dict.contacts.mapLink || "https://maps.google.com/?q=Gogolya+St+48,+Cherkasy"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary map-directions-btn"

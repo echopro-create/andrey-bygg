@@ -9,10 +9,10 @@
   "hero": {
     "title": "Eksklusiv massasje for din",
     "accent": "kropp & sjel",
-    "subtitle": "Profesjonell massasjeterapi i Stockholm. Finn din balanse, frigjør spenninger og gjenopprett energien i en luksuriøs spa-atmosfære.",
+    "subtitle": "Profesjonell massasjeterapi i Tsjerkasy. Finn din balanse, frigjør spenninger og gjenopprett energien i en luksuriøs spa-atmosfære.",
     "bookBtn": "Bestill time",
     "servicesBtn": "Våre tjenester",
-    "badge": "• STOCKHOLM PREMIUM SPA",
+    "badge": "• TSJERKASY PREMIUM SPA",
     "metrics": {
       "m1_val": "10+ ÅR",
       "m1_lbl": "Erfaring",
@@ -56,11 +56,11 @@
       "classic": {
         "title": "Klassisk massasje",
         "desc": "En tradisjonell svensk massasje for dyp avslapning, lindring av muskelspasmer og fullstendig gjenoppretting av energi.",
-        "price": "850 SEK",
+        "price": "850 UAH",
         "duration": "60 min / 90 min",
         "benefit": "Lindrer effektivt muskelspenninger, gjenoppretter fibrenes elastisitet, normaliserer søvn og reduserer stressnivået.",
-        "seo_title": "Klassisk svensk massasje i Stockholm | Oleg Massage",
-        "seo_desc": "Tradisjonell svensk massasje for dyp avslapning og bedre blodsirkulasjon. Profesjonell massør Oleg i Stockholm.",
+        "seo_title": "Klassisk svensk massasje i Tsjerkasy | Oleg Massage",
+        "seo_desc": "Tradisjonell svensk massasje for dyp avslapning og bedre blodsirkulasjon. Profesjonell massør Oleg i Tsjerkasy.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Muskelspenninger og stivhet",
@@ -76,11 +76,11 @@
       "anti-cellulite": {
         "title": "Anticellulittmassasje",
         "desc": "En intensiv modelleringsbehandling rettet mot bekjempelse av lokale fettdepoter og forbedring av hudens elastisitet.",
-        "price": "950 SEK",
+        "price": "950 UAH",
         "duration": "60 min",
         "benefit": "Aktiverer mikrosirkulasjonen i vevet, reduserer hevelser, fremmer lymfedrenasje og modellerer harmoniske kroppskonturer.",
-        "seo_title": "Anticellulittmassasje Stockholm | Effektiv kroppsmodellering",
-        "seo_desc": "Profesjonell anticellulittmassasje i Stockholm. Forbedre hudens elastisitet, øk lymfeflyten og form kroppens konturer.",
+        "seo_title": "Anticellulittmassasje Tsjerkasy | Effektiv kroppsmodellering",
+        "seo_desc": "Profesjonell anticellulittmassasje i Tsjerkasy. Forbedre hudens elastisitet, øk lymfeflyten og form kroppens konturer.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Cellulitter i alle stadier",
@@ -96,11 +96,11 @@
       "sports": {
         "title": "Sportsmassasje",
         "desc": "En intensiv dyptgående massasje designet for å forberede muskler til trening, fremskynde restitusjon og forebygge skader.",
-        "price": "950 SEK",
+        "price": "950 UAH",
         "duration": "60 min / 90 min",
         "benefit": "Lindrer effektivt muskelhypertonus, eliminerer triggerpunkter, fremskynder utskillelsen av melkesyre og øker fleksibiliteten.",
-        "seo_title": "Idrettsmassasje Stockholm | Restitusjon etter trening",
-        "seo_desc": "Dyp idrettsmassasje for idrettsutøvere og aktive. Reduser muskelspenninger, forebygg skader og få raskere restitusjon i Stockholm.",
+        "seo_title": "Idrettsmassasje Tsjerkasy | Restitusjon etter trening",
+        "seo_desc": "Dyp idrettsmassasje for idrettsutøvere og aktive. Reduser muskelspenninger, forebygg skader og få raskere restitusjon i Tsjerkasy.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Intensiv fysisk trening",
@@ -116,11 +116,11 @@
       "lymphatic-drainage": {
         "title": "Lymfedrenasje",
         "desc": "En mild manuell teknikk rettet mot å stimulere lymfestrømmen, rense kroppen for giftstoffer og redusere hevelser.",
-        "price": "900 SEK",
+        "price": "900 UAH",
         "duration": "75 min",
         "benefit": "Reduserer effektivt hevelser i ansikt og lemmer, styrker immunforsvaret og gir en følelse av letthet i hele kroppen.",
-        "seo_title": "Lymfemassasje Stockholm | Detox & Reduser hevelse",
-        "seo_desc": "Mjuk lymfemassasje for å fjerne avfallsstoffer, styrke immunforsvaret og redusere hevelse. Profesjonell lymfeterapi i Stockholm.",
+        "seo_title": "Lymfemassasje Tsjerkasy | Detox & Reduser hevelse",
+        "seo_desc": "Mjuk lymfemassasje for å fjerne avfallsstoffer, styrke immunforsvaret og redusere hevelse. Profesjonell lymfeterapi i Tsjerkasy.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Hevelse i ansikt eller kropp",
@@ -136,11 +136,11 @@
       "cupping": {
         "title": "Koppemassasje",
         "desc": "En terapeutisk teknikk som kombinerer klassisk massasje og vakuumkopping for dyptgående muskelavspenning.",
-        "price": "800 SEK",
+        "price": "800 UAH",
         "duration": "60 min",
         "benefit": "Lindrer kroniske rygg- og nakkesmerter, frigjør bindevev, forbedrer blodsirkulasjonen og loeser opp blokkeringer.",
-        "seo_title": "Koppingsmassasje Stockholm | Dypgående vakuumbehandling",
-        "seo_desc": "Effektiv koppingsmassasje (vakuumbehandling) for å øke sirkulasjonen, lindre ryggsmerter og løse opp triggerpunkter i Stockholm.",
+        "seo_title": "Koppingsmassasje Tsjerkasy | Dypgående vakuumbehandling",
+        "seo_desc": "Effektiv koppingsmassasje (vakuumbehandling) for å øke sirkulasjonen, lindre ryggsmerter og løse opp triggerpunkter i Tsjerkasy.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Kronisk rygg- og nakkesmerte",
@@ -156,11 +156,11 @@
       "hot-stone": {
         "title": "Massasje med varme steiner",
         "desc": "En eksklusiv spabehandling med varme vulkanske basaltsteiner for å gi dyp oppvarming og avslapning.",
-        "price": "1100 SEK",
+        "price": "1100 UAH",
         "duration": "90 min",
         "benefit": "Lindrer fullstendig mental spenning, varmer dype muskellag, forbedrer søvnen og balanserer nervesystemet.",
-        "seo_title": "Hot Stone Massasje Stockholm | Premium steinmassasje",
-        "seo_desc": "Luksuriøs massasje med varme lavasteiner for dyp muskeloppvarming, stresslindring og energibalansering i Stockholm.",
+        "seo_title": "Hot Stone Massasje Tsjerkasy | Premium steinmassasje",
+        "seo_desc": "Luksuriøs massasje med varme lavasteiner for dyp muskeloppvarming, stresslindring og energibalansering i Tsjerkasy.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Dyp stress og utmattelse",
@@ -176,10 +176,10 @@
       "turkish-foam": {
         "title": "Tyrkisk skummassasje",
         "desc": "En spa-ritual i hammam, som kombinerer eksfoliering med en Kese-silkehanske og massasje i en sky av økologisk såpeskum.",
-        "price": "1200 SEK",
+        "price": "1200 UAH",
         "duration": "90 min",
         "benefit": "Fjerner skånsomt døde hudceller, renser porene, renser ut giftstoffer og gir en følelse av absolutt renhet.",
-        "seo_title": "Tyrkisk Skummassasje Stockholm | Luksuriøs spa-ritual",
+        "seo_title": "Tyrkisk Skummassasje Tsjerkasy | Luksuriøs spa-ritual",
         "seo_desc": "Tradisjonell skummassasje på oppvarmet steinbenk. Mild peeling med Kese-hanske og avslappende massasje med skum av olivenoljesåpe.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
@@ -196,11 +196,11 @@
       "natural-massage": {
         "title": "Økologisk massasje",
         "desc": "En mild, foryngende behandling for ansikt og kropp med 100% økologiske kaldpressede planteoljer.",
-        "price": "900 SEK",
+        "price": "900 UAH",
         "duration": "60 min / 90 min",
         "benefit": "Lindrer spenninger i ansiktsmusklene, forbedrer hudtonen, demper hevelser og gir dyp næring til huden.",
-        "seo_title": "Eko-Økologisk Massasje Stockholm | Oleg Massage",
-        "seo_desc": "Myk og gjenoppbyggende økologisk massasje med 100% naturlige, kaldpressede oljer og tilpasset aromaterapi i Stockholm.",
+        "seo_title": "Eko-Økologisk Massasje Tsjerkasy | Oleg Massage",
+        "seo_desc": "Myk og gjenoppbyggende økologisk massasje med 100% naturlige, kaldpressede oljer og tilpasset aromaterapi i Tsjerkasy.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Tørr og dehydrert hud",
@@ -241,8 +241,8 @@
   "contacts": {
     "title": "Kontakt oss",
     "accent": "bestill time",
-    "subtitle": "Bestill time på nett eller ta kontakt via telefon. Vårt private studio ligger i hjertet av Stockholm.",
-    "address": "Birger Jarlsgatan 42, 114 29 Stockholm",
+    "subtitle": "Bestill time på nett eller ta kontakt via telefon. Vårt private studio ligger i hjertet av Tsjerkasy.",
+    "address": "Gogolya St 48, Tsjerkasy, Ukraina",
     "phone": "+46 8 123 45 67",
     "email": "info@olegmassage.se",
     "hours": "Man - Søn: 09:00 - 21:00",
@@ -274,11 +274,14 @@
     "namePlaceholder": "Ditt navn",
     "messagePlaceholder": "Ønsket dato og tid, eller andre ønsker...",
     "formDate": "Ønsket dato",
-    "formTime": "Ønsket tid"
+    "formTime": "Ønsket tid",
+    "street": "Gogolya St 48",
+    "city": "Tsjerkasy",
+    "mapLink": "https://maps.google.com/?q=Gogolya+St+48,+Cherkasy"
   },
   "gallery": {
     "studio": "Studio",
-    "subtitle": "Ta en titt inn i vårt premium massasjestudio i Stockholm. Et fristed for ro, utstyrt for din absolutte komfort."
+    "subtitle": "Ta en titt inn i vårt premium massasjestudio i Tsjerkasy. Et fristed for ro, utstyrt for din absolutte komfort."
   },
   "breadcrumbs": {
     "home": "Hjem",
@@ -303,7 +306,7 @@
     "section2_title": "2. Hvordan vi bruker dine opplysninger",
     "section2_text": "Disse dataene brukes utelukkande til å bekrefte avtalen din, kontakte deg og organisere timen. Vi deler ikke dataene dine med tredjeparter og bruker dem ikke til markedsføring.",
     "section3_title": "3. GDPR-samsvar (EU)",
-    "section3_text": "Vårt studio ligger i Stockholm, Sverige, og vi overholder personvernforordningen (GDPR). Du har rett til å be om innsyn i, korrigering eller sletting av dataene dine når som helst.",
+    "section3_text": "Vårt studio ligger i Tsjerkasy, Ukraina, og vi overholder personvernforordningen (GDPR). Du har rett til å be om innsyn i, korrigering eller sletting av dataene dine når som helst.",
     "section4_title": "4. Kontakt oss",
     "section4_text": "For spørsmål om behandling av personopplysninger eller for å be om sletting, vennligst kontakt oss på e-post: info@olegmassage.se.",
     "backToHome": "Gå til startsiden"
