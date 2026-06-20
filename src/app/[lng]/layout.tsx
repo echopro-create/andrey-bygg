@@ -94,15 +94,15 @@ export async function generateMetadata({
     openGraph: {
       title: titleDefault,
       description: descriptionDefault,
-      url: SITE_URL,
+      url: `${SITE_URL}/${lng}`,
       siteName: SITE_NAME,
       locale: localeMap[lng] || 'en_US',
       type: 'website',
       images: [
         {
           url: `${SITE_URL}/images/hero-bg.webp`,
-          width: 1200,
-          height: 630,
+          width: 1024,
+          height: 1024,
           alt: 'Oleh Massage — Premium Spa & Massage',
         },
       ],
