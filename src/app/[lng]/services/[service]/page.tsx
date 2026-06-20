@@ -79,9 +79,27 @@ export default async function ServicePage({ params }: ServicePageProps) {
           ← {dict.services.back}
         </Link>
         
-        <div className="service-detail-container">
-          {/* Левая колонка: Изображение с эффектом Ambient Glow */}
-          <div className="service-detail-image-wrapper reveal">
+        {/* Шапка услуги: на всю ширину страницы */}
+        <div className="service-detail-header reveal">
+          <h1 className="service-detail-title">{service.title}</h1>
+          
+          {/* Мета-панель: длительность и стоимость */}
+          <div className="service-meta-panel">
+            <div className="meta-item">
+              <span className="meta-label">{dict.services.duration}</span>
+              <span className="meta-value">⏱ {service.duration}</span>
+            </div>
+            <div className="meta-divider"></div>
+            <div className="meta-item">
+              <span className="meta-label">{(dict.services as any).cost}</span>
+              <span className="meta-value gold">{service.price}</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="service-detail-content-wrap reveal">
+          {/* Изображение с эффектом Ambient Glow (флоат влево) */}
+          <div className="service-detail-image-wrapper">
             <div className="service-detail-glow"></div>
             <div className="service-detail-img-frame">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -93,78 +111,60 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
           </div>
           
-          {/* Правая колонка: Информация об услуге */}
-          <div className="service-detail-info-wrapper reveal">
-            <h1 className="service-detail-title">{service.title}</h1>
-            
-            {/* Мета-панель: длительность и стоимость */}
-            <div className="service-meta-panel">
-              <div className="meta-item">
-                <span className="meta-label">{dict.services.duration}</span>
-                <span className="meta-value">⏱ {service.duration}</span>
-              </div>
-              <div className="meta-divider"></div>
-              <div className="meta-item">
-                <span className="meta-label">{(dict.services as any).cost}</span>
-                <span className="meta-value gold">{service.price}</span>
-              </div>
+          <p className="service-short-desc">{service.desc}</p>
+          
+          {/* Терапевтический эффект */}
+          <div className="service-benefit-card glass-card">
+            <div className="benefit-card-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="benefit-icon">
+                <defs>
+                  <linearGradient id="gold-gradient-icon-service" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#e2d2b5" />
+                    <stop offset="50%" stopColor="#d4be96" />
+                    <stop offset="100%" stopColor="#a38a5e" />
+                  </linearGradient>
+                </defs>
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+              <h3 className="benefit-title">{(dict.services as any).benefitsTitle}</h3>
             </div>
+            <p className="benefit-text">{service.benefit}</p>
+          </div>
 
-            <div className="service-detail-description">
-              <p className="service-short-desc">{service.desc}</p>
-              
-              {/* Терапевтический эффект */}
-              <div className="service-benefit-card glass-card">
-                <div className="benefit-card-header">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="benefit-icon">
-                    <defs>
-                      <linearGradient id="gold-gradient-icon-service" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#e2d2b5" />
-                        <stop offset="50%" stopColor="#d4be96" />
-                        <stop offset="100%" stopColor="#a38a5e" />
-                      </linearGradient>
-                    </defs>
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                  </svg>
-                  <h3 className="benefit-title">{(dict.services as any).benefitsTitle}</h3>
-                </div>
-                <p className="benefit-text">{service.benefit}</p>
-              </div>
-
-              {/* Показания к процедуре */}
-              {service.indications_list && (
-                <div className="service-content-block">
-                  <h3 className="service-block-title">{service.indications_title}</h3>
-                  <ul className="service-indications-list">
-                    {service.indications_list.map((ind: string, idx: number) => (
-                      <li key={idx} className="indication-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="indication-check">
-                          <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        <span>{ind}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Как проходит процедура */}
-              {service.process_text && (
-                <div className="service-content-block">
-                  <h3 className="service-block-title">{service.process_title}</h3>
-                  <p className="service-block-text">{service.process_text}</p>
-                </div>
-              )}
-
-              {/* Противопоказания */}
-              {service.contraindications_text && (
-                <div className="service-content-block contraindications-block">
-                  <h4 className="service-block-title-small">{service.contraindications_title}</h4>
-                  <p className="service-block-text-small">{service.contraindications_text}</p>
-                </div>
-              )}
+          {/* Показания к процедуре */}
+          {service.indications_list && (
+            <div className="service-content-block">
+              <h3 className="service-block-title">{service.indications_title}</h3>
+              <ul className="service-indications-list">
+                {service.indications_list.map((ind: string, idx: number) => (
+                  <li key={idx} className="indication-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="indication-check">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>{ind}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            
+          )}
+
+          {/* Как проходит процедура */}
+          {service.process_text && (
+            <div className="service-content-block">
+              <h3 className="service-block-title">{service.process_title}</h3>
+              <p className="service-block-text">{service.process_text}</p>
+            </div>
+          )}
+
+          {/* Противопоказания */}
+          {service.contraindications_text && (
+            <div className="service-content-block contraindications-block">
+              <h4 className="service-block-title-small">{service.contraindications_title}</h4>
+              <p className="service-block-text-small">{service.contraindications_text}</p>
+            </div>
+          )}
+          
+          <div className="book-btn-wrapper">
             <Link
               href={`/${lng}/contacts?service=${serviceSlug}&book=true`}
               className="btn btn-primary book-service-btn"
