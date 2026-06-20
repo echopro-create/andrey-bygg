@@ -69,9 +69,8 @@ html[data-theme='dark'] {
   margin: 0;
 }
 
-html,
-body {
-  height: 100%;
+html {
+  overflow-x: hidden;
 }
 
 body {
@@ -83,6 +82,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
   line-height: 1.6;
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }

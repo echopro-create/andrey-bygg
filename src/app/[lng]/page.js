@@ -105,27 +105,9 @@ export default async function HomePage({ params }) {
                 </div>
               </div>
 
-              {/* Правая колонка: Эстетичное изображение в форме арки с собственным свечением */}
-              <div 
-                className={`${styles.heroImageColumn} fadeInUp`}
-                style={{ animationDelay: '0.4s' }}
-              >
-                <div className={styles.heroImageGlow}></div>
-                <div className={styles.heroImageArch}>
-                  <Image
-                    src="/images/hero.png"
-                    alt="Oleg Massage - Premium Spa Atmosphere"
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className={styles.heroImg}
-                  />
-                </div>
-              </div>
+
             </div>
           </div>
-          {/* Декоративный фоновый элемент */}
-          <div className={styles.heroOverlay}></div>
         </section>
 
         {/* СЕКЦИЯ О МАСТЕРЕ */}
