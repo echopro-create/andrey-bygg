@@ -1535,13 +1535,30 @@ html.theme-zen .hero-pill-tag {
   position: relative;
 }
 
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.service-grid-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.service-grid-right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .service-detail-image-wrapper {
   position: relative;
   padding: 10px;
-  width: 400px;
-  float: left;
-  margin-right: 48px;
-  margin-bottom: 32px;
+  width: 100%;
 }
 
 .service-detail-glow {
@@ -1683,21 +1700,16 @@ html.theme-zen .hero-pill-tag {
 }
 
 .service-content-block {
-  display: block;
-  margin-bottom: 32px;
-}
-
-.service-content-clear {
-  clear: both;
-  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .book-btn-wrapper {
-  clear: both;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
-  padding-top: 24px;
+  padding-top: 16px;
 }
 
 .service-block-title {
@@ -1709,9 +1721,9 @@ html.theme-zen .hero-pill-tag {
 
 .service-indications-list {
   list-style: none;
-  display: block;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .indication-item {
@@ -1719,9 +1731,8 @@ html.theme-zen .hero-pill-tag {
   align-items: start;
   gap: 10px;
   font-size: 0.98rem;
-  line-height: 1.5;
+  line-height: 1.45;
   color: rgba(244, 245, 244, 0.85);
-  margin-bottom: 16px;
 }
 
 .indication-check {
@@ -1738,13 +1749,12 @@ html.theme-zen .hero-pill-tag {
 }
 
 .contraindications-block {
-  clear: both;
   background: rgba(207, 102, 121, 0.03);
   border: 1px solid rgba(207, 102, 121, 0.15);
   padding: 24px 32px;
   border-radius: 20px;
-  margin-top: 32px;
   margin-bottom: 32px;
+  width: 100%;
 }
 
 .service-block-title-small {
@@ -1763,10 +1773,9 @@ html.theme-zen .hero-pill-tag {
 }
 
 .book-service-btn {
-  align-self: flex-start;
   width: 100%;
-  max-width: 340px;
-  margin-top: 10px;
+  max-width: 300px;
+  text-align: center;
 }
 
 /* ------------------ Related Services (Internal Linking) ------------------ */
@@ -1852,11 +1861,16 @@ html.theme-zen .hero-pill-tag {
 }
 
 @media (max-width: 1024px) {
+  .service-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .service-grid-left {
+    gap: 32px;
+  }
   .service-detail-image-wrapper {
-    float: none;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto 32px;
+    max-width: 480px;
+    margin: 0 auto;
   }
   .related-services-grid {
     grid-template-columns: repeat(2, 1fr);
