@@ -110,7 +110,7 @@ html.theme-light {
   --btn-primary-text: #ffffff;
   --btn-primary-shadow: rgba(115, 94, 61, 0.15);
   --btn-primary-shadow-hover: rgba(115, 94, 61, 0.25);
-  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.1) 15%, rgba(var(--background-rgb), 0.15) 50%, rgba(var(--background-rgb), 0.4) 85%, var(--background) 100%);
+  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.85) 15%, rgba(var(--background-rgb), 0.88) 50%, rgba(var(--background-rgb), 0.92) 85%, var(--background) 100%);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
