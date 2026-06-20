@@ -33,7 +33,7 @@ export const viewport: Viewport = {
   maximumScale: 5,
   themeColor: [
     { media: '(prefers-color-scheme: dark)', color: '#080908' },
-    { media: '(prefers-color-scheme: light)', color: '#080908' },
+    { media: '(prefers-color-scheme: light)', color: '#faf8f5' },
   ],
 };
 
@@ -205,9 +205,14 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                var theme = localStorage.getItem('oleg-theme') || 'obsidian';
+                var savedTheme = localStorage.getItem('theme');
+                var theme = savedTheme;
+                if (!theme || (theme !== 'obsidian' && theme !== 'zen' && theme !== 'light')) {
+                  var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  theme = isDark ? 'obsidian' : 'light';
+                }
                 document.documentElement.classList.add('theme-' + theme);
-                var color = theme === 'obsidian' ? '#080908' : '#060907';
+                var color = theme === 'light' ? '#faf8f5' : (theme === 'zen' ? '#060907' : '#080908');
                 var meta = document.createElement('meta');
                 meta.name = 'theme-color';
                 meta.content = color;

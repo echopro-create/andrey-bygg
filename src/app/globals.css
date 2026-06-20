@@ -21,6 +21,15 @@
   --glass-blur: 24px;
   --glass-border: rgba(var(--primary-rgb), 0.12);
   --glass-shadow: rgba(0, 0, 0, 0.6);
+
+  /* Button Styles */
+  --btn-primary-bg-start: #e5d1b1;
+  --btn-primary-bg-end: #c4a97a;
+  --btn-primary-bg-start-hover: #eedbc1;
+  --btn-primary-bg-end-hover: #d1b686;
+  --btn-primary-text: #080908;
+  --btn-primary-shadow: rgba(196, 169, 122, 0.15);
+  --btn-primary-shadow-hover: rgba(196, 169, 122, 0.35);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
@@ -46,8 +55,53 @@ html.theme-zen {
   /* Glassmorphism */
   --glass-bg: rgba(6, 9, 7, 0.82);
   --glass-blur: 24px;
-  --glass-border: rgba(163, 184, 153, 0.12);
+  --glass-border: rgba(var(--primary-rgb), 0.12);
   --glass-shadow: rgba(0, 0, 0, 0.7);
+
+  /* Button Styles */
+  --btn-primary-bg-start: #b4c9aa;
+  --btn-primary-bg-end: #a3b899;
+  --btn-primary-bg-start-hover: #c3d8b9;
+  --btn-primary-bg-end-hover: #b2c7a8;
+  --btn-primary-text: #060907;
+  --btn-primary-shadow: rgba(163, 184, 153, 0.15);
+  --btn-primary-shadow-hover: rgba(163, 184, 153, 0.35);
+  
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-fast: all 0.2s ease;
+  --transition-luxury: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light Theme: Alabaster Ivory & Deep Bronze */
+html.theme-light {
+  --background: #faf8f5;
+  --background-rgb: 250, 248, 245;
+  --primary: #8f764f;
+  --primary-hover: #735e3d;
+  --primary-rgb: 143, 118, 79;
+  --card-bg: #ffffff;
+  --text-color: #2a2724;
+  --text-muted: #706b64;
+  --olive-plate: #eae6de;
+  --olive-text: #8f764f;
+  --error: #c62828;
+  --success: #2e7d32;
+  --footer-bg: #f0ede6;
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(250, 248, 245, 0.85);
+  --glass-blur: 24px;
+  --glass-border: rgba(var(--primary-rgb), 0.15);
+  --glass-shadow: rgba(143, 118, 79, 0.08);
+
+  /* Button Styles */
+  --btn-primary-bg-start: #8f764f;
+  --btn-primary-bg-end: #735e3d;
+  --btn-primary-bg-start-hover: #9c825a;
+  --btn-primary-bg-end-hover: #826b47;
+  --btn-primary-text: #ffffff;
+  --btn-primary-shadow: rgba(115, 94, 61, 0.15);
+  --btn-primary-shadow-hover: rgba(115, 94, 61, 0.25);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
@@ -189,7 +243,7 @@ textarea:focus-visible,
 .loading-spinner-ring {
   position: absolute;
   inset: 0;
-  border: 2px solid rgba(212, 190, 150, 0.15);
+  border: 2px solid rgba(var(--primary-rgb), 0.15);
   border-radius: 50%;
   border-top-color: var(--primary);
   animation: spin 1s linear infinite;
@@ -197,7 +251,7 @@ textarea:focus-visible,
 
 .loading-spinner-ring-inner {
   inset: 8px;
-  border-top-color: rgba(212, 190, 150, 0.4);
+  border-top-color: rgba(var(--primary-rgb), 0.4);
   animation-direction: reverse;
   animation-duration: 0.6s;
 }
@@ -261,17 +315,17 @@ textarea:focus-visible,
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #e5d1b1 0%, #c4a97a 100%);
-  color: var(--background);
+  background: linear-gradient(135deg, var(--btn-primary-bg-start) 0%, var(--btn-primary-bg-end) 100%);
+  color: var(--btn-primary-text);
   font-weight: 600;
   border: 1px solid rgba(var(--primary-rgb), 0.2);
-  box-shadow: 0 4px 12px rgba(196, 169, 122, 0.15);
+  box-shadow: 0 4px 12px var(--btn-primary-shadow);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #eedbc1 0%, #d1b686 100%);
+  background: linear-gradient(135deg, var(--btn-primary-bg-start-hover) 0%, var(--btn-primary-bg-end-hover) 100%);
   border-color: rgba(var(--primary-rgb), 0.3);
-  box-shadow: 0 10px 25px rgba(196, 169, 122, 0.35);
+  box-shadow: 0 10px 25px var(--btn-primary-shadow-hover);
   transform: translateY(-2px);
 }
 
@@ -801,10 +855,7 @@ select.form-control {
   transition: var(--transition-smooth);
 }
 
-html.theme-zen .hero-pill-tag {
-  background: rgba(163, 184, 153, 0.08);
-  border-color: rgba(163, 184, 153, 0.3);
-}
+/* Redundant theme-zen pill tag styling removed as it uses dynamic --primary-rgb */
 
 .hero-title {
   font-size: 4rem;

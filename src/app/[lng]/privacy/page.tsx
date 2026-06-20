@@ -48,7 +48,7 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
           <p className="section-subtitle" style={{ color: 'var(--primary)', fontStyle: 'italic' }}>{dict.privacy.subtitle}</p>
         </header>
 
-        <div className="privacy-content reveal" style={{ color: 'rgba(244, 245, 244, 0.8)', lineHeight: 1.8, display: 'flex', flexDirection: 'column', gap: '32px' }}>
+        <div className="privacy-content reveal" style={{ opacity: 0.8, lineHeight: 1.8, display: 'flex', flexDirection: 'column', gap: '32px' }}>
           <p>{dict.privacy.intro}</p>
 
           <section>
