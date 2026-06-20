@@ -101,7 +101,7 @@ export default async function Page({ params }: PageProps) {
             <div className="olive-background-plate">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/oleg-about.webp?v=2"
+                src="/images/oleg-portrait-new.webp"
                 alt="Oleg Massage Therapist"
                 className="about-img"
               />
