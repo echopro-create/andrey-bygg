@@ -98,89 +98,79 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
 
         <div className="service-detail-content-wrap reveal">
-          {/* Секция 1: Hero-блок (Картинка + Краткое описание + Эффект) */}
-          <div className="service-hero-section">
-            <div className="service-detail-image-wrapper">
-              <div className="service-detail-glow"></div>
-              <div className="service-detail-img-frame">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`/images/services/${serviceSlug}.webp`}
-                  alt={service.title}
-                  className="service-detail-img"
-                />
-              </div>
-            </div>
-            
-            <div className="service-overview-text">
-              <p className="service-short-desc">{service.desc}</p>
-              
-              {/* Терапевтический эффект */}
-              <div className="service-benefit-card glass-card">
-                <div className="benefit-card-header">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="benefit-icon">
-                    <defs>
-                      <linearGradient id="gold-gradient-icon-service" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#e2d2b5" />
-                        <stop offset="50%" stopColor="#d4be96" />
-                        <stop offset="100%" stopColor="#a38a5e" />
-                      </linearGradient>
-                    </defs>
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                  </svg>
-                  <h3 className="benefit-title">{(dict.services as any).benefitsTitle}</h3>
-                </div>
-                <p className="benefit-text">{service.benefit}</p>
-              </div>
+          {/* Изображение услуги */}
+          <div className="service-detail-image-wrapper">
+            <div className="service-detail-glow"></div>
+            <div className="service-detail-img-frame">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/images/services/${serviceSlug}.webp`}
+                alt={service.title}
+                className="service-detail-img"
+              />
             </div>
           </div>
           
-          {/* Секция 2: Подробные сведения (Показания + Процесс) */}
-          <div className="service-details-section">
-            {/* Показания к процедуре */}
-            {service.indications_list && (
-              <div className="service-content-block">
-                <h3 className="service-block-title">{service.indications_title}</h3>
-                <ul className="service-indications-list">
-                  {service.indications_list.map((ind: string, idx: number) => (
-                    <li key={idx} className="indication-item">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="indication-check">
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                      <span>{ind}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {/* Как проходит процедура */}
-            {service.process_text && (
-              <div className="service-content-block">
-                <h3 className="service-block-title">{service.process_title}</h3>
-                <p className="service-block-text">{service.process_text}</p>
-              </div>
-            )}
+          <p className="service-short-desc">{service.desc}</p>
+          
+          {/* Терапевтический эффект */}
+          <div className="service-benefit-card glass-card">
+            <div className="benefit-card-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="benefit-icon">
+                <defs>
+                  <linearGradient id="gold-gradient-icon-service" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#e2d2b5" />
+                    <stop offset="50%" stopColor="#d4be96" />
+                    <stop offset="100%" stopColor="#a38a5e" />
+                  </linearGradient>
+                </defs>
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+              <h3 className="benefit-title">{(dict.services as any).benefitsTitle}</h3>
+            </div>
+            <p className="benefit-text">{service.benefit}</p>
           </div>
 
-          {/* Секция 3: Подвал страницы (Противопоказания + Кнопка записи) */}
-          <div className="service-footer-section">
-            {/* Противопоказания */}
-            {service.contraindications_text && (
-              <div className="contraindications-block">
-                <h4 className="service-block-title-small">{service.contraindications_title}</h4>
-                <p className="service-block-text-small">{service.contraindications_text}</p>
-              </div>
-            )}
-            
-            <div className="book-btn-wrapper">
-              <Link
-                href={`/${lng}/contacts?service=${serviceSlug}&book=true`}
-                className="btn btn-primary book-service-btn"
-              >
-                {dict.services.bookService}
-              </Link>
+          {/* Показания к процедуре */}
+          {service.indications_list && (
+            <div className="service-content-block">
+              <h3 className="service-block-title">{service.indications_title}</h3>
+              <ul className="service-indications-list">
+                {service.indications_list.map((ind: string, idx: number) => (
+                  <li key={idx} className="indication-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="indication-check">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>{ind}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
+          )}
+
+          {/* Как проходит процедура */}
+          {service.process_text && (
+            <div className="service-content-block">
+              <h3 className="service-block-title">{service.process_title}</h3>
+              <p className="service-block-text">{service.process_text}</p>
+            </div>
+          )}
+
+          {/* Противопоказания */}
+          {service.contraindications_text && (
+            <div className="contraindications-block">
+              <h4 className="service-block-title-small">{service.contraindications_title}</h4>
+              <p className="service-block-text-small">{service.contraindications_text}</p>
+            </div>
+          )}
+          
+          <div className="book-btn-wrapper">
+            <Link
+              href={`/${lng}/contacts?service=${serviceSlug}&book=true`}
+              className="btn btn-primary book-service-btn"
+            >
+              {dict.services.bookService}
+            </Link>
           </div>
         </div>
 
