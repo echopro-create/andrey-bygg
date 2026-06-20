@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getDictionary, Locale } from '../../../i18n';
@@ -108,13 +107,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
               <div className="service-detail-image-wrapper">
                 <div className="service-detail-glow"></div>
                 <div className="service-detail-img-frame">
-                  <Image
+                  <img
                     src={`/images/services/${serviceSlug}.webp`}
                     alt={service.title}
                     className="service-detail-img"
                     width={800}
                     height={1000}
-                    priority={true}
+                    fetchPriority="high"
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
@@ -201,12 +200,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
               return (
                 <Link key={slug} href={`/${lng}/services/${slug}`} className="related-service-card glass-card">
                   <div className="related-service-img-wrapper">
-                    <Image
+                    <img
                       src={`/images/services/${slug}.webp`}
                       alt={relService.title}
                       className="related-service-img"
                       width={400}
                       height={250}
+                      loading="lazy"
                       style={{ objectFit: 'cover' }}
                     />
                   </div>

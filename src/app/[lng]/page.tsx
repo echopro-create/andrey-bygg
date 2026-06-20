@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getDictionary, Locale } from '../i18n';
 
@@ -162,12 +161,13 @@ export default async function Page({ params }: PageProps) {
           <div className="container about-container">
             <div className="about-image-wrapper reveal">
               <div className="olive-background-plate">
-                <Image
+                <img
                   src="/images/oleg-portrait-new.webp"
                   alt={dict.about.certTitle ? `Oleg Massage Therapist — ${dict.about.certTitle}` : 'Oleg Massage Therapist'}
                   className="about-img"
                   width={600}
                   height={800}
+                  fetchPriority="high"
                   style={{ objectFit: 'cover' }}
                 />
                 <div className="certificate-badge">
@@ -225,12 +225,13 @@ export default async function Page({ params }: PageProps) {
                 return (
                   <div key={slug} className="service-card reveal">
                     <div className="service-img-wrapper">
-                      <Image
+                      <img
                         src={`/images/services/${slug}.webp`}
                         alt={service.title}
                         className="service-card-img"
                         width={400}
                         height={250}
+                        loading="lazy"
                         style={{ objectFit: 'cover' }}
                       />
                       <div className="service-price-tag">

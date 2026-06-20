@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import Lightbox from '@/components/Lightbox';
 
@@ -46,13 +45,13 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
                 display: 'block',
               }}
             >
-              <Image
+              <img
                 src={img.src}
                 alt={img.alt}
                 className="gallery-img"
                 width={600}
                 height={500}
-                priority={index < 3}
+                loading={index < 3 ? undefined : "lazy"}
                 style={{ objectFit: 'cover' }}
               />
               <div className="gallery-item-hover">
