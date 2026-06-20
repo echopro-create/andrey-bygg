@@ -656,7 +656,7 @@ select.form-control {
   padding: 100px 0 120px;
   position: relative;
   background-image: 
-    linear-gradient(rgba(8, 9, 8, 0.45), rgba(8, 9, 8, 0.72)), 
+    linear-gradient(to bottom, #080908 0%, rgba(8, 9, 8, 0.4) 15%, rgba(8, 9, 8, 0.55) 50%, rgba(8, 9, 8, 0.85) 85%, #080908 100%), 
     url('/images/hero-bg.webp');
   background-size: cover;
   background-position: center;
@@ -666,7 +666,7 @@ select.form-control {
 
 html.theme-zen .hero-section {
   background-image: 
-    linear-gradient(rgba(6, 9, 7, 0.48), rgba(6, 9, 7, 0.75)), 
+    linear-gradient(to bottom, #060907 0%, rgba(6, 9, 7, 0.4) 15%, rgba(6, 9, 7, 0.55) 50%, rgba(6, 9, 7, 0.85) 85%, #060907 100%), 
     url('/images/hero-bg.webp');
 }
 
