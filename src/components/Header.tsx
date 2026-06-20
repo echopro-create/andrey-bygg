@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname, useRouter, useParams } from 'next/navigation';
 import { useState, useEffect, useRef, useTransition } from 'react';
-import { Theme, getSystemTheme, getNextTheme } from '@/utils/theme';
 
 interface HeaderProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,46 +20,7 @@ export default function Header({ dict }: HeaderProps) {
   const params = useParams();
   const currentLng = (params.lng as string) || 'sv';
 
-  const [theme, setTheme] = useState<Theme>('obsidian');
   const [activeHash, setActiveHash] = useState('');
-
-  // Инициализация темы при первом рендере
-  useEffect(() => {
-    const applyTheme = (t: Theme) => {
-      setTheme(t);
-      document.documentElement.classList.remove('theme-obsidian', 'theme-zen', 'theme-light');
-      document.documentElement.classList.add(`theme-${t}`);
-    };
-
-    const savedTheme = localStorage.getItem('theme') as Theme | null;
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-    if (savedTheme && ['obsidian', 'zen'].includes(savedTheme)) {
-      setTimeout(() => applyTheme(savedTheme), 0);
-    } else {
-      const systemTheme = getSystemTheme(mediaQuery.matches);
-      setTimeout(() => applyTheme(systemTheme), 0);
-    }
-
-    const handleSystemThemeChange = (e: MediaQueryListEvent) => {
-      if (!localStorage.getItem('theme')) {
-        applyTheme(getSystemTheme(e.matches));
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleSystemThemeChange);
-    return () => {
-      mediaQuery.removeEventListener('change', handleSystemThemeChange);
-    };
-  }, []);
-
-  const toggleTheme = () => {
-    const nextTheme = getNextTheme(theme);
-    setTheme(nextTheme);
-    localStorage.setItem('theme', nextTheme);
-    document.documentElement.classList.remove('theme-obsidian', 'theme-zen', 'theme-light');
-    document.documentElement.classList.add(`theme-${nextTheme}`);
-  };
 
   // IntersectionObserver для скролла к секциям
   useEffect(() => {
@@ -186,34 +146,6 @@ export default function Header({ dict }: HeaderProps) {
         </nav>
 
         <div className="header-actions">
-          <button
-            onClick={toggleTheme}
-            className="theme-toggle-btn"
-            aria-label={theme === 'obsidian' ? 'Switch to Emerald Zen theme' : 'Switch to Obsidian theme'}
-            style={{
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              color: 'var(--primary)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: '8px',
-              marginRight: '8px',
-              borderRadius: '50%',
-              transition: 'var(--transition-fast)',
-            }}
-          >
-            {theme === 'obsidian' ? (
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            ) : (
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
-            )}
-          </button>
 
           <div className="custom-lang-selector" ref={dropdownRef}>
             <button

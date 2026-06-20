@@ -202,16 +202,10 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                var savedTheme = localStorage.getItem('theme');
-                var theme = savedTheme;
-                if (!theme || (theme !== 'obsidian' && theme !== 'zen')) {
-                  theme = 'obsidian';
-                }
-                document.documentElement.classList.add('theme-' + theme);
-                var color = theme === 'zen' ? '#060907' : '#080908';
+                document.documentElement.classList.add('theme-obsidian');
                 var meta = document.createElement('meta');
                 meta.name = 'theme-color';
-                meta.content = color;
+                meta.content = '#080908';
                 document.head.appendChild(meta);
               })();
             `,
