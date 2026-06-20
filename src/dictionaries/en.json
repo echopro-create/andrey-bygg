@@ -54,10 +54,10 @@
     "items": {
       "classic": {
         "title": "Classic Massage",
-        "desc": "A traditional Swedish massage designed for deep muscle tension relief, improving microcirculation, accelerating lymph flow, and restoring the natural energy balance of the entire body.",
+        "desc": "A traditional Swedish massage designed for deep relaxation, muscle spasm relief, and comprehensive energy recovery.",
         "price": "850 SEK",
         "duration": "60 min / 90 min",
-        "benefit": "Effectively eliminates muscle spasms and stiffness, restores muscle fiber elasticity, normalizes sleep, reduces stress levels, and brings a profound sense of inner emotional harmony.",
+        "benefit": "Effectively releases muscle tension, restores fiber elasticity, normalizes sleep, and reduces daily stress levels.",
         "seo_title": "Classic Swedish Massage Stockholm | Oleg Massage",
         "seo_desc": "Traditional Swedish massage for deep relaxation and blood circulation improvement. Professional massage therapist Oleg in Stockholm.",
         "indications_title": "Indications for Treatment",
@@ -68,16 +68,16 @@
           "Sedentary lifestyle"
         ],
         "process_title": "What to Expect during the Session",
-        "process_text": "The classic massage session begins with gentle, preparatory strokes using warm premium organic oil. This carefully prepares the skin and sets the nervous system for deep relaxation. The therapist then transitions to more active techniques: deep friction, kneading, and gentle wringing. Special attention is given to areas with high muscle tension — the neck and shoulder girdle, the entire length of the spine, and the lower back. Through targeted pressure and smooth stretching motions, deep muscle knots are released, blood circulation is enhanced, and joint mobility is restored. The session concludes with soothing vibrational strokes to normalize heart rate, stabilize breathing, and leave you in a state of absolute peace and complete recovery.",
+        "process_text": "The session begins with a gentle muscle warm-up using heated organic oil. The therapist uses rubbing and kneading techniques to deeply work the neck area, back, and lower back. Trigger point therapy helps release persistent knots and restore joint flexibility. The session ends with relaxing strokes to stabilize the nervous system and induce deep relaxation.",
         "contraindications_title": "Contraindications",
         "contraindications_text": "Acute inflammatory processes, fever, infectious skin conditions, severe varicose veins."
       },
       "anti-cellulite": {
         "title": "Anti-Cellulite Massage",
-        "desc": "An intensive sculpting treatment aimed at actively combating local fat deposits, eliminating fluid retention, and restoring the natural elasticity and firmness of the skin.",
+        "desc": "An intensive sculpting technique aimed at combating local fat deposits and improving skin elasticity.",
         "price": "950 SEK",
         "duration": "60 min",
-        "benefit": "Activates microcirculation in tissues, promotes rapid drainage of excess fluid, reduces swelling, tightens the skin, and visibly sculpts body contours.",
+        "benefit": "Activates microcirculation in tissues, reduces swelling, promotes lymphatic drainage, and sculpts harmonious body contours.",
         "seo_title": "Anti-Cellulite Massage Stockholm | Body Sculpting & Firming",
         "seo_desc": "Professional anti-cellulite massage in Stockholm. Improve skin elasticity, boost lymphatic flow, and sculpt body contours.",
         "indications_title": "Indications for Treatment",
@@ -88,16 +88,16 @@
           "Fluid retention in tissues"
         ],
         "process_title": "What to Expect during the Session",
-        "process_text": "The anti-cellulite massage session begins with the application of a special natural warming oil containing active botanical extracts to accelerate lipolysis. The therapist employs intensive and energetic techniques: deep kneading, friction, rolling, and light tapping. These movements are designed to target the subcutaneous fat layer, break down fibrous tissue, and stimulate collagen production. Special attention is focused on problem areas — the thighs, buttocks, and abdomen. The intensive work alternates with lymphatic drainage strokes, accelerating the removal of broken-down fat cells and accumulated toxins. The treatment finishes with calming drainage strokes to normalize vascular tone, relieve stress on the skin, and speed up tissue regeneration.",
+        "process_text": "The treatment is performed using a special warming oil to accelerate lipolysis. The therapist applies energetic kneading, rolling, and tapping techniques, focusing on the thighs, buttocks, and abdomen. This stimulates lymph flow and aids in toxin elimination. The session concludes with gentle drainage strokes to soothe the blood vessels.",
         "contraindications_title": "Contraindications",
         "contraindications_text": "Pregnancy, fragile capillaries, severe varicose veins, skin inflammation in the treated areas."
       },
       "sports": {
         "title": "Sports Massage",
-        "desc": "An intensive deep-tissue massage developed specifically to prepare muscles for athletic activities, accelerate post-workout recovery, and prevent sports injuries.",
+        "desc": "An intensive deep-tissue massage designed to prepare muscles for training, accelerate recovery, and prevent injuries.",
         "price": "950 SEK",
         "duration": "60 min / 90 min",
-        "benefit": "Effectively relieves muscle hypertonus and fatigue, eliminates trigger points, accelerates lactic acid clearance, and significantly increases overall range of motion.",
+        "benefit": "Effectively relieves muscle hypertonus, eliminates trigger points, speeds up lactic acid clearance, and increases flexibility.",
         "seo_title": "Sports Massage Stockholm | Post-Workout Recovery",
         "seo_desc": "Deep sports massage for athletes and active individuals. Relieve muscle tension, prepare for exercise, and recover faster in Stockholm.",
         "indications_title": "Indications for Treatment",
@@ -108,16 +108,16 @@
           "Prevention of injuries and strains"
         ],
         "process_title": "What to Expect during the Session",
-        "process_text": "The sports massage begins with vigorous friction and warming of major muscle groups using therapeutic sports recovery balms. The therapist performs deep-tissue manipulation, applying firm pressure, compression, and cross-fiber friction. Using trigger point therapy, the session targets deep spasms and fascial adhesions caused by heavy athletic stress. Elements of passive stretching for joints and ligaments are integrated to restore muscle flexibility and increase range of motion. The treatment concludes with light lymphatic drainage strokes, which accelerate the clearance of metabolic waste products, reduce post-workout soreness, and promote rapid muscle recovery.",
+        "process_text": "The session starts with vigorous muscle warming using therapeutic sports balms. The therapist performs deep-tissue work using firm pressure and friction. Elements of passive joint stretching are integrated to restore ligament elasticity. The treatment concludes with light lymphatic drainage to reduce soreness and restore energy.",
         "contraindications_title": "Contraindications",
         "contraindications_text": "Fresh muscle or ligament injuries, fractures, acute joint inflammation, skin cuts or open wounds."
       },
       "lymphatic-drainage": {
         "title": "Lymphatic Drainage",
-        "desc": "A gentle and soothing manual technique designed to stimulate the lymphatic system, cleanse the body of toxins, and eliminate excess fluid retention.",
+        "desc": "A gentle manual technique aimed at stimulating lymphatic circulation, detoxifying the body, and reducing fluid retention.",
         "price": "900 SEK",
         "duration": "75 min",
-        "benefit": "Effectively reduces swelling in the face and limbs, strengthens the immune system, accelerates natural detox processes, and restores a feeling of lightness to the body.",
+        "benefit": "Effectively reduces swelling in the face and limbs, strengthens the immune system, and restores body lightness.",
         "seo_title": "Lymphatic Drainage Massage Stockholm | Detox & De-puff",
         "seo_desc": "Gentle lymphatic drainage massage to eliminate toxins, boost immunity, and reduce swelling. Professional therapy in Stockholm.",
         "indications_title": "Indications for Treatment",
@@ -128,16 +128,16 @@
           "Weight loss or detox programs"
         ],
         "process_title": "What to Expect during the Session",
-        "process_text": "The lymphatic drainage treatment is performed using extremely soft, slow, rhythmic, and wave-like pumping and sweeping strokes along the natural pathways of the lymphatic system. The therapist begins by gently opening and stimulating key lymph nodes (clavicular, axillary, and inguinal). Next, fluid is gently guided from the limbs towards these central drainage nodes. The process is completely painless, causes no skin redness, and has a deeply relaxing effect on the nervous system. It effectively stimulates the removal of excess interstitial fluid, resolves congestion, relieves heavy legs, and improves overall wellness.",
+        "process_text": "The treatment is performed using extremely soft, slow, and rhythmic strokes along the natural pathways of the lymphatic system. The therapist begins by gently opening key lymph nodes and then guides the fluid toward these nodes with wave-like motions. The process is completely painless, deeply relaxing, and promotes fast detox.",
         "contraindications_title": "Contraindications",
         "contraindications_text": "Oncological diseases, thrombophlebitis, thyroid disorders, acute infections."
       },
       "cupping": {
         "title": "Cupping Massage",
-        "desc": "A unique therapeutic method combining classic manual massage and local vacuum suction for deep-tissue relief of chronically tense and tight muscles.",
+        "desc": "A therapeutic technique combining classic massage and vacuum cupping for deep-muscle tension release.",
         "price": "800 SEK",
         "duration": "60 min",
-        "benefit": "Effectively relieves chronic back and neck pain, releases dense fascial structures, improves tissue oxygenation, and eliminates deep muscular congestion.",
+        "benefit": "Relieves chronic back and neck pain, releases fascia, improves blood circulation, and resolves muscular stiffness.",
         "seo_title": "Vacuum Cupping Massage Stockholm | Oleg Massage",
         "seo_desc": "Deep vacuum cupping massage to boost microcirculation, relieve chronic back pain, and release muscle spasms in Stockholm.",
         "indications_title": "Indications for Treatment",
@@ -148,16 +148,16 @@
           "Weakened immune system"
         ],
         "process_title": "What to Expect during the Session",
-        "process_text": "The session begins with the application of a generous layer of warm organic oil to ensure smooth gliding. The therapist manually warms up the muscles of the back and neck. Next, specialized silicone or vacuum cups are placed on the skin. By smoothly moving them along the key muscle lines and spine, the therapist creates a controlled vacuum. This negative pressure acts deeply on the tissues, stretches tight fascia, and brings a powerful rush of fresh, oxygenated blood to tight muscles. The treatment aids in releasing cellular waste and melting stiffness. Temporary redness or marks may appear, which is normal and indicates the start of cellular regeneration.",
+        "process_text": "Warm natural oil is applied to the skin for smooth gliding of the cups. The therapist warms the muscles manually, then places vacuum cups and slides them along the muscle lines of the back. The created vacuum targets deep tissues, providing a powerful rush of oxygenated blood to tight areas.",
         "contraindications_title": "Contraindications",
         "contraindications_text": "Blood diseases, fragile blood vessels, moles or birthmarks in the treatment zone, acute inflammation."
       },
       "hot-stone": {
         "title": "Hot Stone Massage",
-        "desc": "An exclusive spa thermotherapy treatment based on the application of heated volcanic basalt stones to provide deep warming and relaxation to the body.",
+        "desc": "An exclusive spa treatment using heated volcanic basalt stones to provide deep warming and relaxation.",
         "price": "1100 SEK",
         "duration": "90 min",
-        "benefit": "Completely relieves physical and mental tension, warms deep muscle layers, improves sleep quality, and balances the autonomic nervous system.",
+        "benefit": "Completely relieves mental tension, warms deep muscle layers, improves sleep, and balances the nervous system.",
         "seo_title": "Hot Stone Massage Stockholm | Premium Stone Therapy",
         "seo_desc": "Luxurious hot basalt stone massage for deep muscle heating, stress relief, and energy restoration in Stockholm.",
         "indications_title": "Indications for Treatment",
@@ -168,16 +168,16 @@
           "Sleep issues"
         ],
         "process_title": "What to Expect during the Session",
-        "process_text": "The session begins with a gentle manual back massage using aromatic oil to prepare the tissues for the heat. Smooth volcanic basalt stones, heated to a comfortable temperature, are then placed along key energy points along the spine and on the palms. The stones release deep, soothing heat that penetrates into the muscles, melting away chronic spasms and calming the nervous system. The therapist then performs massage movements using both the warm stones and hands, targeting the back, shoulders, and limbs with smooth gliding strokes. This thermal therapy improves circulation, aids in toxin elimination, relieves accumulated stress, and restores a sense of complete serenity.",
+        "process_text": "The session begins with a manual massage using aromatic oil. Heated basalt stones are then placed on key energy points of the back to release deep warmth. The therapist then massaged with warm stones and hands. This thermal therapy melts spasms, relieves fatigue, and induces total serenity.",
         "contraindications_title": "Contraindications",
         "contraindications_text": "Heat sensitivity, high blood pressure, diabetes, skin rashes."
       },
       "turkish-foam": {
         "title": "Turkish Foam Massage",
-        "desc": "An authentic oriental spa ritual in the hammam, combining deep skin exfoliation with a silk Kese glove and a relaxing massage in a cloud of organic soap foam.",
+        "desc": "A spa ritual in the hammam, combining a silk Kese glove exfoliation and a massage in a cloud of organic soap foam.",
         "price": "1200 SEK",
         "duration": "90 min",
-        "benefit": "Gently removes dead skin cells, opens pores, improves skin oxygenation, eliminates toxins, and gives a sensation of absolute cleanliness and lightness.",
+        "benefit": "Gently removes dead skin cells, cleanses pores, eliminates toxins, and gives a sensation of absolute cleanliness.",
         "seo_title": "Turkish Foam Massage Stockholm | Luxurious Spa Ritual",
         "seo_desc": "Indulgent foam massage on a heated stone bed. Gentle scrub with Kese glove and relaxing massage with organic olive oil soap foam.",
         "indications_title": "Indications for Treatment",
@@ -188,16 +188,16 @@
           "Premium spa relaxation"
         ],
         "process_title": "What to Expect during the Session",
-        "process_text": "The ritual takes place in a warm room on a special heated stone table. First, the therapist performs a full-body scrub using a traditional silk Kese glove to gently exfoliate dead skin cells and open the pores. Then, a dense, warm cloud of soap foam made from organic olive soap is created and covers the entire body. The therapist performs a relaxing massage over this airy foam, gently working on the joints, ligaments, and muscles. The warm foam deeply cleanses, nourishes, and hydrates the skin. The treatment concludes with a warm rinse, leaving the skin incredibly smooth, firm, and glowing, and your mind completely at peace.",
+        "process_text": "Performed in a hammam on a heated table. First, the therapist scrubs the body with a Kese glove to remove dead skin cells. The body is then enveloped in a dense cloud of olive soap foam and relaxed with massage movements. The ritual ends with a warm rinse, leaving the skin glowing and smooth.",
         "contraindications_title": "Contraindications",
         "contraindications_text": "Allergy to soap ingredients, open skin wounds, cardiovascular diseases."
       },
       "natural-massage": {
         "title": "Eco-Organic Massage",
-        "desc": "A delicate rejuvenating treatment for the face and body using 100% organic, cold-pressed botanical oils and natural aromatherapy.",
+        "desc": "A delicate rejuvenating treatment for the face and body using 100% organic cold-pressed botanical oils.",
         "price": "900 SEK",
         "duration": "60 min / 90 min",
-        "benefit": "Effectively relieves facial muscle tension, improves skin elasticity, eliminates puffiness, and deeply nourishes tissues with essential nutrients.",
+        "benefit": "Relieves facial muscle tension, improves skin tone, reduces puffiness, and deeply nourishes the skin.",
         "seo_title": "Eco-Organic Massage Stockholm | Oleg Massage",
         "seo_desc": "Gentle restorative eco-massage using 100% natural, cold-pressed organic oils and aromatherapy in Stockholm.",
         "indications_title": "Indications for Treatment",
@@ -208,7 +208,7 @@
           "Preference for organic care"
         ],
         "process_title": "What to Expect during the Session",
-        "process_text": "The session begins with choosing an essential oil that aligns with your emotional state. Only pure, cold-pressed plant-based oils without synthetic fragrances are used. The therapist performs a gentle massage of the face, neck, décolleté, and scalp, incorporating lymphatic drainage, sculpting, and anti-stress techniques. Every movement is tailored to relax facial muscles, stimulate lymph flow, and improve skin tone. The massage helps smooth fine lines, lift facial contours, and deeply nourish the skin. The scents of natural essential oils calm the nervous system, melt away stress, and restore inner emotional balance.",
+        "process_text": "The session combines gentle facial, neck, and décolleté massage techniques with aromatherapy. The therapist uses natural, cold-pressed oils without synthetic additives, enhancing microcirculation and sculpting facial contours. The treatment calms the mind and restores natural radiance.",
         "contraindications_title": "Contraindications",
         "contraindications_text": "Allergies to essential oils, active allergic skin reactions, pregnancy."
       }

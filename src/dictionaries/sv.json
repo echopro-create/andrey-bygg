@@ -54,10 +54,10 @@
     "items": {
       "classic": {
         "title": "Klassisk massage",
-        "desc": "En traditionell svensk massage utformad för djup muskelavspänning, förbättrad mikrocirkulation, snabbare lymfflöde och återställande av kroppens naturliga energibalans.",
+        "desc": "En traditionell svensk massage för djup avslappning, lindring av muskelspasmer och fullständig återhämtning av krafter.",
         "price": "850 SEK",
         "duration": "60 min / 90 min",
-        "benefit": "Lindrar effektivt muskelspasmer och spänningar, återställer muskelfibrernas elasticitet, normaliserar sömnen, minskar stressnivåerna och ger en djup känsla av känslomässig harmoni.",
+        "benefit": "Lindrar effektivt muskelspänningar, återställer fibrernas elasticitet, normaliserar sömnen och minskar stressnivåerna.",
         "seo_title": "Klassisk svensk massage i Stockholm | Oleg Massage",
         "seo_desc": "Traditionell svensk massage för djup avslappning och förbättrad blodcirkulation. Professionell massör Oleg i Stockholm.",
         "indications_title": "Indikationer för behandling",
@@ -68,16 +68,16 @@
           "Stillasittande livsstil"
         ],
         "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Den klassiska massagesessionen inleds med mjuka, förberedande strykningar med varm, ekologisk premiumolja. Detta värmer varsamt upp huden och ställer in nervsystemet på djup avslappning. Terapeuten övergår sedan till mer aktiva tekniker: djup friktion, knådning och pressning. Särskild uppmärksamhet ägnas åt områden med hög muskeltonus — nacke, axlar, hela ryggraden och ländryggen. Genom riktat tryck och mjuka töjningar löses djupa muskelknutor upp, blodcirkulationen förbättras och rörligheten i lederna återställs. Behandlingen avslutas med lugnande, vibrerande strykningar för att normalisera pulsen, stabilisera andningen och lämna dig i ett tillstånd av absolut lugn och fullständig återhämtning.",
+        "process_text": "Sessionen inleds med en mild uppvärmning av musklerna med varm ekologisk olja. Terapeuten använder strykningar och knådningar för att arbeta igenom nacke, rygg och ländrygg på djupet. Riktad triggerpunktsbehandling hjälper till att släppa envisa spänningar. Behandlingen avslutas med lugnande grepp som balanserar nervsystemet och ger djup avslappning.",
         "contraindications_title": "Kontraindikationer",
         "contraindications_text": "Akuta inflammationer, feber, infektiösa hudtillstånd, svåra åderbråck."
       },
       "anti-cellulite": {
         "title": "Anticellulitmassage",
-        "desc": "En intensiv skulpterande behandling som syftar till att aktivt bekämpa lokala fettdepåer, eliminera vätskeansamlingar och återställa hudens naturliga elasticitet och fasthet.",
+        "desc": "En intensiv skulpterande teknik som syftar till att bekämpa lokala fettdepåer och förbättra hudens elasticitet.",
         "price": "950 SEK",
         "duration": "60 min",
-        "benefit": "Aktiverar mikrocirkulationen i vävnaderna, främjar snabb dränering av överskottsvätska, minskar svullnad, stramar upp huden och skulpterar synbart kroppens konturer.",
+        "benefit": "Aktiverar mikrokirkulationen i vävnaderna, minskar svullnad, främjar lymfdränage och skulpterar harmoniska kroppskonturer.",
         "seo_title": "Anticellulitmassage Stockholm | Effektiv kroppsskulptering",
         "seo_desc": "Professionell anticellulitmassage i Stockholm. Förbättra hudens elasticitet, öka lymfflödet och skulptera kroppens konturer.",
         "indications_title": "Indikationer för behandling",
@@ -88,16 +88,16 @@
           "Vätskeansamlingar i vävnader"
         ],
         "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Den anticellulitiska massagesessionen inleds med applicering av en speciell värmande olja med aktiva växtextrakt för att påskynda lipolys. Terapeuten använder intensiva och energiska tekniker: djup knådning, friktion, rullning och lätta klappningar. Dessa rörelser är utformade för att arbeta med den subkutana fettvävnaden på djupet, bryta ner fibrösa strukturer och stimulera kollagenproduktionen. Särskilt fokus läggs på problemområden — lår, stuss och mage. Den intensiva bearbetningen varvas med lymfdränagegrepp, vilket påskyndar utrensningen av slaggprodukter och frigjorda fetter. Behandlingen avslutas med lugnande dränerande strykningar för att normalisera blodkärlens tonus, dämpa hudens spänning och påskynda vävnadsåterhämtningen.",
+        "process_text": "Behandlingen utförs med en speciell värmande olja för att påskynda lipolys. Terapeuten använder energiska grepp som knådning, rullning och klappning på lår, stuss och mage. Detta stimulerar lymfflödet och rensar ut slaggprodukter. Sessionen avslutas med mjuka dränerande strykningar som lugnar blodkärlen.",
         "contraindications_title": "Kontraindikationer",
         "contraindications_text": "Graviditet, sköra kapillärer, uttalade åderbråck, hudinflammationer i behandlade områden."
       },
       "sports": {
         "title": "Sportmassage",
-        "desc": "En intensiv djupgående massage utvecklad speciellt för att förbereda musklerna för träning, påskynda återhämtningen efter belastning och förebygga idrottsskador.",
+        "desc": "En intensiv djupgående massage utformad för att förbereda muskler inför träning, påskynda återhämtning och förebygga skador.",
         "price": "950 SEK",
         "duration": "60 min / 90 min",
-        "benefit": "Lindrar effektivt muskelhypertonus och trötthet, eliminerar triggerpunkter, påskyndar utrensningen av mjölksyra och ökar den allmänna rörligheten avsevärt.",
+        "benefit": "Lindrar effektivt muskelhypertonus, eliminerar triggerpunkter, påskyndar utrensningen av mjölksyra och ökar flexibiliteten.",
         "seo_title": "Idrottsmassage Stockholm | Återhämtning efter träning",
         "seo_desc": "Djupgående idrottsmassage för idrottare och aktiva. Minska muskelspänningar, förebygg skador och påskynda återhämtning i Stockholm.",
         "indications_title": "Indikationer för behandling",
@@ -108,16 +108,16 @@
           "Förebyggande av skador och sträckningar"
         ],
         "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Idrottsmassagen inleds med kraftfull uppvärmning och friktion av stora muskelgrupper med hjälp av återhämtande sportliniment. Terapeuten utför en djupgående och intensiv bearbetning av muskelfibrerna genom att använda starkt tryck, kompression och tvärgående knådningar. Genom triggerpunktsbehandling löser sessionen upp djupa kramper och bindvävsrestriktioner orsakade av hög fysisk belastning. Element av passiv stretching för leder och ligament integreras under sessionen för att återställa musklernas elasticitet och öka rörelseomfånget. Behandlingen avslutas med lätta lymfdränagegrepp som påskyndar utrensningen av slaggprodukter, dämpar träningsvärk och främjar snabb muskelåterhämtning.",
+        "process_text": "Sessionen inleds med kraftfull uppvärmning av musklerna med sportbalsam. Terapeuten utför djupgående massage med starkt tryck och friktion. Element av passiv stretching integreras för att återställa ligamentens elasticitet. Behandlingen avslutas med lätt lymfdränage för att dämpa ömhet och återställa energin.",
         "contraindications_title": "Kontraindikationer",
         "contraindications_text": "Färska muskel- eller ligamentskador, frakturer, akuta ledinflammationer, hudsår."
       },
       "lymphatic-drainage": {
         "title": "Lymfmassage",
-        "desc": "En mild och skonsam manuell teknik som syftar till att stimulera lymfsystemets funktion, rena kroppen från toxiner och eliminera överflödig vätskeansamling.",
+        "desc": "En mild manuell teknik som syftar till att stimulera lymfflödet, rena kroppen från toxiner och reducera svullnad.",
         "price": "900 SEK",
         "duration": "75 min",
-        "benefit": "Minskar effektivt svullnad i ansikte och lemmar, stärker immunförsvaret, påskyndar kroppens naturliga detoxprocesser och ger en känsla av lätthet i kroppen.",
+        "benefit": "Minskar effektivt svullnad i ansikte och lemmar, stärker immunförsvaret och ger en känsla av lätthet i hela kroppen.",
         "seo_title": "Lymfmassage Stockholm | Detox & Minska svullnad",
         "seo_desc": "Mjuk lymfmassage för att rensa ut toxiner, stärka immunförsvaret och minska svullnad. Professionell lymfterapi i Stockholm.",
         "indications_title": "Indikationer för behandling",
@@ -128,16 +128,16 @@
           "Viktminskning eller detoxprogram"
         ],
         "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Lymfdränagebehandlingen utförs med extremt mjuka, långsamma och rytmiska pumpande och svepande strykningar längs lymfsystemets naturliga banor. Terapeuten inleder med att försiktigt öppna och stimulera viktiga lymfkörtlar (vid nyckelbenen, i armhålorna och ljumskarna). Därefter leds vätskan varsamt från armar och ben mot dessa centrala reningscenter. Processen är helt smärtfri, orsakar ingen rodnad och har en djupt avslappnande effekt på nervsystemet. Den stimulerar effektivt bortförseln av överskottsvätska, motverkar blockeringar, lindrar tunga ben och förbättrar det allmänna välbefinnandet.",
+        "process_text": "Behandlingen utförs med mycket mjuka, långsamma och rytmiska strykningar längs lymfsystemets banor. Terapeuten börjar med att försiktigt öppna viktiga lymfkörtlar och leder sedan vätskan mot dessa center med vågliknande rörelser. Processen är helt smärtfri, djupt avslappnande och främjar snabb utrensning.",
         "contraindications_title": "Kontraindikationer",
         "contraindications_text": "Onkologiska sjukdomar, tromboflebit, sköldkörtelrubbningar, akuta infektioner."
       },
       "cupping": {
         "title": "Koppningsmassage",
-        "desc": "En unik terapeutisk metod som kombinerar klassisk manuell massage och lokalt vakuumsug för djupgående lindring av kroniskt strama och stela muskler.",
+        "desc": "En terapeutisk teknik som kombinerar klassisk massage och vakuumsug med koppar för djupgående muskelavspänning.",
         "price": "800 SEK",
         "duration": "60 min",
-        "benefit": "Lindrar effektivt kronisk rygg- och nacksmärta, frigör strama bindvävsstrukturer, förbättrar syresättningen i vävnaderna och eliminerar djupa muskelblockeringar.",
+        "benefit": "Lindrar kronisk rygg- och nacksmärta, frigör bindväv, förbättrar blodcirkulationen och löser upp blockeringar.",
         "seo_title": "Koppningsmassage Stockholm | Djupgående vakuumbehandling",
         "seo_desc": "Effektiv koppningsmassage (vakuumbehandling) för att öka cirkulationen, lindra ryggsmärta och lösa upp triggerpunkter i Stockholm.",
         "indications_title": "Indikationer för behandling",
@@ -148,16 +148,16 @@
           "Försvagat immunförsvar"
         ],
         "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Sessionen inleds med applicering av ett generöst lager varm ekologisk olja för att säkerställa att kopparna glider smidigt. Terapeuten värmer först upp rygg- och nackmusklerna manuellt. Därefter placeras speciella silikon- eller vakuumkoppar på huden. Genom att flytta kopparna längs ryggens muskelbanor och ryggraden skapar terapeuten ett kontrollerat undertryck. Vakuumet går djupt ner i vävnaderna, stretchar bindväven och ger ett kraftigt tillflöde av syresatt blod till spända muskler. Behandlingen hjälper till att rensa ut slaggprodukter och lösa upp stelhet. Tillfällig rodnad kan uppstå på huden, vilket är en normal reaktion som visar att kroppens egna läkningsprocesser har aktiverats.",
+        "process_text": "Varm naturlig olja appliceras på huden för att kopparna ska glida smidigt. Terapeuten värmer först upp musklerna manuellt, placerar sedan vakuumkoppar och drar dem längs ryggens muskelbanor. Vakuumet går djupt ner i vävnaderna och ökar blodflödet till stela zoner.",
         "contraindications_title": "Kontraindikationer",
         "contraindications_text": "Blodsjukdomar, sköra blodkärl, leverfläckar i behandlingsområdet, akuta inflammationer."
       },
       "hot-stone": {
         "title": "Massage med heta stenar",
-        "desc": "En exklusiv spa-termoterapi baserad på användning av uppvärmda vulkaniska basaltstenar för att ge djup uppvärmning och avslappning till kroppen.",
+        "desc": "En exklusiv spabehandling med varma vulkaniska basaltstenar för att ge djup uppvärmning och avslappning.",
         "price": "1100 SEK",
         "duration": "90 min",
-        "benefit": "Lindrar helt fysisk och mental spänning, värmer djupa muskellager, förbättrar sömnkvaliteten och balanserar det autonoma nervsystemet.",
+        "benefit": "Lindrar helt mental spänning, värmer djupa muskellager, förbättrar sömnen och balanserar nervsystemet.",
         "seo_title": "Hot Stone Massage Stockholm | Lyxig stenmassage",
         "seo_desc": "Lyxig massage med varma lavastenar för djup muskeluppvärmning, stresslindring och energibalansering i Stockholm.",
         "indications_title": "Indikationer för behandling",
@@ -168,16 +168,16 @@
           "Sömnproblem"
         ],
         "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Sessionen inleds med en mild manuell ryggmassage med aromatiska oljor för att förbereda vävnaderna för värmen. Släta, varma basaltstenar placeras sedan på viktiga energipunkter längs ryggraden och i handflatorna. Stenarna avger en djup, lugnande värme som tränger ner i musklerna, löser upp kroniska spänningar och lugnar nervsystemet. Terapeuten masserar sedan med de varma stenarna och sina händer över rygg, axlar och ben med mjuka, glidande rörelser. Denna värmeterapi förbättrar cirkulationen, underlättar utrensningen av slaggprodukter, lindrar ackumulerad stress och återställer en känsla av fullständigt välbefinnande.",
+        "process_text": "Sessionen inleds med manuell massage med aromatisk olja. Därefter placeras varma basaltstenar på ryggens energipunkter för att avge djup värme. Terapeuten masserar sedan med varma stenar och händer. Värmeterapin löser upp muskelknutor, dämpar stress och ger ett djupt lugn.",
         "contraindications_title": "Kontraindikationer",
         "contraindications_text": "Värmekänslighet, högt blodtryck, diabetes, hudutslag."
       },
       "turkish-foam": {
         "title": "Turkisk skummassage",
-        "desc": "En autentisk orientalisk spa-ritual i hamam, som kombinerar djup hudexfoliering med en Kese-silkesvante och en avslappnande massage i ett moln av ekologiskt tvålskum.",
+        "desc": "En spa-ritual i hamam, som kombinerar exfoliering med en Kese-silkesvante och massage i ett moln av ekologiskt tvålskum.",
         "price": "1200 SEK",
         "duration": "90 min",
-        "benefit": "Avlägsnar skonsamt döda hudceller, öppnar porerna, förbättrar hudens syresättning, rensar ut toxiner och ger en känsla av absolut renhet och lätthet.",
+        "benefit": "Avlägsnar skonsamt döda hudceller, rengör porerna, rensar ut toxiner och ger en känsla av absolut renhet.",
         "seo_title": "Turkisk Skummassage Stockholm | Lyxigt spa-ritual",
         "seo_desc": "Traditionell skummassage på varm stenbänk. Mild peeling med Kese-vante och avslappnande massage med fluffigt skum av olivoljetvål.",
         "indications_title": "Indikationer för behandling",
@@ -188,16 +188,16 @@
           "Avslappnande spa-upplevelse"
         ],
         "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Ritualen utförs i ett varmt rum på en speciell uppvärmd stenbänk. Först skrubbas hela kroppen med en traditionell Kese-vante av silke för att skonsamt avlägsna döda hudceller och öppna porerna. Därefter täcks kroppen av ett tätt, varmt moln av tvålskum gjort på ekologisk olivtvål. Terapeuten utför en avslappnande massage över detta luftiga skum, vilket mjukar upp muskler och leder. Det varma skummet rengör, ger näring och återfuktar huden på djupet. Sessionen avslutas med en varm avsköljning, vilket lämnar huden otroligt len, fast och full av lyster, och ditt sinne i ett tillstånd av total frid.",
+        "process_text": "Utförs i ett hamam på en uppvärmd bänk. Först skrubbas kroppen med en Kese-vante för att ta bort döda hudceller. Därefter täcks kroppen av ett fluffigt olivtvålskum och masseras med lugnande grepp. Ritualen avslutas med varm avsköljning som gör huden silkeslen och hydrerad.",
         "contraindications_title": "Kontraindikationer",
         "contraindications_text": "Allergi mot tvålingredienser, öppna hudsår, hjärt-kärlsjukdomar."
       },
       "natural-massage": {
         "title": "Ekologisk massage",
-        "desc": "En mild, föryngrande behandling för ansikte och kropp som använder 100% ekologiska, kallpressade växtoljor och naturlig aromaterapi.",
+        "desc": "En mild, föryngrande behandling för ansikte och kropp med 100% ekologiska kallpressade växtoljor.",
         "price": "900 SEK",
         "duration": "60 min / 90 min",
-        "benefit": "Lindrar effektivt spänningar i ansiktsmusklerna, förbättrar hudens spänst, dämpar svullnad och ger näring på djupet med viktiga näringsämnen.",
+        "benefit": "Lindrar spänningar i ansiktsmusklerna, förbättrar hudtonen, dämpar svullnad och ger djup näring till huden.",
         "seo_title": "Eko-Ekologisk Massage Stockholm | Oleg Massage",
         "seo_desc": "Mjuk och återbyggande ekologisk massage med 100% naturliga, kallpressade oljor och skräddarsydd aromaterapi i Stockholm.",
         "indications_title": "Indikationer för behandling",
@@ -208,7 +208,7 @@
           "Önskan om helt naturlig vård"
         ],
         "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Sessionen inleds med att välja en eterisk olja som passar ditt känslomässiga tillstånd. Endast rena, kallpressade växtoljor utan syntetiska doftämnen används. Terapeuten utför en mild massage av ansikte, hals, dekolletage och hårbotten med lymfdränande, skulpterande och antistress-grepp. Varje rörelse är anpassad för att slappna av ansiktsmusklerna, stimulera lymfflödet och förbättra hudtonen. Massagen hjälper till att släta ut fina linjer, strama upp ansiktskonturen och ge näring på djupet. Dofterna lugnar nervsystemet, dämpar stress och återställer din inre känslomässiga balans.",
+        "process_text": "Sessionen kombinerar milda ansikts-, hals- och dekolletagemassagegrepp med aromaterapi. Terapeuten använder naturliga kallpressade oljor utan syntetiska tillsatser, vilket ökar mikrocirkulationen och skulpterar konturerna. Behandlingen lugnar sinnet och återställer hudens lyster.",
         "contraindications_title": "Kontraindikationer",
         "contraindications_text": "Allergi mot eteriska oljor, aktiva allergiska hudreaktioner, graviditet."
       }

@@ -1547,6 +1547,9 @@ html.theme-zen .hero-pill-tag {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  position: sticky;
+  top: 130px;
+  z-index: 10;
 }
 
 .service-grid-right {
@@ -1867,6 +1870,7 @@ html.theme-zen .hero-pill-tag {
   }
   .service-grid-left {
     gap: 32px;
+    position: static;
   }
   .service-detail-image-wrapper {
     max-width: 480px;

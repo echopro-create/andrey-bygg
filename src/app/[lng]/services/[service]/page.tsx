@@ -113,25 +113,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 </div>
               </div>
 
-              {/* Показания к процедуре */}
-              {service.indications_list && (
-                <div className="service-content-block">
-                  <h3 className="service-block-title">{service.indications_title}</h3>
-                  <ul className="service-indications-list">
-                    {service.indications_list.map((ind: string, idx: number) => (
-                      <li key={idx} className="indication-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="indication-check">
-                          <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        <span>{ind}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
             </div>
 
-            {/* Правая колонка: Описание + Эффект + Процесс */}
+            {/* Правая колонка: Описание + Эффект + Процесс + Показания */}
             <div className="service-grid-right">
               <p className="service-short-desc">{service.desc}</p>
               
@@ -158,6 +142,23 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 <div className="service-content-block">
                   <h3 className="service-block-title">{service.process_title}</h3>
                   <p className="service-block-text">{service.process_text}</p>
+                </div>
+              )}
+
+              {/* Показания к процедуре */}
+              {service.indications_list && (
+                <div className="service-content-block">
+                  <h3 className="service-block-title">{service.indications_title}</h3>
+                  <ul className="service-indications-list">
+                    {service.indications_list.map((ind: string, idx: number) => (
+                      <li key={idx} className="indication-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="indication-check">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <span>{ind}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
             </div>
