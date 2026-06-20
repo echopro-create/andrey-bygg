@@ -61,18 +61,16 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
   const images = [
     { src: '/images/gallery/gallery-1.webp', alt: 'Professional deep tissue back massage therapy' },
     { src: '/images/gallery/gallery-2.webp', alt: 'Heated volcanic hot stone massage therapy' },
-    { src: '/images/gallery/gallery-3.webp', alt: 'Neck and shoulder tension relief massage' },
-    { src: '/images/gallery/gallery-4.webp', alt: 'Acupressure foot massage and reflexology treatment' },
-    { src: '/images/gallery/gallery-5.webp', alt: 'Traditional vacuum cupping therapy on client back' },
-    { src: '/images/gallery/gallery-6.webp', alt: 'Relaxing bamboo stick massage technique' },
-    { src: '/images/gallery/gallery-7.webp', alt: 'Therapeutic arm stretch and joint mobilization' },
-    { src: '/images/gallery/gallery-8.webp', alt: 'Soothing head and scalp massage for stress relief' },
-    { src: '/images/gallery/gallery-9.webp', alt: 'Deep sports sports massage on calf muscle for recovery' },
-    { src: '/images/gallery/gallery-10.webp', alt: 'Warm organic oil pouring for back massage' },
-    { src: '/images/gallery/gallery-11.webp', alt: 'Gentle lymphatic drainage massage on neck area' },
-    { src: '/images/gallery/gallery-12.webp', alt: 'Detoxifying honey massage treatment on back' },
-    { src: '/images/gallery/gallery-13.webp', alt: 'Intense sports back massage for muscle recovery' },
-    { src: '/images/gallery/gallery-14.webp', alt: 'Relaxing facial massage and temple acupressure' },
+    { src: '/images/gallery/gallery-3.webp', alt: 'Acupressure foot massage and reflexology treatment' },
+    { src: '/images/gallery/gallery-4.webp', alt: 'Traditional vacuum cupping therapy on client back' },
+    { src: '/images/gallery/gallery-5.webp', alt: 'Relaxing bamboo stick massage technique' },
+    { src: '/images/gallery/gallery-6.webp', alt: 'Therapeutic arm stretch and joint mobilization' },
+    { src: '/images/gallery/gallery-7.webp', alt: 'Soothing head and scalp massage for stress relief' },
+    { src: '/images/gallery/gallery-8.webp', alt: 'Deep sports massage on calf muscle for recovery' },
+    { src: '/images/gallery/gallery-9.webp', alt: 'Warm organic oil pouring for back massage' },
+    { src: '/images/gallery/gallery-10.webp', alt: 'Detoxifying honey massage treatment on back' },
+    { src: '/images/gallery/gallery-11.webp', alt: 'Intense sports back massage for muscle recovery' },
+    { src: '/images/gallery/gallery-12.webp', alt: 'Relaxing facial massage and temple acupressure' },
   ];
 
   const imageGallerySchema = {
