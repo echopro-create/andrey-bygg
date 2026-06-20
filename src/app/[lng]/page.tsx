@@ -135,41 +135,7 @@ export default async function Page({ params }: PageProps) {
         </div>
       </section>
 
-      {/* 3. Advantages Section */}
-      <section className="advantages-section section-spacing">
-        <div className="container">
-          <div className="section-header text-center reveal">
-            <h2 className="section-title">
-              {dict.advantages.title} <span className="gold-accent">{dict.advantages.accent}</span>
-            </h2>
-          </div>
-          <div className="advantages-grid">
-            <div className="glass-card reveal">
-              <div className="advantage-icon">
-                <span className="icon-gold">𓁠</span>
-              </div>
-              <h3 className="advantage-title">{dict.advantages.expTitle}</h3>
-              <p className="advantage-desc">{dict.advantages.expDesc}</p>
-            </div>
-            <div className="glass-card reveal">
-              <div className="advantage-icon">
-                <span className="icon-gold">𓆱</span>
-              </div>
-              <h3 className="advantage-title">{dict.advantages.indTitle}</h3>
-              <p className="advantage-desc">{dict.advantages.indDesc}</p>
-            </div>
-            <div className="glass-card reveal">
-              <div className="advantage-icon">
-                <span className="icon-gold">𓂶</span>
-              </div>
-              <h3 className="advantage-title">{dict.advantages.atmTitle}</h3>
-              <p className="advantage-desc">{dict.advantages.atmDesc}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Services Section */}
+      {/* 3. Services Section */}
       <section id="services" className="services-section section-spacing">
         <div className="container">
           <div className="section-header text-center reveal">
@@ -209,6 +175,40 @@ export default async function Page({ params }: PageProps) {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Advantages Section */}
+      <section className="advantages-section section-spacing">
+        <div className="container">
+          <div className="section-header text-center reveal">
+            <h2 className="section-title">
+              {dict.advantages.title} <span className="gold-accent">{dict.advantages.accent}</span>
+            </h2>
+          </div>
+          <div className="advantages-grid">
+            <div className="glass-card reveal">
+              <div className="advantage-icon">
+                <span className="icon-gold">𓁠</span>
+              </div>
+              <h3 className="advantage-title">{dict.advantages.expTitle}</h3>
+              <p className="advantage-desc">{dict.advantages.expDesc}</p>
+            </div>
+            <div className="glass-card reveal">
+              <div className="advantage-icon">
+                <span className="icon-gold">𓆱</span>
+              </div>
+              <h3 className="advantage-title">{dict.advantages.indTitle}</h3>
+              <p className="advantage-desc">{dict.advantages.indDesc}</p>
+            </div>
+            <div className="glass-card reveal">
+              <div className="advantage-icon">
+                <span className="icon-gold">𓂶</span>
+              </div>
+              <h3 className="advantage-title">{dict.advantages.atmTitle}</h3>
+              <p className="advantage-desc">{dict.advantages.atmDesc}</p>
+            </div>
           </div>
         </div>
       </section>
