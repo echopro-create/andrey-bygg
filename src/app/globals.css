@@ -32,6 +32,7 @@
   --btn-primary-text: #080908;
   --btn-primary-shadow: rgba(196, 169, 122, 0.15);
   --btn-primary-shadow-hover: rgba(196, 169, 122, 0.35);
+  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.4) 15%, rgba(var(--background-rgb), 0.55) 50%, rgba(var(--background-rgb), 0.85) 85%, var(--background) 100%);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
@@ -70,6 +71,7 @@ html.theme-zen {
   --btn-primary-text: #060907;
   --btn-primary-shadow: rgba(163, 184, 153, 0.15);
   --btn-primary-shadow-hover: rgba(163, 184, 153, 0.35);
+  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.4) 15%, rgba(var(--background-rgb), 0.55) 50%, rgba(var(--background-rgb), 0.85) 85%, var(--background) 100%);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
@@ -108,6 +110,7 @@ html.theme-light {
   --btn-primary-text: #ffffff;
   --btn-primary-shadow: rgba(115, 94, 61, 0.15);
   --btn-primary-shadow-hover: rgba(115, 94, 61, 0.25);
+  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.1) 15%, rgba(var(--background-rgb), 0.15) 50%, rgba(var(--background-rgb), 0.4) 85%, var(--background) 100%);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
@@ -822,7 +825,7 @@ select.form-control {
   padding: 100px 0 120px;
   position: relative;
   background-image: 
-    linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.4) 15%, rgba(var(--background-rgb), 0.55) 50%, rgba(var(--background-rgb), 0.85) 85%, var(--background) 100%), 
+    var(--hero-overlay), 
     url('/images/hero-bg.webp');
   background-size: cover;
   background-position: center;
@@ -1994,7 +1997,6 @@ select.form-control {
 
 .gallery-item-frame {
   position: relative;
-  aspect-ratio: 1.2;
   border-radius: 8px;
   border: 1px solid var(--glass-border);
   overflow: hidden;
@@ -2004,8 +2006,7 @@ select.form-control {
 
 .gallery-img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1.2;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
