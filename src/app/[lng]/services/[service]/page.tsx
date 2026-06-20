@@ -150,7 +150,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
           {/* Как проходит процедура */}
           {service.process_text && (
-            <div className="service-content-block">
+            <div className="service-content-block service-content-clear">
               <h3 className="service-block-title">{service.process_title}</h3>
               <p className="service-block-text">{service.process_text}</p>
             </div>
@@ -158,7 +158,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
           {/* Противопоказания */}
           {service.contraindications_text && (
-            <div className="service-content-block contraindications-block">
+            <div className="service-content-block contraindications-block service-content-clear">
               <h4 className="service-block-title-small">{service.contraindications_title}</h4>
               <p className="service-block-text-small">{service.contraindications_text}</p>
             </div>

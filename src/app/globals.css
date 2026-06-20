@@ -1681,8 +1681,11 @@ html.theme-zen .hero-pill-tag {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.service-content-clear {
   clear: both;
-  padding-top: 24px;
+  padding-top: 32px;
 }
 
 .book-btn-wrapper {
@@ -1700,8 +1703,8 @@ html.theme-zen .hero-pill-tag {
 .service-indications-list {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px 24px;
+  grid-template-columns: 1fr;
+  gap: 16px;
 }
 
 .indication-item {
@@ -1847,6 +1850,10 @@ html.theme-zen .hero-pill-tag {
   .related-services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+  }
+  .service-indications-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 24px;
   }
 }
 
