@@ -1531,17 +1531,28 @@ html.theme-zen .hero-pill-tag {
 }
 
 .service-detail-content-wrap {
-  display: block;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.service-hero-section {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 64px;
+  align-items: center;
 }
 
 .service-detail-image-wrapper {
   position: relative;
   padding: 10px;
-  width: 380px;
-  float: left;
-  margin-right: 48px;
-  margin-bottom: 32px;
+  width: 100%;
+}
+
+.service-overview-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .service-detail-glow {
@@ -1677,20 +1688,35 @@ html.theme-zen .hero-pill-tag {
   color: var(--text-color);
 }
 
+.service-details-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+/* Авто-растягивание на 100% ширины, если показан только один блок (показания или процесс) */
+.service-details-section:has(> :only-child) {
+  grid-template-columns: 1fr;
+}
+
 .service-content-block {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.service-content-clear {
-  clear: both;
-  padding-top: 32px;
+.service-footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
 }
 
 .book-btn-wrapper {
-  clear: both;
-  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .service-block-title {
@@ -1730,10 +1756,11 @@ html.theme-zen .hero-pill-tag {
 }
 
 .contraindications-block {
-  background: rgba(207, 102, 121, 0.02);
-  border: 1px solid rgba(207, 102, 121, 0.1);
-  padding: 20px 24px;
-  border-radius: 12px;
+  width: 100%;
+  background: rgba(207, 102, 121, 0.03);
+  border: 1px solid rgba(207, 102, 121, 0.15);
+  padding: 24px 32px;
+  border-radius: 20px;
 }
 
 .service-block-title-small {
@@ -1841,11 +1868,17 @@ html.theme-zen .hero-pill-tag {
 }
 
 @media (max-width: 1024px) {
+  .service-hero-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
   .service-detail-image-wrapper {
-    float: none;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto 32px;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .service-details-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
   .related-services-grid {
     grid-template-columns: repeat(2, 1fr);
