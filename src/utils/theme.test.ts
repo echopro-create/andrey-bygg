@@ -4,7 +4,7 @@ describe('theme utilities', () => {
   describe('getSystemTheme', () => {
     it('should return obsidian when system prefers dark mode', () => {
       // Arrange & Act
-      const theme = getSystemTheme(true);
+      const theme = getSystemTheme();
 
       // Assert
       expect(theme).toBe('obsidian');
@@ -12,7 +12,7 @@ describe('theme utilities', () => {
 
     it('should return obsidian when system prefers light mode (since only dark themes are available)', () => {
       // Arrange & Act
-      const theme = getSystemTheme(false);
+      const theme = getSystemTheme();
 
       // Assert
       expect(theme).toBe('obsidian');
