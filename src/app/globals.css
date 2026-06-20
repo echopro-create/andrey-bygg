@@ -97,10 +97,10 @@ html.theme-light {
   --footer-bg: #f0ede6;
   
   /* Glassmorphism */
-  --glass-bg: rgba(250, 248, 245, 0.85);
+  --glass-bg: rgba(255, 255, 255, 0.45);
   --glass-blur: 24px;
-  --glass-border: rgba(var(--primary-rgb), 0.15);
-  --glass-shadow: rgba(143, 118, 79, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-shadow: rgba(0, 0, 0, 0.05);
   --card-bg-rgb: 255, 255, 255;
   --text-color-rgb: 42, 39, 36;
   --hero-text-color: #f4f5f4;
@@ -906,11 +906,11 @@ select.form-control {
   align-items: center;
   width: 100%;
   padding: 24px 60px;
-  background: rgba(var(--card-bg-rgb), 0.55);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 50px var(--glass-shadow);
   border-radius: 100px;
 }
 
