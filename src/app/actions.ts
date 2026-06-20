@@ -47,7 +47,7 @@ export async function submitBooking(formData: BookingData) {
   const sanitizedTime = formData.time ? formData.time.replace(/[<>]/g, '').trim().slice(0, 30) : '';
 
   const text = `
-🔔 *New booking at Oleg Massage!*
+🔔 *New booking at Oleh Massage!*
 👤 *Name:* ${sanitizedName}
 📞 *Phone:* ${sanitizedPhone}
 💆‍♂️ *Service:* ${sanitizedService}
@@ -58,7 +58,7 @@ export async function submitBooking(formData: BookingData) {
 
   if (!token || !chatId) {
     console.warn(
-      '⚠️ [Oleg Massage Warning] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not configured in .env.\n' +
+      '⚠️ [Oleh Massage Warning] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not configured in .env.\n' +
       'Booking processed in demo mode.\n' +
       'Submission data:',
       {
@@ -93,13 +93,13 @@ export async function submitBooking(formData: BookingData) {
 
     if (!response.ok) {
       const errText = await response.text();
-      console.error('[Oleg Massage] Telegram API Error response:', errText);
+      console.error('[Oleh Massage] Telegram API Error response:', errText);
       return { success: false, error: 'Failed to send notification via Telegram API.' };
     }
 
     return { success: true, demo: false };
   } catch (error: unknown) {
-    console.error('[Oleg Massage] Exception while sending Telegram notification:', error);
+    console.error('[Oleh Massage] Exception while sending Telegram notification:', error);
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown network error.',

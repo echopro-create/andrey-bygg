@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-const SITE_NAME = 'Oleg Massage Stockholm';
+const SITE_NAME = 'Oleh Massage';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -43,10 +43,10 @@ export async function generateMetadata({
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const titleDefault = 'Oleg Massage Stockholm | Premium Spa & Massage';
+  const titleDefault = 'Oleh Massage | Premium Spa & Massage';
   const descriptionDefault =
     dict.hero.subtitle ||
-    'Professional massage therapy in Stockholm. Premium spa treatments by Oleg.';
+    'Professional massage therapy in Cherkasy. Premium spa treatments by Oleh.';
 
   const localeMap: Record<string, string> = {
     sv: 'sv_SE',
@@ -71,12 +71,12 @@ export async function generateMetadata({
       'Swedish massage',
       'sports massage',
       'hot stone massage',
-      'Oleg massage',
+      'Oleh massage',
       'Östermalm massage',
     ],
-    authors: [{ name: 'Oleg Massage Stockholm' }],
-    creator: 'Oleg Massage Stockholm',
-    publisher: 'Oleg Massage Stockholm',
+    authors: [{ name: 'Oleh Massage' }],
+    creator: 'Oleh Massage',
+    publisher: 'Oleh Massage',
     formatDetection: {
       email: false,
       address: false,
@@ -103,7 +103,7 @@ export async function generateMetadata({
           url: '/images/hero-bg.webp',
           width: 1200,
           height: 630,
-          alt: 'Oleg Massage Stockholm — Premium Spa & Massage',
+          alt: 'Oleh Massage — Premium Spa & Massage',
         },
       ],
     },
@@ -143,7 +143,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const orgSchema = {
     '@context': 'https://schema.org',
     '@type': 'HealthAndBeautyBusiness',
-    name: 'Oleg Massage',
+    name: 'Oleh Massage',
     description: dict.hero.subtitle,
     url: `${SITE_URL}/${lng}`,
     logo: `${SITE_URL}/favicon.ico`,

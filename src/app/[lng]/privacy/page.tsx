@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
   const dict = await getDictionary(lng);
 
   return {
-    title: `${dict.privacy.title} | Oleg Massage Stockholm`,
+    title: `${dict.privacy.title} | Oleh Massage`,
     description: dict.privacy.subtitle,
     alternates: {
       canonical: `/${lng}/privacy`,

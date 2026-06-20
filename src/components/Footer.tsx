@@ -20,8 +20,8 @@ export default function Footer({ dict, lng }: FooterProps) {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Link href={`/${lng}`} className="footer-logo" aria-label="Oleg Massage — Home">
-            OLEG <span className="gold-accent">MASSAGE</span>
+          <Link href={`/${lng}`} className="footer-logo" aria-label="Oleh Massage — Home">
+            OLEH <span className="gold-accent">MASSAGE</span>
           </Link>
           <p className="footer-desc">
             {dict.hero.subtitle}
@@ -81,7 +81,7 @@ export default function Footer({ dict, lng }: FooterProps) {
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
           <p>
-            &copy; {currentYear} OLEG MASSAGE. All rights reserved. {dict.contacts.address}.
+            &copy; {currentYear} OLEH MASSAGE. All rights reserved. {dict.contacts.address}.
             {' | '}
             <Link href={`/${lng}/privacy`} className="footer-bottom-link" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>
               {dict.privacyLink}

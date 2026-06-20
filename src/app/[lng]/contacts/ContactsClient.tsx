@@ -308,7 +308,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
       <div className="contacts-info-column reveal">
         <div className="glass-card contacts-info-card">
-          <h3 className="info-box-title">Oleg Massage Stockholm</h3>
+          <h3 className="info-box-title">Oleh Massage</h3>
 
           <div className="info-items">
             <div className="info-item-row">

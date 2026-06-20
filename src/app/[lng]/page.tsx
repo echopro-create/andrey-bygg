@@ -163,7 +163,7 @@ export default async function Page({ params }: PageProps) {
               <div className="olive-background-plate">
                 <img
                   src="/images/oleg-portrait-new.webp"
-                  alt={dict.about.certTitle ? `Oleg Massage Therapist — ${dict.about.certTitle}` : 'Oleg Massage Therapist'}
+                  alt={dict.about.certTitle ? `Oleh Massage Therapist — ${dict.about.certTitle}` : 'Oleh Massage Therapist'}
                   className="about-img"
                   width={600}
                   height={800}

@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   if (!service) return {};
 
   return {
-    title: `${service.seo_title || service.title} | Oleg Massage Stockholm`,
+    title: `${service.seo_title || service.title} | Oleh Massage`,
     description: service.seo_desc || service.desc,
     alternates: {
       canonical: `/${lng}/services/${serviceSlug}`,

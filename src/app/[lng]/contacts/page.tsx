@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
       },
     },
     openGraph: {
-      title: `${title} — Oleg Massage Stockholm`,
+      title: `${title} — Oleh Massage`,
       description,
       url: `${SITE_URL}/${lng}/contacts`,
     },
@@ -50,7 +50,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
           </h1>
           <p className="section-subtitle" style={{ maxWidth: '600px', margin: '0 auto' }}>
             {dict.contacts?.subtitle ||
-              'Book your session online or reach out via phone. Our private studio is located in the heart of Stockholm.'}
+              'Book your session online or reach out via phone. Our private studio is located in the heart of Cherkasy.'}
           </p>
         </div>
 
