@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "gallery": "Gallery",
+    "contacts": "Contacts",
+    "book": "Book Session"
+  },
+  "hero": {
+    "title": "Exclusive massage for your",
+    "accent": "body & soul",
+    "subtitle": "Professional massage therapy in Stockholm. Find your balance, release tension, and restore your energy in a luxurious spa atmosphere.",
+    "bookBtn": "Book Now",
+    "servicesBtn": "Our Services"
+  },
+  "about": {
+    "title": "The art of healing",
+    "accent": "through touch",
+    "text1": "Hello, I am Oleg. I am a certified massage therapist with over 10 years of professional experience. My goal is to help you release pain, stress, and muscle tension by combining classic techniques with customized therapies.",
+    "text2": "Every session is tailored to your specific needs – whether you require deep tissue relief after an intense workout or a calming session to soothe daily stress.",
+    "certTitle": "Licensed Therapist",
+    "certSubtitle": "Certified in Sweden & internationally"
+  },
+  "advantages": {
+    "title": "Why choose",
+    "accent": "Oleg Massage",
+    "expTitle": "10+ Years Experience",
+    "expDesc": "Deep understanding of anatomy and physiology ensures safe, effective, and target-oriented therapy.",
+    "indTitle": "Tailored Approach",
+    "indDesc": "Every session is designed around your specific physical needs, preferences, and focus areas.",
+    "atmTitle": "Premium Atmosphere",
+    "atmDesc": "A serene, private, and premium spa room equipped for your absolute comfort and relaxation."
+  },
+  "services": {
+    "title": "Our Premium",
+    "accent": "Massage Therapies",
+    "priceFrom": "From",
+    "duration": "Duration",
+    "readMore": "Read more",
+    "back": "Back to services",
+    "bookService": "Book this treatment",
+    "items": {
+      "classic": {
+        "title": "Classic Massage",
+        "desc": "Traditional Swedish massage to relieve muscle tension, boost circulation, and relax the body.",
+        "price": "850 SEK",
+        "duration": "60 min / 90 min",
+        "benefit": "Ideal for relieving daily stress, reducing muscle soreness, and improving overall joint flexibility and mental wellbeing."
+      },
+      "anti-cellulite": {
+        "title": "Anti-Cellulite Massage",
+        "desc": "Intense massage technique designed to improve skin elasticity and stimulate lymphatic drainage.",
+        "price": "950 SEK",
+        "duration": "60 min",
+        "benefit": "Enhances microcirculation, assists in reducing fluid retention, firms the skin, and models the body contour."
+      },
+      "sports": {
+        "title": "Sports Massage",
+        "desc": "Deep tissue work focused on muscle recovery, flexibility, and injury prevention.",
+        "price": "950 SEK",
+        "duration": "60 min / 90 min",
+        "benefit": "Targets highly active muscles, helps release chronic muscle tension, speeds up recovery, and enhances athletic performance."
+      },
+      "lymphatic-drainage": {
+        "title": "Lymphatic Drainage",
+        "desc": "Gentle therapy aimed at boosting the lymphatic system and clearing metabolic waste.",
+        "price": "900 SEK",
+        "duration": "75 min",
+        "benefit": "Reduces swelling, strengthens the immune system, detoxifies the body, and leaves a profound feeling of lightness."
+      },
+      "cupping": {
+        "title": "Cupping Massage",
+        "desc": "Vacuum therapy that draws blood flow to target areas to release stubborn muscle knots.",
+        "price": "800 SEK",
+        "duration": "60 min",
+        "benefit": "Combines classic strokes with silicone cups to create negative pressure, releasing tight fascia and soothing chronic pain."
+      },
+      "hot-stone": {
+        "title": "Hot Stone Massage",
+        "desc": "Deeply relaxing massage using warmed basalt stones to melt away deep-seated tension.",
+        "price": "1100 SEK",
+        "duration": "90 min",
+        "benefit": "The heat from the stones penetrates deeply into the muscles, promoting profound relaxation, easing stress, and balancing energy."
+      },
+      "turkish-foam": {
+        "title": "Turkish Foam Massage",
+        "desc": "A luxurious spa experience with organic soap foam, gentle scrubbing, and deep hydration.",
+        "price": "1200 SEK",
+        "duration": "90 min",
+        "benefit": "A traditional hammam-style ritual that deeply cleanses the skin, relaxes muscles, and provides unmatched sensory relaxation."
+      },
+      "natural-massage": {
+        "title": "Eco-Organic Massage",
+        "desc": "Gentle, healing massage utilizing 100% natural and organic botanical oils.",
+        "price": "900 SEK",
+        "duration": "60 min / 90 min",
+        "benefit": "Uses cold-pressed organic oils that deeply nourish the skin, while natural aromatherapy essences soothe the nervous system."
+      }
+    }
+  },
+  "reviews": {
+    "title": "What our",
+    "accent": "clients say",
+    "items": [
+      {
+        "name": "Johan Andersson",
+        "text": "Oleg is an incredible therapist. After the sports massage, I felt like a new person. My shoulders have never felt this mobile.",
+        "rating": 5
+      },
+      {
+        "name": "Sofia Lindqvist",
+        "text": "The hot stone massage was pure magic. The premium and serene atmosphere made the experience absolutely unforgettable. Highly recommended!",
+        "rating": 5
+      },
+      {
+        "name": "Erik Bergqvist",
+        "text": "Professional service and outstanding skills. The lymphatic drainage massage helped me get rid of bloating and fatigue.",
+        "rating": 5
+      }
+    ]
+  },
+  "contacts": {
+    "title": "Contact Us",
+    "accent": "book a session",
+    "address": "Birger Jarlsgatan 42, 114 29 Stockholm",
+    "phone": "+46 8 123 45 67",
+    "email": "info@olegmassage.se",
+    "hours": "Mon - Sun: 09:00 - 21:00",
+    "formTitle": "Send a Request",
+    "formName": "Your Name",
+    "formPhone": "Phone Number",
+    "formService": "Select Service",
+    "formMessage": "Your Message",
+    "formSubmit": "Submit Request",
+    "formSuccess": "Thank you! Your request has been sent. We will contact you shortly to confirm your booking.",
+    "formError": "An error occurred. Please verify that all fields are filled in correctly.",
+    "selectPlaceholder": "Choose a treatment...",
+    "validation": {
+      "nameRequired": "Name is required",
+      "phoneRequired": "Phone number is required",
+      "phoneInvalid": "Please enter a valid phone number",
+      "serviceRequired": "Please select a massage treatment"
+    }
+  }
+}

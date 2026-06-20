@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "about": "Om mig",
+    "services": "Tjänster",
+    "gallery": "Galleri",
+    "contacts": "Kontakter",
+    "book": "Boka tid"
+  },
+  "hero": {
+    "title": "Exklusiv massage för din",
+    "accent": "kropp & själ",
+    "subtitle": "Professionell massage i Stockholm. Hitta din balans, lindra spänningar och återuppbygg din energi i en lyxig spa-atmosfär.",
+    "bookBtn": "Boka tid",
+    "servicesBtn": "Våra tjänster"
+  },
+  "about": {
+    "title": "Konsten att läka",
+    "accent": "genom beröring",
+    "text1": "Hej, jag heter Oleg. Jag är en certifierad massageterapeut med över 10 års erfarenhet av professionell massage. Mitt mål är att hjälpa dig att bli av med smärta, stress och muskelspänningar genom att kombinera klassiska metoder med individuellt anpassade tekniker.",
+    "text2": "Varje session anpassas efter dina specifika behov – oavsett om det handlar om djupgående muskelavslappning efter ett intensivt träningspass eller en lugnande stund för att lindra vardagsstress.",
+    "certTitle": "Diplomerad terapeut",
+    "certSubtitle": "Certifierad i Sverige & internationellt"
+  },
+  "advantages": {
+    "title": "Varför välja",
+    "accent": "Oleg Massage",
+    "expTitle": "10+ års erfarenhet",
+    "expDesc": "Djupgående kunskap om anatomi och massagefysiologi för att säkerstäffe ett optimalt resultat.",
+    "indTitle": "Individuellt upplägg",
+    "indDesc": "Varje behandling skräddarsys efter dina behov och fokusområden för maximal effekt.",
+    "atmTitle": "Premium atmosfär",
+    "atmDesc": "En tyst, harmonisk och lyxig miljö utrustad för din fullständiga avslappning."
+  },
+  "services": {
+    "title": "Våra",
+    "accent": "massagebehandlingar",
+    "priceFrom": "Från",
+    "duration": "Längd",
+    "readMore": "Läs mer",
+    "back": "Tillbaka till tjänster",
+    "bookService": "Boka denna behandling",
+    "items": {
+      "classic": {
+        "title": "Klassisk massage",
+        "desc": "Traditionell svensk massage för att lindra muskelspänningar och öka cirkulationen.",
+        "price": "850 SEK",
+        "duration": "60 min / 90 min",
+        "benefit": "Perfekt för att lindra vardagsstress, minska muskelvärk och förbättra kroppens generella flexibilitet och välbefinnande."
+      },
+      "anti-cellulite": {
+        "title": "Anticellulitmassage",
+        "desc": "Intensiv massage som förbättrar hudens elasticitet och stimulerar lymfflödet.",
+        "price": "950 SEK",
+        "duration": "60 min",
+        "benefit": "Aktiverar mikrocirkulationen, hjälper till att reducera celluliter, stramar upp huden och formar kroppens silhuett."
+      },
+      "sports": {
+        "title": "Sportmassage",
+        "desc": "Djupgående massage inriktad på muskelåterhämtning och ökad rörlighet.",
+        "price": "950 SEK",
+        "duration": "60 min / 90 min",
+        "benefit": "Fokuserar på trötta och överbelastade muskler. Hjälper idrottare att återhämta sig snabbare och förebygga skador."
+      },
+      "lymphatic-drainage": {
+        "title": "Lymfmassage",
+        "desc": "Mjuk behandling för att stimulera lymfsystemet och transportera bort slaggprodukter.",
+        "price": "900 SEK",
+        "duration": "75 min",
+        "benefit": "Reducerar svullnad, stärker immunförsvaret, rensar kroppen på slaggprodukter och ger en känsla av lätthet."
+      },
+      "cupping": {
+        "title": "Koppningsmassage",
+        "desc": "Vakuumbehandling som ökar blodcirkulationen och löser upp djupa spänningar.",
+        "price": "800 SEK",
+        "duration": "60 min",
+        "benefit": "Kombinerar traditionell massage med silikonkoppar för att frigöra stagnation i bindväven och lindra kronisk muskelvärk."
+      },
+      "hot-stone": {
+        "title": "Massage med heta stenar",
+        "desc": "Avslappnande massage med varma basaltstenar som tränger djupt in i musklerna.",
+        "price": "1100 SEK",
+        "duration": "90 min",
+        "benefit": "De varma stenarna ger en djup känsla av lugn, löser upp spänningar utan hårt tryck och balanserar kroppens energiflöde."
+      },
+      "turkish-foam": {
+        "title": "Turkisk skummassage",
+        "desc": "Lyxig spa-behandling med aromatiskt tvålskum och mild exfoliering.",
+        "price": "1200 SEK",
+        "duration": "90 min",
+        "benefit": "En traditionell rituell behandling som rengör huden på djupet, slappnar av musklerna och ger en oöverträffad renhetskänsla."
+      },
+      "natural-massage": {
+        "title": "Ekologisk massage",
+        "desc": "Mild, helande massage med 100% naturliga och ekologiska oljor.",
+        "price": "900 SEK",
+        "duration": "60 min / 90 min",
+        "benefit": "Använder exklusiva kallpressade växtoljor som ger näring åt huden på djupet, samtidigt som dofterna balanserar sinnet."
+      }
+    }
+  },
+  "reviews": {
+    "title": "Vad våra",
+    "accent": "klienter säger",
+    "items": [
+      {
+        "name": "Johan Andersson",
+        "text": "Oleg är en fantastisk terapeut. Efter sportmassagen kände jag mig som en ny människa. Mina axlar har aldrig varit så rörliga.",
+        "rating": 5
+      },
+      {
+        "name": "Sofia Lindqvist",
+        "text": "Massagen med heta stenar var magisk. Den lyxiga och rofyllda atmosfären gjorde upplevelsen helt oförglömlig. Rekommenderas starkt!",
+        "rating": 5
+      },
+      {
+        "name": "Erik Bergqvist",
+        "text": "Professionellt bemötande och en oerhört skicklig massör. Lymfmassagen hjälpte mig att bli av med svullnad och trötthet.",
+        "rating": 5
+      }
+    ]
+  },
+  "contacts": {
+    "title": "Kontakta oss",
+    "accent": "boka tid",
+    "address": "Birger Jarlsgatan 42, 114 29 Stockholm",
+    "phone": "+46 8 123 45 67",
+    "email": "info@olegmassage.se",
+    "hours": "Mån - Sön: 09:00 - 21:00",
+    "formTitle": "Skicka en förfrågan",
+    "formName": "Ditt namn",
+    "formPhone": "Telefonnummer",
+    "formService": "Välj behandling",
+    "formMessage": "Ditt meddelande",
+    "formSubmit": "Skicka förfrågan",
+    "formSuccess": "Tack! Din förfrågan har skickats. Vi kontaktar dig inom kort för att bekräfta din tid.",
+    "formError": "Ett fel uppstod. Kontrollera att alla fält är korrekt ifyllda.",
+    "selectPlaceholder": "Välj en tjänst...",
+    "validation": {
+      "nameRequired": "Namn är obligatoriskt",
+      "phoneRequired": "Telefonnummer är obligatoriskt",
+      "phoneInvalid": "Ange ett giltigt telefonnummer",
+      "serviceRequired": "Vänligen välj en behandling"
+    }
+  }
+}
