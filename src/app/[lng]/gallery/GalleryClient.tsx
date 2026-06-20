@@ -46,7 +46,7 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
           const isFirstNew = index === 6; // Индекс первого элемента из скрытых
           
           return (
-            <div key={index} className="gallery-item-wrapper reveal" style={{ animationDelay: `${index * 0.05}s` }}>
+            <div key={index} className={`gallery-item-wrapper ${index < 6 ? 'reveal' : ''}`} style={{ animationDelay: `${index * 0.05}s` }}>
               <button
                 ref={isFirstNew ? firstNewItemRef : null}
                 type="button"
