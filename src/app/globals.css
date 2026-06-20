@@ -121,7 +121,6 @@ a {
 
 .gold-accent {
   color: var(--primary);
-  font-style: italic;
   font-family: var(--font-title);
   transition: color 0.6s ease;
 }
@@ -1060,7 +1059,6 @@ html.theme-zen .hero-pill-tag {
 }
 
 .review-text {
-  font-style: italic;
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.6;

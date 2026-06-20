@@ -1,11 +1,11 @@
-import { Playfair_Display, Outfit } from 'next/font/google';
+import { Cormorant_Garamond, Outfit } from 'next/font/google';
 import { getDictionary, Locale } from '../i18n';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollRevealInit from '@/components/ScrollRevealInit';
 import '../globals.css';
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-title',
   weight: ['400', '500', '600', '700'],
@@ -34,7 +34,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const dict = await getDictionary(lng);
 
   return (
-    <html lang={lng} className={`${playfair.variable} ${outfit.variable}`} suppressHydrationWarning>
+    <html lang={lng} className={`${cormorant.variable} ${outfit.variable}`} suppressHydrationWarning>
       <head>
         {/* Ранняя инициализация темы во избежание мерцания панели Safari/Chrome */}
         <script
