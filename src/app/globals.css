@@ -254,12 +254,12 @@ textarea:focus-visible,
 }
 
 .section-spacing {
-  padding: 60px 0;
+  padding: 48px 0;
 }
 
 @media (max-width: 768px) {
   .section-spacing {
-    padding: 40px 0;
+    padding: 32px 0;
   }
 }
 
@@ -820,7 +820,7 @@ body.mobile-drawer-open .custom-lang-selector {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 80px;
+  padding: 90px 0 48px;
   position: relative;
   background-image: 
     var(--hero-overlay), 
@@ -957,13 +957,16 @@ body.mobile-drawer-open .custom-lang-selector {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 80px 0 100px;
+    padding: 60px 0 40px;
   }
   .hero-title {
     font-size: 2.5rem;
   }
   .hero-subtitle {
     font-size: 1rem;
+  }
+  .hero-metrics-container {
+    margin-top: 32px;
   }
   .hero-metrics-bar {
     grid-template-columns: repeat(2, 1fr);
@@ -1193,7 +1196,7 @@ body.mobile-drawer-open .custom-lang-selector {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .advantage-card {
@@ -1292,7 +1295,7 @@ body.mobile-drawer-open .custom-lang-selector {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .service-card {
@@ -1410,7 +1413,7 @@ body.mobile-drawer-open .custom-lang-selector {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .review-card {
@@ -1559,7 +1562,8 @@ body.mobile-drawer-open .custom-lang-selector {
   .hero-subtitle { font-size: 1rem; }
   .hero-image-wrapper { order: -1; }
   .certificate-badge { bottom: 15px; right: -10px; }
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; margin-top: 24px; }
+  .advantages-grid, .reviews-grid { margin-top: 24px; }
 }
 
 /* ------------------ Service Detail Page ------------------ */
