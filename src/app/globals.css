@@ -804,14 +804,30 @@ html.theme-zen .hero-pill-tag {
 
 .about-image-wrapper {
   position: relative;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .olive-background-plate {
-  background-color: var(--olive-plate);
-  aspect-ratio: 1;
-  border-radius: 8px;
   position: relative;
-  padding: 20px;
+  background-color: transparent;
+  aspect-ratio: 3 / 4;
+  padding: 0;
+  border-radius: 16px;
+  transition: var(--transition-smooth);
+}
+
+.olive-background-plate::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: -16px;
+  bottom: -16px;
+  border: 1px solid rgba(212, 190, 150, 0.15);
+  border-radius: 16px;
+  z-index: -1;
+  pointer-events: none;
   transition: var(--transition-smooth);
 }
 
@@ -819,25 +835,27 @@ html.theme-zen .hero-pill-tag {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  border: 1px solid rgba(212, 190, 150, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  display: block;
 }
 
 .certificate-badge {
   position: absolute;
-  bottom: -30px;
-  right: -30px;
-  background: var(--glass-bg);
+  bottom: 20px;
+  right: -20px;
+  background: rgba(18, 19, 18, 0.85);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
-  border: 1px solid var(--glass-border);
-  border-radius: 8px;
-  padding: 16px 20px;
+  border: 1px solid rgba(212, 190, 150, 0.2);
+  border-radius: 12px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   gap: 12px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-  max-width: 280px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  max-width: 250px;
   z-index: 10;
 }
 
@@ -847,13 +865,13 @@ html.theme-zen .hero-pill-tag {
 }
 
 .cert-badge-text h5 {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--primary);
   margin-bottom: 2px;
 }
 
 .cert-badge-text p {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
 }
 
@@ -1078,7 +1096,7 @@ html.theme-zen .hero-pill-tag {
 @media (max-width: 1024px) {
   .hero-title { font-size: 2.8rem; }
   .about-container { grid-template-columns: 1fr; gap: 50px; }
-  .about-image-wrapper { max-width: 500px; margin: 0 auto; }
+  .about-image-wrapper { max-width: 380px; margin: 0 auto; }
   .advantages-grid { grid-template-columns: 1fr; gap: 24px; }
   .reviews-grid { grid-template-columns: 1fr; gap: 24px; }
 }
@@ -1089,7 +1107,7 @@ html.theme-zen .hero-pill-tag {
   .hero-title { font-size: 2.4rem; }
   .hero-subtitle { font-size: 1rem; }
   .hero-image-wrapper { order: -1; }
-  .certificate-badge { bottom: -15px; right: 15px; }
+  .certificate-badge { bottom: 15px; right: -10px; }
   .services-grid { grid-template-columns: 1fr; }
 }
 
