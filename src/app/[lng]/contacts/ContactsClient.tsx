@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense, useCallback, useRef } from 'react';
+import { useState, Suspense, useCallback, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { submitBooking } from '../../actions';
@@ -14,10 +14,27 @@ function ContactsForm({ dict }: ContactsClientProps) {
   const searchParams = useSearchParams();
   const csrfTokenRef = useRef<string | null>(null);
 
+  // Build services list and compute default service from URL param (during render, no effect needed)
+  const servicesList = [
+    { value: 'classic', label: dict.services.items.classic.title },
+    { value: 'anti-cellulite', label: dict.services.items['anti-cellulite'].title },
+    { value: 'sports', label: dict.services.items.sports.title },
+    { value: 'lymphatic-drainage', label: dict.services.items['lymphatic-drainage'].title },
+    { value: 'cupping', label: dict.services.items.cupping.title },
+    { value: 'hot-stone', label: dict.services.items['hot-stone'].title },
+    { value: 'turkish-foam', label: dict.services.items['turkish-foam'].title },
+    { value: 'natural-massage', label: dict.services.items['natural-massage'].title },
+  ];
+
+  const initialService = (() => {
+    const param = searchParams.get('service');
+    return param && servicesList.some((s) => s.value === param) ? param : '';
+  })();
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    service: '',
+    service: initialService,
     message: '',
   });
 
@@ -35,29 +52,6 @@ function ContactsForm({ dict }: ContactsClientProps) {
   } | null>(null);
 
   const [copied, setCopied] = useState(false);
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const servicesList = [
-    { value: 'classic', label: dict.services.items.classic.title },
-    { value: 'anti-cellulite', label: dict.services.items['anti-cellulite'].title },
-    { value: 'sports', label: dict.services.items.sports.title },
-    { value: 'lymphatic-drainage', label: dict.services.items['lymphatic-drainage'].title },
-    { value: 'cupping', label: dict.services.items.cupping.title },
-    { value: 'hot-stone', label: dict.services.items['hot-stone'].title },
-    { value: 'turkish-foam', label: dict.services.items['turkish-foam'].title },
-    { value: 'natural-massage', label: dict.services.items['natural-massage'].title },
-  ];
-
-  // Pre-fill service from URL param
-  useEffect(() => {
-    const serviceParam = searchParams.get('service');
-    if (serviceParam && servicesList.some((s) => s.value === serviceParam)) {
-      setFormData((prev) => {
-        if (prev.service === serviceParam) return prev;
-        return { ...prev, service: serviceParam };
-      });
-    }
-  }, [searchParams]);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
