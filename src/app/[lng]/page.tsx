@@ -192,7 +192,7 @@ export default async function Page({ params }: PageProps) {
               <p className="about-paragraph">{dict.about.text2}</p>
               <div className="experience-metric">
                 <div className="metric-item">
-                  <span className="metric-number">10+</span>
+                  <span className="metric-number">20+</span>
                   <div className="metric-info">
                     <span className="metric-label">{dict.advantages.expTitle}</span>
                   </div>
