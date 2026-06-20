@@ -23,8 +23,9 @@
   --glass-shadow: rgba(0, 0, 0, 0.6);
   --card-bg-rgb: 18, 19, 18;
   --text-color-rgb: 244, 245, 244;
-
-  /* Button Styles */
+  --hero-text-color: #f4f5f4;
+  --hero-text-muted: #a3a3a3;
+   /* Button Styles */
   --btn-primary-bg-start: #e5d1b1;
   --btn-primary-bg-end: #c4a97a;
   --btn-primary-bg-start-hover: #eedbc1;
@@ -62,8 +63,9 @@ html.theme-zen {
   --glass-shadow: rgba(0, 0, 0, 0.7);
   --card-bg-rgb: 16, 22, 17;
   --text-color-rgb: 242, 245, 242;
-
-  /* Button Styles */
+  --hero-text-color: #f2f5f2;
+  --hero-text-muted: #99a398;
+   /* Button Styles */
   --btn-primary-bg-start: #b4c9aa;
   --btn-primary-bg-end: #a3b899;
   --btn-primary-bg-start-hover: #c3d8b9;
@@ -101,7 +103,9 @@ html.theme-light {
   --glass-shadow: rgba(143, 118, 79, 0.08);
   --card-bg-rgb: 255, 255, 255;
   --text-color-rgb: 42, 39, 36;
-
+  --hero-text-color: #f4f5f4;
+  --hero-text-muted: #a3a3a3;
+  
   /* Button Styles */
   --btn-primary-bg-start: #8f764f;
   --btn-primary-bg-end: #735e3d;
@@ -110,7 +114,7 @@ html.theme-light {
   --btn-primary-text: #ffffff;
   --btn-primary-shadow: rgba(115, 94, 61, 0.15);
   --btn-primary-shadow-hover: rgba(115, 94, 61, 0.25);
-  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.85) 15%, rgba(var(--background-rgb), 0.88) 50%, rgba(var(--background-rgb), 0.92) 85%, var(--background) 100%);
+  --hero-overlay: linear-gradient(to bottom, rgba(8, 9, 8, 0.6) 0%, rgba(8, 9, 8, 0.7) 45%, rgba(8, 9, 8, 0.3) 75%, var(--background) 100%);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
@@ -869,14 +873,14 @@ select.form-control {
 .hero-title {
   font-size: 4rem;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--hero-text-color);
   line-height: 1.15;
   letter-spacing: 0.01em;
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
-  color: var(--text-muted);
+  color: var(--hero-text-muted);
   max-width: 680px;
   margin: 0 auto;
   line-height: 1.65;
