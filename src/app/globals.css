@@ -1030,24 +1030,98 @@ html.theme-zen .hero-pill-tag {
   margin-top: 60px;
 }
 
-.advantage-icon {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.advantage-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.015) 0%, rgba(255, 255, 255, 0.003) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 190, 150, 0.07);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.4), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  transition: var(--transition-luxury);
 }
 
-.icon-gold {
+.advantage-card-inner {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.advantage-number {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  font-weight: 300;
   color: var(--primary);
+  opacity: 0.15;
+  transition: var(--transition-smooth);
+}
+
+.advantage-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(212, 190, 150, 0.04);
+  border: 1px solid rgba(212, 190, 150, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  transition: var(--transition-luxury);
+}
+
+.advantage-svg {
+  transition: var(--transition-luxury);
 }
 
 .advantage-title {
-  font-size: 1.3rem;
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  font-weight: 400;
   color: var(--text-color);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
 }
 
 .advantage-desc {
   color: var(--text-muted);
   font-size: 0.95rem;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+/* Эффекты наведения (Hover) */
+.advantage-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 190, 150, 0.25);
+  background: linear-gradient(135deg, rgba(212, 190, 150, 0.03) 0%, rgba(212, 190, 150, 0.005) 100%);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.6), 
+    0 0 30px rgba(212, 190, 150, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.advantage-card:hover .advantage-number {
+  opacity: 0.45;
+  transform: scale(1.1);
+}
+
+.advantage-card:hover .advantage-icon-wrapper {
+  background: rgba(212, 190, 150, 0.08);
+  border-color: rgba(212, 190, 150, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(212, 190, 150, 0.1);
+}
+
+.advantage-card:hover .advantage-svg {
+  transform: rotate(5deg) scale(1.05);
 }
 
 .services-grid {

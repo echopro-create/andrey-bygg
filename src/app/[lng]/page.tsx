@@ -197,26 +197,59 @@ export default async function Page({ params }: PageProps) {
             </h2>
           </div>
           <div className="advantages-grid">
-            <div className="glass-card reveal">
-              <div className="advantage-icon">
-                <span className="icon-gold">𓁠</span>
+            <div className="advantage-card reveal">
+              <div className="advantage-card-inner">
+                <div className="advantage-number">01</div>
+                <div className="advantage-icon-wrapper">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="advantage-svg">
+                    <defs>
+                      <linearGradient id="gold-gradient-icon" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#e2d2b5" />
+                        <stop offset="50%" stopColor="#d4be96" />
+                        <stop offset="100%" stopColor="#a38a5e" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M6 16.5a6.5 6.5 0 0 0 12.07 3.36M18 16.5a6.5 6.5 0 0 1-12.07 3.36" />
+                    <path d="M3 14c2.5-1.5 6-1 8 1.5M21 14c-2.5-1.5-6-1-8 1.5" />
+                    <path d="M12 6c0 0-3 3.5-3 5.5s1.34 3.5 3 3.5 3-1.5 3-3.5S12 6 12 6z" />
+                    <circle cx="12" cy="11" r="0.8" fill="url(#gold-gradient-icon)" />
+                  </svg>
+                </div>
+                <h3 className="advantage-title">{dict.advantages.expTitle}</h3>
+                <p className="advantage-desc">{dict.advantages.expDesc}</p>
               </div>
-              <h3 className="advantage-title">{dict.advantages.expTitle}</h3>
-              <p className="advantage-desc">{dict.advantages.expDesc}</p>
             </div>
-            <div className="glass-card reveal">
-              <div className="advantage-icon">
-                <span className="icon-gold">𓆱</span>
+
+            <div className="advantage-card reveal">
+              <div className="advantage-card-inner">
+                <div className="advantage-number">02</div>
+                <div className="advantage-icon-wrapper">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="advantage-svg">
+                    <path d="M12 21c-2.5-3-7-4-9-1.5 0 0 2-6.5 9-8.5 7 2 9 8.5 9 8.5-2-2.5-6.5-1.5-9 1.5z" />
+                    <path d="M12 21c-1.5-4-4.5-7-7-6.5 0 0 2.5-4.5 7-5.5 4.5 1 7 5.5 7 5.5-2.5-.5-5.5 2.5-7 6.5z" />
+                    <path d="M12 12c-1-3-3-5-5-4.5 0 0 2-3 5-3.5 3 .5 5 3.5 5 3.5-2-.5-4 1.5-5 4.5z" />
+                    <path d="M12 7V3" />
+                  </svg>
+                </div>
+                <h3 className="advantage-title">{dict.advantages.indTitle}</h3>
+                <p className="advantage-desc">{dict.advantages.indDesc}</p>
               </div>
-              <h3 className="advantage-title">{dict.advantages.indTitle}</h3>
-              <p className="advantage-desc">{dict.advantages.indDesc}</p>
             </div>
-            <div className="glass-card reveal">
-              <div className="advantage-icon">
-                <span className="icon-gold">𓂶</span>
+
+            <div className="advantage-card reveal">
+              <div className="advantage-card-inner">
+                <div className="advantage-number">03</div>
+                <div className="advantage-icon-wrapper">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="advantage-svg">
+                    <ellipse cx="12" cy="19" rx="6" ry="2.5" />
+                    <ellipse cx="12" cy="14" rx="4.5" ry="2" />
+                    <ellipse cx="12" cy="9.5" rx="3" ry="1.5" />
+                    <path d="M9 6c0-1.5 1-2 1-3M15 6c0-1.5-1-2-1-3M12 6c0-1.5 1-2.5 1-3.5" />
+                  </svg>
+                </div>
+                <h3 className="advantage-title">{dict.advantages.atmTitle}</h3>
+                <p className="advantage-desc">{dict.advantages.atmDesc}</p>
               </div>
-              <h3 className="advantage-title">{dict.advantages.atmTitle}</h3>
-              <p className="advantage-desc">{dict.advantages.atmDesc}</p>
             </div>
           </div>
         </div>
