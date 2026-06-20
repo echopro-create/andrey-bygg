@@ -150,7 +150,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
           {/* Как проходит процедура */}
           {service.process_text && (
-            <div className="service-content-block">
+            <div className="service-content-block service-content-clear">
               <h3 className="service-block-title">{service.process_title}</h3>
               <p className="service-block-text">{service.process_text}</p>
             </div>
