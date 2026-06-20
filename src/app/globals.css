@@ -2169,15 +2169,20 @@ body.mobile-drawer-open .custom-lang-selector {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .contacts-info-column {
-  position: sticky;
-  top: 120px;
+  display: flex;
+  flex-direction: column;
 }
 
-.contacts-info-card { padding: 40px; }
+.contacts-info-card {
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
 .info-items {
   display: flex;
@@ -2249,6 +2254,7 @@ body.mobile-drawer-open .custom-lang-selector {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-top: auto;
 }
 
 .map-grid-pattern {
