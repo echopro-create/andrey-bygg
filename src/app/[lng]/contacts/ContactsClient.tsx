@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, Suspense, useCallback, useRef } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useParams } from 'next/navigation';
 import Link from 'next/link';
 import { submitBooking } from '../../actions';
 
@@ -12,6 +12,8 @@ interface ContactsClientProps {
 
 function ContactsForm({ dict }: ContactsClientProps) {
   const searchParams = useSearchParams();
+  const params = useParams();
+  const currentLng = (params?.lng as string) || 'sv';
   const csrfTokenRef = useRef<string | null>(null);
 
   // Build services list and compute default service from URL param (during render, no effect needed)
@@ -385,11 +387,17 @@ function ContactsForm({ dict }: ContactsClientProps) {
           </div>
 
           <div className="minimal-map-card">
-            <div className="map-grid-pattern">
-              <div className="pulse-circle"></div>
-              <div className="pulse-glow"></div>
-            </div>
-            <div className="map-card-footer">
+            <iframe
+              src={`https://maps.google.com/maps?q=Gogolya%20St%2048,%20Cherkasy&t=&z=16&ie=UTF8&iwloc=&hl=${currentLng === 'no' ? 'no' : currentLng}&output=embed`}
+              width="100%"
+              height="100%"
+              style={{ border: 0, position: 'absolute', top: 0, left: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Oleh Massage location map"
+            ></iframe>
+            <div className="map-card-footer" style={{ position: 'relative', zIndex: 2 }}>
               <div className="map-footer-text">
                 <h6>{dict.contacts.street || 'Gogolya St, 48'}</h6>
                 <p>{dict.contacts.city || 'Cherkasy'}</p>
