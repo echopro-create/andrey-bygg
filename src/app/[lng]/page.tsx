@@ -264,17 +264,64 @@ export default async function Page({ params }: PageProps) {
             </h2>
           </div>
           <div className="reviews-grid">
-            {dict.reviews.items.map((review: any, index: number) => (
-              <div key={index} className="glass-card review-card reveal">
-                <div className="stars">
-                  {Array.from({ length: review.rating }).map((_, i) => (
-                    <span key={i} className="star-gold">★</span>
-                  ))}
+            {dict.reviews.items.map((review: any, index: number) => {
+              const verifiedText = {
+                ru: 'Верифицированный клиент',
+                en: 'Verified client',
+                sv: 'Verifierad klient',
+                no: 'Verifisert klient',
+              }[lng] || 'Verified client';
+
+              return (
+                <div key={index} className="review-card reveal">
+                  <div className="review-card-inner">
+                    {/* Декоративная кавычка */}
+                    <div className="quote-mark">
+                      <svg width="40" height="30" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="quote-svg">
+                        <path d="M10 0C4.477 0 0 4.477 0 10v14h12V10H4c0-3.314 2.686-6 6-6V0zm22 0c-5.523 0-10 4.477-10 10v14h12V10h-8c0-3.314 2.686-6 6-6V0z" fill="url(#gold-gradient-quote)" />
+                        <defs>
+                          <linearGradient id="gold-gradient-quote" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#e2d2b5" stopOpacity="0.08" />
+                            <stop offset="100%" stopColor="#a38a5e" stopOpacity="0.03" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+
+                    {/* Звезды с градиентом */}
+                    <div className="stars">
+                      {Array.from({ length: review.rating }).map((_, i) => (
+                        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="star-svg">
+                          <defs>
+                            <linearGradient id="gold-gradient-star" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stopColor="#e2d2b5" />
+                              <stop offset="50%" stopColor="#d4be96" />
+                              <stop offset="100%" stopColor="#a38a5e" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#gold-gradient-star)" />
+                        </svg>
+                      ))}
+                    </div>
+
+                    <p className="review-text">“{review.text}”</p>
+
+                    <div className="review-footer">
+                      <span className="review-line"></span>
+                      <div className="review-meta">
+                        <div className="review-author">{review.name}</div>
+                        <div className="review-status">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="verified-icon">
+                            <polyline points="20 6 9 17 4 12" />
+                          </svg>
+                          <span>{verifiedText}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p className="review-text">“{review.text}”</p>
-                <div className="review-author">{review.name}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

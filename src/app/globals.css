@@ -1249,32 +1249,132 @@ html.theme-zen .hero-pill-tag {
 }
 
 .review-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.015) 0%, rgba(255, 255, 255, 0.003) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 190, 150, 0.07);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.4), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  transition: var(--transition-luxury);
+}
+
+.review-card-inner {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.quote-mark {
+  position: absolute;
+  top: 30px;
+  right: 32px;
+  pointer-events: none;
+  transition: var(--transition-luxury);
+}
+
+.quote-svg path {
+  transition: var(--transition-luxury);
+}
+
+.stars {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.star-svg {
+  transition: var(--transition-luxury);
+}
+
+.review-text {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-style: italic;
+  color: rgba(244, 245, 244, 0.82);
+  line-height: 1.7;
+  margin-bottom: 30px;
+  flex-grow: 1;
+  text-wrap: pretty;
+}
+
+.review-footer {
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.stars {
+.review-line {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(212, 190, 150, 0.4) 0%, rgba(212, 190, 150, 0) 100%);
+  transition: var(--transition-luxury);
+}
+
+.review-meta {
   display: flex;
-  gap: 4px;
-}
-
-.star-gold {
-  color: var(--primary);
-  font-size: 1.1rem;
-}
-
-.review-text {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .review-author {
   font-family: var(--font-title);
   font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-color);
+  letter-spacing: 0.01em;
+}
+
+.review-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
   color: var(--primary);
-  margin-top: auto;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.verified-icon {
+  display: inline-block;
+  opacity: 0.8;
+}
+
+/* Эффекты наведения (Hover) */
+.review-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 190, 150, 0.25);
+  background: linear-gradient(135deg, rgba(212, 190, 150, 0.03) 0%, rgba(212, 190, 150, 0.005) 100%);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.6), 
+    0 0 30px rgba(212, 190, 150, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.review-card:hover .quote-mark {
+  transform: scale(1.1);
+}
+
+.review-card:hover .quote-svg path {
+  fill-opacity: 0.15;
+}
+
+.review-card:hover .review-line {
+  width: 60px;
+  background: linear-gradient(90deg, rgba(212, 190, 150, 0.8) 0%, rgba(212, 190, 150, 0) 100%);
+}
+
+.review-card:hover .star-svg {
+  transform: scale(1.1);
 }
 
 @media (max-width: 1200px) {
