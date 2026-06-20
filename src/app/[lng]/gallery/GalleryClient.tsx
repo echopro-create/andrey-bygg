@@ -28,38 +28,43 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
   return (
     <>
       <div className="gallery-grid">
-        {images.map((img, index) => (
-          <div key={index} className="gallery-item-wrapper reveal" style={{ animationDelay: `${index * 0.1}s` }}>
-            <button
-              type="button"
-              className="gallery-item-frame"
-              onClick={() => openLightbox(index)}
-              aria-label={`Open gallery image ${index + 1}`}
-              style={{
-                background: 'none',
-                border: 'none',
-                padding: 0,
-                width: '100%',
-                cursor: 'pointer',
-                textAlign: 'left',
-                display: 'block',
-              }}
-            >
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="gallery-img"
-                width={600}
-                height={500}
-                loading={index < 3 ? undefined : "lazy"}
-                style={{ objectFit: 'cover' }}
-              />
-              <div className="gallery-item-hover">
-                <span className="zoom-icon" role="img" aria-hidden="true">🔍</span>
-              </div>
-            </button>
-          </div>
-        ))}
+        {images.map((img, index) => {
+          const isVertical = index < 3;
+          const ratio = isVertical ? '3 / 4' : '1 / 1';
+          return (
+            <div key={index} className="gallery-item-wrapper reveal" style={{ animationDelay: `${index * 0.1}s` }}>
+              <button
+                type="button"
+                className="gallery-item-frame"
+                onClick={() => openLightbox(index)}
+                aria-label={`Open gallery image ${index + 1}`}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  padding: 0,
+                  width: '100%',
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                  display: 'block',
+                  aspectRatio: ratio,
+                }}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="gallery-img"
+                  width={600}
+                  height={isVertical ? 800 : 600}
+                  loading={index < 3 ? undefined : "lazy"}
+                  style={{ objectFit: 'cover' }}
+                />
+                <div className="gallery-item-hover">
+                  <span className="zoom-icon" role="img" aria-hidden="true">🔍</span>
+                </div>
+              </button>
+            </div>
+          );
+        })}
       </div>
 
       <div className="gallery-cta text-center reveal" style={{ marginTop: '60px' }}>
