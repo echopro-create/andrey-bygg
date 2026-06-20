@@ -2,8 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter, useParams } from 'next/navigation';
-import { useState } from 'react';
-import ThemeToggle from './ThemeToggle';
+import { useState, useEffect, useRef } from 'react';
 
 interface HeaderProps {
   dict: any;
@@ -11,6 +10,9 @@ interface HeaderProps {
 
 export default function Header({ dict }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  
   const pathname = usePathname();
   const router = useRouter();
   const params = useParams();
@@ -23,8 +25,20 @@ export default function Header({ dict }: HeaderProps) {
     { code: 'ru', label: 'Русский' },
   ];
 
-  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLng = e.target.value;
+  // Close dropdown on click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setLangDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const changeLanguage = (newLng: string) => {
     if (!pathname) return;
     const segments = pathname.split('/');
     segments[1] = newLng;
@@ -60,22 +74,50 @@ export default function Header({ dict }: HeaderProps) {
         </nav>
 
         <div className="header-actions">
-          <ThemeToggle />
-
-          {/* Language Selector */}
-          <div className="lang-selector-wrapper">
-            <select
-              value={currentLng}
-              onChange={handleLanguageChange}
-              className="lang-select"
+          {/* Custom Language Dropdown (2026 Standard) */}
+          <div className="custom-lang-selector" ref={dropdownRef}>
+            <button
+              onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+              className={`lang-trigger-btn ${langDropdownOpen ? 'active' : ''}`}
+              aria-expanded={langDropdownOpen}
               aria-label="Select language"
             >
-              {languages.map((lang) => (
-                <option key={lang.code} value={lang.code}>
-                  {lang.code.toUpperCase()}
-                </option>
-              ))}
-            </select>
+              <span>{currentLng}</span>
+              <svg
+                className="lang-arrow"
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L5 5L9 1"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            {langDropdownOpen && (
+              <div className="lang-dropdown-menu">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      changeLanguage(lang.code);
+                      setLangDropdownOpen(false);
+                    }}
+                    className={`lang-dropdown-item ${currentLng === lang.code ? 'active' : ''}`}
+                  >
+                    <span>{lang.label}</span>
+                    {currentLng === lang.code && <span className="lang-active-dot" />}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           <Link href={`/${currentLng}/contacts?book=true`} className="btn btn-primary header-book-btn">
@@ -111,24 +153,23 @@ export default function Header({ dict }: HeaderProps) {
           >
             {dict.nav.book}
           </Link>
-          
+
           <div className="mobile-lang-wrapper">
             <span className="mobile-lang-label">Language:</span>
-            <select
-              value={currentLng}
-              onChange={(e) => {
-                handleLanguageChange(e);
-                closeMenu();
-              }}
-              className="mobile-lang-select"
-              aria-label="Select language"
-            >
+            <div className="mobile-lang-control">
               {languages.map((lang) => (
-                <option key={lang.code} value={lang.code}>
-                  {lang.label}
-                </option>
+                <button
+                  key={lang.code}
+                  className={`mobile-lang-btn ${currentLng === lang.code ? 'active' : ''}`}
+                  onClick={() => {
+                    changeLanguage(lang.code);
+                    closeMenu();
+                  }}
+                >
+                  {lang.code.toUpperCase()}
+                </button>
               ))}
-            </select>
+            </div>
           </div>
         </nav>
       </div>
