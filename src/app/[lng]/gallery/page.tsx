@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const description = dict.gallery?.subtitle || 'Take a look inside our premium massage studio in Cherkasy.';
+  const description = dict.gallery?.subtitle || 'Take a look inside our premium private massage studio.';
 
   return {
     title: dict.nav.gallery,
@@ -41,7 +41,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
   const dict = await getDictionary(lng);
 
   const images = [
-    { src: '/images/gallery/gallery-1.webp', alt: 'Massage studio interior — treatment room in Cherkasy' },
+    { src: '/images/gallery/gallery-1.webp', alt: 'Massage studio interior — treatment room' },
     { src: '/images/gallery/gallery-2.webp', alt: 'Premium massage table with organic oils' },
     { src: '/images/gallery/gallery-3.webp', alt: 'Relaxation area with ambient lighting' },
     { src: '/images/gallery/gallery-4.webp', alt: 'Massage therapy preparation area' },
@@ -58,7 +58,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
           </h1>
           <p className="section-subtitle" style={{ maxWidth: '600px', margin: '0 auto' }}>
             {dict.gallery?.subtitle ||
-              'Take a look inside our premium private massage studio in Cherkasy. A sanctuary of peace, equipped for your absolute comfort.'}
+              'Take a look inside our premium private massage studio. A sanctuary of peace, equipped for your absolute comfort.'}
           </p>
         </div>
 

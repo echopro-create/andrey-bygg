@@ -50,7 +50,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
           </h1>
           <p className="section-subtitle" style={{ maxWidth: '600px', margin: '0 auto' }}>
             {dict.contacts?.subtitle ||
-              'Book your session online or reach out via phone. Our private studio is located in the heart of Cherkasy.'}
+              'Book your session online or reach out via phone. Our studio is equipped with everything needed for your comfort.'}
           </p>
         </div>
 

@@ -9,10 +9,10 @@
   "hero": {
     "title": "Eksklusiv massasje for din",
     "accent": "kropp & sjel",
-    "subtitle": "Profesjonell massasjeterapi i Tsjerkasy. Finn din balanse, frigjør spenninger og gjenopprett energien i en luksuriøs spa-atmosfære.",
+    "subtitle": "Profesjonell massasjeterapi og spa-behandlinger. Finn din balanse, frigjør spenninger og gjenopprett energien i en luksuriøs spa-atmosfære.",
     "bookBtn": "Bestill time",
     "servicesBtn": "Våre tjenester",
-    "badge": "• TSJERKASY PREMIUM SPA",
+    "badge": "• PRIVAT SPASTUDIO",
     "metrics": {
       "m1_val": "20+ ÅR",
       "m1_lbl": "Erfaring",
@@ -60,8 +60,8 @@
         "price": "850 SEK",
         "duration": "60 min / 90 min",
         "benefit": "Lindrer effektivt muskelspenninger, gjenoppretter fibrenes elastisitet, normaliserer søvn og reduserer stressnivået.",
-        "seo_title": "Klassisk svensk massasje i Tsjerkasy | Oleh Massage",
-        "seo_desc": "Tradisjonell svensk massasje for dyp avslapning og bedre blodsirkulasjon. Profesjonell massør Oleh i Tsjerkasy.",
+        "seo_title": "Klassisk svensk massasje | Oleh Massage",
+        "seo_desc": "Tradisjonell svensk massasje for dyp avslapning og bedre blodsirkulasjon. Profesjonell massasje av massøren Oleh.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Muskelspenninger og stivhet",
@@ -80,8 +80,8 @@
         "price": "950 SEK",
         "duration": "60 min",
         "benefit": "Aktiverer mikrosirkulasjonen i vevet, reduserer hevelser, fremmer lymfedrenasje og modellerer harmoniske kroppskonturer.",
-        "seo_title": "Anticellulittmassasje Tsjerkasy | Effektiv kroppsmodellering",
-        "seo_desc": "Profesjonell anticellulittmassasje i Tsjerkasy. Forbedre hudens elastisitet, øk lymfeflyten og form kroppens konturer.",
+        "seo_title": "Anticellulittmassasje | Effektiv kroppsmodellering",
+        "seo_desc": "Profesjonell anticellulittmassasje. Forbedre hudens elastisitet, øk lymfeflyten og form kroppens konturer.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Cellulitter i alle stadier",
@@ -100,8 +100,8 @@
         "price": "950 SEK",
         "duration": "60 min / 90 min",
         "benefit": "Lindrer effektivt muskelhypertonus, eliminerer triggerpunkter, fremskynder utskillelsen av melkesyre og øker fleksibiliteten.",
-        "seo_title": "Idrettsmassasje Tsjerkasy | Restitusjon etter trening",
-        "seo_desc": "Dyp idrettsmassasje for idrettsutøvere og aktive. Reduser muskelspenninger, forebygg skader og få raskere restitusjon i Tsjerkasy.",
+        "seo_title": "Idrettsmassasje | Restitusjon etter trening",
+        "seo_desc": "Dyp idrettsmassasje for idrettsutøvere og aktive. Reduser muskelspenninger, forebygg skader og få raskere restitusjon.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Intensiv fysisk trening",
@@ -120,8 +120,8 @@
         "price": "900 SEK",
         "duration": "75 min",
         "benefit": "Reduserer effektivt hevelser i ansikt og lemmer, styrker immunforsvaret og gir en følelse av letthet i hele kroppen.",
-        "seo_title": "Lymfemassasje Tsjerkasy | Detox & Reduser hevelse",
-        "seo_desc": "Mjuk lymfemassasje for å fjerne avfallsstoffer, styrke immunforsvaret og redusere hevelse. Profesjonell lymfeterapi i Tsjerkasy.",
+        "seo_title": "Lymfemassasje | Detox & Reduser hevelse",
+        "seo_desc": "Mjuk lymfemassasje for å fjerne avfallsstoffer, styrke immunforsvaret og redusere hevelse. Profesjonell lymfeterapi.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Hevelse i ansikt eller kropp",
@@ -140,8 +140,8 @@
         "price": "800 SEK",
         "duration": "60 min",
         "benefit": "Lindrer kroniske rygg- og nakkesmerter, frigjør bindevev, forbedrer blodsirkulasjonen og loeser opp blokkeringer.",
-        "seo_title": "Koppingsmassasje Tsjerkasy | Dypgående vakuumbehandling",
-        "seo_desc": "Effektiv koppingsmassasje (vakuumbehandling) for å øke sirkulasjonen, lindre ryggsmerter og løse opp triggerpunkter i Tsjerkasy.",
+        "seo_title": "Koppingsmassasje | Dypgående vakuumbehandling",
+        "seo_desc": "Effektiv koppingsmassasje (vakuumbehandling) for å øke sirkulasjonen, lindre ryggsmerter og løse opp triggerpunkter.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Kronisk rygg- og nakkesmerte",
@@ -160,8 +160,8 @@
         "price": "1100 SEK",
         "duration": "90 min",
         "benefit": "Lindrer fullstendig mental spenning, varmer dype muskellag, forbedrer søvnen og balanserer nervesystemet.",
-        "seo_title": "Hot Stone Massasje Tsjerkasy | Premium steinmassasje",
-        "seo_desc": "Luksuriøs massasje med varme lavasteiner for dyp muskeloppvarming, stresslindring og energibalansering i Tsjerkasy.",
+        "seo_title": "Hot Stone Massasje | Premium steinmassasje",
+        "seo_desc": "Luksuriøs massasje med varme lavasteiner for dyp muskeloppvarming, stresslindring og energibalansering.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Dyp stress og utmattelse",
@@ -180,7 +180,7 @@
         "price": "1200 SEK",
         "duration": "90 min",
         "benefit": "Fjerner skånsomt døde hudceller, renser porene, renser ut giftstoffer og gir en følelse av absolutt renhet.",
-        "seo_title": "Tyrkisk Skummassasje Tsjerkasy | Luksuriøs spa-ritual",
+        "seo_title": "Tyrkisk Skummassasje | Luksuriøs spa-ritual",
         "seo_desc": "Tradisjonell skummassasje på oppvarmet steinbenk. Mild peeling med Kese-hanske og avslappende massasje med skum av olivenoljesåpe.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
@@ -200,8 +200,8 @@
         "price": "900 SEK",
         "duration": "60 min / 90 min",
         "benefit": "Lindrer spenninger i ansiktsmusklene, forbedrer hudtonen, demper hevelser og gir dyp næring til huden.",
-        "seo_title": "Eko-Økologisk Massasje Tsjerkasy | Oleh Massage",
-        "seo_desc": "Myk og gjenoppbyggende økologisk massasje med 100% naturlige, kaldpressede oljer og tilpasset aromaterapi i Tsjerkasy.",
+        "seo_title": "Eko-Økologisk Massasje | Oleh Massage",
+        "seo_desc": "Myk og gjenoppbyggende økologisk massasje med 100% naturlige, kaldpressede oljer og tilpasset aromaterapi.",
         "indications_title": "Indikasjoner for behandling",
         "indications_list": [
           "Tørr og dehydrert hud",
@@ -242,7 +242,7 @@
   "contacts": {
     "title": "Kontakt oss",
     "accent": "bestill time",
-    "subtitle": "Bestill time på nett eller ta kontakt via telefon. Vårt private studio ligger i hjertet av Tsjerkasy.",
+    "subtitle": "Bestill time på nett eller ta kontakt via telefon. Vårt studio er utstyrt med alt som trengs for din komfort.",
     "address": "Gogolya St 48, Tsjerkasy, Ukraina",
     "phone": "+46 737 584 372",
     "email": "info@olegmassage.se",
@@ -283,7 +283,7 @@
   },
   "gallery": {
     "studio": "Studio",
-    "subtitle": "Ta en titt inn i vårt premium massasjestudio i Tsjerkasy. Et fristed for ro, utstyrt for din absolutte komfort."
+    "subtitle": "Ta en titt inn i vårt premium massasjestudio. Et fristed for ro, utstyrt for din absolutte komfort."
   },
   "breadcrumbs": {
     "home": "Hjem",
@@ -308,7 +308,7 @@
     "section2_title": "2. Hvordan vi bruker dine opplysninger",
     "section2_text": "Disse dataene brukes utelukkande til å bekrefte avtalen din, kontakte deg og organisere timen. Vi deler ikke dataene dine med tredjeparter og bruker dem ikke til markedsføring.",
     "section3_title": "3. GDPR-samsvar (EU)",
-    "section3_text": "Vårt studio ligger i Tsjerkasy, Ukraina, og vi overholder personvernforordningen (GDPR). Du har rett til å be om innsyn i, korrigering eller sletting av dataene dine når som helst.",
+    "section3_text": "Vårt studio ligger i Ukraina, og vi overholder personvernforordningen (GDPR). Du har rett til å be om innsyn i, korrigering eller sletting av dataene dine når som helst.",
     "section4_title": "4. Kontakt oss",
     "section4_text": "For spørsmål om behandling av personopplysninger eller for å be om sletting, vennligst kontakt oss på e-post: info@olegmassage.se.",
     "backToHome": "Gå til startsiden"

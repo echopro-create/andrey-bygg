@@ -46,7 +46,7 @@ export async function generateMetadata({
   const titleDefault = 'Oleh Massage | Premium Spa & Massage';
   const descriptionDefault =
     dict.hero.subtitle ||
-    'Professional massage therapy in Cherkasy. Premium spa treatments by Oleh.';
+    'Professional massage therapy and premium spa treatments by Oleh.';
 
   const localeMap: Record<string, string> = {
     sv: 'sv_SE',
@@ -65,8 +65,8 @@ export async function generateMetadata({
     applicationName: SITE_NAME,
     generator: 'Next.js',
     keywords: [
-      'massage Cherkasy',
-      'spa Cherkasy',
+      'professional massage',
+      'premium spa',
       'massage therapist',
       'Swedish massage',
       'sports massage',
