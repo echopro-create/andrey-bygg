@@ -227,7 +227,7 @@ export default async function Page({ params }: PageProps) {
                   <div key={slug} className="service-card reveal">
                     <div className="service-img-wrapper">
                       <img
-                        src={`/images/services/${slug}.webp`}
+                        src={`/images/services/${slug}.webp?v=2`}
                         alt={service.title}
                         className="service-card-img"
                         width={400}

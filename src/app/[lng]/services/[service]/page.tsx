@@ -108,7 +108,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 <div className="service-detail-glow"></div>
                 <div className="service-detail-img-frame">
                   <img
-                    src={`/images/services/${serviceSlug}.webp`}
+                    src={`/images/services/${serviceSlug}.webp?v=2`}
                     alt={service.title}
                     className="service-detail-img"
                     width={800}
