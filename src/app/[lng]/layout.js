@@ -31,7 +31,7 @@ export default async function RootLayout({ children, params }) {
       </head>
       <body>
         <Header lng={lng} dict={dict} />
-        <main style={{ paddingTop: '80px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
           {children}
         </main>
         <Footer lng={lng} dict={dict} />
