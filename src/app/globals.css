@@ -72,7 +72,7 @@ html[data-theme='dark'] {
 }
 
 html {
-  background: var(--background);
+  background-color: var(--background);
   overflow-x: clip;
   transition: background-color var(--transition-normal);
   scrollbar-color: var(--primary) var(--background);
@@ -80,7 +80,7 @@ html {
 
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
