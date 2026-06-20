@@ -37,9 +37,9 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
       type: 'website',
       images: [
         {
-          url: `${SITE_URL}/images/hero-bg.webp`,
-          width: 1024,
-          height: 1024,
+          url: `${SITE_URL}/images/og-image.webp`,
+          width: 1200,
+          height: 630,
           alt: 'Oleh Massage — Premium Spa & Massage',
         },
       ],
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
       card: 'summary_large_image',
       title,
       description,
-      images: [`${SITE_URL}/images/hero-bg.webp`],
+      images: [`${SITE_URL}/images/og-image.webp`],
     },
   };
 }
