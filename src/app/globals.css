@@ -897,16 +897,49 @@ html.theme-zen .hero-pill-tag {
   color: var(--text-muted);
 }
 
+.about-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(212, 190, 150, 0.04) 0%, rgba(212, 190, 150, 0) 70%);
+  transform: translateY(-50%);
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(80px);
+}
+
 .about-text-content {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  position: relative;
+}
+
+.about-quote {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  color: var(--primary);
+  line-height: 1.5;
+  border-left: 2px solid var(--primary);
+  padding-left: 20px;
+  margin: 10px 0;
+  text-shadow: 0 0 30px rgba(212, 190, 150, 0.15);
+  text-wrap: pretty;
 }
 
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 12px;
   letter-spacing: 0.06em;
+  text-wrap: balance;
 }
 
 .text-center {
@@ -915,39 +948,79 @@ html.theme-zen .hero-pill-tag {
 
 .about-paragraph {
   color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-wrap: pretty;
 }
 
 .experience-metric {
   display: flex;
-  align-items: center;
-  gap: 40px;
+  align-items: stretch;
+  gap: 20px;
   margin-top: 16px;
+  width: 100%;
 }
 
 .metric-item {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: rgba(212, 190, 150, 0.02);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 190, 150, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  transition: var(--transition-luxury);
+}
+
+.metric-item:hover {
+  background: rgba(212, 190, 150, 0.04);
+  border-color: rgba(212, 190, 150, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(212, 190, 150, 0.05);
 }
 
 .metric-number {
   font-family: var(--font-title);
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: var(--primary);
+  line-height: 1;
+}
+
+.metric-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .metric-label {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: 4px;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
 }
 
-.metric-line {
-  width: 1px;
-  height: 50px;
-  background-color: rgba(244, 245, 244, 0.1);
+.metric-languages-list {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  color: rgba(212, 190, 150, 0.5);
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .experience-metric {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .metric-item {
+    max-width: 100%;
+  }
 }
 
 .advantages-grid {

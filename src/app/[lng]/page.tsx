@@ -118,17 +118,26 @@ export default async function Page({ params }: PageProps) {
             <h2 className="section-title">
               {dict.about.title} <span className="gold-accent">{dict.about.accent}</span>
             </h2>
+            {dict.about.quote && (
+              <blockquote className="about-quote">
+                {dict.about.quote}
+              </blockquote>
+            )}
             <p className="about-paragraph">{dict.about.text1}</p>
             <p className="about-paragraph">{dict.about.text2}</p>
             <div className="experience-metric">
               <div className="metric-item">
                 <span className="metric-number">10+</span>
-                <span className="metric-label">{dict.advantages.expTitle}</span>
+                <div className="metric-info">
+                  <span className="metric-label">{dict.advantages.expTitle}</span>
+                </div>
               </div>
-              <div className="metric-line"></div>
               <div className="metric-item">
                 <span className="metric-number">4</span>
-                <span className="metric-label">LANGUAGES</span>
+                <div className="metric-info">
+                  <span className="metric-label">LANGUAGES</span>
+                  <span className="metric-languages-list">SV | EN | NO | RU</span>
+                </div>
               </div>
             </div>
           </div>
