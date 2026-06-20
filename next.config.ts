@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
           },
         ],
         destination: 'https://rygghjalp.se/:path*',
-        permanent: false,
+        permanent: true,
       },
     ];
   },
