@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const title = `${dict.contacts.title} ${dict.contacts.accent}`;
+  const title = `${dict.contacts.title} ${dict.contacts.accent} — Oleh Massage`;
   const description = dict.contacts?.subtitle || 'Book your session online or reach out via phone.';
 
   return {
@@ -29,9 +29,26 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
       },
     },
     openGraph: {
-      title: `${title} — Oleh Massage`,
+      title,
       description,
       url: `${SITE_URL}/${lng}/contacts`,
+      siteName: 'Oleh Massage',
+      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : 'en_US',
+      type: 'website',
+      images: [
+        {
+          url: `${SITE_URL}/images/hero-bg.webp`,
+          width: 1200,
+          height: 630,
+          alt: 'Oleh Massage — Premium Spa & Massage',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${SITE_URL}/images/hero-bg.webp`],
     },
   };
 }
@@ -41,8 +58,50 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
+  const businessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HealthAndBeautyBusiness',
+    name: 'Oleh Massage',
+    description: dict.contacts?.subtitle || 'Professional massage therapy and premium spa treatments.',
+    url: `${SITE_URL}/${lng}/contacts`,
+    telephone: dict.contacts.phone,
+    email: dict.contacts.email,
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'SE',
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+          'Saturday',
+          'Sunday',
+        ],
+        opens: '09:00',
+        closes: '21:00',
+      },
+    ],
+    priceRange: '850-1200 SEK',
+    currenciesAccepted: 'SEK',
+    paymentAccepted: 'Cash, Credit Card, Swish',
+    sameAs: [
+      'https://www.instagram.com/olegmassage/',
+      'https://www.facebook.com/olegmassage/',
+    ],
+  };
+
   return (
-    <div className="contacts-page section-spacing">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+      />
+      <div className="contacts-page section-spacing">
       <div className="container">
         <div className="section-header text-center reveal" style={{ marginBottom: '60px' }}>
           <h1 className="section-title">
@@ -57,5 +116,6 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
         <ContactsClient dict={dict} />
       </div>
     </div>
+    </>
   );
 }

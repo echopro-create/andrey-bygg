@@ -100,7 +100,7 @@ export async function generateMetadata({
       type: 'website',
       images: [
         {
-          url: '/images/hero-bg.webp',
+          url: `${SITE_URL}/images/hero-bg.webp`,
           width: 1200,
           height: 630,
           alt: 'Oleh Massage — Premium Spa & Massage',
@@ -111,7 +111,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: titleDefault,
       description: descriptionDefault,
-      images: ['/images/hero-bg.webp'],
+      images: [`${SITE_URL}/images/hero-bg.webp`],
     },
     robots: {
       index: true,
@@ -124,8 +124,15 @@ export async function generateMetadata({
         'max-snippet': -1,
       },
     },
+    manifest: '/site.webmanifest',
     icons: {
-      icon: '/favicon.ico',
+      icon: [
+        { url: '/favicon.ico', sizes: '32x32' },
+        { url: '/favicon.svg', type: 'image/svg+xml' },
+      ],
+      apple: [
+        { url: '/apple-touch-icon.png', sizes: '180x180' },
+      ],
     },
   };
 }

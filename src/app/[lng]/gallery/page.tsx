@@ -13,10 +13,11 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
+  const title = `${dict.nav.gallery} — Oleh Massage`;
   const description = dict.gallery?.subtitle || 'Take a look inside our premium private massage studio.';
 
   return {
-    title: dict.nav.gallery,
+    title,
     description,
     alternates: {
       canonical: `/${lng}/gallery`,
@@ -28,9 +29,26 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
       },
     },
     openGraph: {
-      title: `${dict.nav.gallery} — Oleh Massage`,
+      title,
       description,
       url: `${SITE_URL}/${lng}/gallery`,
+      siteName: 'Oleh Massage',
+      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : 'en_US',
+      type: 'website',
+      images: [
+        {
+          url: `${SITE_URL}/images/gallery/gallery-1.webp`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${SITE_URL}/images/gallery/gallery-1.webp`],
     },
   };
 }
@@ -49,8 +67,26 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
     { src: '/images/gallery/gallery-6.webp', alt: 'Oleh Massage Studio — reception and welcome area' },
   ];
 
+  const imageGallerySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageGallery',
+    name: dict.nav.gallery,
+    description: dict.gallery?.subtitle || 'Take a look inside our premium private massage studio.',
+    url: `${SITE_URL}/${lng}/gallery`,
+    image: images.map((img) => ({
+      '@type': 'ImageObject',
+      contentUrl: `${SITE_URL}${img.src}`,
+      name: img.alt,
+    })),
+  };
+
   return (
-    <div className="gallery-page section-spacing">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGallerySchema) }}
+      />
+      <div className="gallery-page section-spacing">
       <div className="container">
         <div className="section-header text-center reveal" style={{ marginBottom: '60px' }}>
           <h1 className="section-title">
@@ -65,5 +101,6 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
         <GalleryClient images={images} closeLabel={dict.contacts.formTitle} lng={lng} dict={dict} />
       </div>
     </div>
+    </>
   );
 }

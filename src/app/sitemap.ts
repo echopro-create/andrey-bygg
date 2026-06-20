@@ -56,6 +56,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     });
 
+    entries.push({
+      url: `${localeUrl}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+      alternates: {
+        languages: Object.fromEntries(
+          locales.map((alt) => [alt, `${SITE_URL}/${alt}/privacy`])
+        ),
+      },
+    });
+
     for (const service of services) {
       entries.push({
         url: `${localeUrl}/services/${service}`,

@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { getDictionary, Locale } from '../../i18n';
 import { Metadata } from 'next';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
 interface PrivacyPageProps {
   params: Promise<{
     lng: string;
@@ -22,11 +24,44 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
+  const title = `${dict.privacy.title} — Oleh Massage`;
+  const description = dict.privacy.subtitle;
+  const locales = ['sv', 'en', 'no', 'ru'];
+
   return {
-    title: `${dict.privacy.title} | Oleh Massage`,
-    description: dict.privacy.subtitle,
+    title,
+    description,
     alternates: {
       canonical: `/${lng}/privacy`,
+      languages: Object.fromEntries(
+        locales.map((alt) => [alt, `/${alt}/privacy`])
+      ),
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/${lng}/privacy`,
+      siteName: 'Oleh Massage',
+      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : 'en_US',
+      type: 'website',
+      images: [
+        {
+          url: `${SITE_URL}/images/hero-bg.webp`,
+          width: 1200,
+          height: 630,
+          alt: 'Oleh Massage — Premium Spa & Massage',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${SITE_URL}/images/hero-bg.webp`],
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }

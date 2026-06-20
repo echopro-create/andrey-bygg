@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getDictionary, Locale } from '../../../i18n';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
 interface ServicePageProps {
   params: Promise<{
     lng: string;
@@ -42,11 +44,40 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
   if (!service) return {};
 
+  const title = `${service.seo_title || service.title} — Oleh Massage`;
+  const description = service.seo_desc || service.desc;
+  const locales = ['sv', 'en', 'no', 'ru'];
+
   return {
-    title: `${service.seo_title || service.title} | Oleh Massage`,
-    description: service.seo_desc || service.desc,
+    title,
+    description,
     alternates: {
       canonical: `/${lng}/services/${serviceSlug}`,
+      languages: Object.fromEntries(
+        locales.map((alt) => [alt, `/${alt}/services/${serviceSlug}`])
+      ),
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/${lng}/services/${serviceSlug}`,
+      siteName: 'Oleh Massage',
+      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : 'en_US',
+      type: 'website',
+      images: [
+        {
+          url: `${SITE_URL}/images/services/${serviceSlug}.webp`,
+          width: 800,
+          height: 1000,
+          alt: service.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${SITE_URL}/images/services/${serviceSlug}.webp`],
     },
   };
 }
@@ -74,16 +105,46 @@ export default async function ServicePage({ params }: ServicePageProps) {
     no: 'Andre behandlinger',
   }[lng] || 'Other treatments';
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    description: service.desc,
+    provider: {
+      '@type': 'HealthAndBeautyBusiness',
+      name: 'Oleh Massage',
+      url: `${SITE_URL}/${lng}`,
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'SE',
+      },
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'SE',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: service.price.replace(/\D/g, ''),
+      priceCurrency: 'SEK',
+    },
+  };
+
   return (
-    <div className="service-detail-page section-spacing">
-      <div className="container">
-        <Link href={`/${lng}`} className="back-link reveal">
-          ← {dict.services.back}
-        </Link>
-        
-        {/* Шапка услуги: на всю ширину страницы */}
-        <div className="service-detail-header reveal">
-          <h1 className="service-detail-title">{service.title}</h1>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <div className="service-detail-page section-spacing">
+        <div className="container">
+          <Link href={`/${lng}`} className="back-link reveal">
+            ← {dict.services.back}
+          </Link>
+
+          {/* Шапка услуги: на всю ширину страницы */}
+          <div className="service-detail-header reveal">
+            <h1 className="service-detail-title">{service.title}</h1>
           
           {/* Мета-панель: длительность и стоимость */}
           <div className="service-meta-panel">
@@ -223,6 +284,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

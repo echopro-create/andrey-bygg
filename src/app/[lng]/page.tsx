@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `${SITE_URL}/${lng}`,
       images: [
         {
-          url: '/images/hero-bg.webp',
+          url: `${SITE_URL}/images/hero-bg.webp`,
           width: 1200,
           height: 630,
           alt: title,
