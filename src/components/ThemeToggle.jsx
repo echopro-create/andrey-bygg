@@ -15,6 +15,14 @@ export default function ThemeToggle() {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(activeTheme);
     document.documentElement.setAttribute('data-theme', activeTheme);
+
+    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (!metaThemeColor) {
+      metaThemeColor = document.createElement('meta');
+      metaThemeColor.name = 'theme-color';
+      document.getElementsByTagName('head')[0].appendChild(metaThemeColor);
+    }
+    metaThemeColor.setAttribute('content', activeTheme === 'dark' ? '#080908' : '#fdfdfc');
   }, []);
 
   const toggleTheme = () => {
@@ -22,6 +30,11 @@ export default function ThemeToggle() {
     setTheme(nextTheme);
     document.documentElement.setAttribute('data-theme', nextTheme);
     localStorage.setItem('theme', nextTheme);
+
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', nextTheme === 'dark' ? '#080908' : '#fdfdfc');
+    }
   };
 
   return (

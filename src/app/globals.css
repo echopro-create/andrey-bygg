@@ -75,7 +75,9 @@ html {
   background: var(--background);
   overflow-x: clip;
   transition: background-color var(--transition-normal);
+  scrollbar-color: var(--primary) var(--background);
 }
+
 
 body {
   background: var(--background);
