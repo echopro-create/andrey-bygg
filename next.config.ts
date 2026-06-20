@@ -7,6 +7,22 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.rygghjalp.se',
+          },
+        ],
+        destination: 'https://rygghjalp.se/:path*',
+        permanent: false,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {
