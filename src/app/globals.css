@@ -97,10 +97,10 @@ html.theme-light {
   --footer-bg: #f0ede6;
   
   /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-bg: rgba(255, 255, 255, 0.3);
   --glass-blur: 24px;
-  --glass-border: rgba(255, 255, 255, 0.45);
-  --glass-shadow: rgba(0, 0, 0, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.35);
+  --glass-shadow: rgba(0, 0, 0, 0.04);
   --card-bg-rgb: 255, 255, 255;
   --text-color-rgb: 42, 39, 36;
   --hero-text-color: #f4f5f4;
@@ -114,7 +114,7 @@ html.theme-light {
   --btn-primary-text: #ffffff;
   --btn-primary-shadow: rgba(115, 94, 61, 0.15);
   --btn-primary-shadow-hover: rgba(115, 94, 61, 0.25);
-  --hero-overlay: linear-gradient(to bottom, rgba(8, 9, 8, 0.6) 0%, rgba(8, 9, 8, 0.7) 45%, rgba(8, 9, 8, 0.3) 75%, var(--background) 100%);
+  --hero-overlay: linear-gradient(to bottom, rgba(var(--background-rgb), 0.75) 0%, rgba(var(--background-rgb), 0.4) 15%, rgba(8, 9, 8, 0.65) 35%, rgba(8, 9, 8, 0.7) 55%, rgba(8, 9, 8, 0.25) 75%, var(--background) 100%);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
