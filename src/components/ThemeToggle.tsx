@@ -9,7 +9,8 @@ export default function ThemeToggle() {
     const savedTheme = localStorage.getItem('oleg-theme') as 'obsidian' | 'zen';
     if (savedTheme && (savedTheme === 'obsidian' || savedTheme === 'zen')) {
       setTheme(savedTheme);
-      document.documentElement.className = `theme-${savedTheme}`;
+      document.documentElement.classList.remove('theme-obsidian', 'theme-zen');
+      document.documentElement.classList.add(`theme-${savedTheme}`);
       updateThemeColorMeta(savedTheme);
     }
   }, []);
@@ -28,7 +29,8 @@ export default function ThemeToggle() {
   const toggleTheme = () => {
     const nextTheme = theme === 'obsidian' ? 'zen' : 'obsidian';
     setTheme(nextTheme);
-    document.documentElement.className = `theme-${nextTheme}`;
+    document.documentElement.classList.remove('theme-obsidian', 'theme-zen');
+    document.documentElement.classList.add(`theme-${nextTheme}`);
     localStorage.setItem('oleg-theme', nextTheme);
     updateThemeColorMeta(nextTheme);
   };

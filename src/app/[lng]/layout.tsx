@@ -34,7 +34,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const dict = await getDictionary(lng);
 
   return (
-    <html lang={lng} className={`${playfair.variable} ${outfit.variable}`}>
+    <html lang={lng} className={`${playfair.variable} ${outfit.variable}`} suppressHydrationWarning>
       <head>
         {/* Ранняя инициализация темы во избежание мерцания панели Safari/Chrome */}
         <script
@@ -42,7 +42,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
             __html: `
               (function() {
                 var theme = localStorage.getItem('oleg-theme') || 'obsidian';
-                document.documentElement.className = 'theme-' + theme;
+                document.documentElement.classList.add('theme-' + theme);
                 var color = theme === 'obsidian' ? '#080908' : '#060907';
                 
                 var meta = document.createElement('meta');
