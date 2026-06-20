@@ -17,6 +17,26 @@ export async function submitBooking(formData: BookingData) {
   const lastSubmit = cookieStore.get('last_submit_time')?.value;
   const now = Date.now();
   const LIMIT_MS = 15_000; // Ограничение: 1 запрос в 15 секунд
+  // Server-side validation
+  const digits = formData.phone ? formData.phone.replace(/\D/g, '') : '';
+  if (!formData.name || !formData.name.trim() || formData.name.length < 2) {
+    return {
+      success: false,
+      error: 'Name must be at least 2 characters.',
+    };
+  }
+  if (!formData.phone || digits.length < 6 || digits.length > 15 || /^(.)\1+$/.test(digits)) {
+    return {
+      success: false,
+      error: 'Please provide a valid phone number.',
+    };
+  }
+  if (!formData.service) {
+    return {
+      success: false,
+      error: 'Please select a service.',
+    };
+  }
 
   if (lastSubmit) {
     const lastTime = parseInt(lastSubmit, 10);

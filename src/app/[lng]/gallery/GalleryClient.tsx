@@ -71,7 +71,7 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
         <Link href={`/${lng}/contacts?book=true`} className="btn btn-primary">
           {dict.nav.book}
         </Link>
-        <Link href={`/${lng}#services`} className="btn btn-secondary" style={{ marginLeft: '16px' }}>
+        <Link href={`/${lng}#services`} className="btn btn-secondary">
           {dict.allServices || 'View services'}
         </Link>
       </div>
