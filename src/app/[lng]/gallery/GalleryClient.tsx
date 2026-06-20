@@ -50,8 +50,8 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
                 src={img.src}
                 alt={img.alt}
                 className="gallery-img"
-                width={600}
-                height={450}
+                fill={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority={index < 3}
                 style={{ objectFit: 'cover' }}
               />

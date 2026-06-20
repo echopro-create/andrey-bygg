@@ -112,8 +112,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     src={`/images/services/${serviceSlug}.webp`}
                     alt={service.title}
                     className="service-detail-img"
-                    width={800}
-                    height={600}
+                    fill={true}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     priority={true}
                     style={{ objectFit: 'cover' }}
                   />
@@ -205,8 +205,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
                       src={`/images/services/${slug}.webp`}
                       alt={relService.title}
                       className="related-service-img"
-                      width={400}
-                      height={300}
+                      fill={true}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       style={{ objectFit: 'cover' }}
                     />
                   </div>

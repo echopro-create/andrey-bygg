@@ -1821,6 +1821,7 @@ html.theme-zen .hero-pill-tag {
 }
 
 .related-service-img-wrapper {
+  position: relative;
   width: 100%;
   aspect-ratio: 16/10;
   overflow: hidden;
@@ -2185,7 +2186,7 @@ html.theme-zen .hero-pill-tag {
   border: 1px solid var(--glass-border);
   position: relative;
   overflow: hidden;
-  background-color: #0b0d0c;
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -2282,7 +2283,7 @@ html.theme-zen .hero-pill-tag {
 
 /* ------------------ Footer ------------------ */
 .site-footer {
-  background-color: #050605;
+  background-color: var(--footer-bg);
   border-top: 1px solid rgba(244, 245, 244, 0.05);
   padding: 80px 0 0;
   color: var(--text-muted);

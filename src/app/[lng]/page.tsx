@@ -166,8 +166,8 @@ export default async function Page({ params }: PageProps) {
                   src="/images/oleg-portrait-new.webp"
                   alt={dict.about.certTitle ? `Oleg Massage Therapist — ${dict.about.certTitle}` : 'Oleg Massage Therapist'}
                   className="about-img"
-                  width={600}
-                  height={800}
+                  fill={true}
+                  sizes="(max-width: 768px) 100vw, 400px"
                   style={{ objectFit: 'cover' }}
                 />
                 <div className="certificate-badge">
@@ -229,8 +229,8 @@ export default async function Page({ params }: PageProps) {
                         src={`/images/services/${slug}.webp`}
                         alt={service.title}
                         className="service-card-img"
-                        width={400}
-                        height={300}
+                        fill={true}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{ objectFit: 'cover' }}
                       />
                       <div className="service-price-tag">
