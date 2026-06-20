@@ -283,7 +283,8 @@
   },
   "gallery": {
     "studio": "Studio",
-    "subtitle": "Ta en titt inuti vår premiummassagestudio. En fristad av lugn, utrustad för din absoluta komfort."
+    "subtitle": "Ta en titt inuti vår premiummassagestudio. En fristad av lugn, utrustad för din absoluta komfort.",
+    "loadMore": "Visa mer"
   },
   "breadcrumbs": {
     "home": "Hem",

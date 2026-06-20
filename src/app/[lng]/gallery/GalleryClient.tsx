@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 import Lightbox from '@/components/Lightbox';
 
@@ -19,21 +19,36 @@ interface GalleryClientProps {
 
 export default function GalleryClient({ images, lng, dict }: GalleryClientProps) {
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [showAll, setShowAll] = useState(false);
+  const firstNewItemRef = useRef<HTMLButtonElement>(null);
 
   const openLightbox = (index: number) => setActiveIndex(index);
   const closeLightbox = () => setActiveIndex(-1);
   const nextImage = () => setActiveIndex((prev) => (prev + 1) % images.length);
   const prevImage = () => setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
 
+  const handleLoadMore = () => {
+    setShowAll(true);
+    // После рендеринга переносим фокус на первую новую картинку для доступности (A11y)
+    setTimeout(() => {
+      firstNewItemRef.current?.focus();
+    }, 50);
+  };
+
+  const visibleImages = showAll ? images : images.slice(0, 6);
+
   return (
     <>
-      <div className="gallery-grid">
-        {images.map((img, index) => {
+      <div className="gallery-grid" aria-live="polite" aria-relevant="additions">
+        {visibleImages.map((img, index) => {
           const isVertical = index < 3;
           const ratio = isVertical ? '3 / 4' : '1 / 1';
+          const isFirstNew = index === 6; // Индекс первого элемента из скрытых
+          
           return (
-            <div key={index} className="gallery-item-wrapper reveal" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div key={index} className="gallery-item-wrapper reveal" style={{ animationDelay: `${index * 0.05}s` }}>
               <button
+                ref={isFirstNew ? firstNewItemRef : null}
                 type="button"
                 className="gallery-item-frame"
                 onClick={() => openLightbox(index)}
@@ -66,6 +81,19 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
           );
         })}
       </div>
+
+      {!showAll && images.length > 6 && (
+        <div className="gallery-load-more text-center reveal" style={{ marginTop: '40px' }}>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={handleLoadMore}
+            aria-label={dict.gallery?.loadMore || 'Show more images'}
+          >
+            {dict.gallery?.loadMore || 'Show More'}
+          </button>
+        </div>
+      )}
 
       <div className="gallery-cta text-center reveal" style={{ marginTop: '60px' }}>
         <Link href={`/${lng}/contacts?book=true`} className="btn btn-primary">

@@ -283,7 +283,8 @@
   },
   "gallery": {
     "studio": "Studio",
-    "subtitle": "Take a look inside our premium private massage studio. A sanctuary of peace, equipped for your absolute comfort."
+    "subtitle": "Take a look inside our premium private massage studio. A sanctuary of peace, equipped for your absolute comfort.",
+    "loadMore": "Show More"
   },
   "breadcrumbs": {
     "home": "Home",
