@@ -11,7 +11,18 @@
     "accent": "kropp & sjel",
     "subtitle": "Profesjonell massasjeterapi i Stockholm. Finn din balanse, frigjør spenninger og gjenopprett energien i en luksuriøs spa-atmosfære.",
     "bookBtn": "Bestill time",
-    "servicesBtn": "Våre tjenester"
+    "servicesBtn": "Våre tjenester",
+    "badge": "• STOCKHOLM PREMIUM SPA",
+    "metrics": {
+      "m1_val": "10+ ÅR",
+      "m1_lbl": "Erfaring",
+      "m2_val": "100%",
+      "m2_lbl": "Naturlige oljer",
+      "m3_val": "PREMIUM",
+      "m3_lbl": "Spa atmosfære",
+      "m4_val": "TILPASSET",
+      "m4_lbl": "Behandling"
+    }
   },
   "about": {
     "title": "Kunsten å helbrede",

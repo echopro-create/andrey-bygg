@@ -26,11 +26,15 @@ export default async function Page({ params }: PageProps) {
       {/* 1. Hero Section */}
       <section className="hero-section">
         <div className="container hero-container">
-          <div className="hero-text reveal">
+          <div className="hero-content reveal">
+            <div className="hero-pill-tag">{dict.hero.badge}</div>
+            
             <h1 className="hero-title">
               {dict.hero.title} <span className="gold-accent">{dict.hero.accent}</span>
             </h1>
+            
             <p className="hero-subtitle">{dict.hero.subtitle}</p>
+            
             <div className="hero-actions">
               <Link href={`/${lng}/contacts?book=true`} className="btn btn-primary">
                 {dict.hero.bookBtn}
@@ -40,14 +44,33 @@ export default async function Page({ params }: PageProps) {
               </Link>
             </div>
           </div>
-          <div className="hero-image-wrapper reveal">
-            <div className="hero-arch-frame">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/hero.png"
-                alt="Massage Therapy Spa Stockholm"
-                className="hero-img"
-              />
+        </div>
+
+        {/* Floating Metrics Bar */}
+        <div className="container hero-metrics-container reveal">
+          <div className="hero-metrics-bar glass-card">
+            <div className="metric-col">
+              <div className="metric-icon-small">𓁠</div>
+              <span className="metric-val">{dict.hero.metrics.m1_val}</span>
+              <span className="metric-lbl">{dict.hero.metrics.m1_lbl}</span>
+            </div>
+            <div className="metric-col-divider"></div>
+            <div className="metric-col">
+              <div className="metric-icon-small">𓆱</div>
+              <span className="metric-val">{dict.hero.metrics.m2_val}</span>
+              <span className="metric-lbl">{dict.hero.metrics.m2_lbl}</span>
+            </div>
+            <div className="metric-col-divider"></div>
+            <div className="metric-col">
+              <div className="metric-icon-small">𓂶</div>
+              <span className="metric-val">{dict.hero.metrics.m3_val}</span>
+              <span className="metric-lbl">{dict.hero.metrics.m3_lbl}</span>
+            </div>
+            <div className="metric-col-divider"></div>
+            <div className="metric-col">
+              <div className="metric-icon-small">★</div>
+              <span className="metric-val">{dict.hero.metrics.m4_val}</span>
+              <span className="metric-lbl">{dict.hero.metrics.m4_lbl}</span>
             </div>
           </div>
         </div>

@@ -11,7 +11,18 @@
     "accent": "kropp & själ",
     "subtitle": "Professionell massage i Stockholm. Hitta din balans, lindra spänningar och återuppbygg din energi i en lyxig spa-atmosfär.",
     "bookBtn": "Boka tid",
-    "servicesBtn": "Våra tjänster"
+    "servicesBtn": "Våra tjänster",
+    "badge": "• STOCKHOLM PREMIUM SPA",
+    "metrics": {
+      "m1_val": "10+ ÅR",
+      "m1_lbl": "Erfarenhet",
+      "m2_val": "100%",
+      "m2_lbl": "Ekologisk olja",
+      "m3_val": "PREMIUM",
+      "m3_lbl": "Spa atmosfär",
+      "m4_val": "ANPASSAD",
+      "m4_lbl": "Behandling"
+    }
   },
   "about": {
     "title": "Konsten att läka",

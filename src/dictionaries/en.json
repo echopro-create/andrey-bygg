@@ -11,7 +11,18 @@
     "accent": "body & soul",
     "subtitle": "Professional massage therapy in Stockholm. Find your balance, release tension, and restore your energy in a luxurious spa atmosphere.",
     "bookBtn": "Book Now",
-    "servicesBtn": "Our Services"
+    "servicesBtn": "Our Services",
+    "badge": "• STOCKHOLM PREMIUM SPA",
+    "metrics": {
+      "m1_val": "10+ YEARS",
+      "m1_lbl": "Experience",
+      "m2_val": "100%",
+      "m2_lbl": "Organic oils",
+      "m3_val": "PREMIUM",
+      "m3_lbl": "Spa atmosphere",
+      "m4_val": "TAILORED",
+      "m4_lbl": "Treatments"
+    }
   },
   "about": {
     "title": "The art of healing",
