@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-const SITE_NAME = 'Oleh Massage';
+const SITE_NAME = 'RyggHjälp';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -43,10 +43,10 @@ export async function generateMetadata({
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const titleDefault = 'Oleh Massage | Premium Spa & Massage';
+  const titleDefault = 'RyggHjälp | Premium Spa & Massage';
   const descriptionDefault =
     dict.hero.subtitle ||
-    'Professional massage therapy and premium spa treatments by Oleh.';
+    'Professional massage therapy and premium spa treatments.';
 
   const localeMap: Record<string, string> = {
     sv: 'sv_SE',
@@ -71,12 +71,13 @@ export async function generateMetadata({
       'Swedish massage',
       'sports massage',
       'hot stone massage',
-      'Oleh massage',
+      'rygghjalp massage',
+      'RyggHjalp',
       'professional massage',
     ],
-    authors: [{ name: 'Oleh Massage' }],
-    creator: 'Oleh Massage',
-    publisher: 'Oleh Massage',
+    authors: [{ name: 'RyggHjälp' }],
+    creator: 'RyggHjälp',
+    publisher: 'RyggHjälp',
     formatDetection: {
       email: false,
       address: false,
@@ -103,7 +104,7 @@ export async function generateMetadata({
           url: `${SITE_URL}/images/og-image.webp`,
           width: 1200,
           height: 630,
-          alt: 'Oleh Massage — Premium Spa & Massage',
+          alt: 'RyggHjälp — Premium Spa & Massage',
         },
       ],
     },
@@ -150,11 +151,11 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const orgSchema = {
     '@context': 'https://schema.org',
     '@type': 'HealthAndBeautyBusiness',
-    name: 'Oleh Massage',
+    name: 'RyggHjälp',
     description: dict.hero.subtitle,
     url: `${SITE_URL}/${lng}`,
     logo: `${SITE_URL}/favicon.ico`,
-    image: `${SITE_URL}/images/hero-bg.webp`,
+    image: `${SITE_URL}/images/og-image.webp`,
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'SE',

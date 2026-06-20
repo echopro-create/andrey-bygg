@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const title = `${dict.contacts.title} ${dict.contacts.accent} — Oleh Massage`;
+  const title = `${dict.contacts.title} ${dict.contacts.accent} — RyggHjälp`;
   const description = dict.contacts?.subtitle || 'Book your session online or reach out via phone.';
 
   return {
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
       title,
       description,
       url: `${SITE_URL}/${lng}/contacts`,
-      siteName: 'Oleh Massage',
+      siteName: 'RyggHjälp',
       locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : 'en_US',
       type: 'website',
       images: [
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
           url: `${SITE_URL}/images/og-image.webp`,
           width: 1200,
           height: 630,
-          alt: 'Oleh Massage — Premium Spa & Massage',
+          alt: 'RyggHjälp — Premium Spa & Massage',
         },
       ],
     },
@@ -61,7 +61,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
   const businessSchema = {
     '@context': 'https://schema.org',
     '@type': 'HealthAndBeautyBusiness',
-    name: 'Oleh Massage',
+    name: 'RyggHjälp',
     description: dict.contacts?.subtitle || 'Professional massage therapy and premium spa treatments.',
     url: `${SITE_URL}/${lng}/contacts`,
     telephone: dict.contacts.phone,

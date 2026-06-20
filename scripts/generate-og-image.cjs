@@ -46,7 +46,7 @@ async function main() {
       <text x="600" y="340" text-anchor="middle"
         fill="#f0ebe0" font-family="Georgia, serif" font-size="56" font-weight="bold"
         letter-spacing="4">
-        OLEH<tspan fill="url(#gold)"> MASSAGE</tspan>
+        RYGG<tspan fill="url(#gold)">HJÄLP</tspan>
       </text>
 
       <!-- Subtitle -->
@@ -70,7 +70,7 @@ async function main() {
       <text x="600" y="510" text-anchor="middle"
         fill="#5a544a" font-family="Arial, sans-serif" font-size="12" font-weight="400"
         letter-spacing="3">
-        OLEGMASSAGE.SE
+        RYGGHJALP.SE
       </text>
     </svg>`;
 

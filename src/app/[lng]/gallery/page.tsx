@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const title = `${dict.nav.gallery} — Oleh Massage`;
+  const title = `${dict.nav.gallery} — RyggHjälp`;
   const description = dict.gallery?.subtitle || 'Take a look inside our premium private massage studio.';
 
   return {
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
       title,
       description,
       url: `${SITE_URL}/${lng}/gallery`,
-      siteName: 'Oleh Massage',
+      siteName: 'RyggHjälp',
       locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : 'en_US',
       type: 'website',
       images: [
@@ -64,7 +64,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
     { src: '/images/gallery/gallery-3.webp', alt: 'Relaxation area with ambient lighting' },
     { src: '/images/gallery/gallery-4.webp', alt: 'Massage therapy preparation area' },
     { src: '/images/gallery/gallery-5.webp', alt: 'Spa atmosphere — candles and towels' },
-    { src: '/images/gallery/gallery-6.webp', alt: 'Oleh Massage Studio — reception and welcome area' },
+    { src: '/images/gallery/gallery-6.webp', alt: 'RyggHjälp Studio — reception and welcome area' },
   ];
 
   const imageGallerySchema = {

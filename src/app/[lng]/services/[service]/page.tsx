@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
   if (!service) return {};
 
-  const title = `${service.seo_title || service.title} — Oleh Massage`;
+  const title = `${service.seo_title || service.title} — RyggHjälp`;
   const description = service.seo_desc || service.desc;
   const locales = ['sv', 'en', 'no', 'ru'];
 
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
       title,
       description,
       url: `${SITE_URL}/${lng}/services/${serviceSlug}`,
-      siteName: 'Oleh Massage',
+      siteName: 'RyggHjälp',
       locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : 'en_US',
       type: 'website',
       images: [
@@ -112,7 +112,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     description: service.desc,
     provider: {
       '@type': 'HealthAndBeautyBusiness',
-      name: 'Oleh Massage',
+      name: 'RyggHjälp',
       url: `${SITE_URL}/${lng}`,
       address: {
         '@type': 'PostalAddress',
