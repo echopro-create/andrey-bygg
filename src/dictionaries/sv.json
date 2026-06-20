@@ -243,7 +243,7 @@
     "title": "Kontakta oss",
     "accent": "boka tid",
     "subtitle": "Boka din tid online eller kontakta oss via telefon. Vår studio är utrustad med allt som behövs för din komfort.",
-    "address": "Gogolya St 48, Tjerkasy, Ukraina",
+    "address": "Hembesök & sessioner i privat studio",
     "phone": "+46 737 584 372",
     "email": "info@olegmassage.se",
     "hours": "Mån - Sön: 09:00 - 21:00",
@@ -272,14 +272,14 @@
     "copy": "Kopiera",
     "copied": "Kopierat!",
     "copyAddress": "Kopiera adress till urklipp",
-    "directions": "Hitta hit →",
+    "directions": "Kontakta oss →",
     "namePlaceholder": "Ditt namn",
     "messagePlaceholder": "Önskat datum och tid, eller andra önskemål...",
     "formDate": "Önskat datum",
     "formTime": "Önskad tid",
-    "street": "Gogolya St 48",
-    "city": "Tjerkasy",
-    "mapLink": "https://maps.google.com/?q=Gogolya+St+48,+Cherkasy"
+    "street": "Mobil Spatjänst",
+    "city": "Sverige & Norge",
+    "mapLink": ""
   },
   "gallery": {
     "studio": "Studio",

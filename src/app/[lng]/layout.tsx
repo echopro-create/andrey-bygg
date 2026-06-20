@@ -150,15 +150,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     image: `${SITE_URL}/images/hero-bg.webp`,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Gogolya St, 48',
-      addressLocality: 'Cherkasy',
-      postalCode: '18001',
-      addressCountry: 'UA',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 49.4444,
-      longitude: 32.0600,
+      addressCountry: 'SE',
     },
     telephone: dict.contacts.phone,
     email: dict.contacts.email,
@@ -181,10 +173,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     priceRange: '850-1200 SEK',
     currenciesAccepted: 'SEK',
     paymentAccepted: 'Cash, Credit Card, Swish',
-    areaServed: {
-      '@type': 'City',
-      name: 'Cherkasy',
-    },
+
     sameAs: [
       'https://www.instagram.com/olegmassage/',
       'https://www.facebook.com/olegmassage/',
