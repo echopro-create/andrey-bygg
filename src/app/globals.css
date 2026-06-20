@@ -14,6 +14,7 @@
   --olive-text: #d4be96;
   --error: #cf6679;
   --success: #81c784;
+  --footer-bg: #050605;
   
   /* Glassmorphism */
   --glass-bg: rgba(8, 9, 8, 0.82);
@@ -40,6 +41,7 @@ html.theme-zen {
   --olive-text: #a3b899;
   --error: #e57373;
   --success: #81c784;
+  --footer-bg: #030403;
   
   /* Glassmorphism */
   --glass-bg: rgba(6, 9, 7, 0.82);
