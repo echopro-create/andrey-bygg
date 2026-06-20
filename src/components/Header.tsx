@@ -23,23 +23,6 @@ export default function Header({ dict }: HeaderProps) {
 
   const [theme, setTheme] = useState<Theme>('obsidian');
   const [activeHash, setActiveHash] = useState('');
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // Отслеживание скролла для изменения стиля шапки
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   // Инициализация темы при первом рендере
   useEffect(() => {
@@ -182,16 +165,8 @@ export default function Header({ dict }: HeaderProps) {
     return pathWithoutLocale === linkPath;
   };
 
-  const isHomePage = pathname === `/${currentLng}` || pathname === '/' || pathname === `/${currentLng}/`;
-
-  const headerClass = `site-header ${
-    isHomePage 
-      ? (isScrolled ? 'header-scrolled' : 'header-transparent') 
-      : 'header-scrolled'
-  }`;
-
   return (
-    <header className={headerClass}>
+    <header className="site-header">
       <div className="container header-container">
         <Link href={`/${currentLng}`} className="logo" onClick={closeMenu} aria-label="Oleg Massage — Home">
           OLEG <span className="gold-accent">MASSAGE</span>
