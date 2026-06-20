@@ -3,6 +3,7 @@
 /* Default Theme: Obsidian */
 :root, html.theme-obsidian {
   --background: #080908;
+  --background-rgb: 8, 9, 8;
   --primary: #d4be96;
   --primary-hover: #e2d2b5;
   --primary-rgb: 212, 190, 150;
@@ -28,6 +29,7 @@
 /* Alternative Dark Theme: Emerald Zen */
 html.theme-zen {
   --background: #060907;
+  --background-rgb: 6, 9, 7;
   --primary: #a3b899;
   --primary-hover: #b4c9aa;
   --primary-rgb: 163, 184, 153;
@@ -258,7 +260,7 @@ textarea:focus-visible,
 
 .btn-primary {
   background: linear-gradient(135deg, #e5d1b1 0%, #c4a97a 100%);
-  color: #0c0d0c;
+  color: var(--background);
   font-weight: 600;
   border: 1px solid rgba(var(--primary-rgb), 0.2);
   box-shadow: 0 4px 12px rgba(196, 169, 122, 0.15);
@@ -735,7 +737,7 @@ select.form-control {
 
 .mobile-lang-btn.active {
   background: var(--primary);
-  color: #080908;
+  color: var(--background);
   box-shadow: 0 4px 10px rgba(var(--primary-rgb), 0.2);
 }
 
@@ -758,18 +760,12 @@ select.form-control {
   padding: 100px 0 120px;
   position: relative;
   background-image: 
-    linear-gradient(to bottom, #080908 0%, rgba(8, 9, 8, 0.4) 15%, rgba(8, 9, 8, 0.55) 50%, rgba(8, 9, 8, 0.85) 85%, #080908 100%), 
+    linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.4) 15%, rgba(var(--background-rgb), 0.55) 50%, rgba(var(--background-rgb), 0.85) 85%, var(--background) 100%), 
     url('/images/hero-bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-}
-
-html.theme-zen .hero-section {
-  background-image: 
-    linear-gradient(to bottom, #060907 0%, rgba(6, 9, 7, 0.4) 15%, rgba(6, 9, 7, 0.55) 50%, rgba(6, 9, 7, 0.85) 85%, #060907 100%), 
-    url('/images/hero-bg.webp');
 }
 
 .hero-container {
@@ -1309,13 +1305,13 @@ html.theme-zen .hero-pill-tag {
   font-family: var(--font-title);
   font-size: 1.25rem;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--text-color);
   margin-bottom: 10px;
   letter-spacing: 0.02em;
 }
 
 .service-card-desc {
-  color: rgba(244, 245, 244, 0.6);
+  color: var(--text-muted);
   font-size: 0.88rem;
   line-height: 1.6;
   margin-bottom: 24px;

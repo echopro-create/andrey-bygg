@@ -5,6 +5,7 @@ import { usePathname, useRouter, useParams } from 'next/navigation';
 import { useState, useEffect, useRef, useTransition } from 'react';
 
 interface HeaderProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dict: any;
 }
 
@@ -18,6 +19,71 @@ export default function Header({ dict }: HeaderProps) {
   const router = useRouter();
   const params = useParams();
   const currentLng = (params.lng as string) || 'sv';
+
+  const [theme, setTheme] = useState<'obsidian' | 'zen'>('obsidian');
+  const [activeHash, setActiveHash] = useState('');
+
+  // Инициализация темы при первом рендере
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as 'obsidian' | 'zen';
+    if (savedTheme === 'zen') {
+      setTimeout(() => setTheme('zen'), 0);
+      document.documentElement.classList.add('theme-zen');
+      document.documentElement.classList.remove('theme-obsidian');
+    } else {
+      setTimeout(() => setTheme('obsidian'), 0);
+      document.documentElement.classList.add('theme-obsidian');
+      document.documentElement.classList.remove('theme-zen');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === 'obsidian' ? 'zen' : 'obsidian';
+    setTheme(nextTheme);
+    localStorage.setItem('theme', nextTheme);
+    if (nextTheme === 'zen') {
+      document.documentElement.classList.add('theme-zen');
+      document.documentElement.classList.remove('theme-obsidian');
+    } else {
+      document.documentElement.classList.add('theme-obsidian');
+      document.documentElement.classList.remove('theme-zen');
+    }
+  };
+
+  // IntersectionObserver для скролла к секциям
+  useEffect(() => {
+    setTimeout(() => setActiveHash(window.location.hash), 0);
+
+    const handleHashChange = () => {
+      setActiveHash(window.location.hash);
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+
+    const sections = document.querySelectorAll('section[id]');
+    const observerOptions = {
+      root: null,
+      rootMargin: '-40% 0px -50% 0px',
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          setActiveHash(`#${id}`);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, [pathname]);
 
   const languages = [
     { code: 'sv', label: 'Svenska' },
@@ -73,9 +139,18 @@ export default function Header({ dict }: HeaderProps) {
   const isActive = (href: string) => {
     const pathWithoutLocale = pathname.replace(`/${currentLng}`, '') || '/';
     const linkPath = href.replace(`/${currentLng}`, '');
-    if (linkPath === '/') return pathWithoutLocale === '/' || pathWithoutLocale.startsWith('/#');
-    if (linkPath.startsWith('/#')) return false;
-    return pathWithoutLocale.startsWith(linkPath.replace(/#.*$/, ''));
+
+    if (linkPath.includes('#')) {
+      const [path, hash] = linkPath.split('#');
+      const isPathMatch = pathWithoutLocale === '/' || pathWithoutLocale === path;
+      return isPathMatch && activeHash === `#${hash}`;
+    }
+
+    if (linkPath === '/') {
+      return pathWithoutLocale === '/' && !activeHash;
+    }
+
+    return pathWithoutLocale === linkPath;
   };
 
   return (
@@ -99,6 +174,35 @@ export default function Header({ dict }: HeaderProps) {
         </nav>
 
         <div className="header-actions">
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle-btn"
+            aria-label={theme === 'obsidian' ? 'Switch to Emerald Zen theme' : 'Switch to Obsidian theme'}
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              color: 'var(--primary)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '8px',
+              marginRight: '8px',
+              borderRadius: '50%',
+              transition: 'var(--transition-fast)',
+            }}
+          >
+            {theme === 'obsidian' ? (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            ) : (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            )}
+          </button>
+
           <div className="custom-lang-selector" ref={dropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}

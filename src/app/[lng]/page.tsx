@@ -65,6 +65,7 @@ export default async function Page({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: serviceSlugs.map((slug) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const service = (dict.services.items as any)[slug];
       return {
         '@type': 'Question',
@@ -218,6 +219,7 @@ export default async function Page({ params }: PageProps) {
             </div>
             <div className="services-grid">
               {serviceSlugs.map((slug) => {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 const service = (dict.services.items as any)[slug];
                 if (!service) return null;
                 return (
@@ -330,6 +332,7 @@ export default async function Page({ params }: PageProps) {
               </h2>
             </div>
             <div className="reviews-grid">
+              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
               {dict.reviews.items.map((review: any, index: number) => {
                 const verifiedText = {
                   ru: 'Верифицированный клиент',

@@ -98,8 +98,11 @@ export async function submitBooking(formData: BookingData) {
     }
 
     return { success: true, demo: false };
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('[Oleg Massage] Exception while sending Telegram notification:', error);
-    return { success: false, error: error.message || 'Unknown network error.' };
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'Unknown network error.',
+    };
   }
 }

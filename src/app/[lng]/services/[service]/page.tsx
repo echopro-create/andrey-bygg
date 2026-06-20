@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   const lng = resolvedParams.lng as Locale;
   const serviceSlug = resolvedParams.service;
   const dict = await getDictionary(lng);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const service = (dict.services.items as any)[serviceSlug];
 
   if (!service) return {};
@@ -57,6 +58,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const serviceSlug = resolvedParams.service;
   const dict = await getDictionary(lng);
   
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const service = (dict.services.items as any)[serviceSlug];
 
   if (!service) {
@@ -92,6 +94,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
             <div className="meta-divider"></div>
             <div className="meta-item">
+              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
               <span className="meta-label">{(dict.services as any).cost}</span>
               <span className="meta-value gold">{service.price}</span>
             </div>
@@ -136,6 +139,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     </defs>
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                   </svg>
+                  {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                   <h3 className="benefit-title">{(dict.services as any).benefitsTitle}</h3>
                 </div>
                 <p className="benefit-text">{service.benefit}</p>
@@ -191,6 +195,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <h2 className="related-services-title">{relatedTitle}</h2>
           <div className="related-services-grid">
             {relatedSlugs.map((slug) => {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               const relService = (dict.services.items as any)[slug];
               if (!relService) return null;
               return (

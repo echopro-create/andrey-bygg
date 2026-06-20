@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 interface FooterProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dict: any;
   lng: string;
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getDictionary, Locale } from '../../../i18n';
+import { getDictionary, Locale } from '../../i18n';
 import { Metadata } from 'next';
 
 interface PrivacyPageProps {

@@ -23,7 +23,7 @@ function getLocale(request: NextRequest): string {
         return locale;
       }
     }
-  } catch (e) {
+  } catch {
     // Игнорируем ошибки парсинга и возвращаем локаль по умолчанию
   }
   return defaultLocale;
