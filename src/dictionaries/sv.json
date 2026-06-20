@@ -31,8 +31,7 @@
     "text1": "Hej, jag heter Oleg. Jag är en certifierad massageterapeut med över 10 års erfarenhet av professionell massage. Mitt mål är att hjälpa dig att bli av med smärta, stress och muskelspänningar genom att kombinera klassiska metoder med individuellt anpassade tekniker.",
     "text2": "Varje session anpassas efter dina specifika behov – oavsett om det handlar om djupgående muskelavslappning efter ett intensivt träningspass eller en lugnande stund för att lindra vardagsstress.",
     "certTitle": "Diplomerad terapeut",
-    "certSubtitle": "Certifierad i Sverige & internationellt",
-    "languagesLabel": "Språk"
+    "certSubtitle": "Certifierad i Sverige & internationellt"
   },
   "advantages": {
     "title": "Varför välja",
@@ -109,9 +108,7 @@
         "duration": "60 min / 90 min",
         "benefit": "Använder exklusiva kallpressade växtoljor som ger näring åt huden på djupet, samtidigt som dofterna balanserar sinnet."
       }
-    },
-    "cost": "Pris",
-    "benefitsTitle": "Terapeutiska fördelar"
+    }
   },
   "reviews": {
     "title": "Vad våra",
@@ -137,6 +134,7 @@
   "contacts": {
     "title": "Kontakta oss",
     "accent": "boka tid",
+    "subtitle": "Boka din tid online eller kontakta oss via telefon. Vår privata studio ligger i hjärtat av Stockholm.",
     "address": "Birger Jarlsgatan 42, 114 29 Stockholm",
     "phone": "+46 8 123 45 67",
     "email": "info@olegmassage.se",
@@ -155,15 +153,23 @@
       "phoneRequired": "Telefonnummer är obligatoriskt",
       "phoneInvalid": "Ange ett giltigt telefonnummer",
       "serviceRequired": "Vänligen välj en behandling"
-    },
-    "subtitle": "Boka din behandling online eller kontakta oss via telefon. Vår privata studio ligger i hjärtat av Stockholm."
+    }
   },
   "gallery": {
-    "titleAccent": "Studio",
-    "subtitle": "Ta en titt inuti vår privata premiummassagestudio i Stockholm. En oas av fred, utrustad för din absolut komfort.",
-    "close": "Stäng"
+    "subtitle": "Ta en titt inuti vår premiummassagestudio i Stockholm. En fristad av lugn, utrustad för din absoluta komfort."
   },
-  "footer": {
-    "rights": "Alla rättigheter förbehållna. Stockholm, Sverige."
+  "breadcrumbs": {
+    "home": "Hem",
+    "services": "Tjänster",
+    "gallery": "Galleri",
+    "contacts": "Kontakter"
+  },
+  "relatedServices": "Du kanske också gillar",
+  "skipToContent": "Hoppa till innehåll",
+  "allServices": "Alla tjänster",
+  "notFound": {
+    "title": "Sidan hittades inte",
+    "description": "Sidan du letar efter finns inte eller har flyttats. Kontrollera URL:en eller återgå till startsidan.",
+    "backHome": "Tillbaka till startsidan"
   }
 }

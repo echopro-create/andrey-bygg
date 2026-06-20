@@ -6,13 +6,20 @@ interface FooterProps {
 }
 
 export default function Footer({ dict, lng }: FooterProps) {
-  const currentYear = 2026;
+  const currentYear = new Date().getFullYear();
+
+  const footerServices = [
+    { slug: 'classic', title: dict.services.items.classic.title },
+    { slug: 'sports', title: dict.services.items.sports.title },
+    { slug: 'hot-stone', title: dict.services.items['hot-stone'].title },
+    { slug: 'lymphatic-drainage', title: dict.services.items['lymphatic-drainage'].title },
+  ];
 
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Link href={`/${lng}`} className="footer-logo">
+          <Link href={`/${lng}`} className="footer-logo" aria-label="Oleg Massage — Home">
             OLEG <span className="gold-accent">MASSAGE</span>
           </Link>
           <p className="footer-desc">
@@ -20,31 +27,23 @@ export default function Footer({ dict, lng }: FooterProps) {
           </p>
         </div>
 
-        <div className="footer-links">
+        <nav className="footer-links" aria-label="Services navigation">
           <h4 className="footer-title">{dict.nav.services}</h4>
           <ul className="footer-list">
+            {footerServices.map((svc) => (
+              <li key={svc.slug}>
+                <Link href={`/${lng}/services/${svc.slug}`} className="footer-link">
+                  {svc.title}
+                </Link>
+              </li>
+            ))}
             <li>
               <Link href={`/${lng}#services`} className="footer-link">
-                {dict.services.items.classic.title}
-              </Link>
-            </li>
-            <li>
-              <Link href={`/${lng}#services`} className="footer-link">
-                {dict.services.items.sports.title}
-              </Link>
-            </li>
-            <li>
-              <Link href={`/${lng}#services`} className="footer-link">
-                {dict.services.items['hot-stone'].title}
-              </Link>
-            </li>
-            <li>
-              <Link href={`/${lng}#services`} className="footer-link">
-                {dict.services.items['lymphatic-drainage'].title}
+                {dict.allServices || 'All services'} →
               </Link>
             </li>
           </ul>
-        </div>
+        </nav>
 
         <div className="footer-info">
           <h4 className="footer-title">{dict.contacts.title}</h4>
@@ -77,14 +76,30 @@ export default function Footer({ dict, lng }: FooterProps) {
           </ul>
         </div>
       </div>
-      
+
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
-          <p>&copy; {currentYear} OLEG MASSAGE. {dict.footer.rights}</p>
-          <div className="footer-socials">
-            <a href="#" className="social-link" aria-label="Instagram">IG</a>
-            <a href="#" className="social-link" aria-label="Facebook">FB</a>
-          </div>
+          <p>&copy; {currentYear} OLEG MASSAGE. All rights reserved. Birger Jarlsgatan 42, Stockholm, Sweden.</p>
+          <nav className="footer-socials" aria-label="Social media links">
+            <a
+              href="https://www.instagram.com/olegmassage/"
+              className="social-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              IG
+            </a>
+            <a
+              href="https://www.facebook.com/olegmassage/"
+              className="social-link"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              FB
+            </a>
+          </nav>
         </div>
       </div>
     </footer>

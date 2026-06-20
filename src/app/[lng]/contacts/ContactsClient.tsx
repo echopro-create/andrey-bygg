@@ -1,16 +1,19 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, Suspense, useCallback, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import { submitBooking } from '../../actions';
 
 interface ContactsClientProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dict: any;
 }
 
 function ContactsForm({ dict }: ContactsClientProps) {
   const searchParams = useSearchParams();
-  
+  const csrfTokenRef = useRef<string | null>(null);
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -33,7 +36,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
   const [copied, setCopied] = useState(false);
 
-  // Список услуг для выпадающего списка
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const servicesList = [
     { value: 'classic', label: dict.services.items.classic.title },
     { value: 'anti-cellulite', label: dict.services.items['anti-cellulite'].title },
@@ -45,11 +48,14 @@ function ContactsForm({ dict }: ContactsClientProps) {
     { value: 'natural-massage', label: dict.services.items['natural-massage'].title },
   ];
 
-  // Предзаполнение услуги из URL
+  // Pre-fill service from URL param
   useEffect(() => {
     const serviceParam = searchParams.get('service');
-    if (serviceParam && servicesList.some(s => s.value === serviceParam)) {
-      setFormData(prev => ({ ...prev, service: serviceParam }));
+    if (serviceParam && servicesList.some((s) => s.value === serviceParam)) {
+      setFormData((prev) => {
+        if (prev.service === serviceParam) return prev;
+        return { ...prev, service: serviceParam };
+      });
     }
   }, [searchParams]);
 
@@ -57,14 +63,13 @@ function ContactsForm({ dict }: ContactsClientProps) {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    // Очищаем ошибку поля при вводе
+    setFormData((prev) => ({ ...prev, [name]: value }));
     if (errors[name as keyof typeof errors]) {
-      setErrors(prev => ({ ...prev, [name]: undefined }));
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
   };
 
-  const validateForm = () => {
+  const validateForm = useCallback(() => {
     const newErrors: typeof errors = {};
     if (!formData.name.trim()) {
       newErrors.name = dict.contacts.validation.nameRequired;
@@ -72,7 +77,6 @@ function ContactsForm({ dict }: ContactsClientProps) {
     if (!formData.phone.trim()) {
       newErrors.phone = dict.contacts.validation.phoneRequired;
     } else {
-      // Простая проверка телефонного номера (минимум 6 цифр)
       const phoneRegex = /^[+]?[0-9\s\-()]{6,20}$/;
       if (!phoneRegex.test(formData.phone.trim())) {
         newErrors.phone = dict.contacts.validation.phoneInvalid;
@@ -83,6 +87,10 @@ function ContactsForm({ dict }: ContactsClientProps) {
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
+  }, [formData, dict]);
+
+  const sanitizeInput = (value: string): string => {
+    return value.replace(/[<>]/g, '').trim();
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -93,29 +101,38 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
     setIsSubmitting(true);
     try {
-      // Ищем русское или локальное название услуги для отправки в Telegram
-      const selectedServiceObj = servicesList.find(s => s.value === formData.service);
+      const selectedServiceObj = servicesList.find((s) => s.value === formData.service);
       const serviceName = selectedServiceObj ? selectedServiceObj.label : formData.service;
 
+      if (!csrfTokenRef.current) {
+        csrfTokenRef.current = Math.random().toString(36).substring(2) + Date.now().toString(36);
+      }
+
       const result = await submitBooking({
-        ...formData,
+        name: sanitizeInput(formData.name),
+        phone: sanitizeInput(formData.phone),
         service: serviceName,
+        message: sanitizeInput(formData.message),
+        _csrf: csrfTokenRef.current,
       });
 
       if (result.success) {
         setSubmitResult({ success: true, demo: result.demo });
-        // Очищаем форму при успехе
         setFormData({
           name: '',
           phone: '',
           service: '',
           message: '',
         });
+        csrfTokenRef.current = null;
       } else {
         setSubmitResult({ success: false, error: result.error });
       }
-    } catch (err: any) {
-      setSubmitResult({ success: false, error: err.message || 'Network error' });
+    } catch (err: unknown) {
+      setSubmitResult({
+        success: false,
+        error: err instanceof Error ? err.message : 'Network error',
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -129,10 +146,9 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
   return (
     <div className="contacts-grid">
-      {/* Левая колонка: Форма записи */}
       <div className="contacts-form-wrapper glass-card reveal">
         <h3 className="form-box-title">{dict.contacts.formTitle}</h3>
-        
+
         {submitResult && submitResult.success && (
           <div className="alert alert-success">
             <div>
@@ -163,6 +179,8 @@ function ContactsForm({ dict }: ContactsClientProps) {
               onChange={handleInputChange}
               className={`form-control ${errors.name ? 'input-error' : ''}`}
               disabled={isSubmitting}
+              placeholder="Your name"
+              autoComplete="name"
             />
             {errors.name && <div className="error-message">{errors.name}</div>}
           </div>
@@ -179,6 +197,8 @@ function ContactsForm({ dict }: ContactsClientProps) {
               onChange={handleInputChange}
               className={`form-control ${errors.phone ? 'input-error' : ''}`}
               disabled={isSubmitting}
+              placeholder="+46 70 123 45 67"
+              autoComplete="tel"
             />
             {errors.phone && <div className="error-message">{errors.phone}</div>}
           </div>
@@ -218,6 +238,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
               className="form-control"
               style={{ resize: 'vertical' }}
               disabled={isSubmitting}
+              placeholder="Your preferred date and time, or any additional requests..."
             />
           </div>
 
@@ -233,13 +254,18 @@ function ContactsForm({ dict }: ContactsClientProps) {
             )}
           </button>
         </form>
+
+        <div style={{ marginTop: '24px', textAlign: 'center' }}>
+          <Link href="/#services" className="back-link" style={{ marginBottom: 0 }}>
+            {dict.allServices || 'All services'} →
+          </Link>
+        </div>
       </div>
 
-      {/* Правая колонка: Контакты и интерактивный блок */}
       <div className="contacts-info-column reveal">
         <div className="glass-card contacts-info-card">
           <h3 className="info-box-title">Oleg Massage Stockholm</h3>
-          
+
           <div className="info-items">
             <div className="info-item-row">
               <span className="info-item-label">Address</span>
@@ -276,7 +302,6 @@ function ContactsForm({ dict }: ContactsClientProps) {
             </div>
           </div>
 
-          {/* Премиальная интерактивная геолокационная плашка без тяжелого iframe */}
           <div className="minimal-map-card">
             <div className="map-grid-pattern">
               <div className="pulse-circle"></div>

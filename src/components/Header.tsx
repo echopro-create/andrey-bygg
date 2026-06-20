@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter, useParams } from 'next/navigation';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useTransition } from 'react';
 
 interface HeaderProps {
   dict: any;
@@ -11,8 +11,9 @@ interface HeaderProps {
 export default function Header({ dict }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const dropdownRef = useRef<HTMLDivElement>(null);
-  
+
   const pathname = usePathname();
   const router = useRouter();
   const params = useParams();
@@ -25,7 +26,6 @@ export default function Header({ dict }: HeaderProps) {
     { code: 'ru', label: 'Русский' },
   ];
 
-  // Close dropdown on click outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -38,12 +38,25 @@ export default function Header({ dict }: HeaderProps) {
     };
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.classList.add('mobile-drawer-open');
+    } else {
+      document.body.classList.remove('mobile-drawer-open');
+    }
+    return () => {
+      document.body.classList.remove('mobile-drawer-open');
+    };
+  }, [mobileMenuOpen]);
+
   const changeLanguage = (newLng: string) => {
     if (!pathname) return;
     const segments = pathname.split('/');
     segments[1] = newLng;
     const newPath = segments.join('/');
-    router.push(newPath);
+    startTransition(() => {
+      router.push(newPath);
+    });
   };
 
   const closeMenu = () => {
@@ -57,32 +70,44 @@ export default function Header({ dict }: HeaderProps) {
     { href: `/${currentLng}/contacts`, label: dict.nav.contacts },
   ];
 
+  const isActive = (href: string) => {
+    const pathWithoutLocale = pathname.replace(`/${currentLng}`, '') || '/';
+    const linkPath = href.replace(`/${currentLng}`, '');
+    if (linkPath === '/') return pathWithoutLocale === '/' || pathWithoutLocale.startsWith('/#');
+    if (linkPath.startsWith('/#')) return false;
+    return pathWithoutLocale.startsWith(linkPath.replace(/#.*$/, ''));
+  };
+
   return (
     <header className="site-header">
       <div className="container header-container">
-        <Link href={`/${currentLng}`} className="logo" onClick={closeMenu}>
+        <Link href={`/${currentLng}`} className="logo" onClick={closeMenu} aria-label="Oleg Massage — Home">
           OLEG <span className="gold-accent">MASSAGE</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="desktop-nav">
+        <nav className="desktop-nav" aria-label="Main navigation">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="nav-link">
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`nav-link ${isActive(link.href) ? 'nav-link-active' : ''}`}
+              aria-current={isActive(link.href) ? 'page' : undefined}
+            >
               {link.label}
             </Link>
           ))}
         </nav>
 
         <div className="header-actions">
-          {/* Custom Language Dropdown (2026 Standard) */}
           <div className="custom-lang-selector" ref={dropdownRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
               className={`lang-trigger-btn ${langDropdownOpen ? 'active' : ''}`}
               aria-expanded={langDropdownOpen}
-              aria-label="Select language"
+              aria-label={`Select language. Current: ${languages.find((l) => l.code === currentLng)?.label || currentLng}`}
             >
-              <span>{currentLng}</span>
+              <span>{currentLng.toUpperCase()}</span>
+              {isPending && <span className="spinner" style={{ width: '14px', height: '14px', borderWidth: '2px' }} />}
               <svg
                 className="lang-arrow"
                 width="10"
@@ -102,7 +127,7 @@ export default function Header({ dict }: HeaderProps) {
             </button>
 
             {langDropdownOpen && (
-              <div className="lang-dropdown-menu">
+              <div className="lang-dropdown-menu" role="listbox" aria-label="Language selection">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
@@ -111,6 +136,8 @@ export default function Header({ dict }: HeaderProps) {
                       setLangDropdownOpen(false);
                     }}
                     className={`lang-dropdown-item ${currentLng === lang.code ? 'active' : ''}`}
+                    role="option"
+                    aria-selected={currentLng === lang.code}
                   >
                     <span>{lang.label}</span>
                     {currentLng === lang.code && <span className="lang-active-dot" />}
@@ -120,15 +147,18 @@ export default function Header({ dict }: HeaderProps) {
             )}
           </div>
 
-          <Link href={`/${currentLng}/contacts?book=true`} className="btn btn-primary header-book-btn">
+          <Link
+            href={`/${currentLng}/contacts?book=true`}
+            className="btn btn-primary header-book-btn"
+            aria-label={dict.nav.book}
+          >
             {dict.nav.book}
           </Link>
 
-          {/* Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className={`burger-btn ${mobileMenuOpen ? 'open' : ''}`}
-            aria-label="Toggle navigation menu"
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={mobileMenuOpen}
           >
             <span></span>
@@ -138,9 +168,12 @@ export default function Header({ dict }: HeaderProps) {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
-      <div className={`mobile-drawer ${mobileMenuOpen ? 'active' : ''}`}>
-        <nav className="mobile-nav">
+      {mobileMenuOpen && (
+        <div className="mobile-drawer-backdrop" onClick={closeMenu} aria-hidden="true" />
+      )}
+
+      <div className={`mobile-drawer ${mobileMenuOpen ? 'active' : ''}`} role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <nav className="mobile-nav" aria-label="Mobile navigation">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="mobile-nav-link" onClick={closeMenu}>
               {link.label}

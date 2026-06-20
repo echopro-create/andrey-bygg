@@ -1,23 +1,31 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function ScrollRevealInit() {
   const pathname = usePathname();
+  const mountedRef = useRef(false);
 
   useEffect(() => {
-    // Небольшая задержка, чтобы дать React завершить рендеринг DOM
-    const timer = setTimeout(() => {
-      const revealElements = document.querySelectorAll('.reveal');
+    mountedRef.current = true;
 
-      const observer = new IntersectionObserver(
+    let observer: IntersectionObserver | null = null;
+
+    const setupObserver = () => {
+      if (!mountedRef.current) return;
+
+      const revealElements = document.querySelectorAll('.reveal:not(.active)');
+      if (revealElements.length === 0) return;
+
+      observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-              // Прекращаем наблюдение после активации (эффект однократного появления)
-              observer.unobserve(entry.target);
+              requestAnimationFrame(() => {
+                entry.target.classList.add('active');
+              });
+              observer?.unobserve(entry.target);
             }
           });
         },
@@ -27,14 +35,19 @@ export default function ScrollRevealInit() {
         }
       );
 
-      revealElements.forEach((el) => observer.observe(el));
+      revealElements.forEach((el) => observer!.observe(el));
+    };
 
-      return () => {
-        revealElements.forEach((el) => observer.unobserve(el));
-      };
-    }, 100);
+    const timeoutId = setTimeout(() => {
+      requestAnimationFrame(setupObserver);
+    }, 300);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timeoutId);
+      if (observer) {
+        observer.disconnect();
+      }
+    };
   }, [pathname]);
 
   return null;

@@ -31,8 +31,7 @@
     "text1": "Hei, jeg heter Oleg. Jeg er en sertifisert massasjeterapeut med over 10 års profesjonell erfaring. Mitt mål er å hjelpe deg med å frigjøre smerte, stress og muskelspenninger ved å kombinere klassiske metoder med individuelt tilpassede teknikker.",
     "text2": "Hver økt tilpasses dine spesifikke behov – enten du trenger dyptgående muskelavspenning etter en intens treningsøkt eller en beroligende stund for å lindre hverdagsstress.",
     "certTitle": "Diplomert terapeut",
-    "certSubtitle": "Sertifisert i Sverige & internasjonalt",
-    "languagesLabel": "Språk"
+    "certSubtitle": "Sertifisert i Sverige & internasjonalt"
   },
   "advantages": {
     "title": "Hvorfor velge",
@@ -109,9 +108,7 @@
         "duration": "60 min / 90 min",
         "benefit": "Bruker kalddpressede økologiske planteoljer som gir næring til huden, mens naturlig aromaterapi balanserer sinnet."
       }
-    },
-    "cost": "Pris",
-    "benefitsTitle": "Terapeutiske fordeler"
+    }
   },
   "reviews": {
     "title": "Hva våre",
@@ -137,12 +134,13 @@
   "contacts": {
     "title": "Kontakt oss",
     "accent": "bestill time",
+    "subtitle": "Bestill time på nett eller ta kontakt via telefon. Vårt private studio ligger i hjertet av Stockholm.",
     "address": "Birger Jarlsgatan 42, 114 29 Stockholm",
     "phone": "+46 8 123 45 67",
     "email": "info@olegmassage.se",
     "hours": "Man - Søn: 09:00 - 21:00",
     "formTitle": "Send en forespørsel",
-    "formName": "Ditt namn",
+    "formName": "Ditt navn",
     "formPhone": "Telefonnummer",
     "formService": "Velg behandling",
     "formMessage": "Din melding",
@@ -155,15 +153,23 @@
       "phoneRequired": "Telefonnummer er obligatorisk",
       "phoneInvalid": "Vennligst oppgi et gyldig telefonnummer",
       "serviceRequired": "Vennligst velg en behandling"
-    },
-    "subtitle": "Bestill time på nett eller kontakt oss på telefon. Vårt private studio ligger i hjärtat av Stockholm."
+    }
   },
   "gallery": {
-    "titleAccent": "Studio",
-    "subtitle": "Ta en titt i vårt private premium massasjestudio i Stockholm. En oas av fred, utstyrt for din absolutte komfort.",
-    "close": "Lukk"
+    "subtitle": "Ta en titt inn i vårt premium massasjestudio i Stockholm. Et fristed for ro, utstyrt for din absolutte komfort."
   },
-  "footer": {
-    "rights": "Alle rettigheter reservert. Stockholm, Sverige."
+  "breadcrumbs": {
+    "home": "Hjem",
+    "services": "Tjenester",
+    "gallery": "Galleri",
+    "contacts": "Kontakter"
+  },
+  "relatedServices": "Du vil kanskje også like",
+  "skipToContent": "Hopp til innhold",
+  "allServices": "Alle tjenester",
+  "notFound": {
+    "title": "Siden ble ikke funnet",
+    "description": "Siden du leter etter finnes ikke eller har blitt flyttet. Sjekk URL-en eller gå tilbake til startsiden.",
+    "backHome": "Tilbake til startsiden"
   }
 }

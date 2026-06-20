@@ -31,8 +31,7 @@
     "text1": "Hello, I am Oleg. I am a certified massage therapist with over 10 years of professional experience. My goal is to help you release pain, stress, and muscle tension by combining classic techniques with customized therapies.",
     "text2": "Every session is tailored to your specific needs – whether you require deep tissue relief after an intense workout or a calming session to soothe daily stress.",
     "certTitle": "Licensed Therapist",
-    "certSubtitle": "Certified in Sweden & internationally",
-    "languagesLabel": "Languages"
+    "certSubtitle": "Certified in Sweden & internationally"
   },
   "advantages": {
     "title": "Why choose",
@@ -109,9 +108,7 @@
         "duration": "60 min / 90 min",
         "benefit": "Uses cold-pressed organic oils that deeply nourish the skin, while natural aromatherapy essences soothe the nervous system."
       }
-    },
-    "cost": "Cost",
-    "benefitsTitle": "Therapeutic Benefits"
+    }
   },
   "reviews": {
     "title": "What our",
@@ -137,6 +134,7 @@
   "contacts": {
     "title": "Contact Us",
     "accent": "book a session",
+    "subtitle": "Book your session online or reach out via phone. Our private studio is located in the heart of Stockholm.",
     "address": "Birger Jarlsgatan 42, 114 29 Stockholm",
     "phone": "+46 8 123 45 67",
     "email": "info@olegmassage.se",
@@ -155,15 +153,23 @@
       "phoneRequired": "Phone number is required",
       "phoneInvalid": "Please enter a valid phone number",
       "serviceRequired": "Please select a massage treatment"
-    },
-    "subtitle": "Book your session online or reach out via phone. Our private studio is located in the heart of Stockholm."
+    }
   },
   "gallery": {
-    "titleAccent": "Studio",
-    "subtitle": "Take a look inside our premium private massage studio in Stockholm. A sanctuary of peace, equipped for your absolute comfort.",
-    "close": "Close"
+    "subtitle": "Take a look inside our premium private massage studio in Stockholm. A sanctuary of peace, equipped for your absolute comfort."
   },
-  "footer": {
-    "rights": "All rights reserved. Stockholm, Sweden."
+  "breadcrumbs": {
+    "home": "Home",
+    "services": "Services",
+    "gallery": "Gallery",
+    "contacts": "Contacts"
+  },
+  "relatedServices": "You may also like",
+  "skipToContent": "Skip to content",
+  "allServices": "All services",
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved. Please check the URL or return to the homepage.",
+    "backHome": "Back to Home"
   }
 }
