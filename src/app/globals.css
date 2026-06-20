@@ -21,6 +21,7 @@
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
+  --transition-luxury: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Alternative Dark Theme: Emerald Zen */
@@ -41,6 +42,10 @@ html.theme-zen {
   --glass-blur: 24px;
   --glass-border: rgba(163, 184, 153, 0.12);
   --glass-shadow: rgba(0, 0, 0, 0.7);
+  
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-fast: all 0.2s ease;
+  --transition-luxury: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Reset & Base Styles */
@@ -68,6 +73,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.6s ease;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 9999;
 }
 
 /* Typography */
@@ -177,10 +195,10 @@ a {
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 32px;
-  box-shadow: 0 20px 40px var(--glass-shadow);
-  transition: var(--transition-smooth);
+  box-shadow: 0 30px 60px var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: var(--transition-luxury);
 }
 
 .glass-card:hover {
@@ -207,18 +225,18 @@ a {
   width: 100%;
   padding: 14px 16px;
   background-color: rgba(18, 19, 18, 0.6);
-  border: 1px solid rgba(244, 245, 244, 0.1);
-  border-radius: 4px;
+  border: 1px solid rgba(244, 245, 244, 0.15);
+  border-radius: 8px;
   color: var(--text-color);
   font-family: var(--font-body);
   font-size: 1rem;
-  transition: var(--transition-fast);
+  transition: var(--transition-luxury);
 }
 
 .form-control:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 10px rgba(212, 190, 150, 0.15);
+  box-shadow: 0 0 15px rgba(212, 190, 150, 0.25);
   background-color: rgba(18, 19, 18, 0.8);
 }
 
@@ -888,6 +906,7 @@ html.theme-zen .hero-pill-tag {
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 12px;
+  letter-spacing: 0.06em;
 }
 
 .text-center {
@@ -968,17 +987,17 @@ html.theme-zen .hero-pill-tag {
 .service-card {
   background-color: var(--card-bg);
   border: 1px solid rgba(244, 245, 244, 0.04);
-  border-radius: 6px;
+  border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: var(--transition-smooth);
+  transition: var(--transition-luxury);
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   border-color: rgba(212, 190, 150, 0.25);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .service-img-wrapper {
@@ -1008,7 +1027,7 @@ html.theme-zen .hero-pill-tag {
   border: 1px solid rgba(212, 190, 150, 0.3);
   color: var(--primary);
   padding: 6px 12px;
-  border-radius: 4px;
+  border-radius: 100px;
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 500;
