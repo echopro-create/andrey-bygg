@@ -50,25 +50,43 @@ export default async function Page({ params }: PageProps) {
         <div className="container hero-metrics-container reveal">
           <div className="hero-metrics-bar glass-card">
             <div className="metric-col">
-              <div className="metric-icon-small">𓁠</div>
+              <div className="metric-icon-small">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
               <span className="metric-val">{dict.hero.metrics.m1_val}</span>
               <span className="metric-lbl">{dict.hero.metrics.m1_lbl}</span>
             </div>
             <div className="metric-col-divider"></div>
             <div className="metric-col">
-              <div className="metric-icon-small">𓆱</div>
+              <div className="metric-icon-small">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2C12 2 6 8.5 6 13a6 6 0 0 0 12 0c0-4.5-6-11-6-11z" />
+                </svg>
+              </div>
               <span className="metric-val">{dict.hero.metrics.m2_val}</span>
               <span className="metric-lbl">{dict.hero.metrics.m2_lbl}</span>
             </div>
             <div className="metric-col-divider"></div>
             <div className="metric-col">
-              <div className="metric-icon-small">𓂶</div>
+              <div className="metric-icon-small">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 3a9 9 0 0 0-9 9c0 5 9 9 9 9s9-4 9-9a9 9 0 0 0-9-9z" />
+                  <path d="M12 3v18" />
+                </svg>
+              </div>
               <span className="metric-val">{dict.hero.metrics.m3_val}</span>
               <span className="metric-lbl">{dict.hero.metrics.m3_lbl}</span>
             </div>
             <div className="metric-col-divider"></div>
             <div className="metric-col">
-              <div className="metric-icon-small">★</div>
+              <div className="metric-icon-small">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </div>
               <span className="metric-val">{dict.hero.metrics.m4_val}</span>
               <span className="metric-lbl">{dict.hero.metrics.m4_lbl}</span>
             </div>

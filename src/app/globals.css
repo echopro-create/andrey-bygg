@@ -529,7 +529,7 @@ select.form-control {
   padding: 100px 0 120px;
   position: relative;
   background-image: 
-    linear-gradient(rgba(8, 9, 8, 0.72), rgba(8, 9, 8, 0.88)), 
+    linear-gradient(rgba(8, 9, 8, 0.45), rgba(8, 9, 8, 0.72)), 
     url('/images/hero-bg.webp');
   background-size: cover;
   background-position: center;
@@ -539,7 +539,7 @@ select.form-control {
 
 html.theme-zen .hero-section {
   background-image: 
-    linear-gradient(rgba(6, 9, 7, 0.75), rgba(6, 9, 7, 0.9)), 
+    linear-gradient(rgba(6, 9, 7, 0.48), rgba(6, 9, 7, 0.75)), 
     url('/images/hero-bg.webp');
 }
 
@@ -632,26 +632,30 @@ html.theme-zen .hero-pill-tag {
 
 .metric-icon-small {
   color: var(--primary);
-  font-size: 1.2rem;
-  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
   transition: color 0.6s ease;
 }
 
 .metric-val {
-  font-family: var(--font-title);
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: var(--primary);
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
   line-height: 1.1;
   transition: color 0.6s ease;
 }
 
 .metric-lbl {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 400;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
 .metric-col-divider {
