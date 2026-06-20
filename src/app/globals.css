@@ -1525,44 +1525,63 @@ html.theme-zen .hero-pill-tag {
 
 .service-detail-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
   align-items: start;
 }
 
 .service-detail-image-wrapper {
+  position: relative;
+  padding: 10px;
   width: 100%;
 }
 
+.service-detail-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(var(--primary-rgb), 0.12) 0%, rgba(var(--primary-rgb), 0) 70%);
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+}
+
 .service-detail-img-frame {
+  position: relative;
+  z-index: 2;
   width: 100%;
-  aspect-ratio: 1.25;
-  border-radius: 8px;
-  border: 1px solid var(--glass-border);
+  aspect-ratio: 4/5;
+  border-radius: 24px;
+  border: 1px solid rgba(var(--primary-rgb), 0.08);
   overflow: hidden;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
 }
 
 .service-detail-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 6s ease;
+  transition: transform 6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .service-detail-img-frame:hover .service-detail-img {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .service-detail-info-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 32px;
 }
 
 .service-detail-title {
+  font-family: var(--font-title);
   font-size: 3rem;
-  line-height: 1.1;
+  font-weight: 400;
+  line-height: 1.15;
   color: var(--text-color);
 }
 
@@ -1570,10 +1589,12 @@ html.theme-zen .hero-pill-tag {
   display: flex;
   align-items: center;
   gap: 32px;
-  background: rgba(18, 19, 18, 0.4);
-  border: 1px solid rgba(244, 245, 244, 0.05);
-  padding: 16px 24px;
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(var(--primary-rgb), 0.08);
+  padding: 18px 28px;
+  border-radius: 100px;
+  width: fit-content;
 }
 
 .meta-item {
@@ -1604,48 +1625,249 @@ html.theme-zen .hero-pill-tag {
 .meta-divider {
   width: 1px;
   height: 36px;
-  background-color: rgba(244, 245, 244, 0.1);
+  background-color: rgba(var(--primary-rgb), 0.15);
 }
 
 .service-detail-description {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 
 .service-short-desc {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--text-muted);
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: rgba(244, 245, 244, 0.85);
 }
 
 .service-benefit-card {
-  padding: 24px;
+  padding: 32px;
+  border-radius: 20px;
+}
+
+.benefit-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.benefit-icon {
+  flex-shrink: 0;
 }
 
 .benefit-title {
   font-family: var(--font-title);
   font-size: 1.25rem;
   color: var(--primary);
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .benefit-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.98rem;
+  line-height: 1.65;
   color: var(--text-color);
+}
+
+.service-content-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.service-block-title {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  color: var(--text-color);
+  letter-spacing: 0.02em;
+}
+
+.service-indications-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+}
+
+.indication-item {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: rgba(244, 245, 244, 0.85);
+}
+
+.indication-check {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.service-block-text {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  text-wrap: pretty;
+}
+
+.contraindications-block {
+  background: rgba(207, 102, 121, 0.02);
+  border: 1px solid rgba(207, 102, 121, 0.1);
+  padding: 20px 24px;
+  border-radius: 12px;
+}
+
+.service-block-title-small {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--error);
+  margin-bottom: 8px;
+}
+
+.service-block-text-small {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(244, 245, 244, 0.6);
 }
 
 .book-service-btn {
   align-self: flex-start;
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
+  margin-top: 10px;
+}
+
+/* ------------------ Related Services (Internal Linking) ------------------ */
+.related-services-section {
+  margin-top: 100px;
+  padding-top: 60px;
+  border-top: 1px solid rgba(var(--primary-rgb), 0.1);
+}
+
+.related-services-title {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 48px;
+  letter-spacing: 0.02em;
+}
+
+.related-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.related-service-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: var(--transition-luxury);
+}
+
+.related-service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(var(--primary-rgb), 0.25);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.5), 
+    0 0 20px rgba(var(--primary-rgb), 0.04);
+}
+
+.related-service-img-wrapper {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(var(--primary-rgb), 0.06);
+}
+
+.related-service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 4s ease;
+}
+
+.related-service-card:hover .related-service-img {
+  transform: scale(1.04);
+}
+
+.related-service-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.related-service-name {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  color: var(--text-color);
+}
+
+.related-service-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.related-service-price {
+  color: var(--primary);
+  font-weight: 500;
 }
 
 @media (max-width: 1024px) {
-  .service-detail-container { grid-template-columns: 1fr; gap: 40px; }
-  .service-detail-title { font-size: 2.4rem; }
-  .book-service-btn { max-width: 100%; }
+  .service-detail-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .service-detail-image-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .related-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-detail-title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .service-meta-panel {
+    width: 100%;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 14px 20px;
+    gap: 20px;
+  }
+  .service-indications-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .book-service-btn {
+    max-width: 100%;
+  }
+  .related-services-section {
+    margin-top: 60px;
+    padding-top: 40px;
+  }
+  .related-services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .related-services-title {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+  }
 }
 
 /* ------------------ Gallery Page ------------------ */
