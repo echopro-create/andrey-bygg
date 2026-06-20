@@ -72,7 +72,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               </div>
               <div className="meta-divider"></div>
               <div className="meta-item">
-                <span className="meta-label">Cost</span>
+                <span className="meta-label">{dict.services.cost}</span>
                 <span className="meta-value gold">{service.price}</span>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               <p className="service-short-desc">{service.desc}</p>
               
               <div className="service-benefit-card glass-card">
-                <h3 className="benefit-title">Therapeutic Benefits</h3>
+                <h3 className="benefit-title">{dict.services.benefitsTitle}</h3>
                 <p className="benefit-text">{service.benefit}</p>
               </div>
             </div>

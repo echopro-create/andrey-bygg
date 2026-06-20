@@ -31,7 +31,8 @@
     "text1": "Hej, jag heter Oleg. Jag är en certifierad massageterapeut med över 10 års erfarenhet av professionell massage. Mitt mål är att hjälpa dig att bli av med smärta, stress och muskelspänningar genom att kombinera klassiska metoder med individuellt anpassade tekniker.",
     "text2": "Varje session anpassas efter dina specifika behov – oavsett om det handlar om djupgående muskelavslappning efter ett intensivt träningspass eller en lugnande stund för att lindra vardagsstress.",
     "certTitle": "Diplomerad terapeut",
-    "certSubtitle": "Certifierad i Sverige & internationellt"
+    "certSubtitle": "Certifierad i Sverige & internationellt",
+    "languagesLabel": "Språk"
   },
   "advantages": {
     "title": "Varför välja",
@@ -108,7 +109,9 @@
         "duration": "60 min / 90 min",
         "benefit": "Använder exklusiva kallpressade växtoljor som ger näring åt huden på djupet, samtidigt som dofterna balanserar sinnet."
       }
-    }
+    },
+    "cost": "Pris",
+    "benefitsTitle": "Terapeutiska fördelar"
   },
   "reviews": {
     "title": "Vad våra",
@@ -152,6 +155,15 @@
       "phoneRequired": "Telefonnummer är obligatoriskt",
       "phoneInvalid": "Ange ett giltigt telefonnummer",
       "serviceRequired": "Vänligen välj en behandling"
-    }
+    },
+    "subtitle": "Boka din behandling online eller kontakta oss via telefon. Vår privata studio ligger i hjärtat av Stockholm."
+  },
+  "gallery": {
+    "titleAccent": "Studio",
+    "subtitle": "Ta en titt inuti vår privata premiummassagestudio i Stockholm. En oas av fred, utrustad för din absolut komfort.",
+    "close": "Stäng"
+  },
+  "footer": {
+    "rights": "Alla rättigheter förbehållna. Stockholm, Sverige."
   }
 }

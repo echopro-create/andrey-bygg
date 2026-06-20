@@ -31,7 +31,8 @@
     "text1": "Hello, I am Oleg. I am a certified massage therapist with over 10 years of professional experience. My goal is to help you release pain, stress, and muscle tension by combining classic techniques with customized therapies.",
     "text2": "Every session is tailored to your specific needs – whether you require deep tissue relief after an intense workout or a calming session to soothe daily stress.",
     "certTitle": "Licensed Therapist",
-    "certSubtitle": "Certified in Sweden & internationally"
+    "certSubtitle": "Certified in Sweden & internationally",
+    "languagesLabel": "Languages"
   },
   "advantages": {
     "title": "Why choose",
@@ -108,7 +109,9 @@
         "duration": "60 min / 90 min",
         "benefit": "Uses cold-pressed organic oils that deeply nourish the skin, while natural aromatherapy essences soothe the nervous system."
       }
-    }
+    },
+    "cost": "Cost",
+    "benefitsTitle": "Therapeutic Benefits"
   },
   "reviews": {
     "title": "What our",
@@ -152,6 +155,15 @@
       "phoneRequired": "Phone number is required",
       "phoneInvalid": "Please enter a valid phone number",
       "serviceRequired": "Please select a massage treatment"
-    }
+    },
+    "subtitle": "Book your session online or reach out via phone. Our private studio is located in the heart of Stockholm."
+  },
+  "gallery": {
+    "titleAccent": "Studio",
+    "subtitle": "Take a look inside our premium private massage studio in Stockholm. A sanctuary of peace, equipped for your absolute comfort.",
+    "close": "Close"
+  },
+  "footer": {
+    "rights": "All rights reserved. Stockholm, Sweden."
   }
 }

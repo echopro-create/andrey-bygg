@@ -24,14 +24,14 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
       <div className="container">
         <div className="section-header text-center reveal" style={{ marginBottom: '60px' }}>
           <h1 className="section-title">
-            {dict.nav.gallery} <span className="gold-accent">Studio</span>
+            {dict.nav.gallery} <span className="gold-accent">{dict.gallery.titleAccent}</span>
           </h1>
           <p className="section-subtitle" style={{ maxWidth: '600px', margin: '0 auto' }}>
-            Take a look inside our premium private massage studio in Stockholm. A sanctuary of peace, equipped for your absolute comfort.
+            {dict.gallery.subtitle}
           </p>
         </div>
         
-        <GalleryClient images={images} closeLabel={dict.contacts.formTitle} />
+        <GalleryClient images={images} closeLabel={dict.gallery.close} />
       </div>
     </div>
   );

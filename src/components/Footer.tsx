@@ -80,7 +80,7 @@ export default function Footer({ dict, lng }: FooterProps) {
       
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
-          <p>&copy; {currentYear} OLEG MASSAGE. All rights reserved. Stockholm, Sweden.</p>
+          <p>&copy; {currentYear} OLEG MASSAGE. {dict.footer.rights}</p>
           <div className="footer-socials">
             <a href="#" className="social-link" aria-label="Instagram">IG</a>
             <a href="#" className="social-link" aria-label="Facebook">FB</a>

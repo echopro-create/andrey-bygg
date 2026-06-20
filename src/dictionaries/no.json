@@ -31,7 +31,8 @@
     "text1": "Hei, jeg heter Oleg. Jeg er en sertifisert massasjeterapeut med over 10 års profesjonell erfaring. Mitt mål er å hjelpe deg med å frigjøre smerte, stress og muskelspenninger ved å kombinere klassiske metoder med individuelt tilpassede teknikker.",
     "text2": "Hver økt tilpasses dine spesifikke behov – enten du trenger dyptgående muskelavspenning etter en intens treningsøkt eller en beroligende stund for å lindre hverdagsstress.",
     "certTitle": "Diplomert terapeut",
-    "certSubtitle": "Sertifisert i Sverige & internasjonalt"
+    "certSubtitle": "Sertifisert i Sverige & internasjonalt",
+    "languagesLabel": "Språk"
   },
   "advantages": {
     "title": "Hvorfor velge",
@@ -108,7 +109,9 @@
         "duration": "60 min / 90 min",
         "benefit": "Bruker kalddpressede økologiske planteoljer som gir næring til huden, mens naturlig aromaterapi balanserer sinnet."
       }
-    }
+    },
+    "cost": "Pris",
+    "benefitsTitle": "Terapeutiske fordeler"
   },
   "reviews": {
     "title": "Hva våre",
@@ -152,6 +155,15 @@
       "phoneRequired": "Telefonnummer er obligatorisk",
       "phoneInvalid": "Vennligst oppgi et gyldig telefonnummer",
       "serviceRequired": "Vennligst velg en behandling"
-    }
+    },
+    "subtitle": "Bestill time på nett eller kontakt oss på telefon. Vårt private studio ligger i hjärtat av Stockholm."
+  },
+  "gallery": {
+    "titleAccent": "Studio",
+    "subtitle": "Ta en titt i vårt private premium massasjestudio i Stockholm. En oas av fred, utstyrt for din absolutte komfort.",
+    "close": "Lukk"
+  },
+  "footer": {
+    "rights": "Alle rettigheter reservert. Stockholm, Sverige."
   }
 }

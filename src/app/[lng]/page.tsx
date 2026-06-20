@@ -135,7 +135,7 @@ export default async function Page({ params }: PageProps) {
               <div className="metric-item">
                 <span className="metric-number">4</span>
                 <div className="metric-info">
-                  <span className="metric-label">LANGUAGES</span>
+                  <span className="metric-label">{dict.about.languagesLabel}</span>
                   <span className="metric-languages-list">SV | EN | NO | RU</span>
                 </div>
               </div>
