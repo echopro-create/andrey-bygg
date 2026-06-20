@@ -80,47 +80,6 @@ html.theme-zen {
   --transition-luxury: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Light Theme: Alabaster Ivory & Deep Bronze */
-html.theme-light {
-  --background: #faf8f5;
-  --background-rgb: 250, 248, 245;
-  --primary: #8f764f;
-  --primary-hover: #735e3d;
-  --primary-rgb: 143, 118, 79;
-  --card-bg: #ffffff;
-  --text-color: #2a2724;
-  --text-muted: #706b64;
-  --olive-plate: #eae6de;
-  --olive-text: #8f764f;
-  --error: #c62828;
-  --success: #2e7d32;
-  --footer-bg: #f0ede6;
-  
-  /* Glassmorphism */
-  --glass-bg: rgba(var(--background-rgb), 0.85);
-  --glass-blur: 24px;
-  --glass-border: rgba(var(--primary-rgb), 0.15);
-  --glass-shadow: rgba(0, 0, 0, 0.04);
-  --card-bg-rgb: 255, 255, 255;
-  --text-color-rgb: 42, 39, 36;
-  --hero-text-color: #f4f5f4;
-  --hero-text-muted: #a3a3a3;
-  
-  /* Button Styles */
-  --btn-primary-bg-start: #8f764f;
-  --btn-primary-bg-end: #735e3d;
-  --btn-primary-bg-start-hover: #9c825a;
-  --btn-primary-bg-end-hover: #826b47;
-  --btn-primary-text: #ffffff;
-  --btn-primary-shadow: rgba(115, 94, 61, 0.15);
-  --btn-primary-shadow-hover: rgba(115, 94, 61, 0.25);
-  --hero-overlay: linear-gradient(to bottom, rgba(8, 9, 8, 0.45) 0%, rgba(8, 9, 8, 0.2) 20%, rgba(8, 9, 8, 0.45) 60%, rgba(var(--background-rgb), 0.8) 85%, var(--background) 100%);
-  
-  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  --transition-fast: all 0.2s ease;
-  --transition-luxury: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
 /* Reset & Base Styles */
 *, *::before, *::after {
   box-sizing: border-box;

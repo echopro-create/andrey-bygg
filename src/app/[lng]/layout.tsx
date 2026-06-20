@@ -31,10 +31,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: [
-    { media: '(prefers-color-scheme: dark)', color: '#080908' },
-    { media: '(prefers-color-scheme: light)', color: '#faf8f5' },
-  ],
+  themeColor: '#080908',
 };
 
 export async function generateMetadata({
@@ -207,12 +204,11 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
               (function() {
                 var savedTheme = localStorage.getItem('theme');
                 var theme = savedTheme;
-                if (!theme || (theme !== 'obsidian' && theme !== 'zen' && theme !== 'light')) {
-                  var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  theme = isDark ? 'obsidian' : 'light';
+                if (!theme || (theme !== 'obsidian' && theme !== 'zen')) {
+                  theme = 'obsidian';
                 }
                 document.documentElement.classList.add('theme-' + theme);
-                var color = theme === 'light' ? '#faf8f5' : (theme === 'zen' ? '#060907' : '#080908');
+                var color = theme === 'zen' ? '#060907' : '#080908';
                 var meta = document.createElement('meta');
                 meta.name = 'theme-color';
                 meta.content = color;

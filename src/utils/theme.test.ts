@@ -10,24 +10,16 @@ describe('theme utilities', () => {
       expect(theme).toBe('obsidian');
     });
 
-    it('should return light when system prefers light mode', () => {
+    it('should return obsidian when system prefers light mode (since only dark themes are available)', () => {
       // Arrange & Act
       const theme = getSystemTheme(false);
 
       // Assert
-      expect(theme).toBe('light');
+      expect(theme).toBe('obsidian');
     });
   });
 
   describe('getNextTheme', () => {
-    it('should cycle from light to obsidian', () => {
-      // Arrange & Act
-      const next = getNextTheme('light');
-
-      // Assert
-      expect(next).toBe('obsidian');
-    });
-
     it('should cycle from obsidian to zen', () => {
       // Arrange & Act
       const next = getNextTheme('obsidian');
@@ -36,12 +28,12 @@ describe('theme utilities', () => {
       expect(next).toBe('zen');
     });
 
-    it('should cycle from zen to light', () => {
+    it('should cycle from zen to obsidian', () => {
       // Arrange & Act
       const next = getNextTheme('zen');
 
       // Assert
-      expect(next).toBe('light');
+      expect(next).toBe('obsidian');
     });
 
     it('should fall back to obsidian for unknown themes', () => {
