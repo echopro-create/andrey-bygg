@@ -22,7 +22,8 @@
       "m3_lbl": "Spa atmosfære",
       "m4_val": "TILPASSET",
       "m4_lbl": "Behandling"
-    }
+    },
+    "languagesLabel": "SPRÅK"
   },
   "about": {
     "title": "Kunsten å helbrede",
@@ -212,7 +213,9 @@
         "contraindications_title": "Kontraindikasjoner",
         "contraindications_text": "Allergi mot eteriske oljer, aktive allergiske hudreaksjoner, graviditet."
       }
-    }
+    },
+    "cost": "Pris",
+    "benefitsTitle": "Helsefordeler"
   },
   "reviews": {
     "title": "Hva våre",
@@ -256,8 +259,22 @@
       "nameRequired": "Navn er obligatorisk",
       "phoneRequired": "Telefonnummer er obligatorisk",
       "phoneInvalid": "Vennligst oppgi et gyldig telefonnummer",
-      "serviceRequired": "Vennligst velg en behandling"
-    }
+      "serviceRequired": "Vennligst velg en behandling",
+      "dateRequired": "Vennligst velg en dato for timen",
+      "timeRequired": "Vennligst velg et tidspunkt for timen"
+    },
+    "addressLabel": "Adresse",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-post",
+    "hoursLabel": "Åpningstider",
+    "copy": "Kopier",
+    "copied": "Kopiert!",
+    "copyAddress": "Kopier adresse til utklippstavlen",
+    "directions": "Hitta hit →",
+    "namePlaceholder": "Ditt navn",
+    "messagePlaceholder": "Ønsket dato og tid, eller andre ønsker...",
+    "formDate": "Ønsket dato",
+    "formTime": "Ønsket tid"
   },
   "gallery": {
     "subtitle": "Ta en titt inn i vårt premium massasjestudio i Stockholm. Et fristed for ro, utstyrt for din absolutte komfort."
@@ -275,5 +292,20 @@
     "title": "Siden ble ikke funnet",
     "description": "Siden du leter etter finnes ikke eller har blitt flyttet. Sjekk URL-en eller gå tilbake til startsiden.",
     "backHome": "Tilbake til startsiden"
-  }
+  },
+  "privacy": {
+    "title": "Personvernerklæring",
+    "subtitle": "Behandling av personopplysninger",
+    "intro": "Vi bryr oss om ditt personvern. Denne personvernerklæringen beskriver hvordan vi samler inn, bruker og beskytter informasjonen du oppgir når du bestiller en massasje.",
+    "section1_title": "1. Hvilke opplysninger vi samler inn",
+    "section1_text": "Når du fyller ut bestillingsskjemaet samler vi inn ditt navn, telefonnummer, valgt behandling og eventuelle meldinger du legger ved.",
+    "section2_title": "2. Hvordan vi bruker dine opplysninger",
+    "section2_text": "Disse dataene brukes utelukkande til å bekrefte avtalen din, kontakte deg og organisere timen. Vi deler ikke dataene dine med tredjeparter og bruker dem ikke til markedsføring.",
+    "section3_title": "3. GDPR-samsvar (EU)",
+    "section3_text": "Vårt studio ligger i Stockholm, Sverige, og vi overholder personvernforordningen (GDPR). Du har rett til å be om innsyn i, korrigering eller sletting av dataene dine når som helst.",
+    "section4_title": "4. Kontakt oss",
+    "section4_text": "For spørsmål om behandling av personopplysninger eller for å be om sletting, vennligst kontakt oss på e-post: info@olegmassage.se.",
+    "backToHome": "Gå til startsiden"
+  },
+  "privacyLink": "Personvernerklæring"
 }

@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
       alternates: {
         languages: Object.fromEntries(
-          locales.map((alt) => [`${SITE_URL}/${alt}/gallery`])
+          locales.map((alt) => [alt, `${SITE_URL}/${alt}/gallery`])
         ),
       },
     });
@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
       alternates: {
         languages: Object.fromEntries(
-          locales.map((alt) => [`${SITE_URL}/${alt}/contacts`])
+          locales.map((alt) => [alt, `${SITE_URL}/${alt}/contacts`])
         ),
       },
     });
@@ -64,7 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
         alternates: {
           languages: Object.fromEntries(
-            locales.map((alt) => [`${SITE_URL}/${alt}/services/${service}`])
+            locales.map((alt) => [alt, `${SITE_URL}/${alt}/services/${service}`])
           ),
         },
       });

@@ -29,7 +29,7 @@ function getLocale(request: NextRequest): string {
   return defaultLocale;
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Проверяем, есть ли уже локаль в пути
@@ -60,7 +60,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Применяем middleware ко всем путям, кроме статики и внутренних путей Next.js
+    // Применяем proxy ко всем путям, кроме статики и внутренних путей Next.js
     '/((?!_next/static|_next/image|favicon.ico|images|api).*)',
   ],
 };

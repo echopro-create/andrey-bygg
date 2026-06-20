@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 interface LightboxProps {
   images: string[];
@@ -52,11 +53,14 @@ export default function Lightbox({
       </button>
 
       <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={images[activeIndex]}
           alt={`Gallery item ${activeIndex + 1}`}
           className="lightbox-image"
+          fill={true}
+          sizes="100vw"
+          priority={true}
+          style={{ objectFit: 'contain' }}
         />
         <div className="lightbox-counter">
           {activeIndex + 1} / {images.length}

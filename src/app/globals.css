@@ -143,8 +143,9 @@ a {
   top: -100%;
   left: 16px;
   z-index: 9999;
-  background: var(--primary);
-  color: #0c0d0c;
+  background: var(--background);
+  color: var(--primary);
+  border: 1px solid var(--primary);
   padding: 12px 24px;
   border-radius: 8px;
   font-family: var(--font-body);

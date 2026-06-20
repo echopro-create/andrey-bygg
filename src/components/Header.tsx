@@ -188,7 +188,7 @@ export default function Header({ dict }: HeaderProps) {
           </Link>
 
           <div className="mobile-lang-wrapper">
-            <span className="mobile-lang-label">Language:</span>
+            <span className="mobile-lang-label">{dict.hero.languagesLabel || 'Language'}:</span>
             <div className="mobile-lang-control">
               {languages.map((lang) => (
                 <button

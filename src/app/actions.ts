@@ -1,77 +1,58 @@
 'use server';
 
+import { cookies } from 'next/headers';
+
 export interface BookingData {
   name: string;
   phone: string;
   service: string;
   message: string;
+  date?: string;
+  time?: string;
   _csrf?: string;
 }
 
-interface RateLimitEntry {
-  count: number;
-  resetTime: number;
-}
-
-const rateLimitMap = new Map<string, RateLimitEntry>();
-const MAX_REQUESTS = 5;
-const WINDOW_MS = 60_000;
-
-function checkRateLimit(key: string): boolean {
+export async function submitBooking(formData: BookingData) {
+  const cookieStore = await cookies();
+  const lastSubmit = cookieStore.get('last_submit_time')?.value;
   const now = Date.now();
-  const entry = rateLimitMap.get(key);
+  const LIMIT_MS = 15_000; // Ограничение: 1 запрос в 15 секунд
 
-  if (!entry || now > entry.resetTime) {
-    rateLimitMap.set(key, { count: 1, resetTime: now + WINDOW_MS });
-    return true;
-  }
-
-  if (entry.count >= MAX_REQUESTS) {
-    return false;
-  }
-
-  entry.count++;
-  return true;
-}
-
-const RATE_LIMIT_CLEANUP_INTERVAL = 300_000;
-let lastCleanup = Date.now();
-
-function cleanupRateLimitMap() {
-  const now = Date.now();
-  if (now - lastCleanup < RATE_LIMIT_CLEANUP_INTERVAL) return;
-  lastCleanup = now;
-  for (const [key, entry] of rateLimitMap.entries()) {
-    if (now > entry.resetTime) {
-      rateLimitMap.delete(key);
+  if (lastSubmit) {
+    const lastTime = parseInt(lastSubmit, 10);
+    if (now - lastTime < LIMIT_MS) {
+      return {
+        success: false,
+        error: 'Too many requests. Please wait before submitting again.',
+      };
     }
   }
-}
 
-export async function submitBooking(formData: BookingData) {
-  cleanupRateLimitMap();
+  // Устанавливаем куку перед выполнением отправки
+  cookieStore.set('last_submit_time', now.toString(), {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'strict',
+    maxAge: 15,
+  });
 
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
-
-  const rateLimitKey = formData.phone.replace(/[^0-9]/g, '') || 'anonymous';
-  if (!checkRateLimit(rateLimitKey)) {
-    return {
-      success: false,
-      error: 'Too many requests. Please wait before submitting again.',
-    };
-  }
 
   const sanitizedName = formData.name.replace(/[<>]/g, '').trim().slice(0, 100);
   const sanitizedPhone = formData.phone.replace(/[<>]/g, '').trim().slice(0, 30);
   const sanitizedService = formData.service.replace(/[<>]/g, '').trim().slice(0, 100);
   const sanitizedMessage = formData.message.replace(/[<>]/g, '').trim().slice(0, 500);
+  const sanitizedDate = formData.date ? formData.date.replace(/[<>]/g, '').trim().slice(0, 30) : '';
+  const sanitizedTime = formData.time ? formData.time.replace(/[<>]/g, '').trim().slice(0, 30) : '';
 
   const text = `
 🔔 *New booking at Oleg Massage!*
 👤 *Name:* ${sanitizedName}
 📞 *Phone:* ${sanitizedPhone}
 💆‍♂️ *Service:* ${sanitizedService}
+📅 *Date:* ${sanitizedDate || '—'}
+🕒 *Time:* ${sanitizedTime || '—'}
 ✉️ *Message:* ${sanitizedMessage || '—'}
   `;
 
@@ -80,7 +61,14 @@ export async function submitBooking(formData: BookingData) {
       '⚠️ [Oleg Massage Warning] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not configured in .env.\n' +
       'Booking processed in demo mode.\n' +
       'Submission data:',
-      { name: sanitizedName, phone: sanitizedPhone, service: sanitizedService, message: sanitizedMessage }
+      {
+        name: sanitizedName,
+        phone: sanitizedPhone,
+        service: sanitizedService,
+        date: sanitizedDate,
+        time: sanitizedTime,
+        message: sanitizedMessage,
+      }
     );
     return {
       success: true,

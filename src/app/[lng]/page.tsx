@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getDictionary, Locale } from '../i18n';
 
@@ -76,65 +77,11 @@ export default async function Page({ params }: PageProps) {
     }),
   };
 
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'HealthAndBeautyBusiness',
-    name: 'Oleg Massage Stockholm',
-    description: dict.hero.subtitle,
-    url: `${SITE_URL}/${lng}`,
-    image: `${SITE_URL}/images/hero-bg.webp`,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Birger Jarlsgatan 42',
-      addressLocality: 'Stockholm',
-      postalCode: '114 29',
-      addressCountry: 'SE',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 59.3373,
-      longitude: 18.0697,
-    },
-    telephone: dict.contacts.phone,
-    email: dict.contacts.email,
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '09:00',
-        closes: '21:00',
-      },
-    ],
-    priceRange: '850-1200 SEK',
-    currenciesAccepted: 'SEK',
-    paymentAccepted: 'Cash, Credit Card, Swish',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: dict.reviews.items.length.toString(),
-      bestRating: '5',
-    },
-    review: dict.reviews.items.map((item: any) => ({
-      '@type': 'Review',
-      author: { '@type': 'Person', name: item.name },
-      reviewBody: item.text,
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: item.rating.toString(),
-        bestRating: '5',
-      },
-    })),
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       <div className="home-page">
@@ -214,12 +161,13 @@ export default async function Page({ params }: PageProps) {
           <div className="container about-container">
             <div className="about-image-wrapper reveal">
               <div className="olive-background-plate">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/images/oleg-portrait-new.webp"
                   alt={dict.about.certTitle ? `Oleg Massage Therapist — ${dict.about.certTitle}` : 'Oleg Massage Therapist'}
                   className="about-img"
-                  loading="lazy"
+                  width={600}
+                  height={800}
+                  style={{ objectFit: 'cover' }}
                 />
                 <div className="certificate-badge">
                   <span className="cert-gold-star">★</span>
@@ -251,7 +199,7 @@ export default async function Page({ params }: PageProps) {
                 <div className="metric-item">
                   <span className="metric-number">4</span>
                   <div className="metric-info">
-                    <span className="metric-label">LANGUAGES</span>
+                    <span className="metric-label">{dict.hero.languagesLabel || 'LANGUAGES'}</span>
                     <span className="metric-languages-list">SV | EN | NO | RU</span>
                   </div>
                 </div>
@@ -275,12 +223,13 @@ export default async function Page({ params }: PageProps) {
                 return (
                   <div key={slug} className="service-card reveal">
                     <div className="service-img-wrapper">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={`/images/services/${slug}.webp`}
                         alt={service.title}
                         className="service-card-img"
-                        loading="lazy"
+                        width={400}
+                        height={300}
+                        style={{ objectFit: 'cover' }}
                       />
                       <div className="service-price-tag">
                         {dict.services.priceFrom} {service.price}
@@ -291,7 +240,7 @@ export default async function Page({ params }: PageProps) {
                       <p className="service-card-desc">{service.desc}</p>
                       <div className="service-card-footer">
                         <span className="service-duration-label">
-                          ⏱ {service.duration}
+                          <span role="img" aria-hidden="true">⏱</span> {service.duration}
                         </span>
                         <Link href={`/${lng}/services/${slug}`} className="service-card-link">
                           {dict.services.readMore} →

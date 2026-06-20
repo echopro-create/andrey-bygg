@@ -36,12 +36,16 @@ function ContactsForm({ dict }: ContactsClientProps) {
     phone: '',
     service: initialService,
     message: '',
+    date: '',
+    time: '',
   });
 
   const [errors, setErrors] = useState<{
     name?: string;
     phone?: string;
     service?: string;
+    date?: string;
+    time?: string;
   }>({});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -68,16 +72,23 @@ function ContactsForm({ dict }: ContactsClientProps) {
     if (!formData.name.trim()) {
       newErrors.name = dict.contacts.validation.nameRequired;
     }
+    
+    // Улучшенная валидация телефона: очистка от не-цифр, проверка длины и отсеивание одинаковых цифр
+    const digits = formData.phone.replace(/\D/g, '');
     if (!formData.phone.trim()) {
       newErrors.phone = dict.contacts.validation.phoneRequired;
-    } else {
-      const phoneRegex = /^[+]?[0-9\s\-()]{6,20}$/;
-      if (!phoneRegex.test(formData.phone.trim())) {
-        newErrors.phone = dict.contacts.validation.phoneInvalid;
-      }
+    } else if (digits.length < 6 || digits.length > 15 || /^(.)\1+$/.test(digits)) {
+      newErrors.phone = dict.contacts.validation.phoneInvalid;
     }
+
     if (!formData.service) {
       newErrors.service = dict.contacts.validation.serviceRequired;
+    }
+    if (!formData.date) {
+      newErrors.date = dict.contacts.validation.dateRequired;
+    }
+    if (!formData.time) {
+      newErrors.time = dict.contacts.validation.timeRequired;
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -107,6 +118,8 @@ function ContactsForm({ dict }: ContactsClientProps) {
         phone: sanitizeInput(formData.phone),
         service: serviceName,
         message: sanitizeInput(formData.message),
+        date: sanitizeInput(formData.date),
+        time: sanitizeInput(formData.time),
         _csrf: csrfTokenRef.current,
       });
 
@@ -117,6 +130,8 @@ function ContactsForm({ dict }: ContactsClientProps) {
           phone: '',
           service: '',
           message: '',
+          date: '',
+          time: '',
         });
         csrfTokenRef.current = null;
       } else {
@@ -173,7 +188,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
               onChange={handleInputChange}
               className={`form-control ${errors.name ? 'input-error' : ''}`}
               disabled={isSubmitting}
-              placeholder="Your name"
+              placeholder={dict.contacts.namePlaceholder || 'Your name'}
               autoComplete="name"
             />
             {errors.name && <div className="error-message">{errors.name}</div>}
@@ -219,6 +234,41 @@ function ContactsForm({ dict }: ContactsClientProps) {
             {errors.service && <div className="error-message">{errors.service}</div>}
           </div>
 
+          <div className="form-row-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+            <div className="form-group" style={{ marginBottom: 0 }}>
+              <label className="form-label" htmlFor="date">
+                {dict.contacts.formDate} *
+              </label>
+              <input
+                type="date"
+                id="date"
+                name="date"
+                value={formData.date}
+                onChange={handleInputChange}
+                className={`form-control ${errors.date ? 'input-error' : ''}`}
+                disabled={isSubmitting}
+                min={new Date().toISOString().split('T')[0]}
+              />
+              {errors.date && <div className="error-message" style={{ marginTop: '4px' }}>{errors.date}</div>}
+            </div>
+
+            <div className="form-group" style={{ marginBottom: 0 }}>
+              <label className="form-label" htmlFor="time">
+                {dict.contacts.formTime} *
+              </label>
+              <input
+                type="time"
+                id="time"
+                name="time"
+                value={formData.time}
+                onChange={handleInputChange}
+                className={`form-control ${errors.time ? 'input-error' : ''}`}
+                disabled={isSubmitting}
+              />
+              {errors.time && <div className="error-message" style={{ marginTop: '4px' }}>{errors.time}</div>}
+            </div>
+          </div>
+
           <div className="form-group">
             <label className="form-label" htmlFor="message">
               {dict.contacts.formMessage}
@@ -232,7 +282,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
               className="form-control"
               style={{ resize: 'vertical' }}
               disabled={isSubmitting}
-              placeholder="Your preferred date and time, or any additional requests..."
+              placeholder={dict.contacts.messagePlaceholder || 'Your requests...'}
             />
           </div>
 
@@ -262,36 +312,36 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
           <div className="info-items">
             <div className="info-item-row">
-              <span className="info-item-label">Address</span>
+              <span className="info-item-label">{dict.contacts.addressLabel || 'Address'}</span>
               <div className="info-item-value-block">
                 <span className="info-item-val">{dict.contacts.address}</span>
                 <button
                   type="button"
                   onClick={handleCopyAddress}
                   className="copy-btn"
-                  title="Copy address to clipboard"
+                  title={dict.contacts.copyAddress || 'Copy address'}
                 >
-                  {copied ? 'Copied!' : 'Copy'}
+                  {copied ? (dict.contacts.copied || 'Copied!') : (dict.contacts.copy || 'Copy')}
                 </button>
               </div>
             </div>
 
             <div className="info-item-row">
-              <span className="info-item-label">Phone</span>
+              <span className="info-item-label">{dict.contacts.phoneLabel || 'Phone'}</span>
               <a href={`tel:${dict.contacts.phone}`} className="info-item-val link-gold">
                 {dict.contacts.phone}
               </a>
             </div>
 
             <div className="info-item-row">
-              <span className="info-item-label">Email</span>
+              <span className="info-item-label">{dict.contacts.emailLabel || 'Email'}</span>
               <a href={`mailto:${dict.contacts.email}`} className="info-item-val link-gold">
                 {dict.contacts.email}
               </a>
             </div>
 
             <div className="info-item-row">
-              <span className="info-item-label">Hours</span>
+              <span className="info-item-label">{dict.contacts.hoursLabel || 'Hours'}</span>
               <span className="info-item-val">{dict.contacts.hours}</span>
             </div>
           </div>
@@ -312,7 +362,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
                 rel="noopener noreferrer"
                 className="btn btn-secondary map-directions-btn"
               >
-                Directions →
+                {dict.contacts.directions || 'Directions →'}
               </a>
             </div>
           </div>

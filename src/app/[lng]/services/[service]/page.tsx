@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getDictionary, Locale } from '../../../i18n';
@@ -87,7 +88,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <div className="service-meta-panel">
             <div className="meta-item">
               <span className="meta-label">{dict.services.duration}</span>
-              <span className="meta-value">⏱ {service.duration}</span>
+              <span className="meta-value"><span role="img" aria-hidden="true">⏱</span> {service.duration}</span>
             </div>
             <div className="meta-divider"></div>
             <div className="meta-item">
@@ -104,11 +105,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
               <div className="service-detail-image-wrapper">
                 <div className="service-detail-glow"></div>
                 <div className="service-detail-img-frame">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={`/images/services/${serviceSlug}.webp`}
                     alt={service.title}
                     className="service-detail-img"
+                    width={800}
+                    height={600}
+                    priority={true}
+                    style={{ objectFit: 'cover' }}
                   />
                 </div>
               </div>
@@ -192,18 +196,20 @@ export default async function ServicePage({ params }: ServicePageProps) {
               return (
                 <Link key={slug} href={`/${lng}/services/${slug}`} className="related-service-card glass-card">
                   <div className="related-service-img-wrapper">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={`/images/services/${slug}.webp`}
                       alt={relService.title}
                       className="related-service-img"
+                      width={400}
+                      height={300}
+                      style={{ objectFit: 'cover' }}
                     />
                   </div>
                   <div className="related-service-info">
                     <h3 className="related-service-name">{relService.title}</h3>
                     <div className="related-service-meta">
                       <span className="related-service-price">{relService.price}</span>
-                      <span className="related-service-duration">⏱ {relService.duration.split(' / ')[0]}</span>
+                      <span className="related-service-duration"><span role="img" aria-hidden="true">⏱</span> {relService.duration.split(' / ')[0]}</span>
                     </div>
                   </div>
                 </Link>

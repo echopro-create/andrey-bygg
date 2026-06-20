@@ -22,7 +22,8 @@
       "m3_lbl": "Spa atmosphere",
       "m4_val": "TAILORED",
       "m4_lbl": "Treatments"
-    }
+    },
+    "languagesLabel": "LANGUAGES"
   },
   "about": {
     "title": "The art of healing",
@@ -212,7 +213,9 @@
         "contraindications_title": "Contraindications",
         "contraindications_text": "Allergies to essential oils, active allergic skin reactions, pregnancy."
       }
-    }
+    },
+    "cost": "Cost",
+    "benefitsTitle": "Therapeutic Benefits"
   },
   "reviews": {
     "title": "What our",
@@ -256,8 +259,22 @@
       "nameRequired": "Name is required",
       "phoneRequired": "Phone number is required",
       "phoneInvalid": "Please enter a valid phone number",
-      "serviceRequired": "Please select a massage treatment"
-    }
+      "serviceRequired": "Please select a massage treatment",
+      "dateRequired": "Please select a date for the session",
+      "timeRequired": "Please select a time for the session"
+    },
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "hoursLabel": "Hours",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "copyAddress": "Copy address to clipboard",
+    "directions": "Directions →",
+    "namePlaceholder": "Your name",
+    "messagePlaceholder": "Your preferred date and time, or any additional requests...",
+    "formDate": "Preferred date",
+    "formTime": "Preferred time"
   },
   "gallery": {
     "subtitle": "Take a look inside our premium private massage studio in Stockholm. A sanctuary of peace, equipped for your absolute comfort."
@@ -275,5 +292,20 @@
     "title": "Page not found",
     "description": "The page you are looking for does not exist or has been moved. Please check the URL or return to the homepage.",
     "backHome": "Back to Home"
-  }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Processing of personal data",
+    "intro": "We care about your privacy. This Privacy Policy describes how we collect, use, and protect the information you provide when booking a massage session.",
+    "section1_title": "1. What data we collect",
+    "section1_text": "When filling out the booking form, we collect your name, phone number, selected treatment, and any additional requests left in the message.",
+    "section2_title": "2. How we use your data",
+    "section2_text": "This data is used solely to confirm your appointment, contact you, and organize the session. We do not share your data with third parties and do not use it for marketing mailings.",
+    "section3_title": "3. GDPR Compliance (EU)",
+    "section3_text": "Our studio is located in Stockholm, Sweden, and we fully comply with the General Data Protection Regulation (GDPR). You have the right to request access to, correction of, or deletion of your data at any time.",
+    "section4_title": "4. Contact Us",
+    "section4_text": "For any questions regarding personal data processing or to request data deletion, please contact us by email: info@olegmassage.se.",
+    "backToHome": "Back to Home"
+  },
+  "privacyLink": "Privacy Policy"
 }
