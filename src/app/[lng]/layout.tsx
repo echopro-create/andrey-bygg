@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-const SITE_NAME = 'RyggHjälp';
+const SITE_NAME = 'RYGGHJÄLP';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -43,7 +43,7 @@ export async function generateMetadata({
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const titleDefault = 'RyggHjälp | Premium Spa & Massage';
+  const titleDefault = 'RYGGHJÄLP | Premium Spa & Massage';
   const descriptionDefault =
     dict.hero.subtitle ||
     'Professional massage therapy and premium spa treatments.';
@@ -73,12 +73,12 @@ export async function generateMetadata({
       'sports massage',
       'hot stone massage',
       'rygghjalp massage',
-      'RyggHjalp',
+      'RYGGHJÄLP',
       'professional massage',
     ],
-    authors: [{ name: 'RyggHjälp' }],
-    creator: 'RyggHjälp',
-    publisher: 'RyggHjälp',
+    authors: [{ name: 'RYGGHJÄLP' }],
+    creator: 'RYGGHJÄLP',
+    publisher: 'RYGGHJÄLP',
     formatDetection: {
       email: false,
       address: false,
@@ -106,7 +106,7 @@ export async function generateMetadata({
           url: `${SITE_URL}/images/og-image.webp`,
           width: 1200,
           height: 630,
-          alt: 'RyggHjälp — Premium Spa & Massage',
+          alt: 'RYGGHJÄLP — Premium Spa & Massage',
         },
       ],
     },
@@ -153,7 +153,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const orgSchema = {
     '@context': 'https://schema.org',
     '@type': 'HealthAndBeautyBusiness',
-    name: 'RyggHjälp',
+    name: 'RYGGHJÄLP',
     description: dict.hero.subtitle,
     url: `${SITE_URL}/${lng}`,
     logo: `${SITE_URL}/favicon.ico`,

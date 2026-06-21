@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const title = `${dict.privacy.title} — RyggHjälp`;
+  const title = `${dict.privacy.title} — RYGGHJÄLP`;
   const description = dict.privacy.subtitle;
   const locales = ['sv', 'en', 'no', 'ru', 'uk'];
 
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
       title,
       description,
       url: `${SITE_URL}/${lng}/privacy`,
-      siteName: 'RyggHjälp',
+      siteName: 'RYGGHJÄLP',
       locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
           url: `${SITE_URL}/images/og-image.webp`,
           width: 1200,
           height: 630,
-          alt: 'RyggHjälp — Premium Spa & Massage',
+          alt: 'RYGGHJÄLP — Premium Spa & Massage',
         },
       ],
     },

@@ -20,7 +20,7 @@ export default function Footer({ dict, lng }: FooterProps) {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Link href={`/${lng}`} className="footer-logo" aria-label="RyggHjälp — Home">
+          <Link href={`/${lng}`} className="footer-logo" aria-label="RYGGHJÄLP — Home">
             RYGG<span className="gold-accent">HJÄLP</span>
           </Link>
           <p className="footer-desc">

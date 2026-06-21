@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const title = `${dict.nav.gallery} — RyggHjälp`;
+  const title = `${dict.nav.gallery} — RYGGHJÄLP`;
   const description = dict.gallery?.subtitle || 'Take a look inside our premium private massage studio.';
 
   return {
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
       title,
       description,
       url: `${SITE_URL}/${lng}/gallery`,
-      siteName: 'RyggHjälp',
+      siteName: 'RYGGHJÄLP',
       locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [

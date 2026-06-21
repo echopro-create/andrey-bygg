@@ -129,7 +129,7 @@ export default function Header({ dict }: HeaderProps) {
   return (
     <header className="site-header">
       <div className="container header-container">
-        <Link href={`/${currentLng}`} className="logo" onClick={closeMenu} aria-label="RyggHjälp — Home">
+        <Link href={`/${currentLng}`} className="logo" onClick={closeMenu} aria-label="RYGGHJÄLP — Home">
           RYGG<span className="gold-accent">HJÄLP</span>
         </Link>
 
