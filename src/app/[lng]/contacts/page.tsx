@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
         en: '/en/contacts',
         no: '/no/contacts',
         ru: '/ru/contacts',
+        uk: '/uk/contacts',
       },
     },
     openGraph: {
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
       description,
       url: `${SITE_URL}/${lng}/contacts`,
       siteName: 'RyggHjälp',
-      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : 'en_US',
+      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
         {

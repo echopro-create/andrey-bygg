@@ -24,7 +24,7 @@ const serviceSlugs = [
 ];
 
 export async function generateStaticParams() {
-  const locales = ['sv', 'en', 'no', 'ru'];
+  const locales = ['sv', 'en', 'no', 'ru', 'uk'];
   const params: { lng: string; service: string }[] = [];
   for (const lng of locales) {
     for (const service of serviceSlugs) {
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
   const title = `${service.seo_title || service.title} — RyggHjälp`;
   const description = service.seo_desc || service.desc;
-  const locales = ['sv', 'en', 'no', 'ru'];
+  const locales = ['sv', 'en', 'no', 'ru', 'uk'];
 
   return {
     title,
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
       description,
       url: `${SITE_URL}/${lng}/services/${serviceSlug}`,
       siteName: 'RyggHjälp',
-      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : 'en_US',
+      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
         {
@@ -103,6 +103,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     en: 'Other treatments',
     sv: 'Andra behandlingar',
     no: 'Andre behandlinger',
+    uk: 'Інші процедури',
   }[lng] || 'Other treatments';
 
   const serviceSchema = {

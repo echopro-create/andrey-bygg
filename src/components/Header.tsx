@@ -62,6 +62,7 @@ export default function Header({ dict }: HeaderProps) {
     { code: 'en', label: 'English' },
     { code: 'no', label: 'Norsk' },
     { code: 'ru', label: 'Русский' },
+    { code: 'uk', label: 'Українська' },
   ];
 
   useEffect(() => {

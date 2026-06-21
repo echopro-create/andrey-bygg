@@ -53,4 +53,16 @@ describe('i18n dictionary loader', () => {
     expect(dict).toBeDefined();
     expect(dict.nav.about).toBe('Om meg');
   });
+
+  it('should load Ukrainian dictionary successfully', async () => {
+    // Arrange
+    const locale: Locale = 'uk';
+
+    // Act
+    const dict = await getDictionary(locale);
+
+    // Assert
+    expect(dict).toBeDefined();
+    expect(dict.nav.about).toBe('Про майстра');
+  });
 });

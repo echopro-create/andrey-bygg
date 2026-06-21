@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
         en: '/en/gallery',
         no: '/no/gallery',
         ru: '/ru/gallery',
+        uk: '/uk/gallery',
       },
     },
     openGraph: {
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
       description,
       url: `${SITE_URL}/${lng}/gallery`,
       siteName: 'RyggHjälp',
-      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : 'en_US',
+      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
         {

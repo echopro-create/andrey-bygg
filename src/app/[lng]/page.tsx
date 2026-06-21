@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         en: '/en',
         no: '/no',
         ru: '/ru',
+        uk: '/uk',
       },
     },
     openGraph: {
@@ -341,6 +342,7 @@ export default async function Page({ params }: PageProps) {
                   en: 'Verified client',
                   sv: 'Verifierad klient',
                   no: 'Verifisert klient',
+                  uk: 'Верифікований клієнт',
                 }[lng] || 'Verified client';
 
                 return (

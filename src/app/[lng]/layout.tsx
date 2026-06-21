@@ -53,6 +53,7 @@ export async function generateMetadata({
     en: 'en_US',
     no: 'nb_NO',
     ru: 'ru_RU',
+    uk: 'uk_UA',
   };
 
   return {
@@ -90,6 +91,7 @@ export async function generateMetadata({
         en: '/en',
         no: '/no',
         ru: '/ru',
+        uk: '/uk',
       },
     },
     openGraph: {

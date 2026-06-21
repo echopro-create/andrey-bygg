@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
 
   const title = `${dict.privacy.title} — RyggHjälp`;
   const description = dict.privacy.subtitle;
-  const locales = ['sv', 'en', 'no', 'ru'];
+  const locales = ['sv', 'en', 'no', 'ru', 'uk'];
 
   return {
     title,
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
       description,
       url: `${SITE_URL}/${lng}/privacy`,
       siteName: 'RyggHjälp',
-      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : 'en_US',
+      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
         {
