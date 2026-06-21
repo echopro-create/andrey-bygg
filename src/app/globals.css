@@ -1705,6 +1705,8 @@ body.mobile-drawer-open .custom-lang-selector {
 .meta-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 4px;
 }
 
