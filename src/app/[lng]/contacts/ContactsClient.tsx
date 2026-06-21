@@ -406,7 +406,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
                   </svg>
                 </a>
                 <a
-                  href="https://www.facebook.com/touroleg"
+                  href="https://www.facebook.com/profile.php?id=100028476219743"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="messenger-link"

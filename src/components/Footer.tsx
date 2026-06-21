@@ -108,7 +108,7 @@ export default function Footer({ dict, lng }: FooterProps) {
               IG
             </a>
             <a
-              href="https://www.facebook.com/touroleg"
+              href="https://www.facebook.com/profile.php?id=100028476219743"
               className="social-link"
               aria-label="Facebook"
               target="_blank"

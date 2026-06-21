@@ -185,7 +185,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     paymentAccepted: 'Cash, Credit Card, Swish',
     sameAs: [
       'https://www.instagram.com/touroleg/',
-      'https://www.facebook.com/touroleg',
+      'https://www.facebook.com/profile.php?id=100028476219743',
     ],
   };
 
