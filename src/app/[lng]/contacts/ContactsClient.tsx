@@ -234,7 +234,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
             {errors.service && <div className="error-message">{errors.service}</div>}
           </div>
 
-          <div className="form-row-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+          <div className="form-row-2col">
             <div className="form-group" style={{ marginBottom: 0 }}>
               <label className="form-label" htmlFor="date">
                 {dict.contacts.formDate} *

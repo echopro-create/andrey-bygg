@@ -347,8 +347,16 @@ textarea:focus-visible,
   color: var(--text-muted);
 }
 
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
 .form-control {
   width: 100%;
+  min-height: 50px;
   padding: 14px 16px;
   background-color: rgba(var(--card-bg-rgb), 0.6);
   border: 1px solid rgba(var(--text-color-rgb), 0.15);
@@ -357,6 +365,15 @@ textarea:focus-visible,
   font-family: var(--font-body);
   font-size: 1rem;
   transition: var(--transition-luxury);
+  box-sizing: border-box;
+}
+
+/* Fix squished date/time inputs on iOS Safari */
+input[type="date"].form-control,
+input[type="time"].form-control {
+  height: 50px;
+  min-height: 50px;
+  box-sizing: border-box;
 }
 
 .form-control:focus {
@@ -2323,6 +2340,9 @@ body.mobile-drawer-open .custom-lang-selector {
   .contacts-info-card { padding: 24px; }
   .info-item-value-block { flex-direction: column; align-items: flex-start; gap: 8px; }
   .copy-btn { align-self: flex-start; }
+  .form-row-2col {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Messengers styles (Calls and Social links) */
