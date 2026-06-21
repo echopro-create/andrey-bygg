@@ -4,22 +4,22 @@ import { execSync } from 'child_process';
 
 const IMAGES_DIR = path.join(__dirname, '../../public/images');
 
-// Максимальные размеры файлов (в байтах)
+// Максимальные размеры файлов (в байтах) — retina 2x для 2026
 const MAX_FILE_SIZES = {
-  service: 50 * 1024,      // 50KB для сервисных карточек
+  service: 60 * 1024,      // 60KB для сервисных карточек (768px retina)
   gallery: 60 * 1024,      // 60KB для галереи
-  hero: 150 * 1024,        // 150KB для hero-фона
-  portrait: 40 * 1024,     // 40KB для портрета
+  hero: 120 * 1024,        // 120KB для hero-фона (1920px)
+  portrait: 60 * 1024,     // 60KB для портрета (1024px retina)
   contacts: 100 * 1024,    // 100KB для фона контактов
   og: 20 * 1024,           // 20KB для OG-изображений
 };
 
-// Максимальные размеры изображений (в пикселях)
+// Максимальные размеры изображений (в пикселях) — retina 2x
 const MAX_DIMENSIONS = {
-  service: { width: 512, height: 512 },
+  service: { width: 768, height: 768 },
   gallery: { width: 800, height: 800 },
   hero: { width: 1920, height: 1080 },
-  portrait: { width: 512, height: 683 },
+  portrait: { width: 1024, height: 1365 },
   contacts: { width: 800, height: 800 },
   og: { width: 1200, height: 630 },
 };

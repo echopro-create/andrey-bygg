@@ -163,8 +163,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     src={`/images/services/${serviceSlug}.webp`}
                     alt={service.title}
                     className="service-detail-img"
-                    width={512}
-                    height={640}
+                    width={768}
+                    height={960}
                     fetchPriority="high"
                     priority
                     quality={85}
