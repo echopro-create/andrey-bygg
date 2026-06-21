@@ -1581,7 +1581,7 @@ body.mobile-drawer-open .custom-lang-selector {
 @media (max-width: 1024px) {
   .hero-title { font-size: 2.8rem; }
   .about-container { grid-template-columns: 1fr; gap: 50px; }
-  .about-image-wrapper { max-width: 300px; margin: 0 auto; }
+  .about-image-wrapper { max-width: 380px; margin: 0 auto; width: 100%; }
   .advantages-grid { grid-template-columns: 1fr; gap: 24px; }
   .reviews-grid { grid-template-columns: 1fr; gap: 24px; }
 }
@@ -1592,7 +1592,7 @@ body.mobile-drawer-open .custom-lang-selector {
   .hero-title { font-size: 2.4rem; }
   .hero-subtitle { font-size: 1rem; }
   .hero-image-wrapper { order: -1; }
-  .certificate-badge { bottom: 15px; right: -10px; }
+  .certificate-badge { bottom: 16px; left: 16px; right: 16px; max-width: none; }
   .services-grid { grid-template-columns: 1fr; margin-top: 24px; }
   .advantages-grid, .reviews-grid { margin-top: 24px; }
 }
