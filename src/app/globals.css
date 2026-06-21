@@ -2619,6 +2619,275 @@ body.mobile-drawer-open {
   width: 100%;
 }
 
+/* ==========================================================================
+   Custom Form Elements (Dropdown & Datepicker)
+   ========================================================================== */
+
+/* Custom Select */
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-trigger {
+  width: 100%;
+  min-height: 50px;
+  padding: 14px 16px;
+  background-color: rgba(var(--card-bg-rgb), 0.6);
+  border: 1px solid rgba(var(--text-color-rgb), 0.15);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition-luxury);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-select-trigger:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.25);
+  background-color: rgba(var(--card-bg-rgb), 0.8);
+}
+
+.select-placeholder {
+  color: rgba(var(--text-color-rgb), 0.4);
+}
+
+.custom-select-arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.custom-select-wrapper.is-open .custom-select-arrow {
+  transform: rotate(180deg);
+}
+
+.custom-select-options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: 8px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  z-index: 100;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: selectFadeIn 0.2s ease-out;
+}
+
+@keyframes selectFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-select-option {
+  padding: 12px 16px;
+  color: var(--text-color);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.custom-select-option:hover {
+  background-color: rgba(var(--primary-rgb), 0.15);
+  color: var(--primary);
+}
+
+.custom-select-option.is-selected {
+  background-color: rgba(var(--primary-rgb), 0.25);
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* Custom Datepicker */
+.custom-datepicker-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.custom-datepicker-trigger {
+  width: 100%;
+  height: 50px;
+  min-height: 50px;
+  padding: 14px 16px;
+  background-color: rgba(var(--card-bg-rgb), 0.6);
+  border: 1px solid rgba(var(--text-color-rgb), 0.15);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition-luxury);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-datepicker-trigger:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.25);
+  background-color: rgba(var(--card-bg-rgb), 0.8);
+}
+
+.custom-datepicker-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-datepicker-calendar {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 320px;
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 101;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  animation: selectFadeIn 0.2s ease-out;
+}
+
+/* On small mobile screens fit calendar to parent */
+@media (max-width: 360px) {
+  .custom-datepicker-calendar {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.datepicker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.datepicker-nav-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 12px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  line-height: 1;
+}
+
+.datepicker-nav-btn:hover {
+  transform: scale(1.1);
+}
+
+.datepicker-nav-btn:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.datepicker-current-month {
+  color: var(--text-color);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+.datepicker-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.datepicker-weekday {
+  color: rgba(var(--text-color-rgb), 0.4);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.datepicker-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.datepicker-day-empty {
+  aspect-ratio: 1;
+}
+
+.datepicker-day-btn {
+  aspect-ratio: 1;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.datepicker-day-btn:hover:not(:disabled) {
+  background-color: rgba(var(--primary-rgb), 0.15);
+  color: var(--primary);
+}
+
+.datepicker-day-btn.is-today {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.datepicker-day-btn.is-selected {
+  background-color: var(--primary) !important;
+  color: #121212 !important;
+  font-weight: 600;
+}
+
+.datepicker-day-btn:disabled {
+  color: rgba(var(--text-color-rgb), 0.15);
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
 /* ------------------ Reduced Motion ------------------ */
 @media (prefers-reduced-motion: reduce) {
   *,

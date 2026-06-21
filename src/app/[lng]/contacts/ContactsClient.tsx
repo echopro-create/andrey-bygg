@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, Suspense, useCallback, useRef } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useParams } from 'next/navigation';
 import Link from 'next/link';
 import { submitBooking } from '../../actions';
+import { CustomSelect, CustomDatePicker } from './CustomFormComponents';
 
 interface ContactsClientProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -12,7 +13,17 @@ interface ContactsClientProps {
 
 function ContactsForm({ dict }: ContactsClientProps) {
   const searchParams = useSearchParams();
+  const params = useParams();
+  const lng = typeof params?.lng === 'string' ? params.lng : 'sv';
   const csrfTokenRef = useRef<string | null>(null);
+
+  // Generate 30-minute time slots from 09:00 to 21:00
+  const timeSlots = Array.from({ length: 25 }, (_, i) => {
+    const hour = Math.floor(i / 2) + 9;
+    const minute = i % 2 === 0 ? '00' : '30';
+    const timeString = `${hour.toString().padStart(2, '0')}:${minute}`;
+    return { value: timeString, label: timeString };
+  });
 
   // Build services list and compute default service from URL param (during render, no effect needed)
   const servicesList = [
@@ -216,21 +227,20 @@ function ContactsForm({ dict }: ContactsClientProps) {
             <label className="form-label" htmlFor="service">
               {dict.contacts.formService} *
             </label>
-            <select
+            <CustomSelect
               id="service"
-              name="service"
               value={formData.service}
-              onChange={handleInputChange}
-              className={`form-control ${errors.service ? 'input-error' : ''}`}
+              onChange={(val) => {
+                setFormData((prev) => ({ ...prev, service: val }));
+                if (errors.service) {
+                  setErrors((prev) => ({ ...prev, service: undefined }));
+                }
+              }}
+              options={servicesList}
+              placeholder={dict.contacts.selectPlaceholder}
+              error={!!errors.service}
               disabled={isSubmitting}
-            >
-              <option value="">{dict.contacts.selectPlaceholder}</option>
-              {servicesList.map((service) => (
-                <option key={service.value} value={service.value}>
-                  {service.label}
-                </option>
-              ))}
-            </select>
+            />
             {errors.service && <div className="error-message">{errors.service}</div>}
           </div>
 
@@ -239,15 +249,20 @@ function ContactsForm({ dict }: ContactsClientProps) {
               <label className="form-label" htmlFor="date">
                 {dict.contacts.formDate} *
               </label>
-              <input
-                type="date"
+              <CustomDatePicker
                 id="date"
-                name="date"
                 value={formData.date}
-                onChange={handleInputChange}
-                className={`form-control ${errors.date ? 'input-error' : ''}`}
+                onChange={(val) => {
+                  setFormData((prev) => ({ ...prev, date: val }));
+                  if (errors.date) {
+                    setErrors((prev) => ({ ...prev, date: undefined }));
+                  }
+                }}
+                minDate={new Date().toISOString().split('T')[0]}
+                error={!!errors.date}
                 disabled={isSubmitting}
-                min={new Date().toISOString().split('T')[0]}
+                lng={lng}
+                placeholder={dict.contacts.formDate || 'Select date...'}
               />
               {errors.date && <div className="error-message" style={{ marginTop: '4px' }}>{errors.date}</div>}
             </div>
@@ -256,13 +271,18 @@ function ContactsForm({ dict }: ContactsClientProps) {
               <label className="form-label" htmlFor="time">
                 {dict.contacts.formTime} *
               </label>
-              <input
-                type="time"
+              <CustomSelect
                 id="time"
-                name="time"
                 value={formData.time}
-                onChange={handleInputChange}
-                className={`form-control ${errors.time ? 'input-error' : ''}`}
+                onChange={(val) => {
+                  setFormData((prev) => ({ ...prev, time: val }));
+                  if (errors.time) {
+                    setErrors((prev) => ({ ...prev, time: undefined }));
+                  }
+                }}
+                options={timeSlots}
+                placeholder={dict.contacts.formTime || 'Select time...'}
+                error={!!errors.time}
                 disabled={isSubmitting}
               />
               {errors.time && <div className="error-message" style={{ marginTop: '4px' }}>{errors.time}</div>}
