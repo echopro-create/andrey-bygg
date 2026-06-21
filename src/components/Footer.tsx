@@ -99,7 +99,7 @@ export default function Footer({ dict, lng }: FooterProps) {
           </p>
           <nav className="footer-socials" aria-label="Social media links">
             <a
-              href="https://www.instagram.com/olegmassage/"
+              href="https://www.instagram.com/touroleg/"
               className="social-link"
               aria-label="Instagram"
               target="_blank"
@@ -108,7 +108,7 @@ export default function Footer({ dict, lng }: FooterProps) {
               IG
             </a>
             <a
-              href="https://www.facebook.com/olegmassage/"
+              href="https://www.facebook.com/touroleg"
               className="social-link"
               aria-label="Facebook"
               target="_blank"

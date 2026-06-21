@@ -183,10 +183,9 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     priceRange: '$$',
     currenciesAccepted: 'SEK',
     paymentAccepted: 'Cash, Credit Card, Swish',
-
     sameAs: [
-      'https://www.instagram.com/olegmassage/',
-      'https://www.facebook.com/olegmassage/',
+      'https://www.instagram.com/touroleg/',
+      'https://www.facebook.com/touroleg',
     ],
   };
 
