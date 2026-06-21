@@ -2217,6 +2217,13 @@ body.mobile-drawer-open .custom-lang-selector {
   flex-direction: column;
 }
 
+.info-box-title {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
 .info-items {
   display: flex;
   flex-direction: column;
