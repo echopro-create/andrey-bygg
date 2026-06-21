@@ -1,0 +1,31 @@
+# RYGGHJÄLP — Premium Spa & Massage
+
+Professional massage therapy and premium spa treatments in Sweden.
+
+## Pages
+
+- [Home](/) — Main page with services overview
+- [Classic Massage](/services/classic) — Traditional Swedish massage
+- [Anti-Cellulite Massage](/services/anti-cellulite) — Targeted cellulite treatment
+- [Sports Massage](/services/sports) — Athletic recovery and performance
+- [Lymphatic Drainage](/services/lymphatic-drainage) — Gentle detox therapy
+- [Cupping Massage](/services/cupping) — Ancient cupping technique
+- [Hot Stone Massage](/services/hot-stone) — Heated volcanic stone therapy
+- [Turkish Foam Massage](/services/turkish-foam) — Traditional foam cleansing
+- [Eco-Organic Massage](/services/natural-massage) — Natural oil treatment
+- [Gallery](/gallery) — Studio photos
+- [Contacts](/contacts) — Book appointment
+
+## Languages
+
+- [English](/en)
+- [Svenska](/sv)
+- [Norsk](/no)
+- [Русский](/ru)
+- [Українська](/uk)
+
+## Contact
+
+- WhatsApp: +47 486 14 204
+- Instagram: [@touroleg](https://www.instagram.com/touroleg/)
+- Facebook: [RYGGHJÄLP](https://www.facebook.com/profile.php?id=100028476219743)
