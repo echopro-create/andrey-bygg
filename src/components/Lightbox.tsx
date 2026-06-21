@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 interface LightboxProps {
   images: string[];
@@ -18,10 +18,12 @@ export default function Lightbox({
   onPrev,
 }: LightboxProps) {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
-
-  // Минимальная дистанция свайпа в пикселях
-  const minSwipeDistance = 50;
+  const [touchStartY, setTouchStartY] = useState<number | null>(null);
+  const [offsetX, setOffsetX] = useState(0);
+  const [offsetY, setOffsetY] = useState(0);
+  const [isSwipingX, setIsSwipingX] = useState(false);
+  const [isSwipingY, setIsSwipingY] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -41,34 +43,104 @@ export default function Lightbox({
     };
   }, [activeIndex, onClose, onNext, onPrev]);
 
+  // Сброс смещений при смене картинки
+  useEffect(() => {
+    setOffsetX(0);
+    setOffsetY(0);
+    setIsSwipingX(false);
+    setIsSwipingY(false);
+  }, [activeIndex]);
+
   if (activeIndex < 0) return null;
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchEndX(null);
-    setTouchStartX(e.targetTouches[0].clientX);
+    if (isAnimating) return;
+    const touch = e.targetTouches[0];
+    setTouchStartX(touch.clientX);
+    setTouchStartY(touch.clientY);
+    setOffsetX(0);
+    setOffsetY(0);
+    setIsSwipingX(false);
+    setIsSwipingY(false);
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEndX(e.targetTouches[0].clientX);
+    if (isAnimating || touchStartX === null || touchStartY === null) return;
+    const touch = e.targetTouches[0];
+    const diffX = touch.clientX - touchStartX;
+    const diffY = touch.clientY - touchStartY;
+
+    if (!isSwipingX && !isSwipingY) {
+      const absX = Math.abs(diffX);
+      const absY = Math.abs(diffY);
+      if (absX > absY && absX > 10) {
+        setIsSwipingX(true);
+      } else if (absY > absX && absY > 10) {
+        setIsSwipingY(true);
+      }
+    }
+
+    if (isSwipingX) {
+      setOffsetX(diffX);
+      if (e.cancelable) e.preventDefault();
+    } else if (isSwipingY) {
+      setOffsetY(diffY);
+      if (e.cancelable) e.preventDefault();
+    }
   };
 
   const handleTouchEnd = () => {
-    if (!touchStartX || !touchEndX) return;
-    
-    const distance = touchStartX - touchEndX;
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
+    if (touchStartX === null) return;
 
-    if (isLeftSwipe) {
-      onNext();
-    } else if (isRightSwipe) {
-      onPrev();
+    const swipeThresholdX = 80;
+    const swipeThresholdY = 120;
+
+    setIsAnimating(true);
+
+    if (isSwipingX) {
+      if (offsetX > swipeThresholdX) {
+        onPrev();
+      } else if (offsetX < -swipeThresholdX) {
+        onNext();
+      }
+    } else if (isSwipingY) {
+      if (Math.abs(offsetY) > swipeThresholdY) {
+        onClose();
+        setIsAnimating(false);
+        return;
+      }
     }
+
+    setOffsetX(0);
+    setOffsetY(0);
+    setIsSwipingX(false);
+    setIsSwipingY(false);
+    setTouchStartX(null);
+    setTouchStartY(null);
+
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 300);
+  };
+
+  const overlayOpacity = isSwipingY ? Math.max(0.3, 1 - Math.abs(offsetY) / 400) : 1;
+  const overlayStyle: React.CSSProperties = {
+    backgroundColor: `rgba(var(--background-rgb), ${overlayOpacity * 0.95})`,
+    backdropFilter: `blur(${overlayOpacity * 12}px)`,
+    WebkitBackdropFilter: `blur(${overlayOpacity * 12}px)`,
+    transition: isSwipingY ? 'none' : 'background-color 0.3s, backdrop-filter 0.3s',
+  };
+
+  const imageStyle: React.CSSProperties = {
+    objectFit: 'contain',
+    transform: `translate3d(${offsetX}px, ${offsetY}px, 0)`,
+    transition: isSwipingX || isSwipingY ? 'none' : 'transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)',
   };
 
   return (
     <div 
       className="lightbox-overlay" 
+      style={overlayStyle}
       onClick={onClose}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -91,7 +163,7 @@ export default function Lightbox({
           src={images[activeIndex]}
           alt={`Gallery item ${activeIndex + 1}`}
           className="lightbox-image"
-          style={{ objectFit: 'contain' }}
+          style={imageStyle}
         />
         <div className="lightbox-counter">
           {activeIndex + 1} / {images.length}
