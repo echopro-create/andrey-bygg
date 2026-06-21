@@ -21,7 +21,7 @@ const outfit = Outfit({
 });
 
 export async function generateStaticParams() {
-  return [{ lng: 'sv' }, { lng: 'en' }, { lng: 'no' }, { lng: 'ru' }];
+  return [{ lng: 'sv' }, { lng: 'en' }, { lng: 'no' }, { lng: 'ru' }, { lng: 'uk' }];
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';

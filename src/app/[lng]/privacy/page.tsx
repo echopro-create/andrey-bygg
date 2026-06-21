@@ -16,6 +16,7 @@ export async function generateStaticParams() {
     { lng: 'en' },
     { lng: 'no' },
     { lng: 'ru' },
+    { lng: 'uk' },
   ];
 }
 
