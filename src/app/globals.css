@@ -814,6 +814,13 @@ select.form-control {
   .advantage-card-inner {
     padding: 28px 20px;
   }
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
 body.mobile-drawer-open .logo {
