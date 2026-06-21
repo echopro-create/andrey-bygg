@@ -244,6 +244,9 @@ textarea:focus-visible,
     font-size: 0.85rem;
   }
 }
+section[id] {
+  scroll-margin-top: 100px;
+}
 
 /* Layout Utilities */
 .container {
