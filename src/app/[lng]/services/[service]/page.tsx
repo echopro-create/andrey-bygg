@@ -124,11 +124,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
       '@type': 'Country',
       name: 'SE',
     },
-    offers: {
-      '@type': 'Offer',
-      price: service.price.replace(/\D/g, ''),
-      priceCurrency: 'SEK',
-    },
   };
 
   return (
@@ -152,12 +147,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <div className="meta-item">
               <span className="meta-label">{dict.services.duration}</span>
               <span className="meta-value"><span role="img" aria-hidden="true">⏱</span> {service.duration}</span>
-            </div>
-            <div className="meta-divider"></div>
-            <div className="meta-item">
-              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-              <span className="meta-label">{(dict.services as any).cost}</span>
-              <span className="meta-value gold">{service.price}</span>
             </div>
           </div>
         </div>
@@ -275,7 +264,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
                   <div className="related-service-info">
                     <h3 className="related-service-name">{relService.title}</h3>
                     <div className="related-service-meta">
-                      <span className="related-service-price">{relService.price}</span>
                       <span className="related-service-duration"><span role="img" aria-hidden="true">⏱</span> {relService.duration.split(' / ')[0]}</span>
                     </div>
                   </div>

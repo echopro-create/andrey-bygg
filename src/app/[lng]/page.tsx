@@ -236,9 +236,6 @@ export default async function Page({ params }: PageProps) {
                         loading="lazy"
                         style={{ objectFit: 'cover' }}
                       />
-                      <div className="service-price-tag">
-                        {dict.services.priceFrom} {service.price}
-                      </div>
                     </div>
                     <div className="service-card-body">
                       <h3 className="service-card-title">{service.title}</h3>

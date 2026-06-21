@@ -180,7 +180,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
         closes: '21:00',
       },
     ],
-    priceRange: '850-1200 SEK',
+    priceRange: '$$',
     currenciesAccepted: 'SEK',
     paymentAccepted: 'Cash, Credit Card, Swish',
 

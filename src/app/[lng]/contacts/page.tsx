@@ -87,7 +87,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
         closes: '21:00',
       },
     ],
-    priceRange: '850-1200 SEK',
+    priceRange: '$$',
     currenciesAccepted: 'SEK',
     paymentAccepted: 'Cash, Credit Card, Swish',
     sameAs: [
