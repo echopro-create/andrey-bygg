@@ -312,9 +312,8 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
           <div className="info-items">
             <div className="info-item-row">
-              <span className="info-item-label">{dict.contacts.addressLabel || 'Address'}</span>
-              <div className="info-item-value-block">
-                <span className="info-item-val">{dict.contacts.address}</span>
+              <div className="info-item-label-row">
+                <span className="info-item-label">{dict.contacts.addressLabel || 'Address'}</span>
                 <button
                   type="button"
                   onClick={handleCopyAddress}
@@ -324,6 +323,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
                   {copied ? (dict.contacts.copied || 'Copied!') : (dict.contacts.copy || 'Copy')}
                 </button>
               </div>
+              <span className="info-item-val">{dict.contacts.address}</span>
             </div>
 
             <div className="info-item-row">

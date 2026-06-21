@@ -2230,6 +2230,13 @@ body.mobile-drawer-open .custom-lang-selector {
   gap: 6px;
 }
 
+.info-item-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .info-item-label {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -2334,6 +2341,8 @@ body.mobile-drawer-open .custom-lang-selector {
 .map-directions-btn {
   padding: 8px 16px;
   font-size: 0.75rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .submit-btn {
@@ -2350,8 +2359,6 @@ body.mobile-drawer-open .custom-lang-selector {
 
 @media (max-width: 600px) {
   .contacts-info-card { padding: 24px; }
-  .info-item-value-block { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .copy-btn { align-self: flex-start; }
   .form-row-2col {
     grid-template-columns: 1fr;
   }
@@ -2402,9 +2409,10 @@ body.mobile-drawer-open .custom-lang-selector {
     gap: 8px;
   }
   .messengers-number {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 4px;
+    margin-left: 4px;
+  }
+  .map-card-footer {
+    padding: 12px 16px;
   }
 }
 
