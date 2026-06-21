@@ -103,7 +103,7 @@ export default function Header({ dict }: HeaderProps) {
   };
 
   const navLinks = [
-    { href: `/${currentLng}`, label: dict.nav.about },
+    { href: `/${currentLng}#about`, label: dict.nav.about },
     { href: `/${currentLng}#services`, label: dict.nav.services },
     { href: `/${currentLng}/gallery`, label: dict.nav.gallery },
     { href: `/${currentLng}/contacts`, label: dict.nav.contacts },
