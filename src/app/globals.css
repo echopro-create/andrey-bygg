@@ -2781,11 +2781,46 @@ body.mobile-drawer-open {
   animation: selectFadeIn 0.2s ease-out;
 }
 
-/* On small mobile screens fit calendar to parent */
-@media (max-width: 360px) {
+.custom-datepicker-overlay {
+  display: none;
+}
+
+/* On mobile screens center calendar in viewport with backdrop-filter blur overlay */
+@media (max-width: 500px) {
+  .custom-datepicker-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 999;
+  }
+
   .custom-datepicker-calendar {
-    width: 100%;
-    box-sizing: border-box;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: calc(100vw - 32px) !important;
+    max-width: 340px !important;
+    z-index: 1000 !important;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8) !important;
+    animation: selectModalFadeIn 0.25s ease-out !important;
+  }
+}
+
+@keyframes selectModalFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -46%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
 

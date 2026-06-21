@@ -288,7 +288,9 @@ export function CustomDatePicker({
       </div>
 
       {isOpen && (
-        <div className="custom-datepicker-calendar">
+        <>
+          <div className="custom-datepicker-overlay" onClick={() => setIsOpen(false)}></div>
+          <div className="custom-datepicker-calendar">
           <div className="datepicker-header">
             <button type="button" className="datepicker-nav-btn prev" onClick={prevMonth}>
               ‹
@@ -330,6 +332,7 @@ export function CustomDatePicker({
             })}
           </div>
         </div>
+        </>
       )}
     </div>
   );
