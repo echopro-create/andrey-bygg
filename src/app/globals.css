@@ -807,6 +807,13 @@ select.form-control {
     max-width: 100%;
     border-left: none;
   }
+  .section-title {
+    font-size: 1.9rem;
+  }
+  .review-card-inner,
+  .advantage-card-inner {
+    padding: 28px 20px;
+  }
 }
 
 body.mobile-drawer-open .logo {
@@ -2809,6 +2816,7 @@ body.mobile-drawer-open {
     transform: translate(-50%, -50%) !important;
     width: calc(100vw - 32px) !important;
     max-width: 340px !important;
+    padding: 12px !important;
     z-index: 1000 !important;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8) !important;
     animation: selectModalFadeIn 0.25s ease-out !important;
