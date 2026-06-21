@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getDictionary, Locale } from '../../../i18n';
@@ -67,8 +68,8 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
       images: [
         {
           url: `${SITE_URL}/images/services/${serviceSlug}.webp`,
-          width: 1024,
-          height: 1024,
+          width: 512,
+          height: 512,
           alt: service.title,
         },
       ],
@@ -158,13 +159,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
               <div className="service-detail-image-wrapper">
                 <div className="service-detail-glow"></div>
                 <div className="service-detail-img-frame">
-                  <img
-                    src={`/images/services/${serviceSlug}.webp?v=2`}
+                  <Image
+                    src={`/images/services/${serviceSlug}.webp`}
                     alt={service.title}
                     className="service-detail-img"
-                    width={800}
-                    height={1000}
+                    width={512}
+                    height={640}
                     fetchPriority="high"
+                    priority
+                    quality={85}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
@@ -251,13 +255,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
               return (
                 <Link key={slug} href={`/${lng}/services/${slug}`} className="related-service-card glass-card">
                   <div className="related-service-img-wrapper">
-                    <img
+                    <Image
                       src={`/images/services/${slug}.webp`}
                       alt={relService.title}
                       className="related-service-img"
                       width={400}
                       height={250}
                       loading="lazy"
+                      quality={80}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       style={{ objectFit: 'cover' }}
                     />
                   </div>

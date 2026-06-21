@@ -3,6 +3,7 @@
 import { useState, Suspense, useCallback, useRef } from 'react';
 import { useSearchParams, useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { submitBooking } from '../../actions';
 import { CustomSelect, CustomDatePicker } from './CustomFormComponents';
 
@@ -434,11 +435,14 @@ function ContactsForm({ dict }: ContactsClientProps) {
           </div>
 
           <div className="minimal-map-card">
-            <img
+            <Image
               src="/images/contacts-bg.webp"
               alt="Luxury spa background"
               className="spa-ambient-img"
-              style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, objectFit: 'cover' }}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={75}
+              style={{ objectFit: 'cover' }}
             />
             <div className="map-card-footer" style={{ position: 'relative', zIndex: 2 }}>
               <div className="map-footer-text">

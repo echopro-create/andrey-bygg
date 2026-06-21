@@ -39,8 +39,8 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
       images: [
         {
           url: `${SITE_URL}/images/gallery/gallery-1_v2.webp`,
-          width: 1004,
-          height: 1600,
+          width: 800,
+          height: 800,
           alt: title,
         },
       ],

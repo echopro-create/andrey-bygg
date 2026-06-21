@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Lightbox from '@/components/Lightbox';
 
 interface GalleryImage {
@@ -63,13 +64,15 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
                   display: 'block',
                 }}
               >
-                <img
+                <Image
                   src={img.src}
                   alt={img.alt}
                   className="gallery-img"
                   width={600}
                   height={isVertical ? 800 : 600}
                   loading={index < 3 ? undefined : "lazy"}
+                  quality={80}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: 'cover' }}
                 />
                 <div className="gallery-item-hover">
