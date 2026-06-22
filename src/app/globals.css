@@ -256,6 +256,12 @@ section[id] {
   padding: 0 24px;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
 .section-spacing {
   padding: 48px 0;
 }
@@ -1598,6 +1604,7 @@ body.mobile-drawer-open .custom-lang-selector {
   .certificate-badge { bottom: 16px; left: 16px; right: 16px; max-width: none; }
   .services-grid { grid-template-columns: 1fr; margin-top: 24px; }
   .advantages-grid, .reviews-grid { margin-top: 24px; }
+  .about-quote { padding-left: 12px; font-size: 1.15rem; }
 }
 
 /* ------------------ Service Detail Page ------------------ */
@@ -2545,7 +2552,10 @@ body.mobile-drawer-open .custom-lang-selector {
 .social-link:hover { color: var(--primary); }
 
 @media (max-width: 768px) {
-  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .footer-brand { align-items: center; }
+  .footer-desc { margin: 0 auto; }
+  .info-list li { justify-content: center; }
   .footer-bottom-content { flex-direction: column; gap: 16px; text-align: center; }
 }
 

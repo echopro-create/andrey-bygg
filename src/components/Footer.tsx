@@ -47,7 +47,7 @@ export default function Footer({ dict, lng }: FooterProps) {
         </nav>
 
         <div className="footer-info">
-          <h4 className="footer-title">{dict.contacts.title}</h4>
+          <h4 className="footer-title">{dict.nav.contacts}</h4>
           <address style={{ fontStyle: 'normal' }}>
             <ul className="footer-list info-list">
               <li>
