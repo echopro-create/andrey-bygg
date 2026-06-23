@@ -9,6 +9,9 @@ jest.mock('next/headers', () => ({
   cookies: () => mockCookieStore,
 }));
 
+jest.spyOn(console, 'warn').mockImplementation(() => {});
+jest.spyOn(console, 'error').mockImplementation(() => {});
+
 import { submitBooking, BookingData } from './actions';
 
 describe('submitBooking server action', () => {
