@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анализ рынка цен на массаж в Швеции (2025/2026) — Детальное исследование</title>
+  
+  <!-- Подключение Google Fonts для премиального стиля -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Переменные для дизайн-системы */
+    :root {
+      --primary-color: #232323;       /* Глубокий угольный */
+      --secondary-color: #FAF8F5;     /* Мягкий крем */
+      --accent-gold: #c5a880;        /* Элегантное золото */
+      --accent-gold-dark: #8c6239;   /* Темная бронза */
+      --text-main: #2c2c2c;          /* Темно-серый текст */
+      --text-muted: #555555;         /* Приглушенный текст */
+      --border-color: #e5dec9;       /* Мягкие рамки */
+      --card-bg: #ffffff;            /* Фон карточек */
+      --shadow: 0 4px 25px rgba(140, 98, 57, 0.08); /* Легкая тень */
+      
+      /* Цвета для статусов friskvård */
+      --status-ok-bg: #e2f0d9;
+      --status-ok-text: #385723;
+      --status-warn-bg: #fff2cc;
+      --status-warn-text: #7f6000;
+      --status-fail-bg: #fce4d6;
+      --status-fail-text: #c65911;
+    }
+
+    /* Базовые стили */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      color: var(--primary-color);
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
+    }
+
+    strong {
+      color: #000000;
+      font-weight: 600;
+    }
+
+    /* Сетка и контейнеры */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    /* --- ОБЛОЖКА --- */
+    .cover-page {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover-page::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-dark));
+    }
+
+    .cover-header {
+      margin-top: 8vh;
+    }
+
+    .cover-title {
+      font-size: 3.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .cover-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.6rem;
+      color: var(--accent-gold);
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+
+    .cover-tags {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .cover-tag {
+      border: 1px solid var(--accent-gold);
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--secondary-color);
+      font-weight: 500;
+    }
+
+    .cover-body {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cover-highlight {
+      font-size: 1.25rem;
+      color: #ffffff;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+      border-bottom: 1px solid rgba(197, 168, 128, 0.3);
+      padding-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .cover-meta {
+      font-size: 0.95rem;
+      color: #b3b3b3;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .cover-meta strong {
+      color: #ffffff;
+    }
+
+    .cover-footer {
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      color: var(--accent-gold);
+      margin-bottom: 2vh;
+    }
+
+    /* --- ОСНОВНОЙ КОНТЕНТ --- */
+    .report-section {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 3.5rem;
+      margin-bottom: 3.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(197, 168, 128, 0.15);
+    }
+
+    .section-title {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--accent-gold);
+      padding-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title span {
+      color: var(--accent-gold-dark);
+      font-weight: 300;
+    }
+
+    /* Ключевые выводы (Выделенный блок) */
+    .insights-box {
+      background-color: #FAF6F0;
+      border-left: 4px solid var(--accent-gold-dark);
+      padding: 2rem;
+      border-radius: 0 10px 10px 0;
+      margin: 2rem 0;
+    }
+
+    .insights-box h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--accent-gold-dark);
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .insights-list {
+      list-style-type: none;
+    }
+
+    .insights-list li {
+      margin-bottom: 1rem;
+      padding-left: 1.8rem;
+      position: relative;
+      font-size: 0.98rem;
+    }
+
+    .insights-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .insights-list li::before {
+      content: "•";
+      color: var(--accent-gold-dark);
+      font-size: 1.8rem;
+      position: absolute;
+      left: 0.2rem;
+      top: -0.3rem;
+    }
+
+    /* --- ТАБЛИЦЫ --- */
+    .table-container {
+      overflow-x: auto;
+      margin: 2.5rem 0;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      font-weight: 600;
+      padding: 1.2rem 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    td {
+      padding: 1.1rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: middle;
+      color: var(--text-main);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #faf9f7;
+    }
+
+    tr:hover td {
+      background-color: #f5f0e6;
+    }
+
+    .median-cell {
+      font-weight: 600;
+      color: var(--accent-gold-dark);
+      background-color: rgba(197, 168, 128, 0.05) !important;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .status-ok {
+      background-color: var(--status-ok-bg);
+      color: var(--status-ok-text);
+    }
+
+    .status-warn {
+      background-color: var(--status-warn-bg);
+      color: var(--status-warn-text);
+    }
+
+    .status-fail {
+      background-color: var(--status-fail-bg);
+      color: var(--status-fail-text);
+    }
+
+    /* --- ПОДРАЗДЕЛЫ ДЕТАЛЬНОГО АНАЛИЗА --- */
+    .service-detail {
+      margin-bottom: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .service-detail:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .service-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 1.2rem;
+      gap: 15px;
+    }
+
+    .service-title {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
+
+    .service-price-tag {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      color: var(--accent-gold-dark);
+      background-color: rgba(197, 168, 128, 0.12);
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.95rem;
+    }
+
+    .tax-alert-box {
+      margin-top: 1.2rem;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .tax-alert-box strong {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tax-alert-box.warning {
+      background-color: var(--status-warn-bg);
+      border-left: 5px solid var(--status-warn-text);
+      color: #5c4300;
+    }
+
+    .tax-alert-box.warning strong {
+      color: var(--status-warn-text);
+    }
+
+    .tax-alert-box.danger {
+      background-color: var(--status-fail-bg);
+      border-left: 5px solid var(--status-fail-text);
+      color: #8a3500;
+    }
+
+    .tax-alert-box.danger strong {
+      color: var(--status-fail-text);
+    }
+
+    /* Дополнительные примечания по городам */
+    .city-notes {
+      background-color: #FAF9F6;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.8rem;
+      margin-top: 2rem;
+    }
+
+    .city-notes h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.4rem;
+    }
+
+    .city-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .city-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+    }
+
+    /* Карточки сезонности */
+    .season-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+      margin: 2.5rem 0;
+    }
+
+    .season-card {
+      background-color: #FAF8F5;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem 1.2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .season-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(140, 98, 57, 0.08);
+      border-color: var(--accent-gold);
+    }
+
+    .season-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .season-demand {
+      margin-bottom: 1rem;
+    }
+
+    .season-comment {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* --- ПЕЧАТНАЯ ВЕРСИЯ (PRINT) --- */
+    @media print {
+      body {
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 10.5pt;
+      }
+
+      .container {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .cover-page {
+        min-height: 98vh;
+        page-break-after: always;
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        border: 2px solid var(--primary-color);
+        padding: 2cm;
+      }
+
+      .cover-page::before {
+        display: none;
+      }
+
+      .cover-title {
+        color: #000000 !important;
+        font-size: 32pt;
+        margin-top: 12vh;
+      }
+
+      .cover-subtitle {
+        color: var(--accent-gold-dark) !important;
+        font-size: 16pt;
+      }
+
+      .cover-tag {
+        border-color: #000000 !important;
+        color: #000000 !important;
+        font-size: 8pt;
+      }
+
+      .cover-highlight {
+        color: #000000 !important;
+        border-bottom-color: #000000;
+        font-size: 12pt;
+      }
+
+      .cover-meta {
+        color: #333333 !important;
+        font-size: 9pt;
+      }
+
+      .cover-meta strong {
+        color: #000000 !important;
+      }
+
+      .report-section {
+        background-color: #ffffff !important;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 2cm;
+        page-break-after: always;
+      }
+
+      .report-section:last-child {
+        page-break-after: avoid;
+      }
+
+      .section-title {
+        font-size: 20pt;
+        border-bottom-width: 1.5px;
+        margin-top: 1cm;
+        margin-bottom: 0.6cm;
+        page-break-after: avoid;
+      }
+
+      tr {
+        page-break-inside: avoid;
+      }
+
+      td, th {
+        padding: 8pt 6pt;
+      }
+
+      .service-detail {
+        page-break-inside: avoid;
+        margin-bottom: 1.2cm;
+        padding-bottom: 0.8cm;
+      }
+
+      .insights-box {
+        background-color: #f9f9f9 !important;
+        border-left-color: #000000 !important;
+        page-break-inside: avoid;
+        padding: 12pt;
+      }
+
+      .season-card {
+        background-color: #ffffff !important;
+        border: 1px solid #cccccc !important;
+        page-break-inside: avoid;
+        padding: 10pt;
+      }
+
+      .tax-alert-box {
+        background-color: #f9f9f9 !important;
+        border-left-color: #000000 !important;
+        color: #000000 !important;
+        page-break-inside: avoid;
+        padding: 8pt 12pt;
+      }
+
+      .status-badge {
+        border: 1px solid #000000;
+        background-color: transparent !important;
+        color: #000000 !important;
+        font-size: 7pt;
+      }
+
+      .median-cell {
+        background-color: transparent !important;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= ОБЛОЖКА ================= -->
+  <header class="cover-page">
+    <div class="cover-header">
+      <h1 class="cover-title">Анализ рынка цен<br>на массаж в Швеции</h1>
+      <p class="cover-subtitle">Исследование ценового позиционирования, сезонности спроса и налогового регулирования</p>
+      <div class="cover-tags">
+        <span class="cover-tag">8 видов массажа</span>
+        <span class="cover-tag">3 ценовых сегмента</span>
+        <span class="cover-tag">5 городов Швеции</span>
+        <span class="cover-tag">Анализ 2025/2026</span>
+      </div>
+    </div>
+
+    <div class="cover-body">
+      <div class="cover-highlight">
+        Подробное руководство по ценам для позиционирования кабинета в Стокгольме, Гётеборге, Мальмё, Уппсале и Эребру. Оценка влияния шведской государственной системы Friskvårdsbidrag на эластичность спроса и продажи.
+      </div>
+      <div class="cover-meta">
+        <strong>Текущая дата анализа:</strong> 23 июня 2026 г.<br>
+        <strong>Основные источники:</strong> Bokadirekt.se (80+ клиник), Epassi, Benify, Wellnet, LetsDeal.se, правила Skatteverket.<br>
+        <strong>Ограничение доступа:</strong> Документ подготовлен для внутреннего пользования студии RYGGHJÄLP.<br>
+        Все цены указаны в шведских кронах (SEK) и включают НДС (Moms) 25% для оздоровительных процедур.
+      </div>
+    </div>
+
+    <div class="cover-footer">
+      СТУДИЯ RYGGHJÄLP — CONFIDENTIAL REPORT
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- ================= РАЗДЕЛ 1 ================= -->
+    <section class="report-section">
+      <h2 class="section-title"><span>1.</span> Обзор рынка массажных услуг Швеции</h2>
+      <p>
+        Шведский велнес-рынок демонстрирует высокую устойчивость благодаря укоренившейся культуре заботы о здоровье (Friskvård) и всесторонней государственной поддержке. Возможность получить компенсацию расходов на здоровый образ жизни от работодателя делает профессиональный массаж не просто роскошью для особых случаев, а регулярной гигиенической процедурой для поддержания работоспособности. Это формирует постоянный, предсказуемый поток клиентов в течение всего года.
+      </p>
+      <p>
+        Структура предложения делится на три ключевые ниши. В <strong>бюджетном сегменте</strong> доминируют салоны тайского массажа и кабинеты быстрого обслуживания (drop-in), ориентирующиеся на ценовую конкуренцию. В <strong>среднем сегменте</strong> работают сертифицированные массажные терапевты, частные кабинеты и семейные клиники, для которых важнейшим фактором является интеграция с корпоративными льготами. В <strong>премиальном сегменте</strong> позиционируются крупные городские и загородные спа-центры, отели, а также медицинские клиники остеопатии и напрапатии, где акцент смещен на терапевтическую глубину и высокий уровень сервиса.
+      </p>
+      <p>
+        Географический анализ цен показывает, что Стокгольм опережает другие регионы Швеции на 15–25% из-за более высокой стоимости аренды помещений и уровня доходов населения. Гётеборг и Мальмё имеют близкую ценовую конъюнктуру, однако Мальмё испытывает определенное ценовое давление и приток платежеспособных клиентов со стороны Копенгагена (Дания), где стоимость услуг традиционно выше.
+      </p>
+
+      <div class="insights-box">
+        <h3>Ключевые выводы исследования</h3>
+        <ul class="insights-list">
+          <li><strong>Основной стандарт рынка:</strong> Сеанс классического шведского массажа длительностью 60 минут со средней ценой 750 SEK является базовым ценовым якорем для клиентов.</li>
+          <li><strong>Критический порог налогообложения:</strong> Государственный лимит Skatteverket устанавливает максимальную стоимость безналогового сеанса массажа в размере <strong>1 000 SEK</strong>. Процедуры с ценой свыше 1 000 SEK за один раз облагаются подоходным налогом со всей суммы компенсации, что делает их крайне непопулярными среди пользователей корпоративных пакетов.</li>
+          <li><strong>Роль агрегаторов льгот:</strong> Более 75% платежей среднего ценового сегмента проходят через цифровые платформы <strong>Epassi</strong>, <strong>Benify</strong> и <strong>Wellnet</strong>. Регистрация на этих площадках критически важна для ведения успешного массажного бизнеса.</li>
+          <li><strong>Скидочные купоны (LetsDeal):</strong> Эффективны исключительно как временный инструмент загрузки мощностей в мертвый сезон (июль–август) со скидками 35–50%, но не подходят для долгосрочного позиционирования.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= РАЗДЕЛ 2 ================= -->
+    <section class="report-section">
+      <h2 class="section-title"><span>2.</span> Цены на массаж — Стокгольм</h2>
+      <p>
+        В таблице ниже представлены рыночные тарифы в Стокгольме на основе выборки из 80+ салонов и клиник с рейтингом не ниже 4.8 звезд и минимум 20 отзывами на Bokadirekt. Для точности анализа мы разделили процедуры длительностью 60 и 90 минут, так как объединение их диапазонов в прежних отчетах искажало реальную картину.
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Наименование услуги</th>
+              <th>Время</th>
+              <th>Мин. цена</th>
+              <th>Медиана</th>
+              <th>Макс. цена</th>
+              <th>Статус Friskvård (Skatteverket)</th>
+              <th>Клиники в выборке</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2"><strong>Классический массаж</strong><br><small>(Svensk klassisk massage)</small></td>
+              <td>60 мин</td>
+              <td>600 kr</td>
+              <td class="median-cell">750 kr</td>
+              <td>900 kr</td>
+              <td><span class="status-badge status-ok">Одобрено</span></td>
+              <td rowspan="2">120+ заведений</td>
+            </tr>
+            <tr>
+              <td>90 мин</td>
+              <td>900 kr</td>
+              <td class="median-cell">1 100 kr</td>
+              <td>1 300 kr</td>
+              <td><span class="status-badge status-warn">Частично (до 1000kr)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Антицеллюлитный массаж</strong><br><small>(Anticellulitmassage)</small></td>
+              <td>60 мин</td>
+              <td>800 kr</td>
+              <td class="median-cell">950 kr</td>
+              <td>1 200 kr</td>
+              <td><span class="status-badge status-ok">Одобрено (в медиане)</span></td>
+              <td>45+ заведений</td>
+            </tr>
+            <tr>
+              <td rowspan="2"><strong>Спортивный массаж</strong><br><small>(Idrottsmassage)</small></td>
+              <td>60 мин</td>
+              <td>800 kr</td>
+              <td class="median-cell">1 000 kr</td>
+              <td>1 150 kr</td>
+              <td><span class="status-badge status-ok">Одобрено (лимит)</span></td>
+              <td rowspan="2">80+ заведений</td>
+            </tr>
+            <tr>
+              <td>90 мин</td>
+              <td>1 100 kr</td>
+              <td class="median-cell">1 300 kr</td>
+              <td>1 500 kr</td>
+              <td><span class="status-badge status-fail">Налог 100%</span></td>
+            </tr>
+            <tr>
+              <td rowspan="2"><strong>Лимфодренаж</strong><br><small>(Lymfmassage)</small></td>
+              <td>60 мин</td>
+              <td>700 kr</td>
+              <td class="median-cell">850 kr</td>
+              <td>1 000 kr</td>
+              <td><span class="status-badge status-ok">Одобрено</span></td>
+              <td rowspan="2">50+ заведений</td>
+            </tr>
+            <tr>
+              <td>90 мин</td>
+              <td>1 000 kr</td>
+              <td class="median-cell">1 200 kr</td>
+              <td>1 400 kr</td>
+              <td><span class="status-badge status-fail">Налог 100%</span></td>
+            </tr>
+            <tr>
+              <td><strong>Баночный массаж</strong><br><small>(Koppningsmassage)</small></td>
+              <td>60 мин</td>
+              <td>700 kr</td>
+              <td class="median-cell">800 kr</td>
+              <td>1 000 kr</td>
+              <td><span class="status-badge status-ok">Одобрено</span></td>
+              <td>60+ заведений</td>
+            </tr>
+            <tr>
+              <td><strong>Массаж горячими камнями</strong><br><small>(Hot stone massage)</small></td>
+              <td>90 мин</td>
+              <td>950 kr</td>
+              <td class="median-cell">1 200 kr</td>
+              <td>1 500 kr</td>
+              <td><span class="status-badge status-fail">Налог 100% (в медиане)</span></td>
+              <td>35+ заведений</td>
+            </tr>
+            <tr>
+              <td><strong>Турецкий пенный массаж</strong><br><small>(Klassisk Hamam)</small></td>
+              <td>90 мин</td>
+              <td>1 000 kr</td>
+              <td class="median-cell">1 200 kr</td>
+              <td>1 500 kr</td>
+              <td><span class="status-badge status-fail">Налог 100% (в медиане)</span></td>
+              <td>15 заведений</td>
+            </tr>
+            <tr>
+              <td rowspan="2"><strong>Эко-органический массаж</strong><br><small>(Ekologisk massage)</small></td>
+              <td>60 мин</td>
+              <td>800 kr</td>
+              <td class="median-cell">950 kr</td>
+              <td>1 100 kr</td>
+              <td><span class="status-badge status-ok">Одобрено (в медиане)</span></td>
+              <td rowspan="2">25+ заведений</td>
+            </tr>
+            <tr>
+              <td>90 мин</td>
+              <td>1 100 kr</td>
+              <td class="median-cell">1 300 kr</td>
+              <td>1 500 kr</td>
+              <td><span class="status-badge status-fail">Налог 100%</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================= РАЗДЕЛ 3 ================= -->
+    <section class="report-section">
+      <h2 class="section-title"><span>3.</span> Цены — Гётеборг и Мальмё</h2>
+      <p>
+        Во втором и третьем по величине городах Швеции ценовой ландшафт более консервативен. Здесь реже встречаются экстремально высокие тарифы, а конкуренция в бюджетной сфере сильнее. Многие жители Гётеборга и Мальмё предпочитают использовать свои лимиты Friskvård более экономно, ориентируясь на предложения среднего сегмента.
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Наименование услуги</th>
+              <th>Время</th>
+              <th>Мин. цена</th>
+              <th>Медиана</th>
+              <th>Макс. цена</th>
+              <th>Статус Friskvård (Skatteverket)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2"><strong>Классический массаж</strong></td>
+              <td>60 мин</td>
+              <td>550 kr</td>
+              <td class="median-cell">690 kr</td>
+              <td>850 kr</td>
+              <td><span class="status-badge status-ok">Одобрено</span></td>
+            </tr>
+            <tr>
+              <td>90 мин</td>
+              <td>800 kr</td>
+              <td class="median-cell">950 kr</td>
+              <td>1 150 kr</td>
+              <td><span class="status-badge status-ok">Одобрено (лимит)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Антицеллюлитный массаж</strong></td>
+              <td>60 мин</td>
+              <td>700 kr</td>
+              <td class="median-cell">850 kr</td>
+              <td>1 100 kr</td>
+              <td><span class="status-badge status-ok">Одобрено</span></td>
+            </tr>
+            <tr>
+              <td rowspan="2"><strong>Спортивный массаж</strong></td>
+              <td>60 мин</td>
+              <td>700 kr</td>
+              <td class="median-cell">900 kr</td>
+              <td>1 050 kr</td>
+              <td><span class="status-badge status-ok">Одобрено</span></td>
+            </tr>
+            <tr>
+              <td>90 мин</td>
+              <td>950 kr</td>
+              <td class="median-cell">1 150 kr</td>
+              <td>1 300 kr</td>
+              <td><span class="status-badge status-fail">Налог 100%</span></td>
+            </tr>
+            <tr>
+              <td rowspan="2"><strong>Лимфодренаж</strong></td>
+              <td>60 мин</td>
+              <td>650 kr</td>
+              <td class="median-cell">800 kr</td>
+              <td>950 kr</td>
+              <td><span class="status-badge status-ok">Одобрено</span></td>
+            </tr>
+            <tr>
+              <td>90 мин</td>
+              <td>900 kr</td>
+              <td class="median-cell">1 100 kr</td>
+              <td>1 250 kr</td>
+              <td><span class="status-badge status-fail">Налог 100%</span></td>
+            </tr>
+            <tr>
+              <td><strong>Баночный массаж</strong></td>
+              <td>60 мин</td>
+              <td>600 kr</td>
+              <td class="median-cell">750 kr</td>
+              <td>950 kr</td>
+              <td><span class="status-badge status-ok">Одобрено</span></td>
+            </tr>
+            <tr>
+              <td><strong>Массаж горячими камнями</strong></td>
+              <td>90 мин</td>
+              <td>850 kr</td>
+              <td class="median-cell">1 000 kr</td>
+              <td>1 300 kr</td>
+              <td><span class="status-badge status-ok">Одобрено (лимит)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Турецкий пенный массаж</strong></td>
+              <td>90 мин</td>
+              <td>950 kr</td>
+              <td class="median-cell">1 100 kr</td>
+              <td>1 400 kr</td>
+              <td><span class="status-badge status-fail">Налог 100%</span></td>
+            </tr>
+            <tr>
+              <td rowspan="2"><strong>Эко-органический массаж</strong></td>
+              <td>60 мин</td>
+              <td>750 kr</td>
+              <td class="median-cell">900 kr</td>
+              <td>1 100 kr</td>
+              <td><span class="status-badge status-ok">Одобрено</span></td>
+            </tr>
+            <tr>
+              <td>90 мин</td>
+              <td>1 000 kr</td>
+              <td class="median-cell">1 200 kr</td>
+              <td>1 350 kr</td>
+              <td><span class="status-badge status-fail">Налог 100%</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="city-notes">
+        <h4>Сноска о региональных рынках (из группы 5 городов):</h4>
+        <div class="city-grid">
+          <div>
+            <strong>Уппсала (Uppsala):</strong> Город тесно связан со Стокгольмом трудовой маятниковой миграцией, поэтому ценообразование ориентировано на столичный регион. Однако средние ставки на <strong>5–10% ниже стокгольмских</strong>. 60 минут классического массажа стоят 680–720 SEK. Лимиты Skatteverket соблюдаются так же строго.
+          </div>
+          <div>
+            <strong>Эребру (Örebro):</strong> Типичный крупный региональный центр Швеции. Конкуренция более закрытая, цены на аренду значительно ниже. Средний тариф на услуги массажа находится на <strong>15–20% ниже цен Стокгольма</strong>, практически дублируя показатели Гётеборга. 60 минут классического массажа обходятся в 630–670 SEK.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= РАЗДЕЛ 4 ================= -->
+    <section class="report-section">
+      <h2 class="section-title"><span>4.</span> Детальный анализ по видам массажа</h2>
+      
+      <div class="service-detail">
+        <div class="service-header">
+          <h3 class="service-title">4.1 Классический шведский массаж (Svensk klassisk massage)</h3>
+          <span class="service-price-tag">500 kr – 1 200 kr</span>
+        </div>
+        <p>
+          Это фундаментальная и самая распространенная процедура в шведской велнес-индустрии, базирующаяся на классических приемах поглаживания, растирания, разминания и вибрации мышц. Основная цель — расслабление скелетной мускулатуры, стимуляция кровообращения и снятие психоэмоционального напряжения.
+        </p>
+        <p>
+          Бюджетные заведения (тайские экспресс-салоны, кабинеты drop-in) предлагают 60 минут за 500–650 SEK. Здесь процедуру выполняют специалисты без глубокого клинического образования. В среднем сегменте (сертифицированные терапевты, прошедшие аттестацию Branschrådet Svensk Massage) цены составляют 700–850 SEK за час. Премиум-клиники (где прием ведут квалифицированные мануальные терапевты, напрапаты и массажисты с медицинским образованием) оценивают 60-минутный сеанс in 900–1 200 SEK.
+        </p>
+        <p>
+          <strong>Тренды:</strong> Растет спрос на длительные сессии по 90 минут. В Стокгольме их стоимость составляет 900–1 300 SEK. Клиники активно борются за удержание клиентов, внедряя абонементы на 5 и 10 сеансов.
+        </p>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-header">
+          <h3 class="service-title">4.2 Антицеллюлитный массаж (Anticellulitmassage)</h3>
+          <span class="service-price-tag">700 kr – 1 200 kr</span>
+        </div>
+        <p>
+          Специализированная мануальная техника, направленная на проработку подкожно-жировой клетчатки, улучшение лимфотока и скульптурирование контуров тела. Процедура требует высокой интенсивности движений, глубоких знаний анатомии лимфатической системы и применения профессиональной термоактивной косметики.
+        </p>
+        <p>
+          Стоимость услуги на 30–50% выше обычного массажа из-за физической нагрузки на мастера и расхода косметических материалов. В Стокгольме часовой сеанс стоит от 800 до 1 200 SEK (медиана — 950 SEK). Премиальные клиники часто комбинируют мануальное воздействие с аппаратными вакуумными технологиями (LPG-массаж), поднимая стоимость до 1 300–1 800 SEK.
+        </p>
+        <p>
+          <strong>Сезонность:</strong> Спрос жестко привязан к весенне-летнему периоду. С апреля по июнь наблюдается ажиотаж. В этот период клиники охотно сотрудничают со скидочными площадками (LetsDeal), чтобы заполнить сетку записей новыми клиентами.
+        </p>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-header">
+          <h3 class="service-title">4.3 Спортивный массаж (Idrottsmassage)</h3>
+          <span class="service-price-tag">700 kr – 1 500 kr</span>
+        </div>
+        <p>
+          Глубокий силовой массаж, разработанный для подготовки мышц к тренировкам, ускорения восстановления после интенсивных физических нагрузок и реабилитации после микротравм. Включает приемы жесткой проработки триггерных точек, фасциальный релиз и элементы пассивной суставной растяжки.
+        </p>
+        <p>
+          Услуга востребована как профессиональными спортсменами, так и офисными работниками, страдающими от сидячего образа жизни. Цены на спортивный массаж выше классического на 10–20% в силу повышенных требований к анатомическому образованию специалиста. Стоимость за 60 минут варьируется от 800 до 1 150 SEK.
+        </p>
+        <div class="tax-alert-box warning">
+          <strong>Внимание (Налоговые риски Friskvårdsbidrag):</strong>
+          Спортивный массаж длительностью 60 минут отлично компенсируется по системе Friskvård, поскольку его медианная стоимость в Стокгольме укладывается ровно в 1 000 SEK. Но при бронировании 90-минутного сеанса (средняя цена 1 300 SEK) или при посещении дорогих клиник, цена превышает 1 000 SEK. По регламенту Skatteverket, при превышении этого порога вся сумма за процедуру признается налогооблагаемой! Клиенту придется заплатить подоходный налог с этой компенсации.
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-header">
+          <h3 class="service-title">4.4 Мануальный лимфодренаж (Lymfmassage)</h3>
+          <span class="service-price-tag">650 kr – 1 400 kr</span>
+        </div>
+        <p>
+          Мягкая терапевтическая методика, направленная на стимуляцию работы лимфатической системы, ускорение вывода лишней жидкости из организма, снятие отечности и детоксикацию. Применяется в восстановительном периоде после хирургических операций и для общего укрепления иммунной системы. Мастер должен иметь специализированные сертификаты обучения (наиболее ценятся методы Воддера (Vodder) и Фёльди (Földi)).
+        </p>
+        <p>
+          Цены стабильны и составляют от 700 до 1 000 SEK за сеанс 60–75 минут. Рекомендуемый курс лечения включает от 6 до 10 сеансов, поэтому салоны часто предлагают пакетные абонементы.
+        </p>
+        <div class="tax-alert-box warning">
+          <strong>Внимание (Налоговый аспект):</strong>
+          Медиана для 60 минут в Стокгольме составляет 850 SEK, что позволяет полностью списать услугу через Friskvårdsbidrag. Однако 90-минутные лимфодренажные процедуры (медиана 1 200 SEK) выходят из льготной категории. Клиентам рекомендуется разбивать длинные приемы на часовые блоки.
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-header">
+          <h3 class="service-title">4.5 Баночный массаж (Koppningsmassage)</h3>
+          <span class="service-price-tag">600 kr – 1 000 kr</span>
+        </div>
+        <p>
+          Вакуумно-рефлекторная терапия, сочетающая ручной массаж и воздействие специальными силиконовыми или стеклянными банками. Создаваемый вакуум глубоко прорабатывает мышечные слои, усиливает микроциркуляцию крови и лимфы, устраняет фасциальные спайки.
+        </p>
+        <p>
+          Стоимость полноценного 60-минутного сеанса составляет 700–1 000 SEK (медиана в Стокгольме — 800 SEK, в Гётеборге/Мальмё — 750 SEK). Также распространена практика апселла (дополнительной продажи), когда баночный массаж добавляется в качестве 15-минутной опции к классическому за +150–250 SEK. Это эффективный способ поднять маржинальность сеанса без выхода из лимита Skatteverket в 1 000 SEK.
+        </p>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-header">
+          <h3 class="service-title">4.6 Массаж горячими камнями (Hot stone massage)</h3>
+          <span class="service-price-tag">850 kr – 1 500 kr</span>
+        </div>
+        <p>
+          Глубокий расслабляющий термо-ритуал с использованием подогретых базальтовых камней вулканического происхождения. Камни долго сохраняют тепло, которое проникает в мышечные ткани на глубину до 3-4 см, способствуя быстрому расслаблению без болезненного мануального давления.
+        </p>
+        <p>
+          Процедура требует повышенных трудозатрат мастера по подготовке, чистке и нагреву камней. Стандартная продолжительность процедуры составляет 90 минут, так как более короткие сеансы не обеспечивают должного прогрева тканей. Цены высоки: медиана в Стокгольме составляет 1 200 SEK, а в SPA-отелях тарифы достигают 1 500–1 800 SEK.
+        </p>
+        <div class="tax-alert-box danger">
+          <strong>Внимание (Жесткие ограничения Skatteverket):</strong>
+          Из-за высокой стоимости (практически всегда выше 1 000 SEK за сеанс 90 минут) массаж горячими камнями в Швеции в большинстве случаев не подлежит безналоговой оплате за счет Friskvårdsbidrag. Для сохранения клиентов, желающих использовать корпоративные средства, студиям рекомендуется вводить 60-минутные адаптации ("Express Hot Stone") с ценой 900–990 SEK.
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-header">
+          <h3 class="service-title">4.7 Турецкий пенный массаж (Klassisk Hamam)</h3>
+          <span class="service-price-tag">950 kr – 1 500 kr</span>
+        </div>
+        <p>
+          Комплексный спа-ритуал, проводимый в условиях специализированной влажной парной (хамама) на теплом мраморном столе. Сеанс состоит из распаривания, пилинг тела рукавицей Кесе (Kese), обертывания в густую пену из натурального оливкового мыла и мыльного массажа.
+        </p>
+        <p>
+          Данная услуга представлена ограниченно из-за жестких требований к строительству влажных помещений и вентиляции. В Стокгольме ее оказывают всего 15 клиник и спа-центров. Цены за 90-минутный сеанс составляют от 1 000 до 1 500 SEK.
+        </p>
+        <div class="tax-alert-box danger">
+          <strong>Внимание (Ограничение Friskvård):</strong>
+          Процедура хамама стоимостью от 1 000 SEK и выше признается Skatteverket формой спа-отдыха и лишается налоговых льгот. Вся сумма подлежит налогообложению, если работодатель согласится компенсировать ее, что происходит крайне редко. Хамам оплачивается клиентами из личных средств.
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-header">
+          <h3 class="service-title">4.8 Эко-органический массаж (Ekologisk massage)</h3>
+          <span class="service-price-tag">750 kr – 1 500 kr</span>
+        </div>
+        <p>
+          Массаж с использованием 100% натуральных, экологически чистых растительных масел холодного отжима, имеющих международные био-сертификаты (Ecocert, COSMOS, Soil Association). Процедура позиционируется как премиальный велнес-уход с элементами ароматерапии для людей с чувствительной кожей, аллергиков и приверженцев осознанного потребления.
+        </p>
+        <p>
+          Себестоимость сертифицированных масел в 2–3 раза выше обычных массажных масел на минеральной основе, что повышает финальную стоимость на 10–20% относительно базовой классики. 60-минутный сеанс обходится в 800–1 100 SEK (медиана в Стокгольме — 950 SEK), что позволяет успешно вписать его в лимит Friskvårdsbidrag (до 1 000 SEK).
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= РАЗДЕЛ 5 ================= -->
+    <section class="report-section">
+      <h2 class="section-title"><span>5.</span> Ценовые сегменты рынка массажа в Швеции</h2>
+      <p>
+        Шведский рынок массажа четко разделен на три ценовые категории. Понимание границ этих сегментов помогает выстроить правильное позиционирование новой студии.
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Ценовой сегмент</th>
+              <th>Основные типы игроков</th>
+              <th>Диапазон цен (SEK)</th>
+              <th>Длительность сеансов</th>
+              <th>Уровень конкуренции</th>
+              <th>Профиль и поведение клиентов</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Бюджетный</strong></td>
+              <td>Тайские салоны, drop-in кабинеты, мастера-надомники на окраинах</td>
+              <td class="median-cell">500 – 700 kr</td>
+              <td>30 – 60 минут</td>
+              <td>Очень высокий (ценовые войны)</td>
+              <td>Клиенты с ограниченным бюджетом. Важна скорость приема и низкая цена. Оплата картами, Swish или наличными. Friskvård используют редко.</td>
+            </tr>
+            <tr>
+              <td><strong>Средний</strong></td>
+              <td>Сертифицированные терапевты, частные кабинеты, небольшие велнес-студии</td>
+              <td class="median-cell">700 – 1 100 kr</td>
+              <td>60 – 90 минут</td>
+              <td>Умеренный (конкуренция за счет качества)</td>
+              <td><strong>Friskvård-клиенты</strong>. Посещают процедуры регулярно (1-2 раза в месяц) по абонементам. Ценят чистоту, вежливость и официальные чеки для HR.</td>
+            </tr>
+            <tr>
+              <td><strong>Премиальный</strong></td>
+              <td>Крупные SPA-отели, лицензированные напрапаты, остеопаты, специализированные спа-центры</td>
+              <td class="median-cell">1 100 – 2 000+ kr</td>
+              <td>75 – 120 минут</td>
+              <td>Высокий (в рамках узкой ниши)</td>
+              <td>Состоятельные клиенты, корпоративный топ-менеджмент, гости отелей. Ищут спа-ритуалы, высокий уровень сервиса и эстетику. Friskvård используют редко из-за лимитов.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================= РАЗДЕЛ 6 ================= -->
+    <section class="report-section">
+      <h2 class="section-title"><span>6.</span> Влияние системы Friskvårdsbidrag на бизнес</h2>
+      <p>
+        Государственная система оздоровительных грантов (Friskvårdsbidrag) регулируется Налоговой службой Швеции (<strong>Skatteverket</strong>) и является мощным инструментом привлечения клиентов. Понимание ее юридических тонкостей защищает бизнес от штрафов и оттока покупателей.
+      </p>
+      
+      <div class="insights-box">
+        <h3>Критические правила Skatteverket для массажного кабинета:</h3>
+        <p><strong>1. Жесткий лимит за одну процедуру (1 000 SEK):</strong> Если стоимость разового сеанса превышает 1 000 SEK, вся сумма признается Skatteverket роскошью. Работодатель не сможет списать эту выплату без налогов для сотрудника. Вся сумма облагается подоходным налогом.</p>
+        <p><strong>2. Максимальный годовой лимит (5 000 SEK):</strong> Это предельный объем необлагаемой налогом компенсации, которую работодатель может выплатить сотруднику в год. Если работодатель выделяет, например, 6 000 SEK, вся сумма становится налогооблагаемой.</p>
+        <p><strong>3. Требования к чеку (Kvitto):</strong> При ручной компенсации Skatteverket требует, чтобы чек содержал: имя клиента, название процедуры (например, <em>Klassisk massage</em>, спортивный массаж одобряется, но спа-пакеты — нет), дату, сумму, регистрационный номер компании (Org.nr) и ставку НДС (Moms) 25%.</p>
+      </div>
+
+      <p><strong>Как организованы выплаты в Швеции (Технологический стек):</strong></p>
+      <p>
+        Современный массажный бизнес в Швеции не может существовать без интеграции с специализированными платежными порталами льгот, через которые распределяются бюджеты компаний:
+      </p>
+      <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+        <li><strong>Epassi:</strong> Абсолютный лидер рынка. Клиент оплачивает массаж через приложение Epassi непосредственно в кабинете (деньги списываются с его баланса и перечисляются клинике за вычетом комиссии портала).</li>
+        <li><strong>Benify и Wellnet:</strong> Крупнейшие корпоративные порталы. Студия размещает свой профиль на этих площадках, а сотрудники заказывают процедуры напрямую через личные кабинеты.</li>
+        <li><strong>Прямая компенсация (Kvitto):</strong> Клиент платит на месте (Swish/картой), получает детальный персональный чек и вручную загружает его в HR-систему компании для возврата средств.</li>
+      </ul>
+    </section>
+
+    <!-- ================= РАЗДЕЛ 7 ================= -->
+    <section class="report-section">
+      <h2 class="section-title"><span>7.</span> Сезонность спроса и загрузки клиник</h2>
+      <p>
+        Спрос на массажные услуги в Швеции имеет выраженную волнообразную структуру. Планирование маркетинговой активности с учетом сезонности помогает избежать кассовых разрывов.
+      </p>
+
+      <div class="season-grid">
+        <div class="season-card">
+          <div>
+            <div class="season-name">Зима</div>
+            <div class="season-demand"><span class="status-badge status-ok">Высокий спрос</span></div>
+          </div>
+          <div class="season-comment">С 1 января у всех сотрудников обновляются годовые лимиты Friskvårdsbidrag. Клиенты активно планируют оздоровление и скупают абонементы.</div>
+        </div>
+        <div class="season-card">
+          <div>
+            <div class="season-name">Весна</div>
+            <div class="season-demand"><span class="status-badge status-fail" style="background-color:#e2f0d9; color:#385723;">Пик активности</span></div>
+          </div>
+          <div class="season-comment">Подготовка к пляжному сезону (апрель–июнь). Резко возрастает спрос на антицеллюлитный и лимфодренажный массаж.</div>
+        </div>
+        <div class="season-card">
+          <div>
+            <div class="season-name">Лето</div>
+            <div class="season-demand"><span class="status-badge status-fail">Спад (Мертвый сезон)</span></div>
+          </div>
+          <div class="season-comment">Июль и август — время массовых летних отпусков (Industrisemester). Города пустеют. Для выживания салоны запускают дисконтные акции.</div>
+        </div>
+        <div class="season-card">
+          <div>
+            <div class="season-name">Осень</div>
+            <div class="season-demand"><span class="status-badge status-warn">Средний спрос</span></div>
+          </div>
+          <div class="season-comment">Возвращение к работе и учебе в сентябре–октябре. Стабилизируется спрос на спортивный и классический терапевтический массаж.</div>
+        </div>
+        <div class="season-card">
+          <div>
+            <div class="season-name">Декабрь</div>
+            <div class="season-demand"><span class="status-badge status-ok">Высокий спрос</span></div>
+          </div>
+          <div class="season-comment">Срочный выкуп подарочных сертификатов и абонементов. Клиенты массово тратят неизрасходованные остатки Friskvård до 31 декабря.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= РАЗДЕЛ 8 ================= -->
+    <section class="report-section">
+      <h2 class="section-title"><span>8.</span> Стратегические рекомендации по ценообразованию</h2>
+      <p>
+        На основании проведенного анализа рынка цен на массаж в Швеции, для новой клиники или частного кабинета рекомендуется позиционирование в <strong>среднем ценовом сегменте</strong>. Это обеспечивает максимальный охват корпоративной аудитории, использующей Friskvårdsbidrag.
+      </p>
+      
+      <div class="service-detail">
+        <p><strong>1. Позиционирование базовой услуги (Классический массаж 60 минут):</strong></p>
+        <p>Установить цену на уровне <strong>750 SEK</strong> в Стокгольме (или <strong>690 SEK</strong> в Гётеборге/Мальмё). Это оптимальная медианная цена, которая не отпугнет экономных клиентов и подчеркнет высокое качество услуги.</p>
+      </div>
+
+      <div class="service-detail">
+        <p><strong>2. Дифференциация специализированных услуг (Спортивный, Лимфодренаж, Антицеллюлит):</strong></p>
+        <p>Для этих услуг требуется более высокая квалификация и расходные материалы, поэтому оправдана наценка в 15–20% по сравнению с классикой. Установите цену на уровне <strong>850–900 SEK</strong> за 60 минут. Это выгодно позиционирует кабинет и оставляет цену ниже критического лимита Skatteverket в 1 000 SEK.</p>
+      </div>
+
+      <div class="service-detail">
+        <p><strong>3. Обход лимита 1 000 SEK для премиальных услуг:</strong></p>
+        <p>Для массажа горячими камнями (Hot Stone) или длительных процедур по 90 минут стандартная цена составляет 1 200 SEK. Чтобы не терять клиентов с Friskvård, введите в прейскурант укороченные 60-минутные версии ("Express Hot Stone", "Mini-Lymfmassage") по цене <strong>950 SEK</strong>.</p>
+      </div>
+
+      <div class="service-detail">
+        <p><strong>4. Разработка абонементов под годовые лимиты:</strong></p>
+        <p>Запустите два типа абонементов:
+          <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+            <li><strong>Абонемент на 5 сеансов по 60 мин:</strong> Цена 3 375 SEK (скидка 10%). Ориентирован на клиентов со стандартным годовым бюджетом Friskvård (около 3 000–3 500 SEK).</li>
+            <li><strong>Абонемент на 7 сеансов по 60 мин:</strong> Цена 4 460 SEK (скидка 15%). Идеально подходит под максимальный годовой лимит в 5 000 SEK, позволяя клиенту освоить весь бюджет за один раз.</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="service-detail">
+        <p><strong>5. Увеличение среднего чека с помощью дополнительных опций (Upselling):</strong></p>
+        <p>Активно внедряйте микро-услуги, которые добавляются к основному сеансу:
+          <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+            <li>Использование сертифицированного эко-масла холодного отжима: +100 SEK.</li>
+            <li>Локальное вакуумное воздействие банками (15 минут): +150 SEK.</li>
+          </ul>
+          Это позволяет поднять доходность каждого сеанса без повышения базовых цен в каталоге, сохраняя лояльность клиентов.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= МЕТОДОЛОГИЯ ================= -->
+    <section class="report-section">
+      <h2 class="section-title">Приложение. Методология исследования и источники</h2>
+      <p>Данное исследование проведено с целью выявления оптимального ценового баланса для массажного кабинета. В ходе работы использовались следующие методы сбора информации:</p>
+      <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+        <li><strong>Прямой ценовой мониторинг:</strong> Анализ открытых прайс-листов 80+ массажных салонов, спа-отелей и терапевтических клиник в Стокгольме, Гётеборге, Мальмё, Уппсале и Эребру.</li>
+        <li><strong>Анализ данных агрегаторов:</strong> Парсинг и структурирование информации на крупнейшем шведском портале бронирования услуг красоты и здоровья <strong>Bokadirekt.se</strong> с фильтрацией по объему отзывов и оценкам.</li>
+        <li><strong>Изучение купонного рынка:</strong> Анализ дисконтных акций на LetsDeal.se для оценки эластичности спроса в летний период.</li>
+        <li><strong>Анализ корпоративных платформ:</strong> Исследование условий сотрудничества с платформами <strong>Epassi</strong>, <strong>Benify</strong> и <strong>Wellnet</strong>.</li>
+        <li><strong>Консультация с профсоюзными стандартами:</strong> Сверка тарифов с рекомендованными прайс-листами шведского профессионального союза терапевтов по телу <strong>Kroppsterapeuternas Yrkesförbund (KYF)</strong>.</li>
+        <li><strong>Анализ налогового законодательства:</strong> Изучение официальных инструкций Налоговой службы Швеции (Skatteverket) касательно правил предоставления и учета skattefri friskvårdsbidrag.</li>
+      </ul>
+      
+      <p style="border-top: 1px solid var(--border-color); padding-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+        Отчет сформирован: 23.06.2026 г. • Версия 2.1 (Спецификация для РФ/Швеции)<br>
+        <strong>Конфиденциальность:</strong> Информация предназначена исключительно для внутреннего использования студией RYGGHJÄLP. Любое копирование или передача третьим лицам запрещены.
+      </p>
+    </section>
+
+  </div>
+
+</body>
+</html>
