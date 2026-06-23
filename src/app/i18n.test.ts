@@ -65,4 +65,30 @@ describe('i18n dictionary loader', () => {
     expect(dict).toBeDefined();
     expect(dict.nav.about).toBe('Про майстра');
   });
+
+  describe('SEO titles rules', () => {
+    const locales: Locale[] = ['sv', 'en', 'no', 'ru', 'uk'];
+
+    locales.forEach((locale) => {
+      it(`should check that all service seo_title strings in ${locale} dictionary are valid`, async () => {
+        // Arrange & Act
+        const dict = await getDictionary(locale);
+        const services = dict.services.items;
+
+        // Assert
+        Object.keys(services).forEach((key) => {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const service = (services as any)[key];
+          if (service.seo_title) {
+            // 1. Length constraint: seo_title should not be too long
+            // Max allowed length is 55 so that with " — RYGGHJÄLP" (12 chars) it is <= 67 chars.
+            expect(service.seo_title.length).toBeLessThanOrEqual(55);
+
+            // 2. No brand duplicate constraint: seo_title should not contain RYGGHJÄLP
+            expect(service.seo_title).not.toContain('RYGGHJÄLP');
+          }
+        });
+      });
+    });
+  });
 });

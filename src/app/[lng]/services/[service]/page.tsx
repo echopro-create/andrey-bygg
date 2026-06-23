@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
   if (!service) return {};
 
-  const title = `${service.seo_title || service.title} — RYGGHJÄLP`;
+  const title = service.seo_title || service.title;
   const description = service.seo_desc || service.desc;
   const locales = ['sv', 'en', 'no', 'ru', 'uk'];
 

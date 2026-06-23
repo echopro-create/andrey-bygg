@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const title = `${dict.contacts.title} ${dict.contacts.accent} — RYGGHJÄLP`;
+  const title = `${dict.contacts.title} ${dict.contacts.accent}`;
   const description = dict.contacts?.subtitle || 'Book your session online or reach out via phone.';
 
   return {
