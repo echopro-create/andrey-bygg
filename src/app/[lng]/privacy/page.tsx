@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const title = dict.privacy.title;
-  const description = dict.privacy.subtitle;
+  const title = dict.privacy.seo_title || dict.privacy.title;
+  const description = dict.privacy.seo_desc || dict.privacy.subtitle;
   const locales = ['sv', 'en', 'no', 'ru', 'uk'];
 
   return {

@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const title = dict.nav.gallery;
-  const description = dict.gallery?.subtitle || 'Take a look inside our premium private massage studio.';
+  const title = dict.gallery?.seo_title || dict.nav.gallery;
+  const description = dict.gallery?.seo_desc || dict.gallery?.subtitle || 'Take a look inside our premium private massage studio.';
 
   return {
     title,

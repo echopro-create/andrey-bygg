@@ -280,12 +280,16 @@
     "formTime": "Preferred time",
     "street": "Mobile Spa Service",
     "city": "Sweden & Norway",
-    "mapLink": ""
+    "mapLink": "",
+    "seo_title": "Contact us and book your massage session online",
+    "seo_desc": "Get in touch with RYGGHJÄLP to book your massage. We offer professional treatments in a private studio or through home visits."
   },
   "gallery": {
     "studio": "Studio",
     "subtitle": "Take a look inside our premium private massage studio. A sanctuary of peace, equipped for your absolute comfort.",
-    "loadMore": "Show More"
+    "loadMore": "Show More",
+    "seo_title": "Photo gallery of our massage studio and treatments",
+    "seo_desc": "Explore photos of our premium private spa studio and professional massage treatments. See the relaxing atmosphere at RYGGHJÄLP."
   },
   "breadcrumbs": {
     "home": "Home",
@@ -313,7 +317,9 @@
     "section3_text": "Our studio is located in Ukraine, and we fully comply with the General Data Protection Regulation (GDPR). You have the right to request access to, correction of, or deletion of your data at any time.",
     "section4_title": "4. Contact Us",
     "section4_text": "For any questions regarding personal data processing or to request data deletion, please contact us by email: info@rygghjalp.se.",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "seo_title": "Privacy policy and personal data processing",
+    "seo_desc": "Learn how RYGGHJÄLP protects and processes your personal data when booking our massage therapy services in compliance with GDPR."
   },
   "privacyLink": "Privacy Policy"
 }

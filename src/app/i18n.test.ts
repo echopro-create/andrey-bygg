@@ -102,34 +102,44 @@ describe('i18n dictionary loader', () => {
 
         it('should validate main pages metadata limits', () => {
           // 1. Homepage
-          const homeTitle = `${dict.hero.title} ${dict.hero.accent} — RYGGHJÄLP`;
+          // Главная страница использует дефолтный тайтл без шаблона (37-43 симв.)
+          const homeTitle = `${dict.hero.title} ${dict.hero.accent}`;
           expect(homeTitle.length).toBeGreaterThanOrEqual(35);
           expect(homeTitle.length).toBeLessThanOrEqual(70);
-          expect(dict.hero.subtitle.length).toBeGreaterThanOrEqual(100);
+          expect(dict.hero.subtitle.length).toBeGreaterThanOrEqual(80);
           expect(dict.hero.subtitle.length).toBeLessThanOrEqual(160);
 
           // 2. Contacts
-          const contactsTitle = `${dict.contacts.title} ${dict.contacts.accent} — RYGGHJÄLP`;
-          expect(contactsTitle.length).toBeGreaterThanOrEqual(15);
-          expect(contactsTitle.length).toBeLessThanOrEqual(70);
-          const contactsDesc = dict.contacts.subtitle || '';
-          expect(contactsDesc.length).toBeGreaterThanOrEqual(25);
+          const contactsRawTitle = dict.contacts.seo_title || `${dict.contacts.title} ${dict.contacts.accent}`;
+          const contactsFullTitle = `${contactsRawTitle} — RYGGHJÄLP`;
+          expect(contactsRawTitle).not.toContain('RYGGHJÄLP');
+          expect(contactsFullTitle.length).toBeGreaterThanOrEqual(35);
+          expect(contactsFullTitle.length).toBeLessThanOrEqual(70);
+          
+          const contactsDesc = dict.contacts.seo_desc || dict.contacts.subtitle || '';
+          expect(contactsDesc.length).toBeGreaterThanOrEqual(80);
           expect(contactsDesc.length).toBeLessThanOrEqual(160);
 
           // 3. Gallery
-          const galleryTitle = `${dict.nav.gallery} — RYGGHJÄLP`;
-          expect(galleryTitle.length).toBeGreaterThanOrEqual(15);
-          expect(galleryTitle.length).toBeLessThanOrEqual(70);
-          const galleryDesc = dict.gallery?.subtitle || '';
-          expect(galleryDesc.length).toBeGreaterThanOrEqual(25);
+          const galleryRawTitle = dict.gallery?.seo_title || dict.nav.gallery;
+          const galleryFullTitle = `${galleryRawTitle} — RYGGHJÄLP`;
+          expect(galleryRawTitle).not.toContain('RYGGHJÄLP');
+          expect(galleryFullTitle.length).toBeGreaterThanOrEqual(35);
+          expect(galleryFullTitle.length).toBeLessThanOrEqual(70);
+          
+          const galleryDesc = dict.gallery?.seo_desc || dict.gallery?.subtitle || '';
+          expect(galleryDesc.length).toBeGreaterThanOrEqual(80);
           expect(galleryDesc.length).toBeLessThanOrEqual(160);
 
           // 4. Privacy
-          const privacyTitle = `${dict.privacy.title} — RYGGHJÄLP`;
-          expect(privacyTitle.length).toBeGreaterThanOrEqual(15);
-          expect(privacyTitle.length).toBeLessThanOrEqual(70);
-          const privacyDesc = dict.privacy.subtitle || '';
-          expect(privacyDesc.length).toBeGreaterThanOrEqual(25);
+          const privacyRawTitle = dict.privacy.seo_title || dict.privacy.title;
+          const privacyFullTitle = `${privacyRawTitle} — RYGGHJÄLP`;
+          expect(privacyRawTitle).not.toContain('RYGGHJÄLP');
+          expect(privacyFullTitle.length).toBeGreaterThanOrEqual(35);
+          expect(privacyFullTitle.length).toBeLessThanOrEqual(70);
+          
+          const privacyDesc = dict.privacy.seo_desc || dict.privacy.subtitle || '';
+          expect(privacyDesc.length).toBeGreaterThanOrEqual(80);
           expect(privacyDesc.length).toBeLessThanOrEqual(160);
         });
       });

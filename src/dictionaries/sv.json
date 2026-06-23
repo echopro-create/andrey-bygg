@@ -280,12 +280,16 @@
     "formTime": "Önskad tid",
     "street": "Mobil Spatjänst",
     "city": "Sverige & Norge",
-    "mapLink": ""
+    "mapLink": "",
+    "seo_title": "Kontakta oss och boka din massagesession online",
+    "seo_desc": "Kontakta RYGGHJÄLP för att boka din tid. Vi erbjuder professionell massage och spabehandlingar i en privat studio eller via hembesök."
   },
   "gallery": {
     "studio": "Studio",
     "subtitle": "Ta en titt inuti vår premiummassagestudio. En fristad av lugn, utrustad för din absoluta komfort.",
-    "loadMore": "Visa mer"
+    "loadMore": "Visa mer",
+    "seo_title": "Bilder från vår massagestudio och spabehandlingar",
+    "seo_desc": "Se bilder på vår lyxiga spastudio och professionella massagebehandlingar. Upplev harmonin och den avslappnade atmosfären hos RYGGHJÄLP."
   },
   "breadcrumbs": {
     "home": "Hem",
@@ -313,7 +317,9 @@
     "section3_text": "Vår studio ligger i Ukraina, och vi följer dataskyddsförordningen (GDPR) till fullo. Du har rätt att när som helst begära tillgång till, rättelse av eller radering av dina uppgifter.",
     "section4_title": "4. Kontakta oss",
     "section4_text": "Om du har några frågor om personuppgiftsbehandling eller vill begära radering, vänligen kontakta oss via e-post: info@rygghjalp.se.",
-    "backToHome": "Tillbaka till startsidan"
+    "backToHome": "Tillbaka till startsidan",
+    "seo_title": "Integritetspolicy och behandling av personuppgifter",
+    "seo_desc": "Läs mer om hur RYGGHJÄLP behandlar och skyddar dina personuppgifter vid tidsbokning av massagebehandlingar enligt GDPR-direktivet."
   },
   "privacyLink": "Integritetspolicy"
 }
