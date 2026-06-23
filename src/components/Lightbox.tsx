@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 interface LightboxProps {
   images: string[];
@@ -45,6 +45,7 @@ export default function Lightbox({
 
   // Сброс смещений при смене картинки
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOffsetX(0);
     setOffsetY(0);
     setIsSwipingX(false);

@@ -43,7 +43,6 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
       <div className="gallery-grid" aria-live="polite" aria-relevant="additions">
         {visibleImages.map((img, index) => {
           const isVertical = index < 3;
-          const ratio = isVertical ? '3 / 4' : '1 / 1';
           const isFirstNew = index === 6; // Индекс первого элемента из скрытых
           
           return (

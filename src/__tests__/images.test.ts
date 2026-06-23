@@ -93,7 +93,7 @@ describe('Image Performance Tests', () => {
         return { filePath, relativePath, category, size: stats.size };
       });
 
-    it.each(testCases)('$relativePath should be under ${category} size limit ($size bytes)', ({ filePath, category, size }) => {
+    it.each(testCases)('$relativePath should be under ${category} size limit ($size bytes)', ({ category, size }) => {
       const maxSize = MAX_FILE_SIZES[category];
       expect(size).toBeLessThanOrEqual(maxSize);
     });

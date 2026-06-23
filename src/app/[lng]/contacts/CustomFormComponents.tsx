@@ -125,22 +125,16 @@ export function CustomDatePicker({
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
   const [currentMonth, setCurrentMonth] = useState(today.getMonth()); // 0-indexed
 
-  // Localized week days
-  const [weekDays, setWeekDays] = useState<string[]>([]);
-
-  useEffect(() => {
-    // Generate week days dynamically based on locale (Monday as first day)
-    const baseDate = new Date(2026, 5, 1); // June 1, 2026 is Monday
-    const days = [];
-    for (let i = 0; i < 7; i++) {
-      const d = new Date(baseDate);
-      d.setDate(baseDate.getDate() + i);
-      const dayName = d.toLocaleString(lng, { weekday: 'short' });
-      // Capitalize first letter
-      days.push(dayName.charAt(0).toUpperCase() + dayName.slice(1));
-    }
-    setWeekDays(days);
-  }, [lng]);
+  // Localized week days dynamically computed based on locale (Monday as first day)
+  const weekDays = [];
+  const baseDate = new Date(2026, 5, 1); // June 1, 2026 is Monday
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(baseDate);
+    d.setDate(baseDate.getDate() + i);
+    const dayName = d.toLocaleString(lng, { weekday: 'short' });
+    // Capitalize first letter
+    weekDays.push(dayName.charAt(0).toUpperCase() + dayName.slice(1));
+  }
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -157,6 +151,7 @@ export function CustomDatePicker({
     if (value) {
       const parsed = new Date(value);
       if (!isNaN(parsed.getTime())) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setCurrentYear(parsed.getFullYear());
         setCurrentMonth(parsed.getMonth());
       }
