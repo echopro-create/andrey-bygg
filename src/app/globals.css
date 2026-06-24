@@ -2460,45 +2460,15 @@ body.mobile-drawer-open .custom-lang-selector {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 25px 60px rgba(var(--primary-rgb), 0.1);
 }
 
-.contacts-map-card img.contacts-ambient-img {
+.contacts-svg-map {
+  padding: 24px;
+  background-color: #040504;
+  border-radius: 28px;
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: contain;
-  filter: brightness(0.55) contrast(1.1) grayscale(0.15);
-  transition: transform var(--transition-smooth), filter var(--transition-smooth);
+  box-sizing: border-box;
 }
 
-.contacts-map-card:hover img.contacts-ambient-img {
-  transform: scale(1.03);
-  filter: brightness(0.7) contrast(1.15) grayscale(0);
-}
-
-.map-card-footer {
-  background: linear-gradient(to top, rgba(10, 10, 10, 0.98) 0%, rgba(10, 10, 10, 0.8) 60%, transparent 100%);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 24px 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 3;
-}
-
-.map-footer-text h6 {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-color);
-  margin-bottom: 2px;
-}
-
-.map-footer-text p {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
 
 @media (max-width: 1024px) {
   .contacts-grid {
