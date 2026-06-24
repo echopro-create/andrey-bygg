@@ -1333,7 +1333,7 @@ body.mobile-drawer-open .custom-lang-selector {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 40px;
 }
