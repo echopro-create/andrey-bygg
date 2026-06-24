@@ -1212,6 +1212,12 @@ body.mobile-drawer-open .custom-lang-selector {
   font-size: 0.92rem;
   line-height: 1.55;
   text-wrap: pretty;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
 }
 
 .about-paragraphs-grid {
@@ -1716,6 +1722,10 @@ body.mobile-drawer-open .custom-lang-selector {
   .about-paragraph {
     text-align: center;
     text-wrap: balance;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
   }
   .experience-metric {
     justify-content: center;
