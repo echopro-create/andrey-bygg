@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Script from 'next/script';
 import type { Metadata } from 'next';
 import { getDictionary, Locale } from '../i18n';
-import { SITE_URL, serviceSlugs } from '@/lib/config';
+import { SITE_URL, SITE_NAME, serviceSlugs } from '@/lib/config';
 
 interface PageProps {
   params: Promise<{ lng: string }>;
@@ -33,6 +33,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       url: `${SITE_URL}/${lng}`,
+      siteName: SITE_NAME,
+      locale: lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
+      type: 'website',
       images: [
         {
           url: `${SITE_URL}/images/og-image.webp`,
@@ -41,6 +44,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           alt: title,
         },
       ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${SITE_URL}/images/og-image.webp`],
     },
   };
 }

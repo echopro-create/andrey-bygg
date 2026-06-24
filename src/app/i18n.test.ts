@@ -14,7 +14,7 @@ describe('i18n dictionary loader', () => {
     expect(dict.nav).toBeDefined();
     expect(dict.nav.about).toBe('About us');
     expect(dict.nav.services).toBe('Services');
-    expect(dict.hero.accent).toBe('dream home');
+    expect(dict.hero.accent).toBe('Swedish precision');
   });
 
   it('should load Swedish dictionary successfully', async () => {

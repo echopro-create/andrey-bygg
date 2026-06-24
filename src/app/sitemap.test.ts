@@ -211,8 +211,8 @@ describe('sitemap.xml generation', () => {
   });
 
   describe('Total entries count', () => {
-    it('should have exactly 40 entries (4 pages + 6 services) x 4 locales', () => {
-      expect(entries).toHaveLength(40);
+    it('should have exactly 44 entries (5 pages + 6 services) x 4 locales', () => {
+      expect(entries).toHaveLength(44);
     });
   });
 

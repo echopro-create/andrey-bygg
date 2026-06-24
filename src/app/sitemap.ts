@@ -20,6 +20,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
 
     entries.push({
+      url: `${localeUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+      alternates: {
+        languages: Object.fromEntries(
+          locales.map((alt) => [alt, `${SITE_URL}/${alt}/services`])
+        ),
+      },
+    });
+
+    entries.push({
       url: `${localeUrl}/gallery`,
       lastModified: new Date(),
       changeFrequency: 'monthly',

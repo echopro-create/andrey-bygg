@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Lightbox from '@/components/Lightbox';
@@ -13,41 +13,26 @@ interface GalleryImage {
 interface GalleryClientProps {
   images: GalleryImage[];
   lng: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  dict: any;
+  dict: Record<string, unknown>;
 }
 
 export default function GalleryClient({ images, lng, dict }: GalleryClientProps) {
   const [activeIndex, setActiveIndex] = useState(-1);
-  const [showAll, setShowAll] = useState(false);
-  const firstNewItemRef = useRef<HTMLButtonElement>(null);
 
   const openLightbox = (index: number) => setActiveIndex(index);
   const closeLightbox = () => setActiveIndex(-1);
   const nextImage = () => setActiveIndex((prev) => (prev + 1) % images.length);
   const prevImage = () => setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
 
-  const handleLoadMore = () => {
-    setShowAll(true);
-    // После рендеринга переносим фокус на первую новую картинку для доступности (A11y)
-    setTimeout(() => {
-      firstNewItemRef.current?.focus();
-    }, 50);
-  };
-
-  const visibleImages = showAll ? images : images.slice(0, 6);
-
   return (
     <>
-      <div className="gallery-grid" aria-live="polite" aria-relevant="additions">
-        {visibleImages.map((img, index) => {
+      <div className="gallery-grid">
+        {images.map((img, index) => {
           const isVertical = index < 3;
-          const isFirstNew = index === 6; // Индекс первого элемента из скрытых
-          
+
           return (
-            <div key={index} className={`gallery-item-wrapper ${isVertical ? 'gallery-item-vertical' : 'gallery-item-square'} ${index < 6 ? 'reveal' : ''}`} style={{ animationDelay: `${index * 0.05}s` }}>
+            <div key={index} className={`gallery-item-wrapper ${isVertical ? 'gallery-item-vertical' : 'gallery-item-square'} reveal`} style={{ animationDelay: `${index * 0.05}s` }}>
               <button
-                ref={isFirstNew ? firstNewItemRef : null}
                 type="button"
                 className="gallery-item-frame"
                 onClick={() => openLightbox(index)}
@@ -58,39 +43,39 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
                   padding: 0,
                   width: '100%',
                   cursor: 'pointer',
-                  textAlign: 'left',
-                  display: 'block',
                 }}
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   className="gallery-img"
-                  width={600}
-                  height={isVertical ? 800 : 600}
-                  loading={index < 3 ? undefined : "lazy"}
-                  quality={80}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  width={800}
+                  height={isVertical ? 1024 : 800}
+                  loading={index < 3 ? undefined : 'lazy'}
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={85}
                   style={{ objectFit: 'cover' }}
                 />
                 <div className="gallery-item-hover">
-                  <svg 
-                    width="24" 
-                    height="24" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    className="zoom-svg"
-                    aria-hidden="true"
-                  >
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    <line x1="11" y1="8" x2="11" y2="14"></line>
-                    <line x1="8" y1="11" x2="14" y2="11"></line>
-                  </svg>
+                  <div className="zoom-icon" aria-hidden="true">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="zoom-svg"
+                      aria-hidden="true"
+                    >
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -98,35 +83,21 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
         })}
       </div>
 
-      {!showAll && images.length > 6 && (
-        <div className="gallery-load-more text-center reveal" style={{ marginTop: '40px' }}>
-          <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={handleLoadMore}
-            aria-label={dict.gallery?.loadMore || 'Show more images'}
-          >
-            {dict.gallery?.loadMore || 'Show More'}
-          </button>
-        </div>
-      )}
-
-      <div className="gallery-cta text-center reveal" style={{ marginTop: '60px' }}>
-        <Link href={`/${lng}/contacts?book=true`} className="btn btn-primary">
-          {dict.nav.book}
-        </Link>
-        <Link href={`/${lng}#services`} className="btn btn-secondary">
-          {dict.allServices || 'View services'}
+      <div className="gallery-load-more text-center reveal" style={{ marginTop: '40px' }}>
+        <Link href={`/${lng}/contacts`} className="btn btn-secondary">
+          {(dict.nav as Record<string, string>)?.book || 'Request a quote'}
         </Link>
       </div>
 
-      <Lightbox
-        images={images.map((i) => i.src)}
-        activeIndex={activeIndex}
-        onClose={closeLightbox}
-        onNext={nextImage}
-        onPrev={prevImage}
-      />
+      {activeIndex >= 0 && (
+        <Lightbox
+          images={images.map((i) => i.src)}
+          activeIndex={activeIndex}
+          onClose={closeLightbox}
+          onNext={nextImage}
+          onPrev={prevImage}
+        />
+      )}
     </>
   );
 }

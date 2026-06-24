@@ -85,30 +85,30 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
           <p>{dict.privacy.intro}</p>
 
           <section>
-            <h3 style={{ color: 'var(--text-color)', marginBottom: '12px', fontSize: '1.25rem', fontFamily: 'var(--font-title)', fontWeight: 400 }}>
+            <h2 style={{ color: 'var(--text-color)', marginBottom: '12px', fontSize: '1.25rem', fontFamily: 'var(--font-title)', fontWeight: 400 }}>
               {dict.privacy.section1_title}
-            </h3>
+            </h2>
             <p>{dict.privacy.section1_text}</p>
           </section>
 
           <section>
-            <h3 style={{ color: 'var(--text-color)', marginBottom: '12px', fontSize: '1.25rem', fontFamily: 'var(--font-title)', fontWeight: 400 }}>
+            <h2 style={{ color: 'var(--text-color)', marginBottom: '12px', fontSize: '1.25rem', fontFamily: 'var(--font-title)', fontWeight: 400 }}>
               {dict.privacy.section2_title}
-            </h3>
+            </h2>
             <p>{dict.privacy.section2_text}</p>
           </section>
 
           <section>
-            <h3 style={{ color: 'var(--text-color)', marginBottom: '12px', fontSize: '1.25rem', fontFamily: 'var(--font-title)', fontWeight: 400 }}>
+            <h2 style={{ color: 'var(--text-color)', marginBottom: '12px', fontSize: '1.25rem', fontFamily: 'var(--font-title)', fontWeight: 400 }}>
               {dict.privacy.section3_title}
-            </h3>
+            </h2>
             <p>{dict.privacy.section3_text}</p>
           </section>
 
           <section>
-            <h3 style={{ color: 'var(--text-color)', marginBottom: '12px', fontSize: '1.25rem', fontFamily: 'var(--font-title)', fontWeight: 400 }}>
+            <h2 style={{ color: 'var(--text-color)', marginBottom: '12px', fontSize: '1.25rem', fontFamily: 'var(--font-title)', fontWeight: 400 }}>
               {dict.privacy.section4_title}
-            </h3>
+            </h2>
             <p>{dict.privacy.section4_text}</p>
           </section>
         </div>

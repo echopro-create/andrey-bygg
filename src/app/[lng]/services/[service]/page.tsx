@@ -54,8 +54,8 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
       images: [
         {
           url: `${SITE_URL}/images/services/${serviceSlug}.webp`,
-          width: 512,
-          height: 512,
+          width: 1024,
+          height: 1024,
           alt: service.title,
         },
       ],

@@ -148,6 +148,8 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     image: `${SITE_URL}/images/og-image.webp`,
     address: {
       '@type': 'PostalAddress',
+      addressLocality: 'Knäred',
+      addressRegion: 'Halland',
       addressCountry: 'SE',
     },
     telephone: dict.contacts.phone,
