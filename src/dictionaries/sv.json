@@ -213,7 +213,17 @@
     "regions_title": "Verksamhetsområde",
     "regions_desc": "Vi är baserade i Knäred och utför bygg- och renoveringsarbeten i Laholm, Halmstad, Båstad, Ängelholm, Markaryd samt närliggande områden i Halland och norra Skåne.",
     "seo_title": "Kontakta Andrey Bygg | Byggfirma i Laholm & Halmstad",
-    "seo_desc": "Kontakta Andrey Bygg för renovering, köksmontering, fönsterbyte och måleri i Laholm, Halmstad, Båstad. Telefon: +460722686282. Få gratis offert."
+    "seo_desc": "Kontakta Andrey Bygg för renovering, köksmontering, fönsterbyte och måleri i Laholm, Halmstad, Båstad. Telefon: +460722686282. Få gratis offert.",
+    "guarantees": {
+      "g1_title": "Ingen förskottsbetalning",
+      "g1_desc": "Du betalar först efter att respektive arbetsmoment har slutförts och godkänts. Ingen förskottsbetalning.",
+      "g2_title": "Fast prisoffert",
+      "g2_desc": "Kostnaden fastställs i avtalet och ändras inte under arbetets gång. Inga dolda avgifter.",
+      "g3_title": "Hjälp med materialinköp",
+      "g3_desc": "Vi hjälper till att välja, köpa med rabatt och leverera kvalitetsmaterial till arbetsplatsen.",
+      "g4_title": "Kontrakt & garanti",
+      "g4_desc": "Vi arbetar officiellt med kontrakt. Vi ger en trygg garanti på alla utförda bygg- och renoveringsarbeten."
+    }
   },
   "footer": {
     "desc": "Professionella bygg- och renoveringstjänster med fokus på kvalitet, hållbarhet och snygg finish. Vi hjälper dig att förverkliga dina drömmar.",

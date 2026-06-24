@@ -213,7 +213,17 @@
     "regions_title": "Work Area",
     "regions_desc": "We are based in Knäred and perform construction and renovation work in Laholm, Halmstad, Båstad, Ängelholm, Markaryd, and surrounding areas in Halland and Skåne.",
     "seo_title": "Contact Andrey Bygg | Renovation in Laholm & Halmstad",
-    "seo_desc": "Get in touch with Andrey Bygg for kitchen assembly, window replacement, tiling, and painting in Laholm, Halmstad. Phone: +460722686282. Free quote."
+    "seo_desc": "Get in touch with Andrey Bygg for kitchen assembly, window replacement, tiling, and painting in Laholm, Halmstad. Phone: +460722686282. Free quote.",
+    "guarantees": {
+      "g1_title": "No Advance Payment",
+      "g1_desc": "You only pay after each stage of work is completed and approved. No advance payment required.",
+      "g2_title": "Fixed Price Estimate",
+      "g2_desc": "The cost is fixed in the contract and does not change during the process. No hidden fees.",
+      "g3_title": "Material Purchasing Help",
+      "g3_desc": "We help select, purchase with builder discounts, and deliver quality materials directly to the site.",
+      "g4_title": "Contract & Warranty",
+      "g4_desc": "We work officially under a contract and provide a solid warranty on all completed renovation works."
+    }
   },
   "footer": {
     "desc": "Professional building and renovation services focusing on quality, durability, and neat finishing. Helping you build your dream home.",

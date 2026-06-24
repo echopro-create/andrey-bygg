@@ -3,43 +3,13 @@
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 
-interface City {
-  name: string;
-  nameRu: string;
-  nameSv: string;
-  nameEn: string;
-  nameUk: string;
-  x: number;
-  y: number;
-  isBase?: boolean;
-}
-
-const cities: City[] = [
-  { name: 'Knäred', nameRu: 'Кнеред (База)', nameSv: 'Knäred (Bas)', nameEn: 'Knäred (Base)', nameUk: 'Кнеред (База)', x: 250, y: 220, isBase: true },
-  { name: 'Laholm', nameRu: 'Лахольм', nameSv: 'Laholm', nameEn: 'Laholm', nameUk: 'Лахольм', x: 180, y: 210 },
-  { name: 'Halmstad', nameRu: 'Хальмстад', nameSv: 'Halmstad', nameEn: 'Halmstad', nameUk: 'Хальмстад', x: 160, y: 150 },
-  { name: 'Falkenberg', nameRu: 'Фалькенберг', nameSv: 'Falkenberg', nameEn: 'Falkenberg', nameUk: 'Фалькенберг', x: 110, y: 100 },
-  { name: 'Varberg', nameRu: 'Варберг', nameSv: 'Varberg', nameEn: 'Varberg', nameUk: 'Варберг', x: 80, y: 50 },
-  { name: 'Båstad', nameRu: 'Бостад', nameSv: 'Båstad', nameEn: 'Båstad', nameUk: 'Бостад', x: 150, y: 255 },
-  { name: 'Ängelholm', nameRu: 'Энгельхольм', nameSv: 'Ängelholm', nameEn: 'Ängelholm', nameUk: 'Енгельхольм', x: 140, y: 310 },
-  { name: 'Markaryd', nameRu: 'Маркарид', nameSv: 'Markaryd', nameEn: 'Markaryd', nameUk: 'Маркарид', x: 320, y: 230 },
-  { name: 'Helsingborg', nameRu: 'Хельсингборг', nameSv: 'Helsingborg', nameEn: 'Helsingborg', nameUk: 'Хельсінгборг', x: 120, y: 360 },
-];
-
 export default function ContactsClient({ dict }: { dict: Record<string, unknown> }) {
   const params = useParams();
   const lng = (typeof params?.lng === 'string' ? params.lng : 'sv') as string;
   const contacts = (dict.contacts || {}) as Record<string, unknown>;
 
   const [copied, setCopied] = useState<'email' | null>(null);
-  const [hoveredCity, setHoveredCity] = useState<string | null>(null);
 
-  const getCityName = (city: City) => {
-    if (lng === 'ru') return city.nameRu;
-    if (lng === 'uk') return city.nameUk;
-    if (lng === 'en') return city.nameEn;
-    return city.nameSv;
-  };
 
   const email = (contacts.email as string) || '';
   const phone = (contacts.phone as string) || '';
@@ -49,6 +19,7 @@ export default function ContactsClient({ dict }: { dict: Record<string, unknown>
   const accent = (contacts.accent as string) || '';
   const title = (contacts.title as string) || '';
   const regionsDesc = (contacts.regions_desc as string) || '';
+  const guarantees = (contacts.guarantees as Record<string, string>) || {};
 
   const localized: Record<string, Record<string, string>> = {
     sv: {
@@ -205,103 +176,59 @@ export default function ContactsClient({ dict }: { dict: Record<string, unknown>
             </div>
           </div>
 
-          {/* Правая колонка: Карта региона на всю высоту */}
+          {/* Правая колонка: Bento-сетка гарантий */}
           <div className="contacts-info-column reveal">
-            <div className="contacts-map-card">
-              <svg
-                viewBox="0 0 400 400"
-                className="contacts-svg-map"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ width: '100%', height: '100%', display: 'block' }}
-              >
-                <defs>
-                  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.015)" strokeWidth="1" />
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#grid)" />
+            <div className="contacts-guarantees-grid">
+              {/* Карточка 1: Без предоплаты */}
+              <div className="guarantee-card">
+                <div className="guarantee-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="20" height="14" x="2" y="5" rx="2" />
+                    <line x1="2" y1="10" x2="22" y2="10" />
+                  </svg>
+                </div>
+                <h4 className="guarantee-title">{guarantees.g1_title}</h4>
+                <p className="guarantee-desc">{guarantees.g1_desc}</p>
+              </div>
 
-                {/* Радиусы работы от базы */}
-                <circle cx="250" cy="220" r="70" fill="none" stroke="rgba(239, 83, 80, 0.08)" strokeWidth="1" strokeDasharray="4 8" />
-                <circle cx="250" cy="220" r="140" fill="none" stroke="rgba(239, 83, 80, 0.04)" strokeWidth="1" strokeDasharray="4 8" />
+              {/* Карточка 2: Фиксированная смета */}
+              <div className="guarantee-card">
+                <div className="guarantee-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="14" height="20" x="5" y="2" rx="2" />
+                    <line x1="8" y1="6" x2="16" y2="6" />
+                    <line x1="8" y1="10" x2="16" y2="10" />
+                    <line x1="8" y1="14" x2="16" y2="14" />
+                    <line x1="8" y1="18" x2="16" y2="18" />
+                  </svg>
+                </div>
+                <h4 className="guarantee-title">{guarantees.g2_title}</h4>
+                <p className="guarantee-desc">{guarantees.g2_desc}</p>
+              </div>
 
-                {/* Линии-связи от Knäred к остальным городам */}
-                {cities.filter(c => !c.isBase).map(city => {
-                  const isLineActive = hoveredCity === city.name || hoveredCity === 'Knäred';
-                  return (
-                    <line
-                      key={`line-${city.name}`}
-                      x1="250"
-                      y1="220"
-                      x2={city.x}
-                      y2={city.y}
-                      stroke={isLineActive ? 'var(--primary)' : 'rgba(255, 255, 255, 0.08)'}
-                      strokeWidth={isLineActive ? '1.5' : '1'}
-                      strokeDasharray={isLineActive ? undefined : '3,3'}
-                      style={{ transition: 'stroke 0.3s ease, stroke-width 0.3s ease' }}
-                    />
-                  );
-                })}
+              {/* Карточка 3: Помощь с материалами */}
+              <div className="guarantee-card">
+                <div className="guarantee-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                  </svg>
+                </div>
+                <h4 className="guarantee-title">{guarantees.g3_title}</h4>
+                <p className="guarantee-desc">{guarantees.g3_desc}</p>
+              </div>
 
-                {/* Точки городов и названия */}
-                {cities.map(city => {
-                  const isHovered = hoveredCity === city.name;
-                  const cityName = getCityName(city);
-                  return (
-                    <g
-                      key={city.name}
-                      onMouseEnter={() => setHoveredCity(city.name)}
-                      onMouseLeave={() => setHoveredCity(null)}
-                      style={{ cursor: 'pointer' }}
-                    >
-                      {/* Анимированный пульсирующий круг для ховера или базы */}
-                      {(city.isBase || isHovered) && (
-                        <circle
-                          cx={city.x}
-                          cy={city.y}
-                          r={city.isBase ? 6 : 4}
-                          fill="none"
-                          stroke="var(--primary)"
-                          strokeWidth="1.5"
-                        >
-                          <animate attributeName="r" values={`${city.isBase ? 6 : 4};${city.isBase ? 16 : 12}`} dur="2s" repeatCount="indefinite" />
-                          <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite" />
-                        </circle>
-                      )}
-
-                      {/* Основная точка */}
-                      <circle
-                        cx={city.x}
-                        cy={city.y}
-                        r={city.isBase ? 6 : 4}
-                        fill={city.isBase ? 'var(--primary)' : (isHovered ? 'var(--primary)' : 'var(--text-muted)')}
-                        style={{ transition: 'fill 0.3s ease, r 0.3s ease' }}
-                      />
-
-                      {/* Название города */}
-                      <text
-                        x={city.x + (city.isBase ? 12 : 10)}
-                        y={city.y + 4}
-                        fill={isHovered || city.isBase ? 'var(--text-color)' : 'var(--text-muted)'}
-                        fontSize={city.isBase ? '11px' : '9px'}
-                        fontWeight={city.isBase || isHovered ? '600' : '400'}
-                        fontFamily="var(--font-body)"
-                        style={{ transition: 'fill 0.3s ease, font-weight 0.3s ease' }}
-                      >
-                        {cityName}
-                      </text>
-                    </g>
-                  );
-                })}
-
-                {/* Легенда */}
-                <text x="20" y="30" fill="rgba(255, 255, 255, 0.2)" fontSize="8px" fontFamily="var(--font-body)" letterSpacing="0.1em">
-                  REGION OF SERVICES
-                </text>
-                <text x="20" y="42" fill="rgba(255, 255, 255, 0.4)" fontSize="10px" fontFamily="var(--font-body)" fontWeight="600" letterSpacing="0.05em">
-                  HALLAND & SKÅNE
-                </text>
-              </svg>
+              {/* Карточка 4: Договор и гарантия */}
+              <div className="guarantee-card">
+                <div className="guarantee-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <h4 className="guarantee-title">{guarantees.g4_title}</h4>
+                <p className="guarantee-desc">{guarantees.g4_desc}</p>
+              </div>
             </div>
           </div>
         </div>
