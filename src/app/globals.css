@@ -1620,6 +1620,7 @@ body.mobile-drawer-open .custom-lang-selector {
   .hero-title { font-size: 2.4rem; }
   .hero-subtitle { font-size: 1rem; }
   .hero-image-wrapper { order: -1; }
+  .about-image-wrapper { max-width: none; }
   .certificate-badge { bottom: 16px; left: 16px; right: 16px; max-width: none; }
   .services-grid { grid-template-columns: 1fr; margin-top: 24px; }
   .advantages-grid, .reviews-grid { margin-top: 24px; }
