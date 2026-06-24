@@ -5,6 +5,7 @@ import { getDictionary, Locale } from '../i18n';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollRevealInit from '@/components/ScrollRevealInit';
+import { SITE_URL, SITE_NAME, localeMap } from '@/lib/config';
 import '../globals.css';
 
 const cormorant = Cormorant_Garamond({
@@ -25,9 +26,6 @@ export async function generateStaticParams() {
   return [{ lng: 'sv' }, { lng: 'en' }, { lng: 'ru' }, { lng: 'uk' }];
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-const SITE_NAME = 'Andrey Bygg';
-
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -44,17 +42,16 @@ export async function generateMetadata({
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const titleDefault = 'Andrey Bygg | Professionell Bygg & Renovering i Sverige';
+  const localizedTitles: Record<string, string> = {
+    sv: 'Andrey Bygg | Professionell Bygg & Renovering i Sverige',
+    en: 'Andrey Bygg | Professional Construction & Renovation in Sweden',
+    ru: 'Andrey Bygg | Профессиональное строительство и ремонт в Швеции',
+    uk: 'Andrey Bygg | Професійне будівництво та ремонт у Швеції',
+  };
+  const titleDefault = localizedTitles[lng] || localizedTitles.sv;
   const descriptionDefault =
     dict.hero.subtitle ||
     'Professionella byggtjänster och renovering i Halland och Skåne.';
-
-  const localeMap: Record<string, string> = {
-    sv: 'sv_SE',
-    en: 'en_US',
-    ru: 'ru_RU',
-    uk: 'uk_UA',
-  };
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -106,7 +103,7 @@ export async function generateMetadata({
           url: `${SITE_URL}/images/og-image.webp`,
           width: 1200,
           height: 630,
-          alt: 'Andrey Bygg — Professionell Bygg & Renovering',
+          alt: `${SITE_NAME} — ${dict.hero.title} ${dict.hero.accent}`,
         },
       ],
     },
@@ -156,7 +153,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     name: 'Andrey Bygg',
     description: dict.hero.subtitle,
     url: `${SITE_URL}/${lng}`,
-    logo: `${SITE_URL}/favicon.ico`,
+    logo: `${SITE_URL}/icon-512.png`,
     image: `${SITE_URL}/images/og-image.webp`,
     address: {
       '@type': 'PostalAddress',
@@ -183,9 +180,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     priceRange: '$$',
     currenciesAccepted: 'SEK',
     paymentAccepted: 'Cash, Credit Card, Swish',
-    sameAs: [
-      'https://www.instagram.com/',
-    ],
+    sameAs: [],
   };
 
   return (

@@ -3,10 +3,10 @@
 import Link from 'next/link';
 import { usePathname, useRouter, useParams } from 'next/navigation';
 import { useState, useEffect, useRef, useTransition } from 'react';
+import type { Dict } from '@/lib/config';
 
 interface HeaderProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  dict: any;
+  dict: Dict;
 }
 
 export default function Header({ dict }: HeaderProps) {
@@ -91,7 +91,7 @@ export default function Header({ dict }: HeaderProps) {
     if (!pathname) return;
     const segments = pathname.split('/');
     segments[1] = newLng;
-    const newPath = segments.join('/');
+    const newPath = segments.join('/') + window.location.hash;
     startTransition(() => {
       router.push(newPath);
     });

@@ -1,8 +1,8 @@
 import Link from 'next/link';
+import type { Dict } from '@/lib/config';
 
 interface FooterProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  dict: any;
+  dict: Dict;
   lng: string;
 }
 
@@ -40,7 +40,7 @@ export default function Footer({ dict, lng }: FooterProps) {
             ))}
             <li>
               <Link href={`/${lng}#services`} className="footer-link">
-                {dict.allServices || 'All services'} →
+                {dict.allServices ? dict.allServices as string : 'All services'} →
               </Link>
             </li>
           </ul>

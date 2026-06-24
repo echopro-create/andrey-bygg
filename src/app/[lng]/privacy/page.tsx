@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { getDictionary, Locale } from '../../i18n';
 import { Metadata } from 'next';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+import { SITE_URL } from '@/lib/config';
 
 interface PrivacyPageProps {
   params: Promise<{

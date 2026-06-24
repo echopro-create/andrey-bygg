@@ -1,16 +1,5 @@
 import type { MetadataRoute } from 'next';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-
-const locales = ['sv', 'en', 'ru', 'uk'];
-const services = [
-  'windows-doors',
-  'kitchen-assembly',
-  'bathroom-renovation',
-  'tiling',
-  'painting',
-  'roofing-woodwork',
-];
+import { SITE_URL, locales, serviceSlugs } from '@/lib/config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
@@ -66,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     });
 
-    for (const service of services) {
+    for (const service of serviceSlugs) {
       entries.push({
         url: `${localeUrl}/services/${service}`,
         lastModified: new Date(),

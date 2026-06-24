@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { getDictionary, Locale } from '../../i18n';
 import GalleryClient from './GalleryClient';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+import { SITE_URL } from '@/lib/config';
 
 interface GalleryPageProps {
   params: Promise<{ lng: string }>;
@@ -102,7 +101,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
           </p>
         </div>
 
-        <GalleryClient images={images} closeLabel={dict.contacts.formTitle} lng={lng} dict={dict} />
+        <GalleryClient images={images} closeLabel={dict.contacts.formTitle || 'Close'} lng={lng} dict={dict} />
       </div>
     </div>
     </>

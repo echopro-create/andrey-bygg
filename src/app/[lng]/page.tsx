@@ -2,8 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getDictionary, Locale } from '../i18n';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+import { SITE_URL, serviceSlugs } from '@/lib/config';
 
 interface PageProps {
   params: Promise<{ lng: string }>;
@@ -49,15 +48,6 @@ export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
-
-  const serviceSlugs = [
-    'windows-doors',
-    'kitchen-assembly',
-    'bathroom-renovation',
-    'tiling',
-    'painting',
-    'roofing-woodwork',
-  ];
 
   const faqSchema = {
     '@context': 'https://schema.org',

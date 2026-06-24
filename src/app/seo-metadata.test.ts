@@ -33,8 +33,8 @@ describe('SEO metadata & structured data completeness', () => {
       const dict = await getDictionary(locale);
       expect(dict.contacts.seo_title).toBeDefined();
       expect(dict.contacts.seo_desc).toBeDefined();
-      expect(dict.contacts.seo_title.length).toBeGreaterThan(0);
-      expect(dict.contacts.seo_desc.length).toBeGreaterThan(0);
+      expect(dict.contacts.seo_title!.length).toBeGreaterThan(0);
+      expect(dict.contacts.seo_desc!.length).toBeGreaterThan(0);
     });
 
     it.each(locales)('locale "%s" should have gallery seo_title and seo_desc', async (locale) => {
@@ -42,16 +42,16 @@ describe('SEO metadata & structured data completeness', () => {
       expect(dict.gallery).toBeDefined();
       expect(dict.gallery.seo_title).toBeDefined();
       expect(dict.gallery.seo_desc).toBeDefined();
-      expect(dict.gallery.seo_title.length).toBeGreaterThan(0);
-      expect(dict.gallery.seo_desc.length).toBeGreaterThan(0);
+      expect(dict.gallery.seo_title!.length).toBeGreaterThan(0);
+      expect(dict.gallery.seo_desc!.length).toBeGreaterThan(0);
     });
 
     it.each(locales)('locale "%s" should have privacy seo_title and seo_desc', async (locale) => {
       const dict = await getDictionary(locale);
       expect(dict.privacy.seo_title).toBeDefined();
       expect(dict.privacy.seo_desc).toBeDefined();
-      expect(dict.privacy.seo_title.length).toBeGreaterThan(0);
-      expect(dict.privacy.seo_desc.length).toBeGreaterThan(0);
+      expect(dict.privacy.seo_title!.length).toBeGreaterThan(0);
+      expect(dict.privacy.seo_desc!.length).toBeGreaterThan(0);
     });
   });
 

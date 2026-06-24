@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const locales = ['sv', 'en', 'ru', 'uk'];
+import { locales } from '@/lib/config';
 const defaultLocale = 'sv';
 
 function getLocale(request: NextRequest): string {
@@ -13,13 +13,13 @@ function getLocale(request: NextRequest): string {
       .map(lang => {
         const parts = lang.split(';');
         const locale = parts[0].trim().split('-')[0];
-        const q = parts[1] && parts[1].startsWith('q=') ? parseFloat(parts[1].substring(2)) : 1.0;
+        const q = parts[1] && parts[1].startsWith('q=') ? parseFloat(parts[1].substring(2)) || 1.0 : 1.0;
         return { locale, q };
       })
       .sort((a, b) => b.q - a.q);
 
     for (const { locale } of parsedLocales) {
-      if (locales.includes(locale)) {
+      if ((locales as readonly string[]).includes(locale)) {
         return locale;
       }
     }

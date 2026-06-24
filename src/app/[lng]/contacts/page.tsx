@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { getDictionary, Locale } from '../../i18n';
 import ContactsClient from './ContactsClient';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+import { SITE_URL } from '@/lib/config';
 
 interface ContactsPageProps {
   params: Promise<{ lng: string }>;
@@ -89,9 +88,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
     priceRange: '$$',
     currenciesAccepted: 'SEK',
     paymentAccepted: 'Cash, Credit Card, Swish',
-    sameAs: [
-      'https://www.instagram.com/',
-    ],
+    sameAs: [],
   };
 
   return (

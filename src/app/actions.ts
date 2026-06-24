@@ -78,17 +78,8 @@ export async function submitBooking(formData: BookingData) {
 
   if (!token || !chatId) {
     console.warn(
-      '⚠️ [Andrey Bygg Warning] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not configured in .env.\n' +
-      'Booking processed in demo mode.\n' +
-      'Submission data:',
-      {
-        name: sanitizedName,
-        phone: sanitizedPhone,
-        service: sanitizedService,
-        date: sanitizedDate,
-        time: sanitizedTime,
-        message: sanitizedMessage,
-      }
+      '⚠️ [Andrey Bygg Warning] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not configured in .env. ' +
+      'Booking processed in demo mode.'
     );
     return {
       success: true,
@@ -122,7 +113,7 @@ export async function submitBooking(formData: BookingData) {
     console.error('[Andrey Bygg] Exception while sending Telegram notification:', error);
     return {
       success: false,
-      error: error instanceof Error ? error.message : 'Unknown network error.',
+      error: 'Failed to send notification. Please try again later.',
     };
   }
 }
