@@ -2688,6 +2688,22 @@ body.mobile-drawer-open .custom-lang-selector {
   align-items: center;
 }
 
+.footer-bottom-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.footer-bottom-link {
+  color: var(--text-muted);
+  text-decoration: underline;
+  transition: var(--transition-fast);
+}
+
+.footer-bottom-link:hover {
+  color: var(--primary);
+}
+
 .footer-socials {
   display: flex;
   gap: 16px;
@@ -2713,6 +2729,7 @@ body.mobile-drawer-open .custom-lang-selector {
   .footer-desc { margin: 0; text-align: left; }
   .info-list li { justify-content: flex-start; }
   .footer-bottom-content { flex-direction: column; gap: 16px; text-align: center; }
+  .footer-bottom-links { flex-direction: column; gap: 12px; }
 }
 
 @media (max-width: 500px) {

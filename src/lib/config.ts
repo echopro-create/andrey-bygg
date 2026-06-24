@@ -65,6 +65,7 @@ export interface Dict {
     desc?: string;
     rights?: string;
     privacy: string;
+    sitemap?: string;
     quickLinks?: string;
   };
   contacts: {

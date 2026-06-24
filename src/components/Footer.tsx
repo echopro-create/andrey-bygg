@@ -124,9 +124,14 @@ export default function Footer({ dict, lng }: FooterProps) {
           <p>
             &copy; {currentYear} BYGG I SYD. {dict.footer?.rights || 'All rights reserved.'}
           </p>
-          <Link href={`/${lng}/privacy`} className="footer-bottom-link" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>
-            {dict.footer?.privacy || 'Privacy Policy'}
-          </Link>
+          <div className="footer-bottom-links">
+            <Link href={`/${lng}/privacy`} className="footer-bottom-link">
+              {dict.footer?.privacy || 'Privacy Policy'}
+            </Link>
+            <a href="/sitemap.xml" className="footer-bottom-link" target="_blank" rel="noopener noreferrer">
+              {dict.footer?.sitemap || 'Sitemap'}
+            </a>
+          </div>
         </div>
       </div>
     </footer>
