@@ -28,14 +28,12 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
   // Build services list and compute default service from URL param (during render, no effect needed)
   const servicesList = [
-    { value: 'classic', label: dict.services.items.classic.title },
-    { value: 'anti-cellulite', label: dict.services.items['anti-cellulite'].title },
-    { value: 'sports', label: dict.services.items.sports.title },
-    { value: 'lymphatic-drainage', label: dict.services.items['lymphatic-drainage'].title },
-    { value: 'cupping', label: dict.services.items.cupping.title },
-    { value: 'hot-stone', label: dict.services.items['hot-stone'].title },
-    { value: 'turkish-foam', label: dict.services.items['turkish-foam'].title },
-    { value: 'natural-massage', label: dict.services.items['natural-massage'].title },
+    { value: 'windows-doors', label: dict.services.items['windows-doors']?.title || '' },
+    { value: 'kitchen-assembly', label: dict.services.items['kitchen-assembly']?.title || '' },
+    { value: 'bathroom-renovation', label: dict.services.items['bathroom-renovation']?.title || '' },
+    { value: 'tiling', label: dict.services.items.tiling?.title || '' },
+    { value: 'painting', label: dict.services.items.painting?.title || '' },
+    { value: 'roofing-woodwork', label: dict.services.items['roofing-woodwork']?.title || '' },
   ];
 
   const initialService = (() => {

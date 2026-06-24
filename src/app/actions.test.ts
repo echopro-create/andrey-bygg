@@ -23,8 +23,8 @@ describe('submitBooking server action', () => {
   const validBooking: BookingData = {
     name: 'John Doe',
     phone: '+46 700 123 456',
-    service: 'Classic Massage',
-    message: 'I would like to book a session on Friday afternoon.',
+    service: 'windows-doors',
+    message: 'I need window replacement for my house.',
     date: '2026-07-01',
     time: '14:00',
   };

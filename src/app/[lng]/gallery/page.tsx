@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
   const dict = await getDictionary(lng);
 
   const title = dict.gallery?.seo_title || dict.nav.gallery;
-  const description = dict.gallery?.seo_desc || dict.gallery?.subtitle || 'Take a look inside our premium private massage studio.';
+  const description = dict.gallery?.seo_desc || dict.gallery?.subtitle || 'Take a look at our completed construction, renovation, and carpentry projects.';
 
   return {
     title,
@@ -75,7 +75,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
     '@context': 'https://schema.org',
     '@type': 'ImageGallery',
     name: dict.nav.gallery,
-    description: dict.gallery?.subtitle || 'Take a look inside our premium private massage studio.',
+    description: dict.gallery?.subtitle || 'Take a look at our completed construction, renovation, and carpentry projects.',
     url: `${SITE_URL}/${lng}/gallery`,
     image: images.map((img) => ({
       '@type': 'ImageObject',
@@ -98,7 +98,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
           </h1>
           <p className="section-subtitle" style={{ maxWidth: '600px', margin: '0 auto' }}>
             {dict.gallery?.subtitle ||
-              'Take a look inside our premium private massage studio. A sanctuary of peace, equipped for your absolute comfort.'}
+              'Take a look at our completed construction, renovation, and carpentry projects. We guarantee high-quality craftsmanship in every detail.'}
           </p>
         </div>
 
