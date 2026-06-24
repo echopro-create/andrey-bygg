@@ -89,7 +89,7 @@ export default async function Page({ params }: PageProps) {
           {/* Background Image Wrapper for Scroll-driven Parallax */}
           <div className="hero-bg-wrapper">
             <Image
-              src="/images/hero-bg.webp"
+              src="/images/hero-bg.webp?v=3"
               alt="BYGG I SYD"
               fill
               priority
@@ -206,7 +206,7 @@ export default async function Page({ params }: PageProps) {
             <div className="about-image-wrapper reveal">
               <div className="about-image-card">
                 <Image
-                  src="/images/builder-portrait.webp"
+                  src="/images/builder-portrait.webp?v=3"
                   alt={dict.about.certTitle ? `Snickare — ${dict.about.certTitle}` : 'Snickare'}
                   className="about-img"
                   width={1024}
