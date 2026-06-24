@@ -356,7 +356,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
               <span className="info-item-label">{dict.contacts.messengersLabel || 'Messengers'}</span>
               <div className="info-item-val messengers-container">
                 <a
-                  href="https://wa.me/4748614204"
+                  href="https://wa.me/380935758495"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="messenger-link"
@@ -367,7 +367,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
                   </svg>
                 </a>
                 <a
-                  href="https://t.me/+4748614204"
+                  href="https://t.me/+380935758495"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="messenger-link"
@@ -378,7 +378,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
                   </svg>
                 </a>
                 <a
-                  href="viber://chat?number=%2B4748614204"
+                  href="viber://chat?number=%2B380935758495"
                   className="messenger-link"
                   title="Viber"
                 >
@@ -386,7 +386,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
                     <path d="M19.7 17.5c-.7-.4-1.8-1-2.4-.7-.6.3-.9 1.1-1.3 1.4-.3.2-.6.1-.9-.1-1.2-.7-2.2-1.7-2.9-2.9-.2-.3-.3-.6-.1-.9.3-.4 1.1-.7 1.4-1.3.3-.6-.3-1.7-.7-2.4-.4-.7-.8-1.5-1.5-1.5-.6 0-1.2.6-1.5 1.1-.8 1.3-.9 3 .1 4.7 1.5 2.6 3.6 4.7 6.2 6.2 1.7 1 3.4.9 4.7.1.5-.3 1.1-.9 1.1-1.5 0-.7-.8-1.1-1.5-1.5zm-3.5-9.6c2.7.3 4.9 2.5 5.2 5.2.1.4.4.7.8.7s.7-.3.7-.8c-.4-3.4-3.1-6.1-6.5-6.5-.4-.1-.8.2-.8.6.1.4.3.8.6.8zm-1.8 1.8c1.5.3 2.7 1.5 3 3 .1.4.4.6.8.6s.7-.3.7-.8c-.4-2.2-2.1-3.9-4.3-4.3-.4-.1-.8.2-.8.6 0 .5.3.8.6.9zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" />
                   </svg>
                 </a>
-                <span className="messengers-number">+47 486 14 204</span>
+                <span className="messengers-number">+380 93 575 84 95</span>
               </div>
             </div>
 
@@ -394,7 +394,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
               <span className="info-item-label">{dict.contacts.socialsLabel || 'Socials'}</span>
               <div className="info-item-val messengers-container">
                 <a
-                  href="https://www.instagram.com/touroleg/"
+                  href="https://www.instagram.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="messenger-link"
@@ -404,18 +404,6 @@ function ContactsForm({ dict }: ContactsClientProps) {
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
                   </svg>
                 </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100028476219743"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="messenger-link"
-                  title="Facebook"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                    <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
-                  </svg>
-                </a>
-                <span className="messengers-number">@touroleg</span>
               </div>
             </div>
 

@@ -1,31 +1,28 @@
-# RYGGHJÄLP — Premium Spa & Massage
+# Andrey Bygg — Professionell Bygg & Renovering
 
-Professional massage therapy and premium spa treatments in Sweden.
+Professional building and renovation services in Sweden (Laholm, Halmstad, Båstad, Ängelholm, Markaryd).
 
 ## Pages
 
 - [Home](/) — Main page with services overview
-- [Classic Massage](/services/classic) — Traditional Swedish massage
-- [Anti-Cellulite Massage](/services/anti-cellulite) — Targeted cellulite treatment
-- [Sports Massage](/services/sports) — Athletic recovery and performance
-- [Lymphatic Drainage](/services/lymphatic-drainage) — Gentle detox therapy
-- [Cupping Massage](/services/cupping) — Ancient cupping technique
-- [Hot Stone Massage](/services/hot-stone) — Heated volcanic stone therapy
-- [Turkish Foam Massage](/services/turkish-foam) — Traditional foam cleansing
-- [Eco-Organic Massage](/services/natural-massage) — Natural oil treatment
-- [Gallery](/gallery) — Studio photos
-- [Contacts](/contacts) — Book appointment
+- [Window & Door Installation](/services/windows-doors) — Inner/outer doors and energy-efficient windows
+- [Kitchen Assembly](/services/kitchen-assembly) — IKEA kitchen assembly and countertops
+- [Bathroom Renovation](/services/bathroom-renovation) — Wet room tiling and piping
+- [Tiling](/services/tiling) — Tile installation for walls and floors
+- [Painting](/services/painting) — Facade and interior wall painting
+- [Roofing & Woodwork](/services/roofing-woodwork) — Terraces, decks, and roof replacements
+- [Gallery](/gallery) — Photos of completed carpentry and renovation projects
+- [Contacts](/contacts) — Get project consultation and request cost quote
 
 ## Languages
 
 - [English](/en)
 - [Svenska](/sv)
-- [Norsk](/no)
 - [Русский](/ru)
 - [Українська](/uk)
 
 ## Contact
 
-- WhatsApp: +47 486 14 204
-- Instagram: [@touroleg](https://www.instagram.com/touroleg/)
-- Facebook: [RYGGHJÄLP](https://www.facebook.com/profile.php?id=100028476219743)
+- Phone (Sweden): +46 072 268 62 82
+- WhatsApp / Viber / Telegram: +380 93 575 84 95
+- Instagram: [Andrey Bygg](https://www.instagram.com/)
