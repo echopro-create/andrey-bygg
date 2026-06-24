@@ -976,17 +976,7 @@ body.mobile-drawer-open .custom-lang-selector {
 
 @media (min-width: 1025px) {
   .about-container {
-    align-items: stretch;
-  }
-  .about-image-wrapper {
-    height: 100%;
-  }
-  .about-image-card {
-    height: 100%;
-    aspect-ratio: auto !important;
-  }
-  .about-img {
-    height: 100%;
+    align-items: center;
   }
 }
 
