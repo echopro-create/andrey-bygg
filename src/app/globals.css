@@ -40,45 +40,6 @@
   --transition-luxury: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Alternative Dark Theme: Emerald Zen */
-html.theme-zen {
-  --background: #0b0f0b;
-  --background-rgb: 11, 15, 11;
-  --primary: #a1887f;
-  --primary-hover: #bcaaa4;
-  --primary-rgb: 161, 136, 127;
-  --card-bg: #121812;
-  --text-color: #f1f5f2;
-  --text-muted: #8fa093;
-  --error: #e57373;
-  --error-rgb: 229, 115, 115;
-  --success: #81c784;
-  --success-rgb: 129, 199, 132;
-  --footer-bg: #050705;
-  
-  /* Glassmorphism */
-  --glass-bg: rgba(11, 15, 11, 0.82);
-  --glass-blur: 24px;
-  --glass-border: rgba(var(--primary-rgb), 0.12);
-  --glass-shadow: rgba(0, 0, 0, 0.7);
-  --card-bg-rgb: 18, 24, 18;
-  --text-color-rgb: 241, 245, 242;
-  --hero-text-color: #f1f5f2;
-  --hero-text-muted: #8fa093;
-   /* Button Styles */
-  --btn-primary-bg-start: #a1887f;
-  --btn-primary-bg-end: #8d6e63;
-  --btn-primary-bg-start-hover: #bcaaa4;
-  --btn-primary-bg-end-hover: #a1887f;
-  --btn-primary-text: #ffffff;
-  --btn-primary-shadow: rgba(161, 136, 127, 0.15);
-  --btn-primary-shadow-hover: rgba(161, 136, 127, 0.35);
-  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.15) 15%, rgba(var(--background-rgb), 0.3) 50%, rgba(var(--background-rgb), 0.55) 75%, rgba(var(--background-rgb), 0.8) 88%, var(--background) 100%);
-  
-  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  --transition-fast: all 0.2s ease;
-  --transition-luxury: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
 
 /* Reset & Base Styles */
 *, *::before, *::after {
@@ -1489,7 +1450,7 @@ body.mobile-drawer-open .custom-lang-selector {
 
 .service-card-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   border-top: 1px solid rgba(var(--primary-rgb), 0.15);
   padding-top: 18px;
@@ -2375,7 +2336,7 @@ body.mobile-drawer-open .custom-lang-selector {
 /* ------------------ Contacts Layout & Location ------------------ */
 .contacts-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: stretch;
 }
@@ -2467,101 +2428,6 @@ body.mobile-drawer-open .custom-lang-selector {
   border-color: var(--primary);
 }
 
-/* ------------------ Form Fields Premium Styles ------------------ */
-.contacts-form-element {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 10px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  text-align: left;
-}
-
-.form-label {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.form-input {
-  background: rgba(var(--card-bg-rgb), 0.4);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid var(--glass-border);
-  color: var(--text-color);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  padding: 12px 16px;
-  border-radius: 8px;
-  width: 100%;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
-}
-
-.form-input:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.25);
-  background: rgba(var(--card-bg-rgb), 0.7);
-}
-
-.form-input::placeholder {
-  color: rgba(var(--text-color-rgb), 0.3);
-}
-
-.form-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-/* Custom select styling */
-.select-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.custom-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  cursor: pointer;
-  padding-right: 40px;
-}
-
-/* Custom dropdown arrow using pure CSS */
-.select-wrapper::after {
-  content: '';
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  width: 8px;
-  height: 8px;
-  border-right: 1.5px solid var(--text-muted);
-  border-bottom: 1.5px solid var(--text-muted);
-  transform: translateY(-70%) rotate(45deg);
-  pointer-events: none;
-  transition: border-color var(--transition-fast);
-}
-
-.select-wrapper:hover::after {
-  border-color: var(--primary);
-}
-
-.custom-select option {
-  background-color: var(--footer-bg);
-  color: var(--text-color);
-}
-
-.custom-select option:disabled {
-  color: rgba(var(--text-color-rgb), 0.3);
-}
 
 .minimal-map-card {
   height: 180px;

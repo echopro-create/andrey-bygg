@@ -71,9 +71,6 @@ export default async function ServicesPage({ params }: { params: Promise<{ lng: 
                   <h3 className="service-card-title">{service.title}</h3>
                   <p className="service-card-desc">{service.desc}</p>
                   <div className="service-card-footer">
-                    <span className="service-duration-label">
-                      <span role="img" aria-hidden="true">⏱</span> {service.duration}
-                    </span>
                     <Link href={`/${lng}/services/${slug}`} className="service-card-link">
                       {dict.services.readMore} →
                     </Link>

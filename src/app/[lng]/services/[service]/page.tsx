@@ -128,13 +128,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <div className="service-detail-header reveal">
             <h1 className="service-detail-title">{service.title}</h1>
           
-          {/* Мета-панель: длительность и стоимость */}
-          <div className="service-meta-panel">
-            <div className="meta-item">
-              <span className="meta-label">{dict.services.duration}</span>
-              <span className="meta-value"><span role="img" aria-hidden="true">⏱</span> {service.duration}</span>
-            </div>
-          </div>
+
         </div>
 
         <div className="service-detail-content-wrap reveal">
@@ -253,9 +247,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                   </div>
                   <div className="related-service-info">
                     <h3 className="related-service-name">{relService.title}</h3>
-                    <div className="related-service-meta">
-                      <span className="related-service-duration"><span role="img" aria-hidden="true">⏱</span> {relService.duration.split(' / ')[0]}</span>
-                    </div>
+
                   </div>
                 </Link>
               );

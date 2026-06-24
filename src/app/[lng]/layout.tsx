@@ -1,6 +1,5 @@
 import { Cormorant_Garamond, Outfit } from 'next/font/google';
 import type { Metadata, Viewport } from 'next';
-import Script from 'next/script';
 import { getDictionary, Locale } from '../i18n';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -178,26 +177,10 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   return (
     <html
       lang={lng}
-      className={`${cormorant.variable} ${outfit.variable}`}
+      className={`theme-obsidian ${cormorant.variable} ${outfit.variable}`}
       suppressHydrationWarning
     >
       <head>
-        <Script
-          id="theme-initializer"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var theme = localStorage.getItem('theme');
-                if (theme === 'obsidian' || theme === 'zen') {
-                  document.documentElement.classList.add('theme-' + theme);
-                } else {
-                  document.documentElement.classList.add('theme-obsidian');
-                }
-              })();
-            `,
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}

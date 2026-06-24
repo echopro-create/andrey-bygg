@@ -1,24 +1,16 @@
-export type Theme = 'obsidian' | 'zen';
+export type Theme = 'obsidian';
 
 /**
- * Определяет тему по умолчанию на основе системных настроек prefers-color-scheme.
- * Поскольку доступны только темные темы, возвращает 'obsidian'.
+ * Определяет тему по умолчанию на основе системных настроек.
+ * Возвращает 'obsidian'.
  */
 export function getSystemTheme(): Theme {
   return 'obsidian';
 }
 
 /**
- * Возвращает следующую тему в циклическом переключателе:
- * obsidian -> zen -> obsidian
+ * Возвращает следующую тему: всегда 'obsidian'.
  */
-export function getNextTheme(currentTheme: Theme): Theme {
-  switch (currentTheme) {
-    case 'obsidian':
-      return 'zen';
-    case 'zen':
-      return 'obsidian';
-    default:
-      return 'obsidian';
-  }
+export function getNextTheme(): Theme {
+  return 'obsidian';
 }
