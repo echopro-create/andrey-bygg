@@ -93,6 +93,7 @@ export default async function Page({ params }: PageProps) {
               alt="BYGG I SYD"
               fill
               priority
+              fetchPriority="high"
               quality={75}
               sizes="100vw"
               className="hero-bg-image"
@@ -211,7 +212,7 @@ export default async function Page({ params }: PageProps) {
                   className="about-img"
                   width={1024}
                   height={1365}
-                  quality={85}
+                  quality={70}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
                 />
@@ -280,7 +281,7 @@ export default async function Page({ params }: PageProps) {
                         width={768}
                         height={480}
                         loading="lazy"
-                        quality={80}
+                        quality={70}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{ objectFit: 'cover' }}
                       />

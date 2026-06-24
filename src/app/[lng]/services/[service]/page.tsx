@@ -170,7 +170,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     height={800}
                     fetchPriority="high"
                     priority
-                    quality={85}
+                    quality={70}
                     sizes="(max-width: 768px) 100vw, 50vw"
                     style={{ objectFit: 'cover' }}
                   />
@@ -297,7 +297,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                       width={400}
                       height={250}
                       loading="lazy"
-                      quality={80}
+                      quality={70}
                       sizes="(max-width: 768px) 100vw, 33vw"
                       style={{ objectFit: 'cover' }}
                     />

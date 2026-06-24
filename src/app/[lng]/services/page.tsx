@@ -78,7 +78,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ lng: 
                     width={512}
                     height={320}
                     loading="lazy"
-                    quality={80}
+                    quality={70}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     style={{ objectFit: 'cover' }}
                   />
