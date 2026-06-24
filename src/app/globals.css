@@ -1100,56 +1100,120 @@ body.mobile-drawer-open .custom-lang-selector {
   margin: 0 auto;
 }
 
-.olive-background-plate {
+.about-image-card {
   position: relative;
-  background-color: transparent;
   aspect-ratio: 4 / 5;
-  padding: 0;
-  border-radius: 16px;
-  transition: var(--transition-smooth);
+  border-radius: 20px;
+  transition: var(--transition-luxury);
 }
 
-.olive-background-plate::before {
+/* 1. Ambient Glow Behind the Card (Мягкое неоновое свечение) */
+.about-image-card::before {
   content: '';
   position: absolute;
-  top: 12px;
-  left: 12px;
-  right: -12px;
-  bottom: -12px;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: radial-gradient(circle, rgba(var(--primary-rgb), 0.22) 0%, rgba(var(--primary-rgb), 0) 70%);
+  filter: blur(40px);
+  z-index: -2;
+  pointer-events: none;
+  transition: var(--transition-luxury);
+  opacity: 0.7;
+}
+
+/* 2. Glassmorphic Shadow Plate (Премиальная стеклянная подложка с параллаксом) */
+.about-image-card::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: -16px;
+  bottom: -16px;
+  background: linear-gradient(135deg, rgba(var(--card-bg-rgb), 0.4) 0%, rgba(0, 0, 0, 0.75) 100%);
   border: 1px solid rgba(var(--primary-rgb), 0.15);
-  border-radius: 16px;
+  border-radius: 20px;
   z-index: -1;
   pointer-events: none;
-  transition: var(--transition-smooth);
+  transition: var(--transition-luxury);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.6), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
+/* 3. The Portrait Image (Сама фотография) */
 .about-img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 4/5;
+  height: 100%;
   object-fit: cover;
-  border-radius: 16px;
-  border: 1px solid rgba(var(--primary-rgb), 0.2);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  border: 1px solid rgba(var(--primary-rgb), 0.25);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.85);
   display: block;
+  transition: var(--transition-luxury);
 }
 
+/* 4. Certificate Badge (Информационный бейдж) */
 .certificate-badge {
   position: absolute;
-  bottom: 20px;
-  right: -20px;
-  background: rgba(var(--card-bg-rgb), 0.85);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border: 1px solid rgba(var(--primary-rgb), 0.2);
-  border-radius: 12px;
-  padding: 12px 16px;
+  bottom: 24px;
+  right: -24px;
+  background: rgba(var(--card-bg-rgb), 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(var(--primary-rgb), 0.25);
+  border-radius: 14px;
+  padding: 14px 18px;
   display: flex;
   align-items: center;
   gap: 12px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
-  max-width: 250px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  max-width: 260px;
   z-index: 10;
+  transition: var(--transition-luxury);
+}
+
+/* --- HOVER EFFECTS (Эффекты при наведении) --- */
+.about-image-wrapper:hover .about-image-card {
+  transform: translateY(-4px);
+}
+
+/* Картинка приподнимается и подсвечивается сильнее */
+.about-image-wrapper:hover .about-img {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(var(--primary-rgb), 0.45);
+  box-shadow: 
+    0 40px 80px -20px rgba(0, 0, 0, 0.95), 
+    0 0 25px rgba(var(--primary-rgb), 0.15);
+}
+
+/* Стеклянная подложка сзади сдвигается в противоположном направлении (3D-параллакс) */
+.about-image-wrapper:hover .about-image-card::after {
+  transform: translate(-10px, -10px);
+  border-color: rgba(var(--primary-rgb), 0.35);
+  background: linear-gradient(135deg, rgba(var(--card-bg-rgb), 0.5) 0%, rgba(0, 0, 0, 0.85) 100%);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.8), 
+    0 0 15px rgba(var(--primary-rgb), 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Свечение за картой усиливается */
+.about-image-wrapper:hover .about-image-card::before {
+  opacity: 0.95;
+  transform: scale(1.15);
+}
+
+/* Бейдж двигается вперед */
+.about-image-wrapper:hover .certificate-badge {
+  transform: translate(8px, 6px);
+  border-color: rgba(var(--primary-rgb), 0.4);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.85), 
+    0 0 15px rgba(var(--primary-rgb), 0.12);
 }
 
 .cert-gold-star {

@@ -195,7 +195,7 @@ export default async function Page({ params }: PageProps) {
         <section id="about" className="about-section section-spacing">
           <div className="container about-container">
             <div className="about-image-wrapper reveal">
-              <div className="olive-background-plate">
+              <div className="about-image-card">
                 <Image
                   src="/images/builder-portrait.webp"
                   alt={dict.about.certTitle ? `Snickare — ${dict.about.certTitle}` : 'Snickare'}
