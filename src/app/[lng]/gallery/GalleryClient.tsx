@@ -18,6 +18,7 @@ interface GalleryClientProps {
 
 export default function GalleryClient({ images, lng, dict }: GalleryClientProps) {
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [visibleCount, setVisibleCount] = useState(6);
 
   const openLightbox = (index: number) => setActiveIndex(index);
   const closeLightbox = () => setActiveIndex(-1);
@@ -27,7 +28,7 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
   return (
     <>
       <div className="gallery-grid">
-        {images.map((img, index) => {
+        {images.slice(0, visibleCount).map((img, index) => {
           const isVertical = index < 3;
 
           return (
@@ -83,10 +84,20 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
         })}
       </div>
 
-      <div className="gallery-load-more text-center reveal" style={{ marginTop: '40px' }}>
-        <Link href={`/${lng}/contacts`} className="btn btn-secondary">
-          {(dict.nav as Record<string, string>)?.book || 'Request a quote'}
-        </Link>
+      <div className="gallery-load-more text-center reveal" style={{ marginTop: '40px', display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+        {visibleCount < images.length ? (
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() => setVisibleCount(images.length)}
+          >
+            {(dict.gallery as Record<string, string>)?.loadMore || 'Show more'}
+          </button>
+        ) : (
+          <Link href={`/${lng}/contacts`} className="btn btn-secondary">
+            {(dict.nav as Record<string, string>)?.book || 'Request a quote'}
+          </Link>
+        )}
       </div>
 
       {activeIndex >= 0 && (
