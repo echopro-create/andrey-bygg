@@ -16,6 +16,10 @@ export default function Footer({ dict, lng }: FooterProps) {
     { slug: 'tiling', title: dict.services.items.tiling.title },
   ];
 
+  const regionText = dict.contacts.regions_desc as string || 'Laholm, Halmstad, Båstad, Ängelholm, Markaryd — Halland & Skåne, Sweden';
+  const socialPhone = (dict.contacts.social_phone as string) || '';
+  const messengerDigits = socialPhone.replace(/\D/g, '');
+
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
@@ -40,7 +44,7 @@ export default function Footer({ dict, lng }: FooterProps) {
             ))}
             <li>
               <Link href={`/${lng}#services`} className="footer-link">
-                {dict.allServices ? dict.allServices as string : 'All services'} →
+                All services →
               </Link>
             </li>
           </ul>
@@ -55,7 +59,7 @@ export default function Footer({ dict, lng }: FooterProps) {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
-                <span>{dict.contacts.address}</span>
+                <span>{regionText}</span>
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="info-icon" style={{ marginTop: '4px' }}>
@@ -63,12 +67,14 @@ export default function Footer({ dict, lng }: FooterProps) {
                 </svg>
                 <div>
                   <a href={`tel:${dict.contacts.phone}`} className="hover-gold" style={{ display: 'block' }}>{dict.contacts.phone}</a>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginTop: '4px' }}>
-                    WA/TG/Viber:{' '}
-                    <a href="https://wa.me/380935758495" target="_blank" rel="noopener noreferrer" className="hover-gold">
-                      +380 93 575 84 95
-                    </a>
-                  </span>
+                  {socialPhone && (
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginTop: '4px' }}>
+                      WA/TG/Viber:{' '}
+                      <a href={`https://wa.me/${messengerDigits}`} target="_blank" rel="noopener noreferrer" className="hover-gold">
+                        {socialPhone}
+                      </a>
+                    </span>
+                  )}
                 </div>
               </li>
               <li>
@@ -94,20 +100,9 @@ export default function Footer({ dict, lng }: FooterProps) {
             &copy; {currentYear} Andrey Bygg. All rights reserved. {dict.contacts.address}.
             {' | '}
             <Link href={`/${lng}/privacy`} className="footer-bottom-link" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>
-              {dict.privacyLink}
+              {dict.footer?.privacy || 'Privacy Policy'}
             </Link>
           </p>
-          <nav className="footer-socials" aria-label="Social media links">
-            <a
-              href="https://www.instagram.com/"
-              className="social-link"
-              aria-label="Instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              IG
-            </a>
-          </nav>
         </div>
       </div>
     </footer>

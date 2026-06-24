@@ -34,7 +34,7 @@ describe('robots.txt generation', () => {
   it('should not disallow important public pages', () => {
     const rules = result.rules as { disallow?: string[] };
     const disallow = rules.disallow as string[];
-    const importantPaths = ['/', '/sv', '/en', '/no', '/ru', '/uk'];
+    const importantPaths = ['/', '/sv', '/en', '/ru', '/uk'];
     for (const path of importantPaths) {
       const blocked = disallow.some((d) => path.startsWith(d.replace(/\/$/, '')));
       expect(blocked).toBe(false);

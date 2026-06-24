@@ -9,7 +9,7 @@ export default function Loading() {
         minHeight: '60vh',
       }}
     >
-      <div className="loading-spinner-large">
+      <div className="loading-spinner-large" role="status" aria-label="Loading">
         <div className="loading-spinner-ring" />
         <div className="loading-spinner-ring loading-spinner-ring-inner" />
       </div>

@@ -109,7 +109,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
           </p>
         </div>
 
-        <ContactsClient dict={dict} />
+        <ContactsClient dict={dict as unknown as Record<string, unknown>} />
       </div>
     </div>
     </>

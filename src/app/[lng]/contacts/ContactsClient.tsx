@@ -7,18 +7,104 @@ import Image from 'next/image';
 import { submitBooking } from '../../actions';
 import { CustomSelect, CustomDatePicker } from './CustomFormComponents';
 
-interface ContactsClientProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  dict: any;
+interface ContactsFormProps {
+  dict: Record<string, unknown>;
 }
 
-function ContactsForm({ dict }: ContactsClientProps) {
+function ContactsForm({ dict }: ContactsFormProps) {
   const searchParams = useSearchParams();
   const params = useParams();
   const lng = typeof params?.lng === 'string' ? params.lng : 'sv';
   const csrfTokenRef = useRef<string | null>(null);
 
-  // Generate 30-minute time slots from 09:00 to 21:00
+  const validationMessages: Record<string, Record<string, string>> = {
+    sv: {
+      nameRequired: 'Namn måste anges.',
+      phoneRequired: 'Telefonnummer måste anges.',
+      phoneInvalid: 'Ange ett giltigt telefonnummer.',
+      serviceRequired: 'Välj en tjänst.',
+      dateRequired: 'Välj ett datum.',
+      timeRequired: 'Välj en tid.',
+    },
+    en: {
+      nameRequired: 'Name is required.',
+      phoneRequired: 'Phone number is required.',
+      phoneInvalid: 'Please enter a valid phone number.',
+      serviceRequired: 'Please select a service.',
+      dateRequired: 'Please select a date.',
+      timeRequired: 'Please select a time.',
+    },
+    ru: {
+      nameRequired: 'Имя обязательно.',
+      phoneRequired: 'Телефон обязателен.',
+      phoneInvalid: 'Введите корректный номер телефона.',
+      serviceRequired: 'Выберите услугу.',
+      dateRequired: 'Выберите дату.',
+      timeRequired: 'Выберите время.',
+    },
+    uk: {
+      nameRequired: "Ім'я обов'язкове.",
+      phoneRequired: "Телефон обов'язковий.",
+      phoneInvalid: 'Введіть коректний номер телефону.',
+      serviceRequired: 'Виберіть послугу.',
+      dateRequired: 'Виберіть дату.',
+      timeRequired: 'Виберіть час.',
+    },
+  };
+
+  const formLabels: Record<string, Record<string, string>> = {
+    sv: {
+      formName: 'Namn',
+      formPhone: 'Telefon',
+      formService: 'Tjänst',
+      formDate: 'Datum',
+      formTime: 'Tid',
+      formMessage: 'Meddelande',
+      servicePlaceholder: 'Välj tjänst...',
+      datePlaceholder: 'Välj datum...',
+      timePlaceholder: 'Välj tid...',
+    },
+    en: {
+      formName: 'Name',
+      formPhone: 'Phone',
+      formService: 'Service',
+      formDate: 'Date',
+      formTime: 'Time',
+      formMessage: 'Message',
+      servicePlaceholder: 'Select service...',
+      datePlaceholder: 'Select date...',
+      timePlaceholder: 'Select time...',
+    },
+    ru: {
+      formName: 'Имя',
+      formPhone: 'Телефон',
+      formService: 'Услуга',
+      formDate: 'Дата',
+      formTime: 'Время',
+      formMessage: 'Сообщение',
+      servicePlaceholder: 'Выберите услугу...',
+      datePlaceholder: 'Выберите дату...',
+      timePlaceholder: 'Выберите время...',
+    },
+    uk: {
+      formName: "Ім'я",
+      formPhone: 'Телефон',
+      formService: 'Послуга',
+      formDate: 'Дата',
+      formTime: 'Час',
+      formMessage: 'Повідомлення',
+      servicePlaceholder: 'Виберіть послугу...',
+      datePlaceholder: 'Виберіть дату...',
+      timePlaceholder: 'Виберіть час...',
+    },
+  };
+
+  const t = validationMessages[lng] || validationMessages.en;
+  const labels = formLabels[lng] || formLabels.en;
+  const contacts = (dict.contacts || {}) as Record<string, unknown>;
+  const servicesDict = (dict.services as Record<string, unknown>) || {};
+  const servicesItems = (servicesDict.items as Record<string, Record<string, unknown>>) || {};
+
   const timeSlots = Array.from({ length: 25 }, (_, i) => {
     const hour = Math.floor(i / 2) + 9;
     const minute = i % 2 === 0 ? '00' : '30';
@@ -26,14 +112,13 @@ function ContactsForm({ dict }: ContactsClientProps) {
     return { value: timeString, label: timeString };
   });
 
-  // Build services list and compute default service from URL param (during render, no effect needed)
   const servicesList = [
-    { value: 'windows-doors', label: dict.services.items['windows-doors']?.title || '' },
-    { value: 'kitchen-assembly', label: dict.services.items['kitchen-assembly']?.title || '' },
-    { value: 'bathroom-renovation', label: dict.services.items['bathroom-renovation']?.title || '' },
-    { value: 'tiling', label: dict.services.items.tiling?.title || '' },
-    { value: 'painting', label: dict.services.items.painting?.title || '' },
-    { value: 'roofing-woodwork', label: dict.services.items['roofing-woodwork']?.title || '' },
+    { value: 'windows-doors', label: (servicesItems['windows-doors']?.title as string) || '' },
+    { value: 'kitchen-assembly', label: (servicesItems['kitchen-assembly']?.title as string) || '' },
+    { value: 'bathroom-renovation', label: (servicesItems['bathroom-renovation']?.title as string) || '' },
+    { value: 'tiling', label: (servicesItems.tiling?.title as string) || '' },
+    { value: 'painting', label: (servicesItems.painting?.title as string) || '' },
+    { value: 'roofing-woodwork', label: (servicesItems['roofing-woodwork']?.title as string) || '' },
   ];
 
   const initialService = (() => {
@@ -80,29 +165,28 @@ function ContactsForm({ dict }: ContactsClientProps) {
   const validateForm = useCallback(() => {
     const newErrors: typeof errors = {};
     if (!formData.name.trim()) {
-      newErrors.name = dict.contacts.validation.nameRequired;
+      newErrors.name = t.nameRequired;
     }
-    
-    // Улучшенная валидация телефона: очистка от не-цифр, проверка длины и отсеивание одинаковых цифр
+
     const digits = formData.phone.replace(/\D/g, '');
     if (!formData.phone.trim()) {
-      newErrors.phone = dict.contacts.validation.phoneRequired;
+      newErrors.phone = t.phoneRequired;
     } else if (digits.length < 6 || digits.length > 15 || /^(.)\1+$/.test(digits)) {
-      newErrors.phone = dict.contacts.validation.phoneInvalid;
+      newErrors.phone = t.phoneInvalid;
     }
 
     if (!formData.service) {
-      newErrors.service = dict.contacts.validation.serviceRequired;
+      newErrors.service = t.serviceRequired;
     }
     if (!formData.date) {
-      newErrors.date = dict.contacts.validation.dateRequired;
+      newErrors.date = t.dateRequired;
     }
     if (!formData.time) {
-      newErrors.time = dict.contacts.validation.timeRequired;
+      newErrors.time = t.timeRequired;
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  }, [formData, dict]);
+  }, [formData, t]);
 
   const sanitizeInput = (value: string): string => {
     return value.replace(/[<>]/g, '').trim();
@@ -157,21 +241,25 @@ function ContactsForm({ dict }: ContactsClientProps) {
     }
   };
 
+  const addressText = 'Halland & Skåne, Sweden';
   const handleCopyAddress = () => {
-    navigator.clipboard.writeText(dict.contacts.address);
+    navigator.clipboard.writeText(addressText);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const socialPhone = (contacts.social_phone as string) || '';
+  const phone = (contacts.phone as string) || '';
+
   return (
     <div className="contacts-grid">
       <div className="contacts-form-wrapper glass-card reveal">
-        <h3 className="form-box-title">{dict.contacts.formTitle}</h3>
+        <h3 className="form-box-title">{contacts.formTitle as string}</h3>
 
         {submitResult && submitResult.success && (
           <div className="alert alert-success">
             <div>
-              <p>{dict.contacts.formSuccess}</p>
+              <p>{contacts.successMsg as string}</p>
               {submitResult.demo && (
                 <span className="demo-badge">Demo Mode Active (Logged to terminal)</span>
               )}
@@ -181,14 +269,14 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
         {submitResult && !submitResult.success && (
           <div className="alert alert-error">
-            <p>{dict.contacts.formError} ({submitResult.error})</p>
+            <p>{(contacts.errorMsg as string) || 'Submission failed.'} ({submitResult.error})</p>
           </div>
         )}
 
         <form onSubmit={handleSubmit} noValidate>
           <div className="form-group">
             <label className="form-label" htmlFor="name">
-              {dict.contacts.formName} *
+              {labels.formName} *
             </label>
             <input
               type="text"
@@ -198,7 +286,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
               onChange={handleInputChange}
               className={`form-control ${errors.name ? 'input-error' : ''}`}
               disabled={isSubmitting}
-              placeholder={dict.contacts.namePlaceholder || 'Your name'}
+              placeholder={(contacts.namePlaceholder as string) || 'Your name'}
               autoComplete="name"
             />
             {errors.name && <div className="error-message">{errors.name}</div>}
@@ -206,7 +294,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
           <div className="form-group">
             <label className="form-label" htmlFor="phone">
-              {dict.contacts.formPhone} *
+              {labels.formPhone} *
             </label>
             <input
               type="tel"
@@ -216,7 +304,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
               onChange={handleInputChange}
               className={`form-control ${errors.phone ? 'input-error' : ''}`}
               disabled={isSubmitting}
-              placeholder="+46 70 123 45 67"
+              placeholder={(contacts.phonePlaceholder as string) || '+46 70 123 45 67'}
               autoComplete="tel"
             />
             {errors.phone && <div className="error-message">{errors.phone}</div>}
@@ -224,7 +312,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
           <div className="form-group">
             <label className="form-label" htmlFor="service">
-              {dict.contacts.formService} *
+              {labels.formService} *
             </label>
             <CustomSelect
               id="service"
@@ -236,7 +324,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
                 }
               }}
               options={servicesList}
-              placeholder={dict.contacts.selectPlaceholder}
+              placeholder={labels.servicePlaceholder}
               error={!!errors.service}
               disabled={isSubmitting}
             />
@@ -246,7 +334,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
           <div className="form-row-2col">
             <div className="form-group" style={{ marginBottom: 0 }}>
               <label className="form-label" htmlFor="date">
-                {dict.contacts.formDate} *
+                {labels.formDate} *
               </label>
               <CustomDatePicker
                 id="date"
@@ -261,14 +349,14 @@ function ContactsForm({ dict }: ContactsClientProps) {
                 error={!!errors.date}
                 disabled={isSubmitting}
                 lng={lng}
-                placeholder={dict.contacts.formDate || 'Select date...'}
+                placeholder={labels.datePlaceholder}
               />
               {errors.date && <div className="error-message" style={{ marginTop: '4px' }}>{errors.date}</div>}
             </div>
 
             <div className="form-group" style={{ marginBottom: 0 }}>
               <label className="form-label" htmlFor="time">
-                {dict.contacts.formTime} *
+                {labels.formTime} *
               </label>
               <CustomSelect
                 id="time"
@@ -280,7 +368,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
                   }
                 }}
                 options={timeSlots}
-                placeholder={dict.contacts.formTime || 'Select time...'}
+                placeholder={labels.timePlaceholder}
                 error={!!errors.time}
                 disabled={isSubmitting}
               />
@@ -290,7 +378,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
           <div className="form-group">
             <label className="form-label" htmlFor="message">
-              {dict.contacts.formMessage}
+              {labels.formMessage}
             </label>
             <textarea
               id="message"
@@ -301,7 +389,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
               className="form-control"
               style={{ resize: 'vertical' }}
               disabled={isSubmitting}
-              placeholder={dict.contacts.messagePlaceholder || 'Your requests...'}
+              placeholder={(contacts.messagePlaceholder as string) || 'Your requests...'}
             />
           </div>
 
@@ -313,14 +401,14 @@ function ContactsForm({ dict }: ContactsClientProps) {
             {isSubmitting ? (
               <span className="spinner"></span>
             ) : (
-              dict.contacts.formSubmit
+              (contacts.submitBtn as string) || 'Submit'
             )}
           </button>
         </form>
 
         <div style={{ marginTop: '24px', textAlign: 'center' }}>
           <Link href="/#services" className="back-link" style={{ marginBottom: 0 }}>
-            {dict.allServices || 'All services'} →
+            All services →
           </Link>
         </div>
       </div>
@@ -332,91 +420,76 @@ function ContactsForm({ dict }: ContactsClientProps) {
           <div className="info-items">
             <div className="info-item-row">
               <div className="info-item-label-row">
-                <span className="info-item-label">{dict.contacts.addressLabel || 'Address'}</span>
+                <span className="info-item-label">Address</span>
                 <button
                   type="button"
                   onClick={handleCopyAddress}
                   className="copy-btn"
-                  title={dict.contacts.copyAddress || 'Copy address'}
+                  title="Copy address"
                 >
-                  {copied ? (dict.contacts.copied || 'Copied!') : (dict.contacts.copy || 'Copy')}
+                  {copied ? 'Copied!' : 'Copy'}
                 </button>
               </div>
-              <span className="info-item-val">{dict.contacts.address}</span>
+              <span className="info-item-val">{addressText}</span>
             </div>
 
             <div className="info-item-row">
-              <span className="info-item-label">{dict.contacts.phoneLabel || 'Phone'}</span>
-              <a href={`tel:${dict.contacts.phone}`} className="info-item-val link-gold">
-                {dict.contacts.phone}
+              <span className="info-item-label">{(contacts.phone_label as string) || 'Phone'}</span>
+              <a href={`tel:${phone}`} className="info-item-val link-gold">
+                {phone}
+              </a>
+            </div>
+
+            {socialPhone && (
+              <div className="info-item-row">
+                <span className="info-item-label">{(contacts.social_phone_label as string) || 'Messengers'}</span>
+                <div className="info-item-val messengers-container">
+                  <a
+                    href={`https://wa.me/${socialPhone.replace(/\D/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="messenger-link"
+                    title="WhatsApp"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403.002 9.803-4.394 9.806-9.8.001-2.618-1.01-5.079-2.846-6.917C16.4 1.849 13.907 1.013 11.99 1.013c-5.41 0-9.813 4.4-9.816 9.804-.001 1.902.504 3.753 1.464 5.36l-.994 3.63 3.722-.975zm13.123-5.267c-.29-.145-1.716-.847-1.98-.943-.264-.096-.456-.145-.648.145-.19.29-.74.943-.907 1.135-.166.19-.333.215-.623.07-1.285-.64-2.13-1.06-2.975-2.51-.23-.396.23-.367.659-1.22.072-.145.036-.271-.018-.38-.054-.109-.456-1.1-.624-1.514-.165-.397-.33-.342-.456-.342-.117-.006-.252-.006-.388-.006-.136 0-.356.05-.542.253-.186.204-.71.693-.71 1.69 0 1.002.722 1.968.822 2.102.1.13 1.42 2.167 3.44 3.04.48.207.857.33 1.15.424.483.153.924.13 1.272.078.388-.058 1.716-.701 1.957-1.378.24-.678.24-1.258.17-1.378-.073-.12-.265-.192-.556-.337z" />
+                    </svg>
+                  </a>
+                  <a
+                    href={`https://t.me/+${socialPhone.replace(/\D/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="messenger-link"
+                    title="Telegram"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M11.944 0C5.344 0 0 5.344 0 12c0 6.656 5.344 12 11.944 12 6.6 0 12-5.344 12-12 0-6.656-5.4-12-12-12zm5.892 8.136l-1.92 9.072c-.144.648-.528.804-1.068.504l-2.928-2.16-1.416 1.368c-.156.156-.288.288-.6.288l.204-3.036 5.52-4.992c.24-.216-.048-.336-.372-.12l-6.816 4.296-2.94-.924c-.636-.204-.648-.636.132-.936l11.496-4.428c.528-.192.996.12.804.972z" />
+                    </svg>
+                  </a>
+                  <a
+                    href={`viber://chat?number=%2B${socialPhone.replace(/\D/g, '')}`}
+                    className="messenger-link"
+                    title="Viber"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.7 17.5c-.7-.4-1.8-1-2.4-.7-.6.3-.9 1.1-1.3 1.4-.3.2-.6.1-.9-.1-1.2-.7-2.2-1.7-2.9-2.9-.2-.3-.3-.6-.1-.9.3-.4 1.1-.7 1.4-1.3.3-.6-.3-1.7-.7-2.4-.4-.7-.8-1.5-1.5-1.5-.6 0-1.2.6-1.5 1.1-.8 1.3-.9 3 .1 4.7 1.5 2.6 3.6 4.7 6.2 6.2 1.7 1 3.4.9 4.7.1.5-.3 1.1-.9 1.1-1.5 0-.7-.8-1.1-1.5-1.5zm-3.5-9.6c2.7.3 4.9 2.5 5.2 5.2.1.4.4.7.8.7s.7-.3.7-.8c-.4-3.4-3.1-6.1-6.5-6.5-.4-.1-.8.2-.8.6.1.4.3.8.6.8zm-1.8 1.8c1.5.3 2.7 1.5 3 3 .1.4.4.6.8.6s.7-.3.7-.8c-.4-2.2-2.1-3.9-4.3-4.3-.4-.1-.8.2-.8.6 0 .5.3.8.6.9zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" />
+                    </svg>
+                  </a>
+                  <span className="messengers-number">{socialPhone}</span>
+                </div>
+              </div>
+            )}
+
+            <div className="info-item-row">
+              <span className="info-item-label">{(contacts.email_label as string) || 'Email'}</span>
+              <a href={`mailto:${contacts.email}`} className="info-item-val link-gold">
+                {contacts.email as string}
               </a>
             </div>
 
             <div className="info-item-row">
-              <span className="info-item-label">{dict.contacts.messengersLabel || 'Messengers'}</span>
-              <div className="info-item-val messengers-container">
-                <a
-                  href="https://wa.me/380935758495"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="messenger-link"
-                  title="WhatsApp"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403.002 9.803-4.394 9.806-9.8.001-2.618-1.01-5.079-2.846-6.917C16.4 1.849 13.907 1.013 11.99 1.013c-5.41 0-9.813 4.4-9.816 9.804-.001 1.902.504 3.753 1.464 5.36l-.994 3.63 3.722-.975zm13.123-5.267c-.29-.145-1.716-.847-1.98-.943-.264-.096-.456-.145-.648.145-.19.29-.74.943-.907 1.135-.166.19-.333.215-.623.07-1.285-.64-2.13-1.06-2.975-2.51-.23-.396.23-.367.659-1.22.072-.145.036-.271-.018-.38-.054-.109-.456-1.1-.624-1.514-.165-.397-.33-.342-.456-.342-.117-.006-.252-.006-.388-.006-.136 0-.356.05-.542.253-.186.204-.71.693-.71 1.69 0 1.002.722 1.968.822 2.102.1.13 1.42 2.167 3.44 3.04.48.207.857.33 1.15.424.483.153.924.13 1.272.078.388-.058 1.716-.701 1.957-1.378.24-.678.24-1.258.17-1.378-.073-.12-.265-.192-.556-.337z" />
-                  </svg>
-                </a>
-                <a
-                  href="https://t.me/+380935758495"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="messenger-link"
-                  title="Telegram"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M11.944 0C5.344 0 0 5.344 0 12c0 6.656 5.344 12 11.944 12 6.6 0 12-5.344 12-12 0-6.656-5.4-12-12-12zm5.892 8.136l-1.92 9.072c-.144.648-.528.804-1.068.504l-2.928-2.16-1.416 1.368c-.156.156-.288.288-.6.288l.204-3.036 5.52-4.992c.24-.216-.048-.336-.372-.12l-6.816 4.296-2.94-.924c-.636-.204-.648-.636.132-.936l11.496-4.428c.528-.192.996.12.804.972z" />
-                  </svg>
-                </a>
-                <a
-                  href="viber://chat?number=%2B380935758495"
-                  className="messenger-link"
-                  title="Viber"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19.7 17.5c-.7-.4-1.8-1-2.4-.7-.6.3-.9 1.1-1.3 1.4-.3.2-.6.1-.9-.1-1.2-.7-2.2-1.7-2.9-2.9-.2-.3-.3-.6-.1-.9.3-.4 1.1-.7 1.4-1.3.3-.6-.3-1.7-.7-2.4-.4-.7-.8-1.5-1.5-1.5-.6 0-1.2.6-1.5 1.1-.8 1.3-.9 3 .1 4.7 1.5 2.6 3.6 4.7 6.2 6.2 1.7 1 3.4.9 4.7.1.5-.3 1.1-.9 1.1-1.5 0-.7-.8-1.1-1.5-1.5zm-3.5-9.6c2.7.3 4.9 2.5 5.2 5.2.1.4.4.7.8.7s.7-.3.7-.8c-.4-3.4-3.1-6.1-6.5-6.5-.4-.1-.8.2-.8.6.1.4.3.8.6.8zm-1.8 1.8c1.5.3 2.7 1.5 3 3 .1.4.4.6.8.6s.7-.3.7-.8c-.4-2.2-2.1-3.9-4.3-4.3-.4-.1-.8.2-.8.6 0 .5.3.8.6.9zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" />
-                  </svg>
-                </a>
-                <span className="messengers-number">+380 93 575 84 95</span>
-              </div>
-            </div>
-
-            <div className="info-item-row">
-              <span className="info-item-label">{dict.contacts.socialsLabel || 'Socials'}</span>
-              <div className="info-item-val messengers-container">
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="messenger-link"
-                  title="Instagram"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div className="info-item-row">
-              <span className="info-item-label">{dict.contacts.emailLabel || 'Email'}</span>
-              <a href={`mailto:${dict.contacts.email}`} className="info-item-val link-gold">
-                {dict.contacts.email}
-              </a>
-            </div>
-
-            <div className="info-item-row">
-              <span className="info-item-label">{dict.contacts.hoursLabel || 'Hours'}</span>
-              <span className="info-item-val">{dict.contacts.hours}</span>
+              <span className="info-item-label">Hours</span>
+              <span className="info-item-val">{contacts.hours as string}</span>
             </div>
           </div>
 
@@ -432,17 +505,19 @@ function ContactsForm({ dict }: ContactsClientProps) {
             />
             <div className="map-card-footer" style={{ position: 'relative', zIndex: 2 }}>
               <div className="map-footer-text">
-                <h6>{dict.contacts.street}</h6>
-                <p>{dict.contacts.city}</p>
+                <h6>Halland & Skåne</h6>
+                <p>Sweden</p>
               </div>
-              <a
-                href="https://wa.me/380935758495"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary map-directions-btn"
-              >
-                {dict.contacts.directions || 'WhatsApp →'}
-              </a>
+              {socialPhone && (
+                <a
+                  href={`https://wa.me/${socialPhone.replace(/\D/g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary map-directions-btn"
+                >
+                  WhatsApp →
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -451,7 +526,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
   );
 }
 
-export default function ContactsClient({ dict }: ContactsClientProps) {
+export default function ContactsClient({ dict }: { dict: Record<string, unknown> }) {
   return (
     <Suspense fallback={<div className="container text-center"><span className="spinner"></span></div>}>
       <ContactsForm dict={dict} />

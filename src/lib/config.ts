@@ -38,8 +38,6 @@ export interface Dict {
     metrics: Record<string, string>;
   };
   skipToContent: string;
-  allServices?: string;
-  privacyLink?: string;
   services: {
     back?: string;
     title?: string;
@@ -63,17 +61,35 @@ export interface Dict {
       contraindications_text?: string;
     }>;
   };
+  footer?: {
+    desc?: string;
+    rights?: string;
+    privacy: string;
+    quickLinks?: string;
+  };
   contacts: {
     phone: string;
     email: string;
+    phone_label?: string;
+    social_phone?: string;
+    social_phone_label?: string;
+    email_label?: string;
     address?: string;
     hours?: string;
+    regions_desc?: string;
     title?: string;
     accent?: string;
     subtitle?: string;
     seo_title?: string;
     seo_desc?: string;
     formTitle?: string;
+    namePlaceholder?: string;
+    phonePlaceholder?: string;
+    servicePlaceholder?: string;
+    messagePlaceholder?: string;
+    submitBtn?: string;
+    successMsg?: string;
+    errorMsg?: string;
   };
   gallery: {
     seo_title?: string;
