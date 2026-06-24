@@ -2640,7 +2640,7 @@ body.mobile-drawer-open .custom-lang-selector {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr 1.3fr 1.7fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   padding-bottom: 60px;
 }
