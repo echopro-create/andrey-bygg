@@ -1,5 +1,23 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { getDictionary, Locale } from '../i18n';
+
+export async function generateMetadata({ params }: { params: Promise<{ lng: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const lng = (resolvedParams.lng || 'sv') as Locale;
+
+  const titles: Record<string, string> = {
+    sv: 'Sidan hittades inte — BYGG I SYD',
+    en: 'Page not found — BYGG I SYD',
+    ru: 'Страница не найдена — BYGG I SYD',
+    uk: 'Сторінку не знайдено — BYGG I SYD',
+  };
+
+  return {
+    title: titles[lng] || titles.en,
+    robots: { index: false, follow: false },
+  };
+}
 
 interface NotFoundProps {
   params: Promise<{ lng: string }>;
