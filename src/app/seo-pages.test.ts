@@ -1,6 +1,7 @@
 jest.mock('server-only', () => ({}));
 import { getDictionary, Locale } from './i18n';
 import sitemap from './sitemap';
+import robotsTxt from './robots';
 
 const locales: Locale[] = ['sv', 'en', 'ru', 'uk'];
 
@@ -93,16 +94,16 @@ describe('SEO — All pages metadata completeness', () => {
 
 describe('SEO — Robots.txt', () => {
   it('should disallow /api/ and /_next/', () => {
-    const robots = require('./robots').default();
-    const rules = robots.rules as { disallow?: string[] };
+    const result = robotsTxt();
+    const rules = result.rules as { disallow?: string[] };
     expect(rules.disallow).toContain('/api/');
     expect(rules.disallow).toContain('/_next/');
   });
 
   it('should include sitemap URL', () => {
-    const robots = require('./robots').default();
-    expect(robots.sitemap).toBeDefined();
-    expect(robots.sitemap).toMatch(/sitemap\.xml$/);
+    const result = robotsTxt();
+    expect(result.sitemap).toBeDefined();
+    expect(result.sitemap).toMatch(/sitemap\.xml$/);
   });
 });
 
