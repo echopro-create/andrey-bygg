@@ -72,11 +72,11 @@ describe('i18n dictionary loader', () => {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const service = (services as any)[key];
             const rawTitle = service.seo_title || service.title;
-            const fullTitle = `${rawTitle} — Andrey Bygg`;
+            const fullTitle = `${rawTitle} — BYGG I SYD`;
 
             // Title checks (Optimal: 50-60 chars, safe max: 75 chars)
             expect(rawTitle).toBeDefined();
-            expect(rawTitle).not.toContain('Andrey Bygg');
+            expect(rawTitle).not.toContain('BYGG I SYD');
             expect(fullTitle.length).toBeGreaterThanOrEqual(35);
             expect(fullTitle.length).toBeLessThanOrEqual(75);
 
@@ -98,7 +98,7 @@ describe('i18n dictionary loader', () => {
 
           // 2. Contacts
           const contactsRawTitle = dict.contacts.seo_title || `${dict.contacts.title} ${dict.contacts.accent}`;
-          const contactsFullTitle = `${contactsRawTitle} — Andrey Bygg`;
+          const contactsFullTitle = `${contactsRawTitle} — BYGG I SYD`;
           expect(contactsFullTitle.length).toBeGreaterThanOrEqual(35);
           expect(contactsFullTitle.length).toBeLessThanOrEqual(75);
           
@@ -108,7 +108,7 @@ describe('i18n dictionary loader', () => {
 
           // 3. Gallery
           const galleryRawTitle = dict.gallery?.seo_title || dict.nav.gallery;
-          const galleryFullTitle = `${galleryRawTitle} — Andrey Bygg`;
+          const galleryFullTitle = `${galleryRawTitle} — BYGG I SYD`;
           expect(galleryFullTitle.length).toBeGreaterThanOrEqual(35);
           expect(galleryFullTitle.length).toBeLessThanOrEqual(75);
           
@@ -118,7 +118,7 @@ describe('i18n dictionary loader', () => {
 
           // 4. Privacy
           const privacyRawTitle = dict.privacy.seo_title || dict.privacy.title;
-          const privacyFullTitle = `${privacyRawTitle} — Andrey Bygg`;
+          const privacyFullTitle = `${privacyRawTitle} — BYGG I SYD`;
           expect(privacyFullTitle.length).toBeGreaterThanOrEqual(35);
           expect(privacyFullTitle.length).toBeLessThanOrEqual(75);
           

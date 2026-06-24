@@ -25,8 +25,8 @@ export default function Footer({ dict, lng }: FooterProps) {
       <div className="container footer-grid">
         {/* 1. Блок бренда */}
         <div className="footer-brand">
-          <Link href={`/${lng}`} className="footer-logo" aria-label="Andrey Bygg — Home">
-            ANDREY<span className="gold-accent"> BYGG</span>
+          <Link href={`/${lng}`} className="footer-logo" aria-label="BYGG I SYD — Home">
+              BYGG I<span className="gold-accent"> SYD</span>
           </Link>
           <p className="footer-desc">
             {dict.footer?.desc}
@@ -122,7 +122,7 @@ export default function Footer({ dict, lng }: FooterProps) {
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
           <p>
-            &copy; {currentYear} Andrey Bygg. {dict.footer?.rights || 'All rights reserved.'}
+            &copy; {currentYear} BYGG I SYD. {dict.footer?.rights || 'All rights reserved.'}
           </p>
           <Link href={`/${lng}/privacy`} className="footer-bottom-link" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>
             {dict.footer?.privacy || 'Privacy Policy'}

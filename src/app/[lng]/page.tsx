@@ -90,7 +90,7 @@ export default async function Page({ params }: PageProps) {
           <div className="hero-bg-wrapper">
             <Image
               src="/images/hero-bg.webp"
-              alt="Andrey Bygg Construction Background"
+              alt="BYGG I SYD"
               fill
               priority
               quality={85}

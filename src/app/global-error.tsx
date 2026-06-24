@@ -18,7 +18,7 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="noindex" />
-        <title>Error — Andrey Bygg</title>
+        <title>Error — BYGG I SYD</title>
       </head>
       <body style={{
         backgroundColor: '#080908',

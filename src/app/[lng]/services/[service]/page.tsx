@@ -99,7 +99,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     description: service.desc,
     provider: {
       '@type': 'ConstructionBusiness',
-      name: 'Andrey Bygg',
+      name: 'BYGG I SYD',
       url: `${SITE_URL}/${lng}`,
       address: {
         '@type': 'PostalAddress',

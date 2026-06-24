@@ -78,12 +78,12 @@ describe('SEO metadata & structured data completeness', () => {
       }
     });
 
-    it.each(locales)('locale "%s" SEO titles should not contain "Andrey Bygg" (added by template)', async (locale) => {
+    it.each(locales)('locale "%s" SEO titles should not contain "BYGG I SYD" (added by template)', async (locale) => {
       const dict = await getDictionary(locale);
       for (const slug of serviceSlugs) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const service = (dict.services.items as any)[slug];
-        expect(service.seo_title).not.toContain('Andrey Bygg');
+        expect(service.seo_title).not.toContain('BYGG I SYD');
       }
     });
   });
@@ -126,7 +126,7 @@ describe('SEO metadata & structured data completeness', () => {
         const schema: Record<string, unknown> = {
           '@context': 'https://schema.org',
           '@type': 'ConstructionBusiness',
-          name: 'Andrey Bygg',
+          name: 'BYGG I SYD',
           description: dict.hero.subtitle,
           address: {
             '@type': 'PostalAddress',
@@ -152,7 +152,7 @@ describe('SEO metadata & structured data completeness', () => {
 
         expect(schema['@context']).toBe('https://schema.org');
         expect(schema['@type']).toBe('ConstructionBusiness');
-        expect(schema.name).toBe('Andrey Bygg');
+        expect(schema.name).toBe('BYGG I SYD');
         expect(schema.description).toBeTruthy();
         expect(schema.telephone).toBeTruthy();
         expect(schema.email).toBeTruthy();
@@ -220,7 +220,7 @@ describe('SEO metadata & structured data completeness', () => {
             description: service.desc,
             provider: {
               '@type': 'ConstructionBusiness',
-              name: 'Andrey Bygg',
+              name: 'BYGG I SYD',
               address: {
                 '@type': 'PostalAddress',
                 addressCountry: 'SE',
@@ -239,7 +239,7 @@ describe('SEO metadata & structured data completeness', () => {
           expect(typeof serviceSchema.description).toBe('string');
           expect(serviceSchema.description.length).toBeGreaterThan(0);
           expect(serviceSchema.provider['@type']).toBe('ConstructionBusiness');
-          expect(serviceSchema.provider.name).toBe('Andrey Bygg');
+          expect(serviceSchema.provider.name).toBe('BYGG I SYD');
           expect(serviceSchema.areaServed['@type']).toBe('Country');
           expect(serviceSchema.areaServed.name).toBe('SE');
         }
@@ -409,16 +409,16 @@ describe('SEO metadata & structured data completeness', () => {
       }
     });
 
-    it('brand name Andrey Bygg should appear as a keyword', () => {
-      const brandKeyword = 'Andrey Bygg';
+    it('brand name BYGG I SYD should appear as a keyword', () => {
+      const brandKeyword = 'BYGG I SYD';
       const keywords = [
         'professional construction',
         'home renovation',
         'carpenter Sweden',
         'kitchen assembly',
         'bathroom renovation',
-        'andrey bygg',
-        'Andrey Bygg',
+        'bygg i syd',
+        'BYGG I SYD',
       ];
       expect(keywords).toContain(brandKeyword);
     });

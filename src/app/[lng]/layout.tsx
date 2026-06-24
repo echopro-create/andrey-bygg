@@ -63,7 +63,7 @@ export async function generateMetadata({
       'kakelsättning',
       'måleri',
       'utvändiga träarbeten',
-      'Andrey Bygg',
+      'byggisyd',
     ],
     authors: [{ name: SITE_NAME }],
     creator: SITE_NAME,
@@ -141,7 +141,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const orgSchema = {
     '@context': 'https://schema.org',
     '@type': 'ConstructionBusiness',
-    name: 'Andrey Bygg',
+    name: 'BYGG I SYD',
     description: dict.hero.subtitle,
     url: `${SITE_URL}/${lng}`,
     logo: `${SITE_URL}/icon-512.png`,

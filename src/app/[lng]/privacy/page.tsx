@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
       title,
       description,
       url: `${SITE_URL}/${lng}/privacy`,
-      siteName: 'Andrey Bygg',
+      siteName: 'BYGG I SYD',
       locale: lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
           url: `${SITE_URL}/images/og-image.webp`,
           width: 1200,
           height: 630,
-          alt: 'Andrey Bygg — Professionella byggtjänster i Sverige',
+          alt: 'BYGG I SYD',
         },
       ],
     },

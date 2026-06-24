@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lng: stri
 
   const title = dict.nav.services;
   const description = dict.services.title
-    ? `${dict.services.title} ${dict.services.accent || ''} — Andrey Bygg`
+    ? `${dict.services.title} ${dict.services.accent || ''} — BYGG I SYD`
     : '';
 
   return {
