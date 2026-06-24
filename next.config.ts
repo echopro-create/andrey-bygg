@@ -15,10 +15,10 @@ const nextConfig: NextConfig = {
         has: [
           {
             type: 'host',
-            value: 'www.andreybygg.se',
+            value: 'www.byggisyd.se',
           },
         ],
-        destination: 'https://andreybygg.se/:path*',
+        destination: 'https://byggisyd.se/:path*',
         permanent: true,
       },
     ];

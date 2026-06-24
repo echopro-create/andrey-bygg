@@ -64,9 +64,9 @@ describe('Typography Formatter', () => {
 
     it('should skip email, phone numbers, and URLs', () => {
       // Arrange
-      const email = 'info@andreybygg.se';
+      const email = 'annest1024@gmail.com';
       const phone = '+46 70 123 45 67';
-      const url = 'https://andreybygg.se/services/painting';
+      const url = 'https://byggisyd.se/services/painting';
 
       // Act & Assert
       expect(formatTypographyString(email, 'sv')).toBe(email);

@@ -460,13 +460,13 @@ describe('SEO metadata & structured data completeness', () => {
   });
 
   describe('WWW redirect presence in next.config', () => {
-    it('should redirect www.andreybygg.se to andreybygg.se (canonical domain)', () => {
+    it('should redirect www.byggisyd.se to byggisyd.se (canonical domain)', () => {
       const redirectSource = '/:path*';
-      const redirectHost = 'www.andreybygg.se';
-      const redirectDestination = 'https://andreybygg.se/:path*';
+      const redirectHost = 'www.byggisyd.se';
+      const redirectDestination = 'https://byggisyd.se/:path*';
 
-      expect(redirectHost).toBe('www.andreybygg.se');
-      expect(redirectDestination).toBe('https://andreybygg.se/:path*');
+      expect(redirectHost).toBe('www.byggisyd.se');
+      expect(redirectDestination).toBe('https://byggisyd.se/:path*');
       expect(redirectSource).toBe('/:path*');
     });
   });
