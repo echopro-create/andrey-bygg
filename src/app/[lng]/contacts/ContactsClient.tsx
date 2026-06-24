@@ -140,12 +140,12 @@ export default function ContactsClient({ dict }: { dict: Record<string, unknown>
             </div>
           </div>
 
-          {/* Правая колонка: Картинка чертежей на всю высоту */}
+          {/* Правая колонка: Карта региона на всю высоту */}
           <div className="contacts-info-column reveal">
             <div className="minimal-map-card" style={{ height: '100%', minHeight: '300px', position: 'relative' }}>
               <Image
                 src="/images/contacts-bg.webp"
-                alt="Andrey Bygg Plan"
+                alt="Andrey Bygg Service Area Map"
                 className="contacts-ambient-img"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
