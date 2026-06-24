@@ -43,7 +43,7 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
             onClick={reset}
             style={{
               padding: '12px 32px',
-              background: 'linear-gradient(135deg, #e2d2b5, #a38a5e)',
+              background: 'linear-gradient(135deg, #e2d2b5, #c4a96a)',
               color: '#080908',
               border: 'none',
               borderRadius: '8px',

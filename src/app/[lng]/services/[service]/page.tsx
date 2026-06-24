@@ -120,7 +120,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
       />
       <div className="service-detail-page section-spacing">
         <div className="container">
-          <Link href={`/${lng}`} className="back-link reveal">
+          <Link href={`/${lng}/services`} className="back-link reveal">
             ← {dict.services.back}
           </Link>
 

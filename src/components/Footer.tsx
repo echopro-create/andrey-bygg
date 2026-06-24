@@ -39,26 +39,21 @@ export default function Footer({ dict, lng }: FooterProps) {
           <ul className="footer-list">
             <li>
               <Link href={`/${lng}`} className="footer-link">
-                {lng === 'ru' ? 'Главная' : lng === 'uk' ? 'Головна' : 'Hem'}
+                {lng === 'sv' ? 'Hem' : lng === 'ru' ? 'Главная' : lng === 'uk' ? 'Головна' : 'Home'}
               </Link>
             </li>
             <li>
-              <Link href={`/${lng}#about`} className="footer-link">
-                {dict.nav.about}
-              </Link>
-            </li>
-            <li>
-              <Link href={`/${lng}#services`} className="footer-link">
+              <Link href={`/${lng}/services`} className="footer-link">
                 {dict.nav.services}
               </Link>
             </li>
             <li>
-              <Link href={`/${lng}#gallery`} className="footer-link">
+              <Link href={`/${lng}/gallery`} className="footer-link">
                 {dict.nav.gallery}
               </Link>
             </li>
             <li>
-              <Link href={`/${lng}#contacts`} className="footer-link">
+              <Link href={`/${lng}/contacts`} className="footer-link">
                 {dict.nav.contacts}
               </Link>
             </li>

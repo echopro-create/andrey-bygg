@@ -65,7 +65,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
     { src: '/images/gallery/gallery-5_v2.webp', alt: (dict.gallery?.alt5 as string) || dict.nav.gallery },
     { src: '/images/gallery/gallery-6_v2.webp', alt: (dict.gallery?.alt7 as string) || dict.nav.gallery },
     { src: '/images/gallery/gallery-7_v2.webp', alt: (dict.gallery?.alt3 as string) || dict.nav.gallery },
-    { src: '/images/gallery/gallery-8_v2.webp', alt: (dict.gallery?.alt3 as string) || dict.nav.gallery },
+    { src: '/images/gallery/gallery-8_v2.webp', alt: (dict.gallery?.alt9 as string) || dict.nav.gallery },
     { src: '/images/gallery/gallery-9_v2.webp', alt: (dict.gallery?.alt8 as string) || dict.nav.gallery },
     { src: '/images/gallery/gallery-10_v2.webp', alt: (dict.gallery?.alt10 as string) || dict.nav.gallery },
   ];

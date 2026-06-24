@@ -197,7 +197,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
         <ScrollRevealInit />
 
-        <main id="main-content" style={{ minHeight: 'calc(100vh - 80px)', paddingTop: '80px' }}>
+        <main id="main-content" className="main-content">
           {children}
         </main>
 

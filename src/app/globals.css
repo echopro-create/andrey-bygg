@@ -225,6 +225,18 @@ section[id] {
     scroll-margin-top: 80px;
   }
 }
+
+.main-content {
+  min-height: calc(100vh - 80px);
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 64px;
+  }
+}
+
 /* Layout Utilities */
 .container {
   width: 100%;

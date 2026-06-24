@@ -91,6 +91,7 @@ export interface Dict {
     submitBtn?: string;
     successMsg?: string;
     errorMsg?: string;
+    guarantees?: Record<string, string>;
   };
   gallery: {
     seo_title?: string;
