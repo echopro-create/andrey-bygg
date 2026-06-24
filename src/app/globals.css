@@ -753,6 +753,7 @@ body.mobile-drawer-open .custom-lang-selector {
 /* ------------------ Home Page ------------------ */
 .hero-section {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;

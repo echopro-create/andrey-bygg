@@ -93,9 +93,11 @@ export default async function Page({ params }: PageProps) {
               alt="BYGG I SYD"
               fill
               priority
-              quality={85}
+              fetchPriority="high"
+              quality={70}
               sizes="100vw"
               className="hero-bg-image"
+              style={{ backgroundColor: '#080908' }}
             />
             <div className="hero-bg-overlay" />
           </div>
