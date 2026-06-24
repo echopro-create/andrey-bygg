@@ -73,7 +73,21 @@
         "process_title": "Arbetets skeden",
         "process_text": "Vi börjar med exakt kontrollmätning på plats. Därefter demonterar vi försiktigt de gamla karmarna för att minimera skador på väggar. Vi riktar in den nya karmen med millimeterprecision, fixerar den med karmskruv, drevar med isolering samt monterar tätningsband, foder, smygar och fönsterbleck.",
         "contraindications_title": "Viktig information",
-        "contraindications_text": "Fönstermontering utomhus rekommenderas inte vid kraftigt regn, hård vind eller temperaturer under -10 °C."
+        "contraindications_text": "Fönstermontering utomhus rekommenderas inte vid kraftigt regn, hård vind eller temperaturer under -10 °C.",
+        "faq": [
+          {
+            "q": "Vad kostar ett fönsterbyte i Halland?",
+            "a": "Kostnaden beräknas individuellt och fastställs i avtalet. Det beror på antal, material (trä, trä/aluminium, PVC) och mått. Vi erbjuder kostnadsfria mätningar och offerter i Laholm, Halmstad, Båstad och närliggande kommuner."
+          },
+          {
+            "q": "Hjälper ni till med inköp av fönster och dörrar?",
+            "a": "Ja, vi samarbetar med ledande tillverkare (t.ex. Elitfönster, SP Fönster) och hjälper dig att köpa fönster och dörrar av hög kvalitet med våra hantverkarrabatter samt ordnar leverans."
+          },
+          {
+            "q": "Hur lång tid tar det att installera ett fönster?",
+            "a": "I genomsnitt tar installation och färdigställande av ett fönster 2 till 4 timmar. Ett komplett fönsterbyte på en villa tar vanligtvis 1–3 dagar."
+          }
+        ]
       },
       "kitchen-assembly": {
         "title": "Köksmontering",
@@ -93,7 +107,21 @@
         "process_title": "Arbetets skeden",
         "process_text": "Vi kontrollerar golvets och väggarnas vinklar och förbereder fästpunkter. Vi bygger ihop och monterar stommar, väggskåp och högskåp. Vi sågar till och monterar bänkskivan med håltagning for ho och häll, hänger upp luckor, installerar lådor och integrerar vitvaror samt belysning.",
         "contraindications_title": "Viktig information",
-        "contraindications_text": "Vatten- och elanslutningar måste förberedas eller godkännas av behörig VVS- och elinstallatör."
+        "contraindications_text": "Vatten- och elanslutningar måste förberedas eller godkännas av behörig VVS- och elinstallatör.",
+        "faq": [
+          {
+            "q": "Monterar ni IKEA-kök och kök från andra tillverkare?",
+            "a": "Ja, vi är specialiserade på professionell montering av alla typer av kök, inklusive IKEA, Marbodal, Epoq etc. Vi utför utskärningar för diskho, installation av vitvaror och skarvning av bänkskivor."
+          },
+          {
+            "q": "Hur lång tid tar en köksmontering i Halmstad eller Laholm?",
+            "a": "Montering av ett standardkök med installation av vitvaror tar vanligtvis mellan 2 och 5 dagar, beroende på kökets storlek och planeringens komplexitet."
+          },
+          {
+            "q": "Erbjuder ni garanti på köksmontering?",
+            "a": "Ja, vi ger en trygg garanti på alla utförda snickeri- och monteringsarbeten. Du kan vara säker på att alla skåp sitter säkert och att luckorna är perfekt justerade."
+          }
+        ]
       },
       "bathroom-renovation": {
         "title": "Badrumsrenovering",
@@ -113,7 +141,21 @@
         "process_title": "Arbetets skeden",
         "process_text": "Vi river gamla ytor vid behov, förbereder underlaget med flytspackling för korrekt fall. Vi monterar godkänt tätskikt (våtrumsmembran), utför kakling/klinkerläggning och fogning. Slutligen monterar vi toalett, tvättställ, blandare, duschväggar och badrumsskåp.",
         "contraindications_title": "Viktig information",
-        "contraindications_text": "Våtrumsarbeten kräver strikt efterlevnad av torktider för spackel och membran. Vatten måste stängas av under kortare perioder."
+        "contraindications_text": "Våtrumsarbeten kräver strikt efterlevnad av torktider för spackel och membran. Vatten måste stängas av under kortare perioder.",
+        "faq": [
+          {
+            "q": "Renoverar ni badrum enligt svensk standard?",
+            "a": "Ja, alla badrumsrenoveringar utförs i strikt enlighet med gällande våtrumsregler (tätskikt). Vi säkerställer fullt skydd mot fukt och vattenskador."
+          },
+          {
+            "q": "Vilka områden i Halland och Skåne arbetar ni i?",
+            "a": "Vår bas är i Knäred (Laholms kommun). Vi utför arbeten i Halmstad, Laholm, Båstad, Ängelholm, Markaryd och närliggande områden."
+          },
+          {
+            "q": "Vad kostar en badrumsrenovering?",
+            "a": "Det slutliga priset beror på yta, rördragning och materialval. Vi gör ett kostnadsfritt hembesök för att inspektera utrymmet och ta fram en fast offert."
+          }
+        ]
       },
       "tiling": {
         "title": "Kakelsättning",
@@ -133,7 +175,21 @@
         "process_title": "Arbetets skeden",
         "process_text": "Vi grundar underlaget för bra vidhäftning. Vi mäter upp ytan för att få en balanserad kapning vid kanterna. Vi applicerar fix, monterar plattorna med hjälp av nivåsystem för att undvika fogsprång. Därefter fogar vi ytan och avslutar med mjukfog (silikon) i alla innerhörn.",
         "contraindications_title": "Viktig information",
-        "contraindications_text": "Det nylagda golvet får inte beträdas under ca 24 timmar efter läggning tills fixet har härdat ordentligt."
+        "contraindications_text": "Det nylagda golvet får inte beträdas under ca 24 timmar efter läggning tills fixet har härdat ordentligt.",
+        "faq": [
+          {
+            "q": "Vilka ytor utför ni plattsättning på?",
+            "a": "Vi lägger kakel, klinker och mosaik på alla ytor: väggar och golv i badrum, kökskakel (stänkskydd), golv i hall, tvättstuga samt frostbeständig klinker på terrasser."
+          },
+          {
+            "q": "Använder ni nivåutjämningssystem för kakel?",
+            "a": "Ja, vi använder alltid moderna nivåsystem för att säkerställa en helt plan yta utan ojämnheter och med perfekta fogar."
+          },
+          {
+            "q": "Kan jag beställa endast stänkskydd till kök i Halmstad?",
+            "a": "Ja, vi utför plattsättning i alla storlekar — från ett litet stänkskydd i köket till kompletta badrum och stora kommersiella ytor."
+          }
+        ]
       },
       "painting": {
         "title": "Måleriarbeten",
@@ -153,7 +209,21 @@
         "process_title": "Arbetets skeden",
         "process_text": "Vi täcker golv, fönster och möbler noggrant. Vi spacklar skarvar och skruvhål (i två till tre omgångar), slipar ytan jämn och dammsuger rent. Vi grundmålar och målar sedan två lager med täckfärg av hög kvalitet. Vi avslutar med att städa upp arbetsytan.",
         "contraindications_title": "Viktig information",
-        "contraindications_text": "Inomhusmålning kräver god ventilation och en temperatur över +10 °C. Utomhusmålning kräver torrt väder utan direkt starkt solljus."
+        "contraindications_text": "Inomhusmålning kräver god ventilation och en temperatur över +10 °C. Utomhusmålning kräver torrt väder utan direkt starkt solljus.",
+        "faq": [
+          {
+            "q": "Vilka målartjänster erbjuder ni?",
+            "a": "Vi erbjuder allt inom måleri: spackling av gipsplattor, slipning, grundmålning, målning av väggar och tak, listverk och dörrar samt fasadmålning av trähus."
+          },
+          {
+            "q": "Hjälper ni till att välja rätt färg för det svenska klimatet?",
+            "a": "Ja, för utomhusmålning väljer vi alltid kvalitetsfärger anpassade för det nordiska klimatet. De skyddar träet mot fukt, UV-strålning och temperatursvängningar."
+          },
+          {
+            "q": "Hur många dagar tar det att måla ett hus invändigt?",
+            "a": "Invändig målning av väggar och tak i en standardlägenhet eller villa tar vanligtvis 2 till 7 dagar, beroende på hur många spacklings- och torktider som krävs."
+          }
+        ]
       },
       "roofing-woodwork": {
         "title": "Takläggning & träarbeten",
@@ -173,7 +243,21 @@
         "process_title": "Arbetets skeden",
         "process_text": "Vid takrenovering river vi det gamla materialet, inspekterar undertaket, lägger ny underlagspapp, monterar bär- och ströläkt samt lägger takpannor eller plåt. Vid altanbygge förbereder vi grunden med plintar, bygger ett stabilt bärverk av reglar, skruvar trall och bygger räcken.",
         "contraindications_title": "Viktig information",
-        "contraindications_text": "Takläggning och utvändiga träarbeten är starkt väderberoende och utförs bäst under den torra årstiden."
+        "contraindications_text": "Takläggning och utvändiga träarbeten är starkt väderberoende och utförs bäst under den torra årstiden.",
+        "faq": [
+          {
+            "q": "Vilka material använder ni för takläggning?",
+            "a": "Vi arbetar med betongpannor, lertegel, plåttak och takpapp. Vid takbyte bygger vi även ny underlagspapp, läkt och vindskivor vid behov."
+          },
+          {
+            "q": "Bygger ni trall och altaner i Halland?",
+            "a": "Ja, vi bygger hållbara altaner, uterum, staket och räcken av högkvalitativt tryckimpregnerat virke som tål väta och röta under många år."
+          },
+          {
+            "q": "Får man en gratis offert för att bygga en altan?",
+            "a": "Självklart. Vi gör ett kostnadsfritt besök i Laholm, Halmstad, Båstad eller andra städer i regionen för att mäta, diskutera ditt projekt och ta fram en offert."
+          }
+        ]
       }
     }
   },

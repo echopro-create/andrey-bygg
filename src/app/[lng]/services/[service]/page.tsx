@@ -92,6 +92,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
     uk: 'Інші послуги',
   }[lng] || 'Other services';
 
+  const faqTitle = {
+    ru: 'Часто задаваемые вопросы',
+    en: 'Frequently Asked Questions',
+    sv: 'Vanliga frågor',
+    uk: 'Часті запитання',
+  }[lng] || 'FAQ';
+
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -112,12 +119,31 @@ export default async function ServicePage({ params }: ServicePageProps) {
     },
   };
 
+  const faqSchema = service.faq ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: service.faq.map((item: { q: string; a: string }) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  } : null;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <div className="service-detail-page section-spacing">
         <div className="container">
           <Link href={`/${lng}/services`} className="back-link reveal">
@@ -220,6 +246,29 @@ export default async function ServicePage({ params }: ServicePageProps) {
               {dict.services.bookService}
             </Link>
           </div>
+
+          {service.faq && service.faq.length > 0 && (
+            <div className="service-faq-section reveal">
+              <h2 className="service-faq-title">{faqTitle}</h2>
+              <div className="service-faq-list">
+                {service.faq.map((item: { q: string; a: string }, idx: number) => (
+                  <details key={idx} className="faq-details">
+                    <summary className="faq-summary">
+                      {item.q}
+                      <span className="faq-icon">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </span>
+                    </summary>
+                    <div className="faq-content">
+                      <p>{item.a}</p>
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Блок перелинковки: Другие процедуры */}

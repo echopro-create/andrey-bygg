@@ -59,6 +59,7 @@ export interface Dict {
       indications_list?: string[];
       contraindications_title?: string;
       contraindications_text?: string;
+      faq?: Array<{ q: string; a: string }>;
     }>;
   };
   footer?: {

@@ -73,7 +73,21 @@
         "process_title": "Workflow stages",
         "process_text": "We start with precise measurements on-site. Next, we carefully remove the old frames to minimize wall damage. We level the new frame with millimeter precision, secure it, insulate with weatherproofing materials, and mount neat interior trim and exterior sills.",
         "contraindications_title": "Important notes",
-        "contraindications_text": "Outdoor installation is not recommended in heavy rain, strong winds, or temperatures below -10°C due to expanding foam properties."
+        "contraindications_text": "Outdoor installation is not recommended in heavy rain, strong winds, or temperatures below -10°C due to expanding foam properties.",
+        "faq": [
+          {
+            "q": "What is the cost of window and door installation (fönsterbyte) in Halland?",
+            "a": "The cost is calculated individually and fixed in the contract. It depends on the quantity, frames material (wood, wood-aluminum, PVC), and dimensions. We provide a free site visit and measurement check with a detailed quote for clients in Laholm, Halmstad, Båstad, and nearby areas."
+          },
+          {
+            "q": "Do you help with purchasing windows and doors in Sweden?",
+            "a": "Yes, we help you select and purchase high-quality energy-efficient windows and doors directly from trusted Swedish suppliers using our builder discounts, and we arrange delivery to the site."
+          },
+          {
+            "q": "How long does it take to install one window?",
+            "a": "On average, installing and fully finishing a single window takes 2 to 4 hours. Replacing all windows in a standard private house usually takes 1 to 3 days."
+          }
+        ]
       },
       "kitchen-assembly": {
         "title": "Kitchen assembly & installation",
@@ -93,7 +107,21 @@
         "process_title": "Workflow stages",
         "process_text": "We check the walls and floor levels and prepare anchors. We assemble and install base and wall cabinets. We cut and install the countertop (including sink and hob cutouts), align doors, adjust drawers, and integrate appliances and lighting.",
         "contraindications_title": "Important notes",
-        "contraindications_text": "Water and electrical connections must be prepared or approved by certified VVS and electrical partners."
+        "contraindications_text": "Water and electrical connections must be prepared or approved by certified VVS and electrical partners.",
+        "faq": [
+          {
+            "q": "Do you assemble IKEA kitchens and other brands?",
+            "a": "Yes, we specialize in professional kitchen cabinet assembly of any type, including IKEA, Marbodal, Epoq, etc. We handle sink cutouts, built-in appliance installation, and seamless countertop joints."
+          },
+          {
+            "q": "How long does a kitchen installation take in Halmstad or Laholm?",
+            "a": "Fitting a standard kitchen set and connecting the appliances takes 2 to 5 days, depending on the kitchen size and layout complexity."
+          },
+          {
+            "q": "Do you offer a warranty on kitchen cabinet assembly?",
+            "a": "Yes, all carpentry and installation works come with an official contract warranty. You can be sure that all cabinets are mounted securely and fronts are perfectly adjusted."
+          }
+        ]
       },
       "bathroom-renovation": {
         "title": "Bathroom renovation",
@@ -113,7 +141,21 @@
         "process_title": "Workflow stages",
         "process_text": "We demolish old surfaces if needed and level the floor for correct water drainage. We apply approved waterproofing membrane (tätskikt), install tiles and grout. Lastly, we mount the toilet, sink, faucets, shower glass, and cabinets.",
         "contraindications_title": "Important notes",
-        "contraindications_text": "Wet room works require strict drying times for plaster and membrane. Water must be shut off during short periods."
+        "contraindications_text": "Wet room works require strict drying times for plaster and membrane. Water must be shut off during short periods.",
+        "faq": [
+          {
+            "q": "Do you renovate bathrooms according to Swedish standards?",
+            "a": "Yes, all bathroom renovations are carried out in strict compliance with Swedish wet room building regulations (våtrumsregler). We apply certified waterproofing (tätskikt) for absolute leakage protection."
+          },
+          {
+            "q": "Which cities in Halland and Skåne do you serve?",
+            "a": "Our base is located in Knäred (Laholm commune). We visit sites in Halmstad, Laholm, Båstad, Ängelholm, Markaryd, and surrounding areas."
+          },
+          {
+            "q": "How much does a turnkey bathroom renovation cost?",
+            "a": "The final cost depends on the floor area, plumbing state, and selected materials. We offer a free site visit to inspect the bathroom and prepare a fixed estimate."
+          }
+        ]
       },
       "tiling": {
         "title": "Wall & floor tiling",
@@ -133,7 +175,21 @@
         "process_title": "Workflow stages",
         "process_text": "We prime the surface for maximum adhesion. We measure the area to get symmetrical cuts on borders. We apply adhesive, lay the tiles using leveling systems to prevent fogsprång, grout the joints, and apply silicone sealant in corners.",
         "contraindications_title": "Important notes",
-        "contraindications_text": "Tiled floors must not be walked on for at least 24 hours after installation while the adhesive cures."
+        "contraindications_text": "Tiled floors must not be walked on for at least 24 hours after installation while the adhesive cures.",
+        "faq": [
+          {
+            "q": "What surfaces do you install tiles on?",
+            "a": "We lay ceramic tile, porcelain, mosaic, and clinker on all surfaces: bathroom walls and floors, kitchen backsplashes, hallways, utility rooms, and frost-resistant tiles on outdoor terraces."
+          },
+          {
+            "q": "What tile leveling system do you use?",
+            "a": "We use modern tile leveling systems (clips and wedges) to ensure a perfectly flat surface with no height differences and completely even grout joints."
+          },
+          {
+            "q": "Can I order just a kitchen backsplash tiling in Halmstad?",
+            "a": "Yes, we perform tiling works of any scale — from a small kitchen backsplash to complete bathrooms and large technical rooms."
+          }
+        ]
       },
       "painting": {
         "title": "Painting & decorating",
@@ -153,7 +209,21 @@
         "process_title": "Workflow stages",
         "process_text": "We protect floors, windows, and furniture. We plaster cracks and drywall seams, sand everything smooth, and apply primer. Next, we paint two coats of high-quality paint. Lastly, we remove masking tape and clean up.",
         "contraindications_title": "Important notes",
-        "contraindications_text": "Interior painting requires good ventilation and temperatures above +10°C. Facade painting requires dry weather without direct harsh sunlight."
+        "contraindications_text": "Interior painting requires good ventilation and temperatures above +10°C. Facade painting requires dry weather without direct harsh sunlight.",
+        "faq": [
+          {
+            "q": "What painting services do you provide?",
+            "a": "We offer a full range of painting services: plastering drywall joints, sanding, priming, interior wall and ceiling painting, baseboard and door painting, wallcovering, and exterior wood house facade painting."
+          },
+          {
+            "q": "Do you help choose the right paint for the Swedish climate?",
+            "a": "Yes, for outdoor works we choose specialized paints adapted to the Nordic climate. They protect the wood from humidity, UV rays, and temperature changes for many years."
+          },
+          {
+            "q": "How many days does it take to paint a house internally?",
+            "a": "Interior painting of walls and ceilings in a standard apartment or villa usually takes 2 to 7 days, including all drywall prep, priming, and drying times."
+          }
+        ]
       },
       "roofing-woodwork": {
         "title": "Roofing & exterior woodwork",
@@ -173,7 +243,21 @@
         "process_title": "Workflow stages",
         "process_text": "For roofs, we inspect sheathing, lay underlayment membrane, mount batten structures, and lay shingles or sheet metal. For terraces, we prepare concrete foundations, build a heavy-duty joist frame, screw down decking boards, and build railings.",
         "contraindications_title": "Important notes",
-        "contraindications_text": "Roofing and exterior woodworks are heavily dependent on weather conditions and are best done during dry seasons."
+        "contraindications_text": "Roofing and exterior woodworks are heavily dependent on weather conditions and are best done during dry seasons.",
+        "faq": [
+          {
+            "q": "What materials do you use for roof repairs (takläggning)?",
+            "a": "We work with clay and concrete tiles, corrugated sheet metal, and roll roofing. When replacing a roof, we fully install new underlayment, battening, and windboards."
+          },
+          {
+            "q": "Do you build wooden decks and terraces (bygga altan) in Halland?",
+            "a": "Yes, we build durable wooden decks, verandas, pergolas, fences, and railings using high-quality pressure-treated wood (tryckimpregnerat virke) resistant to decay and moisture."
+          },
+          {
+            "q": "Can I get a free estimate for deck construction?",
+            "a": "Absolutely. We offer a free site visit in Laholm, Halmstad, Båstad, or other towns in the region to take measurements, discuss your project, and prepare a quote."
+          }
+        ]
       }
     }
   },
