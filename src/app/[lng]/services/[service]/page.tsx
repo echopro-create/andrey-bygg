@@ -230,13 +230,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
           </div>
 
-          {/* Противопоказания (на всю ширину под Grid-панелью) */}
-          {service.contraindications_text && (
-            <div className="important-notes-block">
-              <h4 className="service-block-title-small">{service.contraindications_title}</h4>
-              <p className="service-block-text-small">{service.contraindications_text}</p>
-            </div>
-          )}
+
           
           <div className="book-btn-wrapper">
             <Link
