@@ -266,7 +266,7 @@ section[id] {
     scroll-margin-top: 80px;
   }
 }
-}/* Layout Utilities */
+/* Layout Utilities */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -898,7 +898,7 @@ body.mobile-drawer-open .custom-lang-selector {
   
   /* Scroll-driven animation */
   animation: hero-scroll-zoom linear;
-  animation-timeline: scroll();
+  animation-timeline: scroll(root);
   animation-range: start 0% exit 100%;
 }
 
