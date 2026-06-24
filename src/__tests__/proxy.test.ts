@@ -15,24 +15,24 @@ function createMockRequest(pathname: string, acceptLanguage?: string): NextReque
   } as unknown as NextRequest;
 }
 
-describe('proxy middleware (locale auto-detection)', () => {
+describe('proxy proxy (locale auto-detection)', () => {
   describe('paths that already contain locale', () => {
     it('should pass through /sv path', () => {
       const req = createMockRequest('/sv');
       const res = proxy(req);
-      expect(res.headers.get('x-middleware-next')).toBeDefined();
+      expect(res.headers.get('x-proxy-next')).toBeDefined();
     });
 
     it('should pass through /en/gallery path', () => {
       const req = createMockRequest('/en/gallery');
       const res = proxy(req);
-      expect(res.headers.get('x-middleware-next')).toBeDefined();
+      expect(res.headers.get('x-proxy-next')).toBeDefined();
     });
 
     it('should pass through /ru/services/windows-doors path', () => {
       const req = createMockRequest('/ru/services/windows-doors');
       const res = proxy(req);
-      expect(res.headers.get('x-middleware-next')).toBeDefined();
+      expect(res.headers.get('x-proxy-next')).toBeDefined();
     });
   });
 
@@ -40,31 +40,31 @@ describe('proxy middleware (locale auto-detection)', () => {
     it('should skip /images path', () => {
       const req = createMockRequest('/images/hero-bg.webp');
       const res = proxy(req);
-      expect(res.headers.get('x-middleware-next')).toBeDefined();
+      expect(res.headers.get('x-proxy-next')).toBeDefined();
     });
 
     it('should skip /api path', () => {
       const req = createMockRequest('/api/some-endpoint');
       const res = proxy(req);
-      expect(res.headers.get('x-middleware-next')).toBeDefined();
+      expect(res.headers.get('x-proxy-next')).toBeDefined();
     });
 
     it('should skip /_next path', () => {
       const req = createMockRequest('/_next/static/chunks/main.js');
       const res = proxy(req);
-      expect(res.headers.get('x-middleware-next')).toBeDefined();
+      expect(res.headers.get('x-proxy-next')).toBeDefined();
     });
 
     it('should skip favicon.ico', () => {
       const req = createMockRequest('/favicon.ico');
       const res = proxy(req);
-      expect(res.headers.get('x-middleware-next')).toBeDefined();
+      expect(res.headers.get('x-proxy-next')).toBeDefined();
     });
 
     it('should skip paths containing a dot (file extension)', () => {
       const req = createMockRequest('/robots.txt');
       const res = proxy(req);
-      expect(res.headers.get('x-middleware-next')).toBeDefined();
+      expect(res.headers.get('x-proxy-next')).toBeDefined();
     });
   });
 

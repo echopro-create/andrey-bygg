@@ -101,7 +101,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
           </p>
         </div>
 
-        <GalleryClient images={images} closeLabel={dict.contacts.formTitle || 'Close'} lng={lng} dict={dict} />
+        <GalleryClient images={images} closeLabel="Close" lng={lng} dict={dict} />
       </div>
     </div>
     </>

@@ -10,8 +10,6 @@
   --card-bg: #121312;
   --text-color: #f4f5f4;
   --text-muted: #a3a3a3;
-  --olive-plate: #2b0a0a;
-  --olive-text: #ff3b30;
   --error: #cf6679;
   --error-rgb: 207, 102, 121;
   --success: #81c784;
@@ -52,8 +50,6 @@ html.theme-zen {
   --card-bg: #121812;
   --text-color: #f1f5f2;
   --text-muted: #8fa093;
-  --olive-plate: #1c271d;
-  --olive-text: #a1887f;
   --error: #e57373;
   --error-rgb: 229, 115, 115;
   --success: #81c784;

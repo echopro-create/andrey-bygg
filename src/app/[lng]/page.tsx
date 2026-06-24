@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Script from 'next/script';
 import type { Metadata } from 'next';
 import { getDictionary, Locale } from '../i18n';
 import { SITE_URL, serviceSlugs } from '@/lib/config';
@@ -157,39 +158,37 @@ export default async function Page({ params }: PageProps) {
           </div>
 
           {/* Cross-browser Scroll-driven Parallax and Zoom using requestAnimationFrame */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function() {
-                  var wrapper = document.querySelector('.hero-bg-wrapper');
-                  if (!wrapper) return;
+          <Script id="hero-parallax-script">
+            {`
+              (function() {
+                var wrapper = document.querySelector('.hero-bg-wrapper');
+                if (!wrapper) return;
+                
+                var ticking = false;
+                var lastScrollY = 0;
+                
+                function updateAnimation() {
+                  var zoom = 1 + (lastScrollY * 0.00025);
+                  var opacity = 1 - (lastScrollY * 0.001);
                   
-                  var ticking = false;
-                  var lastScrollY = 0;
+                  var finalZoom = Math.min(1.18, zoom);
+                  var finalOpacity = Math.max(0.35, opacity);
                   
-                  function updateAnimation() {
-                    var zoom = 1 + (lastScrollY * 0.00025);
-                    var opacity = 1 - (lastScrollY * 0.001);
-                    
-                    var finalZoom = Math.min(1.18, zoom);
-                    var finalOpacity = Math.max(0.35, opacity);
-                    
-                    wrapper.style.transform = 'scale(' + finalZoom + ') translateZ(0)';
-                    wrapper.style.opacity = finalOpacity;
-                    ticking = false;
+                  wrapper.style.transform = 'scale(' + finalZoom + ') translateZ(0)';
+                  wrapper.style.opacity = finalOpacity;
+                  ticking = false;
+                }
+                
+                window.addEventListener('scroll', function() {
+                  lastScrollY = window.scrollY;
+                  if (!ticking) {
+                    window.requestAnimationFrame(updateAnimation);
+                    ticking = true;
                   }
-                  
-                  window.addEventListener('scroll', function() {
-                    lastScrollY = window.scrollY;
-                    if (!ticking) {
-                      window.requestAnimationFrame(updateAnimation);
-                      ticking = true;
-                    }
-                  }, { passive: true });
-                })();
-              `
-            }}
-          />
+                }, { passive: true });
+              })();
+            `}
+          </Script>
         </section>
 
         {/* 2. About Master Section */}

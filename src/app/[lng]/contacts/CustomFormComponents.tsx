@@ -78,12 +78,21 @@ export function CustomSelect({
       </div>
 
       {isOpen && (
-        <ul className="custom-select-options">
+        <ul className="custom-select-options" role="listbox" tabIndex={-1}>
           {options.map((opt) => (
             <li
               key={opt.value}
+              role="option"
+              aria-selected={opt.value === value}
               className={`custom-select-option ${opt.value === value ? 'is-selected' : ''}`}
               onClick={() => handleSelect(opt.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleSelect(opt.value);
+                }
+              }}
+              tabIndex={0}
             >
               {opt.label}
             </li>

@@ -96,7 +96,7 @@ export default function Footer({ dict, lng }: FooterProps) {
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
           <p>
-            &copy; {currentYear} Andrey Bygg. All rights reserved. {dict.contacts.address}.
+            &copy; {currentYear} Andrey Bygg. {dict.contacts.regions_desc || ''}.
             {' | '}
             <Link href={`/${lng}/privacy`} className="footer-bottom-link" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>
               {dict.footer?.privacy || 'Privacy Policy'}
