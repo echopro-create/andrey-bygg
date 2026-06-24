@@ -2459,7 +2459,7 @@ body.mobile-drawer-open .custom-lang-selector {
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
+  object-fit: contain;
   filter: brightness(0.55) contrast(1.1) grayscale(0.15);
   transition: transform var(--transition-smooth), filter var(--transition-smooth);
 }

@@ -186,7 +186,7 @@ export default function ContactsClient({ dict }: { dict: Record<string, unknown>
                 sizes="(max-width: 768px) 100vw, 50vw"
                 quality={75}
                 loading="lazy"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'contain' }}
               />
               <div className="map-card-footer">
                 <div className="map-footer-text">
