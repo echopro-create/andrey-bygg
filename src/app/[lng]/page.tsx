@@ -94,7 +94,7 @@ export default async function Page({ params }: PageProps) {
               fill
               priority
               fetchPriority="high"
-              quality={70}
+              quality={80}
               sizes="100vw"
               className="hero-bg-image"
               style={{ backgroundColor: '#080908' }}
