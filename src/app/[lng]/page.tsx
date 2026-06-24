@@ -226,9 +226,19 @@ export default async function Page({ params }: PageProps) {
                   {dict.about.quote}
                 </blockquote>
               )}
-              <p className="about-paragraph">{dict.about.text1}</p>
-              <p className="about-paragraph">{dict.about.text2}</p>
-              {dict.about.text3 && <p className="about-paragraph">{dict.about.text3}</p>}
+              <div className="about-paragraphs-grid">
+                <div className="about-paragraphs-col">
+                  <p className="about-paragraph">{dict.about.text1}</p>
+                </div>
+                <div className="about-paragraphs-col">
+                  <p className="about-paragraph">{dict.about.text2}</p>
+                </div>
+              </div>
+              {dict.about.text3 && (
+                <p className="about-paragraph about-paragraph-full">
+                  {dict.about.text3}
+                </p>
+              )}
               <div className="experience-metric">
                 <div className="metric-item">
                   <span className="metric-number">10+</span>

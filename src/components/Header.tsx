@@ -24,7 +24,10 @@ export default function Header({ dict }: HeaderProps) {
 
   const [activeHash, setActiveHash] = useState('');
   const [theme, setTheme] = useState<Theme>(() => {
-    try { const s = localStorage.getItem('theme'); if (s === 'zen') return 'zen'; } catch { /* SSR */ }
+    if (typeof localStorage !== 'undefined') {
+      const s = localStorage.getItem('theme');
+      if (s === 'obsidian' || s === 'zen') return s;
+    }
     return 'obsidian';
   });
   const [scrolled, setScrolled] = useState(false);

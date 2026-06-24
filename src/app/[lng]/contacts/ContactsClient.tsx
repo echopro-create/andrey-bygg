@@ -1,14 +1,10 @@
 'use client';
 
-import { Suspense, useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 
-interface ContactsInfoProps {
-  dict: Record<string, unknown>;
-}
-
-function ContactsInfo({ dict }: ContactsInfoProps) {
+export default function ContactsClient({ dict }: { dict: Record<string, unknown> }) {
   const params = useParams();
   const lng = (typeof params?.lng === 'string' ? params.lng : 'sv') as string;
   const contacts = (dict.contacts || {}) as Record<string, unknown>;
@@ -24,27 +20,41 @@ function ContactsInfo({ dict }: ContactsInfoProps) {
   const title = (contacts.title as string) || '';
   const regionsDesc = (contacts.regions_desc as string) || '';
 
-  const copyLabels: Record<string, Record<string, string>> = {
-    sv: { copy: 'Kopiera', copied: 'Kopierad!' },
-    en: { copy: 'Copy', copied: 'Copied!' },
-    ru: { copy: 'Копировать', copied: 'Скопировано!' },
-    uk: { copy: 'Копіювати', copied: 'Скопійовано!' },
+  const localized: Record<string, Record<string, string>> = {
+    sv: {
+      copy: 'Kopiera',
+      copied: 'Kopierad!',
+      hoursLabel: 'Öppettider',
+      regionLabel: 'Region',
+      writeUs: 'Skriv till oss',
+      callUs: 'Ring oss',
+    },
+    en: {
+      copy: 'Copy',
+      copied: 'Copied!',
+      hoursLabel: 'Hours',
+      regionLabel: 'Region',
+      writeUs: 'Write to us',
+      callUs: 'Call us',
+    },
+    ru: {
+      copy: 'Копировать',
+      copied: 'Скопировано!',
+      hoursLabel: 'Часы работы',
+      regionLabel: 'Регион',
+      writeUs: 'Написать нам',
+      callUs: 'Позвонить',
+    },
+    uk: {
+      copy: 'Копіювати',
+      copied: 'Скопійовано!',
+      hoursLabel: 'Години роботи',
+      regionLabel: 'Регіон',
+      writeUs: 'Написати нам',
+      callUs: 'Зателефонувати',
+    },
   };
-  const cl = copyLabels[lng] || copyLabels.en;
-
-  const writeLabels: Record<string, string> = {
-    sv: 'Skriv till oss',
-    en: 'Write to us',
-    ru: 'Написать нам',
-    uk: 'Написати нам',
-  };
-
-  const callLabels: Record<string, string> = {
-    sv: 'Ring oss',
-    en: 'Call us',
-    ru: 'Позвонить',
-    uk: 'Зателефонувати',
-  };
+  const l = localized[lng] || localized.en;
 
   return (
     <div className="contacts-page section-spacing">
@@ -77,9 +87,9 @@ function ContactsInfo({ dict }: ContactsInfoProps) {
                       setTimeout(() => setCopied(null), 2000);
                     }}
                     className="copy-btn"
-                    title={cl.copy}
+                    title={l.copy}
                   >
-                    {copied === 'email' ? cl.copied : cl.copy}
+                    {copied === 'email' ? l.copied : l.copy}
                   </button>
                 </div>
               </div>
@@ -107,13 +117,13 @@ function ContactsInfo({ dict }: ContactsInfoProps) {
               </div>
 
               <div className="info-item-row">
-                <span className="info-item-label">Hours</span>
+                <span className="info-item-label">{l.hoursLabel}</span>
                 <span className="info-item-val">{hours}</span>
               </div>
 
               {regionsDesc && (
                 <div className="info-item-row">
-                  <span className="info-item-label">{(contacts.regions_title as string) || 'Region'}</span>
+                  <span className="info-item-label">{(contacts.regions_title as string) || l.regionLabel}</span>
                   <span className="info-item-val" style={{ fontSize: '0.9rem' }}>{regionsDesc}</span>
                 </div>
               )}
@@ -121,10 +131,10 @@ function ContactsInfo({ dict }: ContactsInfoProps) {
 
             <div style={{ display: 'flex', gap: '12px', marginTop: '32px', flexWrap: 'wrap' }}>
               <a href={`mailto:${email}`} className="btn btn-primary">
-                {writeLabels[lng] || 'Write to us'}
+                {l.writeUs}
               </a>
               <a href={`tel:${phone}`} className="btn btn-secondary">
-                {callLabels[lng] || 'Call us'}
+                {l.callUs}
               </a>
             </div>
           </div>
@@ -152,13 +162,5 @@ function ContactsInfo({ dict }: ContactsInfoProps) {
         </div>
       </div>
     </div>
-  );
-}
-
-export default function ContactsClient({ dict }: { dict: Record<string, unknown> }) {
-  return (
-    <Suspense fallback={<div className="container text-center"><span className="spinner"></span></div>}>
-      <ContactsInfo dict={dict} />
-    </Suspense>
   );
 }

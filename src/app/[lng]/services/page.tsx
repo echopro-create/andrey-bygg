@@ -40,7 +40,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ lng: 
   const dict = await getDictionary(lng);
 
   return (
-    <div className="services-page section-spacing">
+    <div className="section-spacing">
       <div className="container">
         <div className="section-header text-center reveal" style={{ marginBottom: '60px' }}>
           <h1 className="section-title">
@@ -50,7 +50,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ lng: 
 
         <div className="services-grid">
           {serviceSlugs.map((slug) => {
-            const service = (dict.services.items as Record<string, Record<string, unknown>>)[slug];
+            const service = dict.services.items[slug];
             if (!service) return null;
             return (
               <div key={slug} className="service-card reveal">
@@ -68,11 +68,11 @@ export default async function ServicesPage({ params }: { params: Promise<{ lng: 
                   />
                 </div>
                 <div className="service-card-body">
-                  <h3 className="service-card-title">{service.title as string}</h3>
-                  <p className="service-card-desc">{service.desc as string}</p>
+                  <h3 className="service-card-title">{service.title}</h3>
+                  <p className="service-card-desc">{service.desc}</p>
                   <div className="service-card-footer">
                     <span className="service-duration-label">
-                      <span role="img" aria-hidden="true">⏱</span> {service.duration as string}
+                      <span role="img" aria-hidden="true">⏱</span> {service.duration}
                     </span>
                     <Link href={`/${lng}/services/${slug}`} className="service-card-link">
                       {dict.services.readMore} →
