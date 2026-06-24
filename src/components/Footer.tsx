@@ -35,7 +35,7 @@ export default function Footer({ dict, lng }: FooterProps) {
 
         {/* 2. Быстрые ссылки для навигации */}
         <nav className="footer-nav-col" aria-label="Quick links">
-          <h4 className="footer-title">{dict.footer?.quickLinks || 'Menu'}</h4>
+          <h3 className="footer-title">{dict.footer?.quickLinks || 'Menu'}</h3>
           <ul className="footer-list">
             <li>
               <Link href={`/${lng}`} className="footer-link">
@@ -62,7 +62,7 @@ export default function Footer({ dict, lng }: FooterProps) {
 
         {/* 3. Список всех услуг (SEO перелинковка) */}
         <nav className="footer-links" aria-label="Services navigation">
-          <h4 className="footer-title">{dict.nav.services}</h4>
+          <h3 className="footer-title">{dict.nav.services}</h3>
           <ul className="footer-list">
             {footerServices.map((svc) => (
               <li key={svc.slug}>
@@ -76,7 +76,7 @@ export default function Footer({ dict, lng }: FooterProps) {
 
         {/* 4. Контактная информация */}
         <div className="footer-info">
-          <h4 className="footer-title">{dict.nav.contacts}</h4>
+          <h3 className="footer-title">{dict.nav.contacts}</h3>
           <address style={{ fontStyle: 'normal' }}>
             <ul className="footer-list info-list">
               <li>

@@ -75,8 +75,8 @@ export default async function ServicesPage({ params }: { params: Promise<{ lng: 
                     src={`/images/services/${slug}.webp`}
                     alt={service.title as string}
                     className="service-card-img"
-                    width={768}
-                    height={480}
+                    width={512}
+                    height={320}
                     loading="lazy"
                     quality={80}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

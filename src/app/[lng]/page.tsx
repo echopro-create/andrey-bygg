@@ -209,8 +209,8 @@ export default async function Page({ params }: PageProps) {
                   src="/images/builder-portrait.webp"
                   alt={dict.about.certTitle ? `Snickare — ${dict.about.certTitle}` : 'Snickare'}
                   className="about-img"
-                  width={1024}
-                  height={1365}
+                  width={800}
+                  height={1067}
                   fetchPriority="high"
                   priority
                   quality={85}
@@ -220,7 +220,7 @@ export default async function Page({ params }: PageProps) {
                 <div className="certificate-badge">
                   <span className="cert-gold-star">★</span>
                   <div className="cert-badge-text">
-                    <h5>{dict.about.certTitle}</h5>
+                    <h3 className="certificate-title">{dict.about.certTitle}</h3>
                     <p>{dict.about.certSubtitle}</p>
                   </div>
                 </div>
@@ -279,8 +279,8 @@ export default async function Page({ params }: PageProps) {
                         src={`/images/services/${slug}.webp`}
                         alt={service.title}
                         className="service-card-img"
-                        width={768}
-                        height={480}
+                        width={512}
+                        height={320}
                         loading="lazy"
                         quality={80}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
