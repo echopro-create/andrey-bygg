@@ -2700,11 +2700,18 @@ body.mobile-drawer-open .custom-lang-selector {
 }
 
 @media (max-width: 768px) {
-  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; text-align: left; }
-  .footer-brand { align-items: center; }
-  .footer-desc { margin: 0 auto; }
-  .info-list li { justify-content: center; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; text-align: left; }
+  .footer-brand { align-items: flex-start; }
+  .footer-desc { margin: 0; text-align: left; }
+  .info-list li { justify-content: flex-start; }
   .footer-bottom-content { flex-direction: column; gap: 16px; text-align: center; }
+}
+
+@media (max-width: 500px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
 }
 
 /* ------------------ Breadcrumbs ------------------ */
