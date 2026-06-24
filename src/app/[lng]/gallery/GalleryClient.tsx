@@ -32,7 +32,7 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
           const isVertical = index < 3;
 
           return (
-            <div key={index} className={`gallery-item-wrapper ${isVertical ? 'gallery-item-vertical' : 'gallery-item-square'} reveal`} style={{ animationDelay: `${index * 0.05}s` }}>
+            <div key={index} className={`gallery-item-wrapper ${isVertical ? 'gallery-item-vertical' : 'gallery-item-square'} ${index < 3 ? '' : 'reveal'}`} style={{ animationDelay: `${index * 0.05}s` }}>
               <button
                 type="button"
                 className="gallery-item-frame"

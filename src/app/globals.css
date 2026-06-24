@@ -1076,7 +1076,7 @@ body.mobile-drawer-open .custom-lang-selector {
   font-size: 1.5rem;
 }
 
-.cert-badge-text h5 {
+.cert-badge-text .cert-badge-title {
   font-size: 0.9rem;
   color: var(--primary);
   margin-bottom: 2px;

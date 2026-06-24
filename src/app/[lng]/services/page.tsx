@@ -58,7 +58,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ lng: 
   return (
     <div className="section-spacing">
       <div className="container">
-        <div className="section-header text-center reveal" style={{ marginBottom: '60px' }}>
+        <div className="section-header text-center" style={{ marginBottom: '60px' }}>
           <h1 className="section-title">
             {dict.services.title} <span className="gold-accent">{dict.services.accent}</span>
           </h1>

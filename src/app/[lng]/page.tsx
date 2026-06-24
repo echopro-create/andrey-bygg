@@ -93,7 +93,7 @@ export default async function Page({ params }: PageProps) {
               alt="BYGG I SYD"
               fill
               priority
-              quality={85}
+              quality={75}
               sizes="100vw"
               className="hero-bg-image"
             />
@@ -101,7 +101,7 @@ export default async function Page({ params }: PageProps) {
           </div>
 
           <div className="container hero-container">
-            <div className="hero-content reveal">
+            <div className="hero-content">
               <h1 className="hero-title">
                 {dict.hero.title} <span className="gold-accent">{dict.hero.accent}</span>
               </h1>
@@ -120,7 +120,7 @@ export default async function Page({ params }: PageProps) {
           </div>
 
           {/* Floating Metrics Bar */}
-          <div className="container hero-metrics-container reveal">
+          <div className="container hero-metrics-container">
             <div className="hero-metrics-bar glass-card">
               <div className="metric-col">
                 <div className="metric-icon-small">
@@ -211,8 +211,6 @@ export default async function Page({ params }: PageProps) {
                   className="about-img"
                   width={1024}
                   height={1365}
-                  fetchPriority="high"
-                  priority
                   quality={85}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
@@ -220,7 +218,7 @@ export default async function Page({ params }: PageProps) {
                 <div className="certificate-badge">
                   <span className="cert-gold-star">★</span>
                   <div className="cert-badge-text">
-                    <h5>{dict.about.certTitle}</h5>
+                    <div className="cert-badge-title">{dict.about.certTitle}</div>
                     <p>{dict.about.certSubtitle}</p>
                   </div>
                 </div>

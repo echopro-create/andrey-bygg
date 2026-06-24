@@ -216,7 +216,7 @@ export default function Header({ dict }: HeaderProps) {
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
-        <Link href={`/${currentLng}`} className="logo" onClick={closeMenu} aria-label="BYGG I SYD — Home">
+        <Link href={`/${currentLng}`} className="logo" onClick={closeMenu}>
           BYGG I<span className="gold-accent"> SYD</span>
         </Link>
 

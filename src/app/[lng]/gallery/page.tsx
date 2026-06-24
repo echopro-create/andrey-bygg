@@ -91,7 +91,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
       />
       <div className="gallery-page section-spacing">
       <div className="container">
-        <div className="section-header text-center reveal" style={{ marginBottom: '60px' }}>
+        <div className="section-header text-center" style={{ marginBottom: '60px' }}>
           <h1 className="section-title">
             {dict.nav.gallery} <span className="gold-accent">{dict.gallery?.studio || 'Studio'}</span>
           </h1>

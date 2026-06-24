@@ -25,7 +25,7 @@ export default function Footer({ dict, lng }: FooterProps) {
       <div className="container footer-grid">
         {/* 1. Блок бренда */}
         <div className="footer-brand">
-          <Link href={`/${lng}`} className="footer-logo" aria-label="BYGG I SYD — Home">
+          <Link href={`/${lng}`} className="footer-logo">
               BYGG I<span className="gold-accent"> SYD</span>
           </Link>
           <p className="footer-desc">

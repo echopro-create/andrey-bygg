@@ -60,7 +60,7 @@ export default function ContactsClient({ dict }: { dict: Record<string, unknown>
   return (
     <div className="contacts-page section-spacing">
       <div className="container">
-        <div className="section-header text-center reveal" style={{ marginBottom: '32px' }}>
+        <div className="section-header text-center" style={{ marginBottom: '32px' }}>
           <h1 className="section-title">
             {title} <span className="gold-accent">{accent}</span>
           </h1>
@@ -71,7 +71,7 @@ export default function ContactsClient({ dict }: { dict: Record<string, unknown>
 
         <div className="contacts-grid">
           {/* Левая колонка: Блок контактов */}
-          <div className="contacts-details-panel reveal">
+          <div className="contacts-details-panel">
             <h2 className="contacts-panel-title">{contacts.formTitle as string}</h2>
 
             <div className="info-items-interactive">
@@ -177,7 +177,7 @@ export default function ContactsClient({ dict }: { dict: Record<string, unknown>
           </div>
 
           {/* Правая колонка: Bento-сетка гарантий */}
-          <div className="contacts-info-column reveal">
+          <div className="contacts-info-column">
             <div className="contacts-guarantees-grid">
               {/* Карточка 1: Без предоплаты */}
               <div className="guarantee-card">

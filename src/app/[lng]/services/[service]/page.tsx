@@ -146,16 +146,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
       )}
       <div className="service-detail-page section-spacing">
         <div className="container">
-          <Link href={`/${lng}/services`} className="back-link reveal">
+          <Link href={`/${lng}/services`} className="back-link">
             ← {dict.services.back}
           </Link>
 
           {/* Шапка услуги: на всю ширину страницы */}
-          <div className="service-detail-header reveal">
+          <div className="service-detail-header">
             <h1 className="service-detail-title">{service.title}</h1>
           </div>
 
-        <div className="service-detail-content-wrap reveal">
+        <div className="service-detail-content-wrap">
           <div className="service-detail-grid">
             {/* Левая колонка: Изображение + Карточка действия */}
             <div className="service-grid-left">
@@ -178,7 +178,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               </div>
 
               {/* Карточка действия для десктопов */}
-              <div className="service-cta-card glass-card reveal">
+              <div className="service-cta-card glass-card">
                 <h3 className="cta-card-title">{dict.services.bookService}</h3>
                 <p className="cta-card-text">
                   {lng === 'ru' ? 'Мы проконсультируем вас по всем вопросам, приедем на бесплатный замер и составим подробную смету.' :
