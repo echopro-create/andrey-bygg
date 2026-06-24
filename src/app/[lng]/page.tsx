@@ -285,7 +285,7 @@ export default async function Page({ params }: PageProps) {
                         width={512}
                         height={320}
                         loading="lazy"
-                        quality={80}
+              quality={85}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{ objectFit: 'cover' }}
                       />
