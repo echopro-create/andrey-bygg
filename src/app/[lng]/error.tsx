@@ -28,11 +28,11 @@ const translations = {
     tryAgain: 'Försök igen',
     backToHome: 'Till startsidan',
   },
-  no: {
-    title: 'Noe gikk galt',
-    description: 'En uventet feil oppsto. Vennligst prøv igjen eller gå tilbake til forsiden.',
-    tryAgain: 'Prøv igjen',
-    backToHome: 'Til forsiden',
+  uk: {
+    title: 'Щось пішло не так',
+    description: 'Сталася непередбачена помилка. Будь ласка, спробуйте ще раз або поверніться на головну сторінку.',
+    tryAgain: 'Спробувати знову',
+    backToHome: 'На головну',
   },
 };
 
@@ -43,7 +43,7 @@ export default function Error({ error, reset }: ErrorProps) {
 
   const params = useParams();
   const rawLng = params?.lng;
-  const lng = (typeof rawLng === 'string' && ['ru', 'en', 'sv', 'no'].includes(rawLng) ? rawLng : 'sv') as 'ru' | 'en' | 'sv' | 'no';
+  const lng = (typeof rawLng === 'string' && ['ru', 'en', 'sv', 'uk'].includes(rawLng) ? rawLng : 'sv') as 'ru' | 'en' | 'sv' | 'uk';
   const t = translations[lng] || translations.sv;
 
   return (

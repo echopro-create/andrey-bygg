@@ -14,7 +14,6 @@ export async function generateStaticParams() {
   return [
     { lng: 'sv' },
     { lng: 'en' },
-    { lng: 'no' },
     { lng: 'ru' },
     { lng: 'uk' },
   ];
@@ -27,7 +26,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
 
   const title = dict.privacy.seo_title || dict.privacy.title;
   const description = dict.privacy.seo_desc || dict.privacy.subtitle;
-  const locales = ['sv', 'en', 'no', 'ru', 'uk'];
+  const locales = ['sv', 'en', 'ru', 'uk'];
 
   return {
     title,
@@ -42,15 +41,15 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
       title,
       description,
       url: `${SITE_URL}/${lng}/privacy`,
-      siteName: 'RYGGHJÄLP',
-      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
+      siteName: 'Andrey Bygg',
+      locale: lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
         {
           url: `${SITE_URL}/images/og-image.webp`,
           width: 1200,
           height: 630,
-          alt: 'RYGGHJÄLP — Premium Spa & Massage',
+          alt: 'Andrey Bygg — Professionella byggtjänster i Sverige',
         },
       ],
     },

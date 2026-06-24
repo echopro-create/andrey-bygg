@@ -14,10 +14,10 @@ const nextConfig: NextConfig = {
         has: [
           {
             type: 'host',
-            value: 'www.rygghjalp.se',
+            value: 'www.andreybygg.se',
           },
         ],
-        destination: 'https://rygghjalp.se/:path*',
+        destination: 'https://andreybygg.se/:path*',
         permanent: true,
       },
     ];

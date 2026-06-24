@@ -1,18 +1,16 @@
 jest.mock('server-only', () => ({}));
 import { getDictionary, Locale } from './i18n';
 
-const locales: Locale[] = ['sv', 'en', 'no', 'ru', 'uk'];
+const locales: Locale[] = ['sv', 'en', 'ru', 'uk'];
 
 describe('SEO metadata & structured data completeness', () => {
   const serviceSlugs = [
-    'classic',
-    'anti-cellulite',
-    'sports',
-    'lymphatic-drainage',
-    'cupping',
-    'hot-stone',
-    'turkish-foam',
-    'natural-massage',
+    'windows-doors',
+    'kitchen-assembly',
+    'bathroom-renovation',
+    'tiling',
+    'painting',
+    'roofing-woodwork',
   ];
 
   describe('Dictionary SEO field presence', () => {
@@ -80,21 +78,12 @@ describe('SEO metadata & structured data completeness', () => {
       }
     });
 
-    it.each(locales)('locale "%s" SEO titles should not contain "RYGGHJÄLP" (added by template)', async (locale) => {
+    it.each(locales)('locale "%s" SEO titles should not contain "Andrey Bygg" (added by template)', async (locale) => {
       const dict = await getDictionary(locale);
       for (const slug of serviceSlugs) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const service = (dict.services.items as any)[slug];
-        expect(service.seo_title).not.toContain('RYGGHJÄLP');
-      }
-      if (dict.contacts.seo_title) {
-        expect(dict.contacts.seo_title).not.toContain('RYGGHJÄLP');
-      }
-      if (dict.gallery?.seo_title) {
-        expect(dict.gallery.seo_title).not.toContain('RYGGHJÄLP');
-      }
-      if (dict.privacy.seo_title) {
-        expect(dict.privacy.seo_title).not.toContain('RYGGHJÄLP');
+        expect(service.seo_title).not.toContain('Andrey Bygg');
       }
     });
   });
@@ -127,7 +116,7 @@ describe('SEO metadata & structured data completeness', () => {
 
   describe('Structured data (JSON-LD) schema validation', () => {
     describe('Organization schema (layout.tsx)', () => {
-      it.each(locales)('locale "%s" should provide valid HealthAndBeautyBusiness schema', async (locale) => {
+      it.each(locales)('locale "%s" should provide valid ConstructionBusiness schema', async (locale) => {
         const dict = await getDictionary(locale);
         // Validate that required fields are available in the dictionary for the schema
         expect(dict.hero.subtitle).toBeDefined();
@@ -136,8 +125,8 @@ describe('SEO metadata & structured data completeness', () => {
 
         const schema: Record<string, unknown> = {
           '@context': 'https://schema.org',
-          '@type': 'HealthAndBeautyBusiness',
-          name: 'RYGGHJÄLP',
+          '@type': 'ConstructionBusiness',
+          name: 'Andrey Bygg',
           description: dict.hero.subtitle,
           address: {
             '@type': 'PostalAddress',
@@ -157,21 +146,20 @@ describe('SEO metadata & structured data completeness', () => {
           currenciesAccepted: 'SEK',
           paymentAccepted: 'Cash, Credit Card, Swish',
           sameAs: [
-            'https://www.instagram.com/touroleg/',
-            'https://www.facebook.com/profile.php?id=100028476219743',
+            'https://www.instagram.com/',
           ],
         };
 
         expect(schema['@context']).toBe('https://schema.org');
-        expect(schema['@type']).toBe('HealthAndBeautyBusiness');
-        expect(schema.name).toBe('RYGGHJÄLP');
+        expect(schema['@type']).toBe('ConstructionBusiness');
+        expect(schema.name).toBe('Andrey Bygg');
         expect(schema.description).toBeTruthy();
         expect(schema.telephone).toBeTruthy();
         expect(schema.email).toBeTruthy();
         expect(schema.priceRange).toBe('$$');
         expect(schema.currenciesAccepted).toBe('SEK');
         expect(Array.isArray(schema.sameAs)).toBe(true);
-        expect(schema.sameAs.length).toBeGreaterThanOrEqual(2);
+        expect(schema.sameAs.length).toBeGreaterThanOrEqual(1);
 
         const hours = (schema.openingHoursSpecification as Array<Record<string, unknown>>)[0];
         expect(hours.opens).toBe('09:00');
@@ -181,7 +169,7 @@ describe('SEO metadata & structured data completeness', () => {
     });
 
     describe('FAQPage schema (homepage)', () => {
-      it.each(locales)('locale "%s" should generate valid FAQ schema with 8 Q&A pairs', async (locale) => {
+      it.each(locales)('locale "%s" should generate valid FAQ schema with 6 Q&A pairs', async (locale) => {
         const dict = await getDictionary(locale);
 
         const faqSchema = {
@@ -203,7 +191,7 @@ describe('SEO metadata & structured data completeness', () => {
 
         expect(faqSchema['@context']).toBe('https://schema.org');
         expect(faqSchema['@type']).toBe('FAQPage');
-        expect(faqSchema.mainEntity).toHaveLength(8);
+        expect(faqSchema.mainEntity).toHaveLength(6);
 
         for (const qa of faqSchema.mainEntity) {
           expect(qa['@type']).toBe('Question');
@@ -230,8 +218,8 @@ describe('SEO metadata & structured data completeness', () => {
             name: service.title,
             description: service.desc,
             provider: {
-              '@type': 'HealthAndBeautyBusiness',
-              name: 'RYGGHJÄLP',
+              '@type': 'ConstructionBusiness',
+              name: 'Andrey Bygg',
               address: {
                 '@type': 'PostalAddress',
                 addressCountry: 'SE',
@@ -249,8 +237,8 @@ describe('SEO metadata & structured data completeness', () => {
           expect(serviceSchema.name.length).toBeGreaterThan(0);
           expect(typeof serviceSchema.description).toBe('string');
           expect(serviceSchema.description.length).toBeGreaterThan(0);
-          expect(serviceSchema.provider['@type']).toBe('HealthAndBeautyBusiness');
-          expect(serviceSchema.provider.name).toBe('RYGGHJÄLP');
+          expect(serviceSchema.provider['@type']).toBe('ConstructionBusiness');
+          expect(serviceSchema.provider.name).toBe('Andrey Bygg');
           expect(serviceSchema.areaServed['@type']).toBe('Country');
           expect(serviceSchema.areaServed.name).toBe('SE');
         }
@@ -262,7 +250,7 @@ describe('SEO metadata & structured data completeness', () => {
         const items = [
           { label: 'Home', href: '/en' },
           { label: 'Services', href: '/en/services' },
-          { label: 'Classic Massage', href: '/en/services/classic' },
+          { label: 'Window & door installation', href: '/en/services/windows-doors' },
         ];
 
         const jsonLd = {
@@ -293,9 +281,9 @@ describe('SEO metadata & structured data completeness', () => {
     describe('ImageGallery schema (gallery page)', () => {
       it('should generate valid ImageGallery with ImageObject children', () => {
         const images = [
-          { src: '/images/gallery/gallery-1_v2.webp', alt: 'Back massage therapy' },
-          { src: '/images/gallery/gallery-2_v2.webp', alt: 'Hot stone massage' },
-          { src: '/images/gallery/gallery-3_v2.webp', alt: 'Foot massage and reflexology' },
+          { src: '/images/gallery/gallery-1_v2.webp', alt: 'Window installation' },
+          { src: '/images/gallery/gallery-2_v2.webp', alt: 'Kitchen assembly' },
+          { src: '/images/gallery/gallery-3_v2.webp', alt: 'Bathroom renovation' },
         ];
 
         const imageGallerySchema = {
@@ -348,7 +336,7 @@ describe('SEO metadata & structured data completeness', () => {
 
     it('canonical URLs should be relative paths (not full URLs)', () => {
       for (const locale of locales) {
-        const canonical = `/${locale}/services/classic`;
+        const canonical = `/${locale}/services/windows-doors`;
         expect(canonical.startsWith('http')).toBe(false);
         expect(canonical).toMatch(/^\/[a-z]{2}/);
       }
@@ -356,17 +344,16 @@ describe('SEO metadata & structured data completeness', () => {
   });
 
   describe('Hreflang alternates completeness', () => {
-    it('all pages should reference all 5 locales in alternates', () => {
-      const expectedLocales = ['sv', 'en', 'no', 'ru', 'uk'];
+    it('all pages should reference all 4 locales in alternates', () => {
+      const expectedLocales = ['sv', 'en', 'ru', 'uk'];
       const alternates = {
         sv: '/sv',
         en: '/en',
-        no: '/no',
         ru: '/ru',
         uk: '/uk',
       };
       expect(Object.keys(alternates).sort()).toEqual(expectedLocales.sort());
-      expect(Object.keys(alternates)).toHaveLength(5);
+      expect(Object.keys(alternates)).toHaveLength(4);
     });
   });
 
@@ -405,35 +392,32 @@ describe('SEO metadata & structured data completeness', () => {
 
   describe('Keywords presence', () => {
     const localeKeywords: Record<string, string[]> = {
-      sv: ['massage', 'spa'],
-      en: ['massage', 'spa'],
-      no: ['massasje', 'spa'],
-      ru: ['массаж', 'спа'],
-      uk: ['масаж', 'спа'],
+      sv: ['bygg', 'renovering'],
+      en: ['renovation', 'construction'],
+      ru: ['ремонт', 'строительство'],
+      uk: ['ремонт', 'будівництво'],
     };
 
     it.each(locales)('locale "%s" should have locale-appropriate keywords in hero text', async (locale) => {
       const dict = await getDictionary(locale);
       const heroText = `${dict.hero.title} ${dict.hero.accent} ${dict.hero.subtitle}`.toLowerCase();
 
-      const keywords = localeKeywords[locale] || ['massage', 'spa'];
+      const keywords = localeKeywords[locale] || ['renovation', 'construction'];
       for (const keyword of keywords) {
         expect(heroText).toContain(keyword);
       }
     });
 
-    it('brand name RYGGHJÄLP should appear as a keyword', () => {
-      const brandKeyword = 'RYGGHJÄLP';
+    it('brand name Andrey Bygg should appear as a keyword', () => {
+      const brandKeyword = 'Andrey Bygg';
       const keywords = [
-        'professional massage',
-        'premium spa',
-        'massage therapist',
-        'Swedish massage',
-        'sports massage',
-        'hot stone massage',
-        'rygghjalp massage',
-        'RYGGHJÄLP',
-        'professional massage',
+        'professional construction',
+        'home renovation',
+        'carpenter Sweden',
+        'kitchen assembly',
+        'bathroom renovation',
+        'andrey bygg',
+        'Andrey Bygg',
       ];
       expect(keywords).toContain(brandKeyword);
     });
@@ -444,13 +428,11 @@ describe('SEO metadata & structured data completeness', () => {
       const localeMap: Record<string, string> = {
         sv: 'sv_SE',
         en: 'en_US',
-        no: 'nb_NO',
         ru: 'ru_RU',
         uk: 'uk_UA',
       };
       expect(localeMap.sv).toBe('sv_SE');
       expect(localeMap.en).toBe('en_US');
-      expect(localeMap.no).toBe('nb_NO');
       expect(localeMap.ru).toBe('ru_RU');
       expect(localeMap.uk).toBe('uk_UA');
     });
@@ -477,13 +459,13 @@ describe('SEO metadata & structured data completeness', () => {
   });
 
   describe('WWW redirect presence in next.config', () => {
-    it('should redirect www.rygghjalp.se to rygghjalp.se (canonical domain)', () => {
+    it('should redirect www.andreybygg.se to andreybygg.se (canonical domain)', () => {
       const redirectSource = '/:path*';
-      const redirectHost = 'www.rygghjalp.se';
-      const redirectDestination = 'https://rygghjalp.se/:path*';
+      const redirectHost = 'www.andreybygg.se';
+      const redirectDestination = 'https://andreybygg.se/:path*';
 
-      expect(redirectHost).toBe('www.rygghjalp.se');
-      expect(redirectDestination).toBe('https://rygghjalp.se/:path*');
+      expect(redirectHost).toBe('www.andreybygg.se');
+      expect(redirectDestination).toBe('https://andreybygg.se/:path*');
       expect(redirectSource).toBe('/:path*');
     });
   });

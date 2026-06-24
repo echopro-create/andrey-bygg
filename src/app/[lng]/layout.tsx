@@ -21,11 +21,11 @@ const outfit = Outfit({
 });
 
 export async function generateStaticParams() {
-  return [{ lng: 'sv' }, { lng: 'en' }, { lng: 'no' }, { lng: 'ru' }, { lng: 'uk' }];
+  return [{ lng: 'sv' }, { lng: 'en' }, { lng: 'ru' }, { lng: 'uk' }];
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-const SITE_NAME = 'RYGGHJÄLP';
+const SITE_NAME = 'Andrey Bygg';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -43,15 +43,14 @@ export async function generateMetadata({
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const titleDefault = 'RYGGHJÄLP | Premium Spa & Massage';
+  const titleDefault = 'Andrey Bygg | Professionell Bygg & Renovering i Sverige';
   const descriptionDefault =
     dict.hero.subtitle ||
-    'Professional massage therapy and premium spa treatments.';
+    'Professionella byggtjänster och renovering i Halland och Skåne.';
 
   const localeMap: Record<string, string> = {
     sv: 'sv_SE',
     en: 'en_US',
-    no: 'nb_NO',
     ru: 'ru_RU',
     uk: 'uk_UA',
   };
@@ -66,19 +65,20 @@ export async function generateMetadata({
     applicationName: SITE_NAME,
     generator: 'Next.js',
     keywords: [
-      'professional massage',
-      'premium spa',
-      'massage therapist',
-      'Swedish massage',
-      'sports massage',
-      'hot stone massage',
-      'rygghjalp massage',
-      'RYGGHJÄLP',
-      'professional massage',
+      'byggfirma',
+      'renovering',
+      'snickare',
+      'takläggning',
+      'köksmontering',
+      'badrumsrenovering',
+      'kakelsättning',
+      'måleri',
+      'utvändiga träarbeten',
+      'Andrey Bygg',
     ],
-    authors: [{ name: 'RYGGHJÄLP' }],
-    creator: 'RYGGHJÄLP',
-    publisher: 'RYGGHJÄLP',
+    authors: [{ name: 'Andrey Bygg' }],
+    creator: 'Andrey Bygg',
+    publisher: 'Andrey Bygg',
     formatDetection: {
       email: false,
       address: false,
@@ -89,7 +89,6 @@ export async function generateMetadata({
       languages: {
         sv: '/sv',
         en: '/en',
-        no: '/no',
         ru: '/ru',
         uk: '/uk',
       },
@@ -106,7 +105,7 @@ export async function generateMetadata({
           url: `${SITE_URL}/images/og-image.webp`,
           width: 1200,
           height: 630,
-          alt: 'RYGGHJÄLP — Premium Spa & Massage',
+          alt: 'Andrey Bygg — Professionell Bygg & Renovering',
         },
       ],
     },
@@ -152,8 +151,8 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
   const orgSchema = {
     '@context': 'https://schema.org',
-    '@type': 'HealthAndBeautyBusiness',
-    name: 'RYGGHJÄLP',
+    '@type': 'ConstructionBusiness',
+    name: 'Andrey Bygg',
     description: dict.hero.subtitle,
     url: `${SITE_URL}/${lng}`,
     logo: `${SITE_URL}/favicon.ico`,
@@ -184,8 +183,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     currenciesAccepted: 'SEK',
     paymentAccepted: 'Cash, Credit Card, Swish',
     sameAs: [
-      'https://www.instagram.com/touroleg/',
-      'https://www.facebook.com/profile.php?id=100028476219743',
+      'https://www.instagram.com/',
     ],
   };
 

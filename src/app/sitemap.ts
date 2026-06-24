@@ -2,16 +2,14 @@ import type { MetadataRoute } from 'next';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
-const locales = ['sv', 'en', 'no', 'ru', 'uk'];
+const locales = ['sv', 'en', 'ru', 'uk'];
 const services = [
-  'classic',
-  'anti-cellulite',
-  'sports',
-  'lymphatic-drainage',
-  'cupping',
-  'hot-stone',
-  'turkish-foam',
-  'natural-massage',
+  'windows-doors',
+  'kitchen-assembly',
+  'bathroom-renovation',
+  'tiling',
+  'painting',
+  'roofing-woodwork',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -13,7 +13,7 @@ describe('sitemap.xml generation', () => {
   });
 
   describe('Homepage entries', () => {
-    it('should have 5 homepage entries (one per locale)', () => {
+    it('should have 4 homepage entries (one per locale)', () => {
       const homepageEntries = entries.filter(
         (e) =>
           !e.url.includes('/services/') &&
@@ -22,7 +22,7 @@ describe('sitemap.xml generation', () => {
           !e.url.includes('/privacy') &&
           e.url.match(/\/[a-z]{2}$/)
       );
-      expect(homepageEntries).toHaveLength(5);
+      expect(homepageEntries).toHaveLength(4);
     });
 
     it('each homepage should have priority 1', () => {
@@ -53,7 +53,7 @@ describe('sitemap.xml generation', () => {
       }
     });
 
-    it('each homepage should have hreflang alternates for all 5 locales', () => {
+    it('each homepage should have hreflang alternates for all 4 locales', () => {
       const homepageEntries = entries.filter(
         (e) =>
           !e.url.includes('/services/') &&
@@ -66,10 +66,9 @@ describe('sitemap.xml generation', () => {
         expect(entry.alternates).toBeDefined();
         expect(entry.alternates!.languages).toBeDefined();
         const langs = entry.alternates!.languages!;
-        expect(Object.keys(langs)).toHaveLength(5);
+        expect(Object.keys(langs)).toHaveLength(4);
         expect(langs.sv).toMatch(/\/sv$/);
         expect(langs.en).toMatch(/\/en$/);
-        expect(langs.no).toMatch(/\/no$/);
         expect(langs.ru).toMatch(/\/ru$/);
         expect(langs.uk).toMatch(/\/uk$/);
       }
@@ -91,9 +90,9 @@ describe('sitemap.xml generation', () => {
   });
 
   describe('Gallery entries', () => {
-    it('should have 5 gallery entries', () => {
+    it('should have 4 gallery entries', () => {
       const galleryEntries = entries.filter((e) => e.url.includes('/gallery'));
-      expect(galleryEntries).toHaveLength(5);
+      expect(galleryEntries).toHaveLength(4);
     });
 
     it('each gallery entry should have priority 0.7', () => {
@@ -114,15 +113,15 @@ describe('sitemap.xml generation', () => {
       const galleryEntries = entries.filter((e) => e.url.includes('/gallery'));
       for (const entry of galleryEntries) {
         expect(entry.alternates!.languages).toBeDefined();
-        expect(Object.keys(entry.alternates!.languages!)).toHaveLength(5);
+        expect(Object.keys(entry.alternates!.languages!)).toHaveLength(4);
       }
     });
   });
 
   describe('Contacts entries', () => {
-    it('should have 5 contacts entries', () => {
+    it('should have 4 contacts entries', () => {
       const contactsEntries = entries.filter((e) => e.url.includes('/contacts'));
-      expect(contactsEntries).toHaveLength(5);
+      expect(contactsEntries).toHaveLength(4);
     });
 
     it('each contacts entry should have priority 0.9', () => {
@@ -141,9 +140,9 @@ describe('sitemap.xml generation', () => {
   });
 
   describe('Privacy entries', () => {
-    it('should have 5 privacy entries', () => {
+    it('should have 4 privacy entries', () => {
       const privacyEntries = entries.filter((e) => e.url.includes('/privacy'));
-      expect(privacyEntries).toHaveLength(5);
+      expect(privacyEntries).toHaveLength(4);
     });
 
     it('each privacy entry should have priority 0.3', () => {
@@ -163,19 +162,17 @@ describe('sitemap.xml generation', () => {
 
   describe('Service entries', () => {
     const expectedServices = [
-      'classic',
-      'anti-cellulite',
-      'sports',
-      'lymphatic-drainage',
-      'cupping',
-      'hot-stone',
-      'turkish-foam',
-      'natural-massage',
+      'windows-doors',
+      'kitchen-assembly',
+      'bathroom-renovation',
+      'tiling',
+      'painting',
+      'roofing-woodwork',
     ];
 
-    it('should have 40 service entries (8 services x 5 locales)', () => {
+    it('should have 24 service entries (6 services x 4 locales)', () => {
       const serviceEntries = entries.filter((e) => e.url.includes('/services/'));
-      expect(serviceEntries).toHaveLength(40);
+      expect(serviceEntries).toHaveLength(24);
     });
 
     it('each service entry should have priority 0.8', () => {
@@ -192,10 +189,10 @@ describe('sitemap.xml generation', () => {
       }
     });
 
-    it('should cover all 8 service slugs in all locales', () => {
+    it('should cover all 6 service slugs in all locales', () => {
       const serviceEntries = entries.filter((e) => e.url.includes('/services/'));
       for (const slug of expectedServices) {
-        for (const lang of ['sv', 'en', 'no', 'ru', 'uk']) {
+        for (const lang of ['sv', 'en', 'ru', 'uk']) {
           const found = serviceEntries.some(
             (e) => e.url === `http://localhost:3000/${lang}/services/${slug}`
           );
@@ -204,18 +201,18 @@ describe('sitemap.xml generation', () => {
       }
     });
 
-    it('each service entry should have hreflang alternates for all 5 locales', () => {
+    it('each service entry should have hreflang alternates for all 4 locales', () => {
       const serviceEntries = entries.filter((e) => e.url.includes('/services/'));
       for (const entry of serviceEntries) {
         expect(entry.alternates).toBeDefined();
-        expect(Object.keys(entry.alternates!.languages!)).toHaveLength(5);
+        expect(Object.keys(entry.alternates!.languages!)).toHaveLength(4);
       }
     });
   });
 
   describe('Total entries count', () => {
-    it('should have exactly 60 entries (4 pages + 8 services) x 5 locales', () => {
-      expect(entries).toHaveLength(60);
+    it('should have exactly 40 entries (4 pages + 6 services) x 4 locales', () => {
+      expect(entries).toHaveLength(40);
     });
   });
 
@@ -228,7 +225,7 @@ describe('sitemap.xml generation', () => {
 
     it('all URLs should include a locale segment', () => {
       for (const entry of entries) {
-        expect(entry.url).toMatch(/\/(sv|en|no|ru|uk)(\/|$)/);
+        expect(entry.url).toMatch(/\/(sv|en|ru|uk)(\/|$)/);
       }
     });
 

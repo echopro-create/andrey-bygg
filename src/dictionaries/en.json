@@ -1,325 +1,261 @@
 {
   "nav": {
-    "about": "About",
+    "about": "About us",
     "services": "Services",
     "gallery": "Gallery",
     "contacts": "Contacts",
-    "book": "Book Session"
+    "book": "Get Quote"
   },
   "hero": {
-    "title": "Exclusive massage for your",
-    "accent": "body & soul",
-    "subtitle": "Professional massage therapy and spa treatments. Find your balance, release tension, and restore your energy in a luxurious spa atmosphere.",
-    "bookBtn": "Book Now",
-    "servicesBtn": "Our Services",
-    "badge": "• PRIVATE MASSAGE",
+    "title": "Professional renovation & construction for your",
+    "accent": "dream home",
+    "subtitle": "High-quality carpentry, bathroom remodeling, tiling, painting, and roofing in Halland and Skåne regions. We bring your ideas to life with precision.",
+    "bookBtn": "Get Quote",
+    "servicesBtn": "Our services",
+    "badge": "• ANDREY BYGG",
     "metrics": {
-      "m1_val": "20+ YEARS",
+      "m1_val": "10+ YEARS",
       "m1_lbl": "Experience",
       "m2_val": "100%",
-      "m2_lbl": "Organic oils",
-      "m3_val": "PREMIUM",
-      "m3_lbl": "Spa atmosphere",
-      "m4_val": "TAILORED",
-      "m4_lbl": "Treatments"
+      "m2_lbl": "Happy clients",
+      "m3_val": "WARRANTY",
+      "m3_lbl": "On all works",
+      "m4_val": "FAIR",
+      "m4_lbl": "Pricing"
     },
-    "languagesLabel": "LANGUAGES"
+    "languagesLabel": "LANGUAGE"
   },
   "about": {
-    "title": "The art of healing",
-    "accent": "through touch",
-    "quote": "“My goal is not just to relax muscles, but to restore the inner balance and harmony of your body.”",
-    "text1": "Hello, I am Oleh. I am a certified massage therapist with over 20 years of professional experience. My main goal is to help you fully restore your mental and physical health, release chronic pain, and alleviate stress.",
-    "text2": "Over the years of practice, I have helped hundreds of clients relieve severe issues related to back pain, leg strain, and sciatic nerve issues (sciatica). My professional path includes working in leading medical and rehabilitation clinics in Ukraine and Norway, as well as the prestigious Wine & Spa Complex Starosel in Bulgaria.",
-    "certTitle": "Licensed Therapist",
-    "certSubtitle": "Certified in Ukraine & internationally",
-    "text3": "Every session is tailored to your unique needs — from deep therapeutic treatment of problem areas to gentle techniques for stress relief and restoration of energy."
+    "title": "Quality & reliability",
+    "accent": "in every detail",
+    "quote": "“Our goal is to build practical, durable, and beautiful spaces that you and your family will enjoy for many years to come.”",
+    "text1": "Hi, I am Andrey. I am an experienced carpenter and builder. Over the last 10 years, I have been working on home renovation, assembly, and restoration in Sweden. My focus is on absolute precision, material knowledge, and delivering high-quality results.",
+    "text2": "I cover the Halland and Skåne regions, based in Knäred (Laholm municipality). We work closely with our clients in Laholm, Halmstad, Båstad, Ängelholm, and Markaryd, creating tailored solutions for their homes and budget.",
+    "certTitle": "Experienced craftsman",
+    "certSubtitle": "Trust and safety focused",
+    "text3": "We perform the full range of construction and renovation works – from cost estimation and planning to turnkey projects of any complexity. We combine modern technologies and innovative methods with Scandinavian simplicity and a personalized approach to each project."
   },
   "advantages": {
     "title": "Why choose",
-    "accent": "RYGGHJÄLP",
-    "expTitle": "20+ Years Experience",
-    "expDesc": "Deep understanding of anatomy and physiology ensures safe, effective, and target-oriented therapy.",
-    "indTitle": "Tailored Approach",
-    "indDesc": "Every session is designed around your specific physical needs, preferences, and focus areas.",
-    "atmTitle": "Premium Atmosphere",
-    "atmDesc": "A serene, private, and premium spa room equipped for your absolute comfort and relaxation."
+    "accent": "Andrey Bygg",
+    "expTitle": "10+ years experience",
+    "expDesc": "Deep knowledge of Swedish building codes and materials ensures long-lasting results.",
+    "indTitle": "Tailored solutions",
+    "indDesc": "We plan every single project around your specific ideas, schedule, and budget.",
+    "atmTitle": "Cleanliness & order",
+    "atmDesc": "We respect your home. We maintain a tidy workspace and clean up thoroughly after our work."
   },
   "services": {
-    "title": "Our Premium",
-    "accent": "Massage Therapies",
-    "priceFrom": "From",
+    "title": "Our",
+    "accent": "building services",
+    "priceFrom": "According to",
     "duration": "Duration",
     "readMore": "Read more",
     "back": "Back to services",
-    "bookService": "Book this treatment",
+    "bookService": "Get a quote",
+    "benefitsTitle": "What you get with us",
     "items": {
-      "classic": {
-        "title": "Classic Massage",
-        "desc": "A traditional Swedish massage designed for deep relaxation, muscle spasm relief, and comprehensive energy recovery.",
-        "price": "850 SEK",
-        "duration": "60 min / 90 min",
-        "benefit": "Effectively releases muscle tension, restores fiber elasticity, normalizes sleep, and reduces daily stress levels.",
-        "seo_title": "Classic Swedish Massage | Deep Muscle Relaxation",
-        "seo_desc": "Traditional Swedish massage for deep relaxation and blood circulation improvement. Professional care by massage therapist Oleh.",
-        "indications_title": "Indications for Treatment",
+      "windows-doors": {
+        "title": "Window & door installation",
+        "desc": "Professional installation and replacement of energy-efficient windows and entry doors for draft protection.",
+        "price": "quote",
+        "duration": "1-3 days",
+        "benefit": "Perfectly sealed windows and doors that prevent drafts, lower your heating bills, and provide great soundproofing.",
+        "seo_title": "Window & Door Installation | Laholm & Halmstad",
+        "seo_desc": "Professional replacement and installation of windows and doors in Laholm, Halmstad, and Båstad. Secure fit and neat finish. Get a free quote.",
+        "indications_title": "When is this service needed?",
         "indications_list": [
-          "Muscle tension and stiffness",
-          "Chronic fatigue and stress",
-          "Sleep disorders and insomnia",
-          "Sedentary lifestyle"
+          "Drafty, cold, or hard-to-close windows",
+          "High heating bills due to old single/double glass",
+          "Worn out exterior doors that need replacement",
+          "Facade renovations or new extensions"
         ],
-        "process_title": "What to Expect during the Session",
-        "process_text": "The session begins with a gentle muscle warm-up using heated organic oil. The therapist uses rubbing and kneading techniques to deeply work the neck area, back, and lower back. Trigger point therapy helps release persistent knots and restore joint flexibility. The session ends with relaxing strokes to stabilize the nervous system and induce deep relaxation.",
-        "contraindications_title": "Contraindications",
-        "contraindications_text": "Acute inflammatory processes, fever, infectious skin conditions, severe varicose veins."
+        "process_title": "Workflow stages",
+        "process_text": "We start with precise measurements on-site. Next, we carefully remove the old frames to minimize wall damage. We level the new frame with millimeter precision, secure it, insulate with weatherproofing materials, and mount neat interior trim and exterior sills.",
+        "contraindications_title": "Important notes",
+        "contraindications_text": "Outdoor installation is not recommended in heavy rain, strong winds, or temperatures below -10°C due to expanding foam properties."
       },
-      "anti-cellulite": {
-        "title": "Anti-Cellulite Massage",
-        "desc": "An intensive sculpting technique aimed at combating local fat deposits and improving skin elasticity.",
-        "price": "950 SEK",
-        "duration": "60 min",
-        "benefit": "Activates microcirculation in tissues, reduces swelling, promotes lymphatic drainage, and sculpts harmonious body contours.",
-        "seo_title": "Anti-Cellulite Massage | Body Sculpting & Firming",
-        "seo_desc": "Professional anti-cellulite massage. Improve skin elasticity, boost lymphatic flow, and sculpt body contours.",
-        "indications_title": "Indications for Treatment",
+      "kitchen-assembly": {
+        "title": "Kitchen assembly & installation",
+        "desc": "Complete assembly of kitchen cabinets, countertops, sinks, and integrated appliances.",
+        "price": "quote",
+        "duration": "2-5 days",
+        "benefit": "A durable and perfectly aligned kitchen (e.g. IKEA). All cabinets are safely anchored to the wall, doors are adjusted, and countertops fit perfectly.",
+        "seo_title": "Kitchen Assembly in Halmstad, Laholm & Båstad",
+        "seo_desc": "Professional IKEA kitchen assembly and installation in Halmstad, Båstad, and Laholm. Seamless countertop cuts and cabinet alignment. Call us.",
+        "indications_title": "When is this service needed?",
         "indications_list": [
-          "Any stage of cellulite",
-          "Loss of skin tone and elasticity",
-          "Localized fat deposits",
-          "Fluid retention in tissues"
+          "Buying a new kitchen (IKEA, Marbodal, etc.)",
+          "Complete layout remodeling of your kitchen",
+          "Replacing old kitchen countertops and sinks",
+          "Integrating new kitchen appliances"
         ],
-        "process_title": "What to Expect during the Session",
-        "process_text": "The treatment is performed using a special warming oil to accelerate lipolysis. The therapist applies energetic kneading, rolling, and tapping techniques, focusing on the thighs, buttocks, and abdomen. This stimulates lymph flow and aids in toxin elimination. The session concludes with gentle drainage strokes to soothe the blood vessels.",
-        "contraindications_title": "Contraindications",
-        "contraindications_text": "Pregnancy, fragile capillaries, severe varicose veins, skin inflammation in the treated areas."
+        "process_title": "Workflow stages",
+        "process_text": "We check the walls and floor levels and prepare anchors. We assemble and install base and wall cabinets. We cut and install the countertop (including sink and hob cutouts), align doors, adjust drawers, and integrate appliances and lighting.",
+        "contraindications_title": "Important notes",
+        "contraindications_text": "Water and electrical connections must be prepared or approved by certified VVS and electrical partners."
       },
-      "sports": {
-        "title": "Sports Massage",
-        "desc": "An intensive deep-tissue massage designed to prepare muscles for training, accelerate recovery, and prevent injuries.",
-        "price": "950 SEK",
-        "duration": "60 min / 90 min",
-        "benefit": "Effectively relieves muscle hypertonus, eliminates trigger points, speeds up lactic acid clearance, and increases flexibility.",
-        "seo_title": "Sports Massage | Post-Workout Recovery",
-        "seo_desc": "Deep sports massage for athletes and active individuals. Relieve muscle tension, prepare for exercise, and recover faster.",
-        "indications_title": "Indications for Treatment",
+      "bathroom-renovation": {
+        "title": "Bathroom renovation",
+        "desc": "Renovation and installation of bathroom furniture, shower cabins, toilets, and wet room fuktsäkring.",
+        "price": "quote",
+        "duration": "5-14 days",
+        "benefit": "A modern, hygienic, and fuktsäkert bathroom. We ensure correct floor slope towards the drain and sturdy installation of all bathroom furniture.",
+        "seo_title": "Bathroom Renovation | Båstad, Halmstad & Laholm",
+        "seo_desc": "Bathroom remodeling and wet room preparation in Båstad, Halmstad, and Laholm. Professional tile and vanity installation according to regulations.",
+        "indications_title": "When is this service needed?",
         "indications_list": [
-          "Intense physical activity",
-          "Muscle hypertonia",
-          "Pre-competition preparation",
-          "Prevention of injuries and strains"
+          "Worn-out wet room surfaces, mold, or water leaks",
+          "Updating bathroom vanity, toilet, or shower screen",
+          "Installing new floor heating in the bathroom",
+          "Remodeling laundry room or guest toilet"
         ],
-        "process_title": "What to Expect during the Session",
-        "process_text": "The session starts with vigorous muscle warming using therapeutic sports balms. The therapist performs deep-tissue work using firm pressure and friction. Elements of passive joint stretching are integrated to restore ligament elasticity. The treatment concludes with light lymphatic drainage to reduce soreness and restore energy.",
-        "contraindications_title": "Contraindications",
-        "contraindications_text": "Fresh muscle or ligament injuries, fractures, acute joint inflammation, skin cuts or open wounds."
+        "process_title": "Workflow stages",
+        "process_text": "We demolish old surfaces if needed and level the floor for correct water drainage. We apply approved waterproofing membrane (tätskikt), install tiles and grout. Lastly, we mount the toilet, sink, faucets, shower glass, and cabinets.",
+        "contraindications_title": "Important notes",
+        "contraindications_text": "Wet room works require strict drying times for plaster and membrane. Water must be shut off during short periods."
       },
-      "lymphatic-drainage": {
-        "title": "Lymphatic Drainage",
-        "desc": "A gentle manual technique aimed at stimulating lymphatic circulation, detoxifying the body, and reducing fluid retention.",
-        "price": "900 SEK",
-        "duration": "75 min",
-        "benefit": "Effectively reduces swelling in the face and limbs, strengthens the immune system, and restores body lightness.",
-        "seo_title": "Lymphatic Drainage Massage | Detox & De-puff",
-        "seo_desc": "Gentle lymphatic drainage massage to eliminate toxins, boost immunity, and reduce swelling. Professional therapy.",
-        "indications_title": "Indications for Treatment",
+      "tiling": {
+        "title": "Wall & floor tiling",
+        "desc": "Professional laying of ceramic, porcelain, or mosaic tiles in kitchens, bathrooms, hallways, and utility rooms.",
+        "price": "quote",
+        "duration": "2-5 days",
+        "benefit": "Completely flat tile surfaces with symmetrical grout lines. Extremely durable and easy-to-clean walls and floors.",
+        "seo_title": "Professional Tiler in Ängelholm, Båstad & Laholm",
+        "seo_desc": "Looking for a tiler? We lay floor and wall tiles in Ängelholm, Båstad, Halmstad, and Laholm. Quality kitchen backsplashes and bathroom tiling.",
+        "indications_title": "When is this service needed?",
         "indications_list": [
-          "Facial or body swelling",
-          "Lymph stagnation and heavy legs",
-          "Weakened immune system",
-          "Weight loss or detox programs"
+          "New kitchen backsplash tiling",
+          "Durable floor tiles in utility rooms, halls, or kitchens",
+          "Tiling bathroom walls and floor",
+          "Installing frost-resistant tiles in conservatories"
         ],
-        "process_title": "What to Expect during the Session",
-        "process_text": "The treatment is performed using extremely soft, slow, and rhythmic strokes along the natural pathways of the lymphatic system. The therapist begins by gently opening key lymph nodes and then guides the fluid toward these nodes with wave-like motions. The process is completely painless, deeply relaxing, and promotes fast detox.",
-        "contraindications_title": "Contraindications",
-        "contraindications_text": "Oncological diseases, thrombophlebitis, thyroid disorders, acute infections."
+        "process_title": "Workflow stages",
+        "process_text": "We prime the surface for maximum adhesion. We measure the area to get symmetrical cuts on borders. We apply adhesive, lay the tiles using leveling systems to prevent fogsprång, grout the joints, and apply silicone sealant in corners.",
+        "contraindications_title": "Important notes",
+        "contraindications_text": "Tiled floors must not be walked on for at least 24 hours after installation while the adhesive cures."
       },
-      "cupping": {
-        "title": "Cupping Massage",
-        "desc": "A therapeutic technique combining classic massage and vacuum cupping for deep-muscle tension release.",
-        "price": "800 SEK",
-        "duration": "60 min",
-        "benefit": "Relieves chronic back and neck pain, releases fascia, improves blood circulation, and resolves muscular stiffness.",
-        "seo_title": "Vacuum Cupping Massage | Deep Tissue Therapy",
-        "seo_desc": "Deep vacuum cupping massage to boost microcirculation, relieve chronic back pain, and release muscle spasms.",
-        "indications_title": "Indications for Treatment",
+      "painting": {
+        "title": "Painting & decorating",
+        "desc": "Plastering, sanding, interior wall and ceiling painting, wood trim coating, and exterior facade painting.",
+        "price": "quote",
+        "duration": "2-7 days",
+        "benefit": "Smooth walls without bubbles or cracks, sharp edges, and uniform paint color. We use durable, eco-friendly interior paints.",
+        "seo_title": "House Painter in Markaryd, Halmstad & Laholm | Painting",
+        "seo_desc": "Professional painting services, plastering, sanding, and facade painting in Markaryd, Halmstad, and Laholm. High-quality materials.",
+        "indications_title": "When is this service needed?",
         "indications_list": [
-          "Chronic back and neck pain",
-          "Pronounced trigger points",
-          "Muscle congestion",
-          "Weakened immune system"
+          "Dirty, scratched, or faded walls and ceilings",
+          "New plasterboard walls requiring tape jointing and painting",
+          "Protecting wood siding facade of your house",
+          "Changing interior wall colors or wallpapering"
         ],
-        "process_title": "What to Expect during the Session",
-        "process_text": "Warm natural oil is applied to the skin for smooth gliding of the cups. The therapist warms the muscles manually, then places vacuum cups and slides them along the muscle lines of the back. The created vacuum targets deep tissues, providing a powerful rush of oxygenated blood to tight areas.",
-        "contraindications_title": "Contraindications",
-        "contraindications_text": "Blood diseases, fragile blood vessels, moles or birthmarks in the treatment zone, acute inflammation."
+        "process_title": "Workflow stages",
+        "process_text": "We protect floors, windows, and furniture. We plaster cracks and drywall seams, sand everything smooth, and apply primer. Next, we paint two coats of high-quality paint. Lastly, we remove masking tape and clean up.",
+        "contraindications_title": "Important notes",
+        "contraindications_text": "Interior painting requires good ventilation and temperatures above +10°C. Facade painting requires dry weather without direct harsh sunlight."
       },
-      "hot-stone": {
-        "title": "Hot Stone Massage",
-        "desc": "An exclusive spa treatment using heated volcanic basalt stones to provide deep warming and relaxation.",
-        "price": "1100 SEK",
-        "duration": "90 min",
-        "benefit": "Completely relieves mental tension, warms deep muscle layers, improves sleep, and balances the nervous system.",
-        "seo_title": "Hot Stone Massage | Premium Stone Therapy",
-        "seo_desc": "Luxurious hot basalt stone massage for deep muscle heating, stress relief, and energy restoration.",
-        "indications_title": "Indications for Treatment",
+      "roofing-woodwork": {
+        "title": "Roofing & exterior woodwork",
+        "desc": "Roof repair, shingle replacement, and building wooden decks, terraces, fences, and facades.",
+        "price": "quote",
+        "duration": "3-10 days",
+        "benefit": "A completely weather-tight roof protecting your home, and beautiful outdoor wooden decks built using premium pressure-treated lumber.",
+        "seo_title": "Roofing & Altan Construction | Laholm & Halmstad",
+        "seo_desc": "We build wooden terraces, fences, and replace roofs in Laholm, Halmstad, Ängelholm. Professional carpentry services with warranty.",
+        "indications_title": "When is this service needed?",
         "indications_list": [
-          "Deep stress and anxiety",
-          "Chronic muscle tension",
-          "Cold extremities",
-          "Sleep issues"
+          "Old or leaking roof shingles and underlayment",
+          "Desire to build a new wooden deck or terrace",
+          "Building garden fences, gates, or wind barriers",
+          "Replacing worn-out fascia boards or wood siding"
         ],
-        "process_title": "What to Expect during the Session",
-        "process_text": "The session begins with a manual massage using aromatic oil. Heated basalt stones are then placed on key energy points of the back to release deep warmth. The therapist then massaged with warm stones and hands. This thermal therapy melts spasms, relieves fatigue, and induces total serenity.",
-        "contraindications_title": "Contraindications",
-        "contraindications_text": "Heat sensitivity, high blood pressure, diabetes, skin rashes."
-      },
-      "turkish-foam": {
-        "title": "Turkish Foam Massage",
-        "desc": "A spa ritual in the hammam, combining a silk Kese glove exfoliation and a massage in a cloud of organic soap foam.",
-        "price": "1200 SEK",
-        "duration": "90 min",
-        "benefit": "Gently removes dead skin cells, cleanses pores, eliminates toxins, and gives a sensation of absolute cleanliness.",
-        "seo_title": "Turkish Foam Massage | Luxurious Spa Ritual",
-        "seo_desc": "Indulgent foam massage on a heated stone bed. Gentle scrub with Kese glove and relaxing massage with organic olive oil soap foam.",
-        "indications_title": "Indications for Treatment",
-        "indications_list": [
-          "Need for deep skin exfoliation",
-          "General fatigue and low energy",
-          "Pre-tanning skin prep",
-          "Premium spa relaxation"
-        ],
-        "process_title": "What to Expect during the Session",
-        "process_text": "Performed in a hammam on a heated table. First, the therapist scrubs the body with a Kese glove to remove dead skin cells. The body is then enveloped in a dense cloud of olive soap foam and relaxed with massage movements. The ritual ends with a warm rinse, leaving the skin glowing and smooth.",
-        "contraindications_title": "Contraindications",
-        "contraindications_text": "Allergy to soap ingredients, open skin wounds, cardiovascular diseases."
-      },
-      "natural-massage": {
-        "title": "Eco-Organic Massage",
-        "desc": "A delicate rejuvenating treatment for the face and body using 100% organic cold-pressed botanical oils.",
-        "price": "900 SEK",
-        "duration": "60 min / 90 min",
-        "benefit": "Relieves facial muscle tension, improves skin tone, reduces puffiness, and deeply nourishes the skin.",
-        "seo_title": "Eco-Organic Massage | Natural Body Care",
-        "seo_desc": "Gentle restorative eco-massage using 100% natural, cold-pressed organic oils and aromatherapy.",
-        "indications_title": "Indications for Treatment",
-        "indications_list": [
-          "Dry and dehydrated skin",
-          "Nervous exhaustion and fatigue",
-          "Sensitive skin conditions",
-          "Preference for organic care"
-        ],
-        "process_title": "What to Expect during the Session",
-        "process_text": "The session combines gentle facial, neck, and décolleté massage techniques with aromatherapy. The therapist uses natural, cold-pressed oils without synthetic additives, enhancing microcirculation and sculpting facial contours. The treatment calms the mind and restores natural radiance.",
-        "contraindications_title": "Contraindications",
-        "contraindications_text": "Allergies to essential oils, active allergic skin reactions, pregnancy."
+        "process_title": "Workflow stages",
+        "process_text": "For roofs, we inspect sheathing, lay underlayment membrane, mount batten structures, and lay shingles or sheet metal. For terraces, we prepare concrete foundations, build a heavy-duty joist frame, screw down decking boards, and build railings.",
+        "contraindications_title": "Important notes",
+        "contraindications_text": "Roofing and exterior woodworks are heavily dependent on weather conditions and are best done during dry seasons."
       }
-    },
-    "cost": "Cost",
-    "benefitsTitle": "Therapeutic Benefits"
+    }
   },
   "reviews": {
     "title": "What our",
     "accent": "clients say",
-    "items": [
+    "list": [
       {
-        "name": "Johan Andersson",
-        "text": "Oleh is an incredible therapist. After the sports massage, I felt like a new person. My shoulders have never felt this mobile.",
-        "rating": 5
+        "name": "Johan Persson",
+        "role": "Laholm",
+        "text": "Andrey Bygg installed new windows in our house and built a fantastic deck in the backyard. The work was done quickly, cleanly, and with incredible precision. Highly recommended!"
       },
       {
-        "name": "Sofia Lindqvist",
-        "text": "The hot stone massage was pure magic. The premium and serene atmosphere made the experience absolutely unforgettable. Highly recommended!",
-        "rating": 5
+        "name": "Maria Andersson",
+        "role": "Halmstad",
+        "text": "We hired Andrey to assemble our new IKEA kitchen. Everything was put together perfectly and fitted against our uneven walls. Smooth communication and fair price."
       },
       {
-        "name": "Erik Bergqvist",
-        "text": "Professional service and outstanding skills. The lymphatic drainage massage helped me get rid of bloating and fatigue.",
-        "rating": 5
+        "name": "Lars Lindqvist",
+        "role": "Båstad",
+        "text": "Excellent tiling work in our bathroom. Andrey is very detail-oriented, keeps the workplace clean, and is always on time. I recommend him for any renovation projects."
       }
     ]
   },
   "contacts": {
-    "title": "Contact Us",
-    "accent": "book a session",
-    "subtitle": "Book your session online or reach out via phone. Our studio is equipped with everything needed for your comfort.",
-    "address": "Home visits & private studio sessions",
-    "phone": "+46 737 584 372",
-    "email": "info@rygghjalp.se",
-    "hours": "Mon - Sun: 09:00 - 21:00",
-    "formTitle": "Send a Request",
-    "formName": "Your Name",
-    "formPhone": "Phone Number",
-    "formService": "Select Service",
-    "formMessage": "Your Message",
-    "formSubmit": "Submit Request",
-    "formSuccess": "Thank you! Your request has been sent. We will contact you shortly to confirm your booking.",
-    "formError": "An error occurred. Please verify that all fields are filled in correctly.",
-    "selectPlaceholder": "Choose a treatment...",
-    "validation": {
-      "nameRequired": "Name is required",
-      "phoneRequired": "Phone number is required",
-      "phoneInvalid": "Please enter a valid phone number",
-      "serviceRequired": "Please select a massage treatment",
-      "dateRequired": "Please select a date for the session",
-      "timeRequired": "Please select a time for the session"
-    },
-    "addressLabel": "Address",
-    "phoneLabel": "Calls",
-    "messengersLabel": "Messengers",
-    "emailLabel": "Email",
-    "socialsLabel": "Social media",
-    "hoursLabel": "Hours",
-    "copy": "Copy",
-    "copied": "Copied!",
-    "copyAddress": "Copy address to clipboard",
-    "directions": "Message Us →",
+    "title": "Contact",
+    "accent": "us",
+    "subtitle": "Get in touch for a free consultation and project quote.",
+    "phone": "+46 072 268 62 82",
+    "phone_label": "Main number (Sweden):",
+    "social_phone": "+380 93 575 84 95",
+    "social_phone_label": "Viber / WhatsApp / Telegram:",
+    "email": "info@andreybygg.se",
+    "email_label": "Email:",
+    "hours": "Mon-Sun: 09:00 - 21:00",
+    "formTitle": "Send a request",
     "namePlaceholder": "Your name",
-    "messagePlaceholder": "Your preferred date and time, or any additional requests...",
-    "formDate": "Preferred date",
-    "formTime": "Preferred time",
-    "street": "Mobile Spa Service",
-    "city": "Sweden & Norway",
-    "mapLink": "",
-    "seo_title": "Contact us and book your massage session online",
-    "seo_desc": "Get in touch with RYGGHJÄLP to book your massage. We offer professional treatments in a private studio or through home visits."
+    "emailPlaceholder": "Your email",
+    "phonePlaceholder": "Your phone number",
+    "servicePlaceholder": "Select service",
+    "messagePlaceholder": "Describe your project (dimensions, materials, desired start date)...",
+    "submitBtn": "Send Message",
+    "successMsg": "Thank you! Your message has been sent. We will get back to you as soon as possible.",
+    "errorMsg": "An error occurred. Please try sending the message again.",
+    "regions_title": "Work Area",
+    "regions_desc": "We are based in Knäred and perform construction and renovation work in Laholm, Halmstad, Båstad, Ängelholm, Markaryd, and surrounding areas in Halland and Skåne.",
+    "seo_title": "Contact Andrey Bygg | Renovation in Laholm & Halmstad",
+    "seo_desc": "Get in touch with Andrey Bygg for kitchen assembly, window replacement, tiling, and painting in Laholm, Halmstad. Phone: +460722686282. Free quote."
   },
-  "gallery": {
-    "studio": "Studio",
-    "subtitle": "Take a look inside our premium private massage studio. A sanctuary of peace, equipped for your absolute comfort.",
-    "loadMore": "Show More",
-    "seo_title": "Photo gallery of our massage studio and treatments",
-    "seo_desc": "Explore photos of our premium private spa studio and professional massage treatments. See the relaxing atmosphere at RYGGHJÄLP."
-  },
-  "breadcrumbs": {
-    "home": "Home",
-    "services": "Services",
-    "gallery": "Gallery",
-    "contacts": "Contacts"
-  },
-  "relatedServices": "You may also like",
-  "skipToContent": "Skip to content",
-  "allServices": "All services",
-  "notFound": {
-    "title": "Page not found",
-    "description": "The page you are looking for does not exist or has been moved. Please check the URL or return to the homepage.",
-    "backHome": "Back to Home"
+  "footer": {
+    "desc": "Professional building and renovation services focusing on quality, durability, and neat finishing. Helping you build your dream home.",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "quickLinks": "Quick Links"
   },
   "privacy": {
     "title": "Privacy Policy",
-    "subtitle": "Processing of personal data",
-    "intro": "We care about your privacy. This Privacy Policy describes how we collect, use, and protect the information you provide when booking a massage session.",
-    "section1_title": "1. What data we collect",
-    "section1_text": "When filling out the booking form, we collect your name, phone number, selected treatment, and any additional requests left in the message.",
-    "section2_title": "2. How we use your data",
-    "section2_text": "This data is used solely to confirm your appointment, contact you, and organize the session. We do not share your data with third parties and do not use it for marketing mailings.",
-    "section3_title": "3. GDPR Compliance (EU)",
-    "section3_text": "Our studio is located in Ukraine, and we fully comply with the General Data Protection Regulation (GDPR). You have the right to request access to, correction of, or deletion of your data at any time.",
-    "section4_title": "4. Contact Us",
-    "section4_text": "For any questions regarding personal data processing or to request data deletion, please contact us by email: info@rygghjalp.se.",
+    "subtitle": "Last updated: June 24, 2026",
     "backToHome": "Back to Home",
-    "seo_title": "Privacy policy and personal data processing",
-    "seo_desc": "Learn how RYGGHJÄLP protects and processes your personal data when booking our massage therapy services in compliance with GDPR."
+    "intro": "Andrey Bygg respects your privacy. This Privacy Policy explains how we collect, use, and protect your personal data when you visit our website or submit an inquiry through our forms.",
+    "section1_title": "1. Data we collect",
+    "section1_text": "When you submit our contact or quote form, we collect the details you enter: name, email address, phone number, service of interest, and project description.",
+    "section2_title": "2. How we use your data",
+    "section2_text": "We use your details exclusively to answer your request, calculate estimates, prepare quotes, and contact you regarding your construction project.",
+    "section3_title": "3. Sharing information",
+    "section3_text": "We do not sell, trade, or transfer your personal data to outside parties. All data is kept strictly confidential within Andrey Bygg.",
+    "section4_title": "4. Data protection",
+    "section4_text": "We implement appropriate security measures to protect your personal data from unauthorized access or alteration. Our website uses SSL encryption for secure data transfer.",
+    "seo_title": "Privacy Policy — Andrey Bygg",
+    "seo_desc": "Privacy Policy for Andrey Bygg. We protect your personal data and handle it according to Swedish legislation."
   },
-  "privacyLink": "Privacy Policy"
+  "gallery": {
+    "studio": "projects",
+    "subtitle": "Take a look at our completed construction, renovation, and carpentry projects. We guarantee high-quality craftsmanship in every detail.",
+    "loadMore": "Show more",
+    "seo_title": "Gallery of Renovation & Construction Projects | Andrey Bygg",
+    "seo_desc": "Browse photos of kitchen assembly, bathroom remodeling, tiling, and painting projects completed by Andrey Bygg in Laholm and Halmstad."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved. Please check the URL or go back to home.",
+    "backHome": "Back to Home"
+  },
+  "skipToContent": "Skip to content"
 }

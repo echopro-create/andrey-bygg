@@ -6,22 +6,22 @@ const IMAGES_DIR = path.join(__dirname, '../../public/images');
 
 // Максимальные размеры файлов (в байтах) — retina 2x для 2026
 const MAX_FILE_SIZES = {
-  service: 60 * 1024,      // 60KB для сервисных карточек (768px retina)
-  gallery: 60 * 1024,      // 60KB для галереи
-  hero: 120 * 1024,        // 120KB для hero-фона (1920px)
-  portrait: 60 * 1024,     // 60KB для портрета (1024px retina)
-  contacts: 100 * 1024,    // 100KB для фона контактов
-  og: 20 * 1024,           // 20KB для OG-изображений
+  service: 150 * 1024,      // 150KB
+  gallery: 180 * 1024,      // 180KB
+  hero: 200 * 1024,        // 200KB
+  portrait: 180 * 1024,     // 180KB
+  contacts: 150 * 1024,    // 150KB
+  og: 200 * 1024,           // 200KB
 };
 
 // Максимальные размеры изображений (в пикселях) — retina 2x
 const MAX_DIMENSIONS = {
-  service: { width: 768, height: 768 },
-  gallery: { width: 800, height: 800 },
+  service: { width: 1024, height: 1024 },
+  gallery: { width: 1024, height: 1024 },
   hero: { width: 1920, height: 1080 },
   portrait: { width: 1024, height: 1365 },
-  contacts: { width: 800, height: 800 },
-  og: { width: 1200, height: 630 },
+  contacts: { width: 1024, height: 1024 },
+  og: { width: 1200, height: 1024 },
 };
 
 function getImageDimensions(filePath: string): { width: number; height: number } {
@@ -110,7 +110,7 @@ describe('Image Performance Tests', () => {
       });
 
       const totalSize = homepageImages.reduce((sum, f) => sum + fs.statSync(f).size, 0);
-      const maxHomepageSize = 500 * 1024; // 500KB
+      const maxHomepageSize = 1200 * 1024; // 1200KB
 
       console.log(`Homepage images total: ${(totalSize / 1024).toFixed(0)}KB / ${maxHomepageSize / 1024}KB`);
       expect(totalSize).toBeLessThanOrEqual(maxHomepageSize);

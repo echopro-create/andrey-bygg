@@ -24,7 +24,6 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
       languages: {
         sv: '/sv/contacts',
         en: '/en/contacts',
-        no: '/no/contacts',
         ru: '/ru/contacts',
         uk: '/uk/contacts',
       },
@@ -33,15 +32,15 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
       title,
       description,
       url: `${SITE_URL}/${lng}/contacts`,
-      siteName: 'RYGGHJÄLP',
-      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
+      siteName: 'Andrey Bygg',
+      locale: lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
         {
           url: `${SITE_URL}/images/og-image.webp`,
           width: 1200,
           height: 630,
-          alt: 'RYGGHJÄLP — Premium Spa & Massage',
+          alt: 'Andrey Bygg — Professionella byggtjänster i Sverige',
         },
       ],
     },
@@ -61,9 +60,9 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
 
   const businessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'HealthAndBeautyBusiness',
-    name: 'RYGGHJÄLP',
-    description: dict.contacts?.subtitle || 'Professional massage therapy and premium spa treatments.',
+    '@type': 'ConstructionBusiness',
+    name: 'Andrey Bygg',
+    description: dict.contacts?.subtitle || 'Professionella byggtjänster i Sverige.',
     url: `${SITE_URL}/${lng}/contacts`,
     telephone: dict.contacts.phone,
     email: dict.contacts.email,
@@ -91,8 +90,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
     currenciesAccepted: 'SEK',
     paymentAccepted: 'Cash, Credit Card, Swish',
     sameAs: [
-      'https://www.instagram.com/touroleg/',
-      'https://www.facebook.com/profile.php?id=100028476219743',
+      'https://www.instagram.com/',
     ],
   };
 

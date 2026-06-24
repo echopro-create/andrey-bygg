@@ -1,325 +1,261 @@
 {
   "nav": {
-    "about": "Om mig",
+    "about": "Om oss",
     "services": "Tjänster",
     "gallery": "Galleri",
     "contacts": "Kontakter",
-    "book": "Boka tid"
+    "book": "Få offert"
   },
   "hero": {
-    "title": "Exklusiv massage för din",
-    "accent": "kropp & själ",
-    "subtitle": "Professionell massage och avslappning. Hitta din balans, lindra spänningar och återuppbygg din energi i en lyxig spa-atmosfär.",
-    "bookBtn": "Boka tid",
+    "title": "Professionella byggtjänster för ditt",
+    "accent": "drömhem",
+    "subtitle": "Högkvalitativ renovering, snickeri och fastighetsskötsel i Halland och Skåne län. Vi förverkligar dina idéer med svensk kvalitet och precision.",
+    "bookBtn": "Få offert",
     "servicesBtn": "Våra tjänster",
-    "badge": "• PRIVAT MASSAGE",
+    "badge": "• ANDREY BYGG",
     "metrics": {
-      "m1_val": "20+ ÅR",
+      "m1_val": "10+ ÅR",
       "m1_lbl": "Erfarenhet",
       "m2_val": "100%",
-      "m2_lbl": "Ekologisk olja",
-      "m3_val": "PREMIUM",
-      "m3_lbl": "Spa atmosfär",
-      "m4_val": "ANPASSAD",
-      "m4_lbl": "Behandling"
+      "m2_lbl": "Nöjda kunder",
+      "m3_val": "GARANTI",
+      "m3_lbl": "På allt arbete",
+      "m4_val": "FAIR",
+      "m4_lbl": "Prissättning"
     },
     "languagesLabel": "SPRÅK"
   },
   "about": {
-    "title": "Konsten att läka",
-    "accent": "genom beröring",
-    "quote": "”Mitt mål är inte bara att slappna av musklerna, utan att återställa kroppens inre balans och harmoni.”",
-    "text1": "Hej, jag heter Oleh. Jag är en certifierad massageterapeut med över 20 års erfarenhet av professionell massage. Mitt huvudsakliga mål är att hjälpa dig att helt återställa din mentala och fysiska hälsa, bli av med kronisk smärta och lindra stress.",
-    "text2": "Under mina år av praktik har jag hjälpt hundratals klienter att lindra svåra problem relaterade till rygg, ben och ischiasnerver (ischias). Min yrkesbana inkluderar arbete på ledande medicinska och rehabiliteringskliniker i Ukraina och Norge, samt på det prestigefyllda spa-hotellet Starosel i Bulgarien.",
-    "certTitle": "Diplomerad terapeut",
-    "certSubtitle": "Certifierad i Ukraina & internationellt",
-    "text3": "Varje session anpassas efter dina unika behov – från djupgående terapeutisk behandling av problemområden till mjuka tekniker för stresslindring och energiåterställning."
+    "title": "Kvalitet & pålitlighet",
+    "accent": "i varje detalj",
+    "quote": "”Vårt mål är att skapa praktiska, hållbara och vackra utrymmen som du och din familj kommer att trivas i under många år framöver.”",
+    "text1": "Hej, jag heter Andrey. Jag är en erfaren snickare och byggnadsarbetare. Under de senaste 10 åren har jag arbetat med renovering, montering och restaurering i Sverige. Mitt fokus ligger på noggrannhet, materialkännedom och at alltid erbjuda ett slutresultat av högsta standard.",
+    "text2": "Jag utför arbeten i hela Halland och Skåne län, med bas i Knäred (Laholm kommun). Vi samarbetar nära med våra kunder i Laholm, Halmstad, Båstad, Ängelholm och Markaryd för att skräddarsy lösningar som passar just deras hem och budget.",
+    "certTitle": "Erfaren hantverkare",
+    "certSubtitle": "Fokus på trygghet och kvalitet",
+    "text3": "Vi utför hela spektrat av bygg- och renoveringsarbeten – från kostnadskalkyl och planering till nyckelklara projekt av alla svårighetsgrader. Vi kombinerar moderna teknologier och innovativa metoder med skandinavisk enkelhet och ett personligt tillvägagångssätt för varje projekt."
   },
   "advantages": {
     "title": "Varför välja",
-    "accent": "RYGGHJÄLP",
-    "expTitle": "20+ års erfarenhet",
-    "expDesc": "Djupgående kunskap om anatomi och massagefysiologi för att säkerstäffe ett optimalt resultat.",
-    "indTitle": "Individuellt upplägg",
-    "indDesc": "Varje behandling skräddarsys efter dina behov och fokusområden för maximal effekt.",
-    "atmTitle": "Premium atmosfär",
-    "atmDesc": "En tyst, harmonisk och lyxig miljö utrustad för din fullständiga avslappning."
+    "accent": "Andrey Bygg",
+    "expTitle": "10+ års erfarenhet",
+    "expDesc": "Lång erfarenhet av renoveringar i Sverige garanterar säkra konstruktioner och hållbara materialval.",
+    "indTitle": "Skräddarsytt för dig",
+    "indDesc": "Vi planerar varje projekt noggrant utifrån dina personliga önskemål och förutsättningar.",
+    "atmTitle": "Renlighet & ordning",
+    "atmDesc": "Vi respekterar ditt hem. Vi håller ordning under arbetets gång och städar noggrant efter oss."
   },
   "services": {
     "title": "Våra",
-    "accent": "massagebehandlingar",
-    "priceFrom": "Från",
-    "duration": "Längd",
+    "accent": "byggtjänster",
+    "priceFrom": "Enligt",
+    "duration": "Tidsplan",
     "readMore": "Läs mer",
     "back": "Tillbaka till tjänster",
-    "bookService": "Boka denna behandling",
+    "bookService": "Begär offert",
+    "benefitsTitle": "Vad du får med oss",
     "items": {
-      "classic": {
-        "title": "Klassisk massage",
-        "desc": "En traditionell svensk massage för djup avslappning, lindring av muskelspasmer och fullständig återhämtning av krafter.",
-        "price": "850 SEK",
-        "duration": "60 min / 90 min",
-        "benefit": "Lindrar effektivt muskelspänningar, återställer fibrernas elasticitet, normaliserar sömnen och minskar stressnivåerna.",
-        "seo_title": "Klassisk svensk massage | Djup muskelavslappning",
-        "seo_desc": "Traditionell svensk massage för djup avslappning och förbättrad blodcirkulation. Professionell massage av massören Oleh.",
-        "indications_title": "Indikationer för behandling",
+      "windows-doors": {
+        "title": "Fönster- & dörrmontering",
+        "desc": "Professionell installation och utbyte av inner- och ytterdörrar samt energieffektiva fönster för ökad komfort.",
+        "price": "offert",
+        "duration": "1-3 dagar",
+        "benefit": "Du får perfekt tätade fönster och dörrar som eliminerar drag, sänker dina uppvärmningskostnader och förbättrar husets ljudisolering.",
+        "seo_title": "Montera fönster & dörrar i Laholm och Halmstad",
+        "seo_desc": "Professionell montering av fönster och ytterdörrar i Laholm, Halmstad och Båstad. Vi garanterar täthet och snygg finish. Kontakta oss för offert.",
+        "indications_title": "När behövs tjänsten?",
         "indications_list": [
-          "Muskelspänningar och stelhet",
-          "Kronisk trötthet och stress",
-          "Sömnproblem och sömnlöshet",
-          "Stillasittande livsstil"
+          "Dragiga, kalla eller svårstängda fönster",
+          "Hög energiförbrukning på grund av gamla glas",
+          "Slitna ytterdörrar som behöver uppdateras",
+          "Renovering av fasad eller nybygge"
         ],
-        "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Sessionen inleds med en mild uppvärmning av musklerna med varm ekologisk olja. Terapeuten använder strykningar och knådningar för att arbeta igenom nacke, rygg och ländrygg på djupet. Riktad triggerpunktsbehandling hjälper till att släppa envisa spänningar. Behandlingen avslutas med lugnande grepp som balanserar nervsystemet och ger djup avslappning.",
-        "contraindications_title": "Kontraindikationer",
-        "contraindications_text": "Akuta inflammationer, feber, infektiösa hudtillstånd, svåra åderbråck."
+        "process_title": "Arbetets skeden",
+        "process_text": "Vi börjar med exakt kontrollmätning på plats. Därefter demonterar vi försiktigt de gamla karmarna för att minimera skador på väggar. Vi riktar in den nya karmen med millimeterprecision, fixerar den med karmskruv, drevar med isolering samt monterar tätningsband, foder, smygar och fönsterbleck.",
+        "contraindications_title": "Viktig information",
+        "contraindications_text": "Fönstermontering utomhus rekommenderas inte vid kraftigt regn, hård vind eller temperaturer under -10 °C."
       },
-      "anti-cellulite": {
-        "title": "Anticellulitmassage",
-        "desc": "En intensiv skulpterande teknik som syftar till att bekämpa lokala fettdepåer och förbättra hudens elasticitet.",
-        "price": "950 SEK",
-        "duration": "60 min",
-        "benefit": "Aktiverar mikrokirkulationen i vävnaderna, minskar svullnad, främjar lymfdränage och skulpterar harmoniska kroppskonturer.",
-        "seo_title": "Anticellulitmassage | Effektiv kroppsskulptering",
-        "seo_desc": "Professionell anticellulitmassage. Förbättra hudens elasticitet, öka lymfflödet och skulptera kroppens konturer.",
-        "indications_title": "Indikationer för behandling",
+      "kitchen-assembly": {
+        "title": "Köksmontering",
+        "desc": "Komplett montering och installation av köksskåp, bänkskivor, diskhoar och integrerade vitvaror.",
+        "price": "offert",
+        "duration": "2-5 dagar",
+        "benefit": "En hållbar och ergonomisk installation av ditt nya kök (t.ex. IKEA). Alla stommar förankras säkert, luckor finjusteras och bänkskivor passas in exakt.",
+        "seo_title": "Köksmontering i Halmstad, Laholm & Båstad",
+        "seo_desc": "Montering av IKEA-kök och andra varumärken i Halmstad, Båstad och Laholm. Professionell montering av bänkskivor och skåp med garanti.",
+        "indications_title": "När behövs tjänsten?",
         "indications_list": [
-          "Celluliter i alla stadier",
-          "Minskad hudtonus och elasticitet",
-          "Lokala fettansamlingar",
-          "Vätskeansamlingar i vävnader"
+          "Planering och köp av nytt kök (IKEA, Marbodal etc.)",
+          "Behov av att uppdatera en gammal kökslayout",
+          "Byte av sliten bänkskiva och diskho",
+          "Installation av integrerade köksmaskiner"
         ],
-        "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Behandlingen utförs med en speciell värmande olja för att påskynda lipolys. Terapeuten använder energiska grepp som knådning, rullning och klappning på lår, stuss och mage. Detta stimulerar lymfflödet och rensar ut slaggprodukter. Sessionen avslutas med mjuka dränerande strykningar som lugnar blodkärlen.",
-        "contraindications_title": "Kontraindikationer",
-        "contraindications_text": "Graviditet, sköra kapillärer, uttalade åderbråck, hudinflammationer i behandlade områden."
+        "process_title": "Arbetets skeden",
+        "process_text": "Vi kontrollerar golvets och väggarnas vinklar och förbereder fästpunkter. Vi bygger ihop och monterar stommar, väggskåp och högskåp. Vi sågar till och monterar bänkskivan med håltagning for ho och häll, hänger upp luckor, installerar lådor och integrerar vitvaror samt belysning.",
+        "contraindications_title": "Viktig information",
+        "contraindications_text": "Vatten- och elanslutningar måste förberedas eller godkännas av behörig VVS- och elinstallatör."
       },
-      "sports": {
-        "title": "Sportmassage",
-        "desc": "En intensiv djupgående massage utformad för att förbereda muskler inför träning, påskynda återhämtning och förebygga skador.",
-        "price": "950 SEK",
-        "duration": "60 min / 90 min",
-        "benefit": "Lindrar effektivt muskelhypertonus, eliminerar triggerpunkter, påskyndar utrensningen av mjölksyra och ökar flexibiliteten.",
-        "seo_title": "Idrottsmassage | Återhämtning efter träning",
-        "seo_desc": "Djupgående idrottsmassage för idrottare och aktiva. Minska muskelspänningar, förebygg skador och påskynda återhämtning.",
-        "indications_title": "Indikationer för behandling",
+      "bathroom-renovation": {
+        "title": "Badrumsrenovering",
+        "desc": "Renovering och montering av badrumsmöbler, duschväggar, wc och förberedande fuktsäkra våtrumsarbeten.",
+        "price": "offert",
+        "duration": "5-14 dagar",
+        "benefit": "Ett modernt, hygieniskt och funktionellt badrum. Vi säkerställer korrekta fall mot golvbrunn och noggrann montering av all inredning.",
+        "seo_title": "Badrumsrenovering | Båstad, Halmstad & Laholm",
+        "seo_desc": "Noggrann badrumsrenovering, montering av badrumsmöbler och tätskikt i Båstad, Halmstad och Laholm. Vi bygger tryggt enligt svenska regler.",
+        "indications_title": "När behövs tjänsten?",
         "indications_list": [
-          "Intensiv fysisk träning",
-          "Muskelhypertoni",
-          "Förberedelse inför tävling",
-          "Förebyggande av skador och sträckningar"
+          "Slitna ytor, missfärgningar eller fuktoro",
+          "Modernisering av badrumsmöbler och sanitet",
+          "Behov av att installera ny golvvärme",
+          "Renovering av gästtoalett eller tvättstuga"
         ],
-        "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Sessionen inleds med kraftfull uppvärmning av musklerna med sportbalsam. Terapeuten utför djupgående massage med starkt tryck och friktion. Element av passiv stretching integreras för att återställa ligamentens elasticitet. Behandlingen avslutas med lätt lymfdränage för att dämpa ömhet och återställa energin.",
-        "contraindications_title": "Kontraindikationer",
-        "contraindications_text": "Färska muskel- eller ligamentskador, frakturer, akuta ledinflammationer, hudsår."
+        "process_title": "Arbetets skeden",
+        "process_text": "Vi river gamla ytor vid behov, förbereder underlaget med flytspackling för korrekt fall. Vi monterar godkänt tätskikt (våtrumsmembran), utför kakling/klinkerläggning och fogning. Slutligen monterar vi toalett, tvättställ, blandare, duschväggar och badrumsskåp.",
+        "contraindications_title": "Viktig information",
+        "contraindications_text": "Våtrumsarbeten kräver strikt efterlevnad av torktider för spackel och membran. Vatten måste stängas av under kortare perioder."
       },
-      "lymphatic-drainage": {
-        "title": "Lymfmassage",
-        "desc": "En mild manuell teknik som syftar till att stimulera lymfflödet, rena kroppen från toxiner och reducera svullnad.",
-        "price": "900 SEK",
-        "duration": "75 min",
-        "benefit": "Minskar effektivt svullnad i ansikte och lemmar, stärker immunförsvaret och ger en känsla av lätthet i hela kroppen.",
-        "seo_title": "Lymfmassage | Detox & Minska svullnad",
-        "seo_desc": "Mjuk lymfmassage för att rensa ut toxiner, stärka immunförsvaret och minska svullnad. Professionell lymfterapi.",
-        "indications_title": "Indikationer för behandling",
+      "tiling": {
+        "title": "Kakelsättning",
+        "desc": "Läggning av kakel och klinker i badrum, kök, tvättstugor, hallar och andra ytor med fokus på symmetri.",
+        "price": "offert",
+        "duration": "2-5 dagar",
+        "benefit": "Du får spikraka fogar, en perfekt jämn yta utan nivåskillnader och en lättstädad kakelvägg eller klinkergolv.",
+        "seo_title": "Plattsättare & kakelsättning i Ängelholm & Båstad",
+        "seo_desc": "Söker du plattsättare? Vi utför kakelsättning och klinkerläggning i Ängelholm, Båstad, Halmstad och Laholm. Hög precision för kök & bad.",
+        "indications_title": "När behövs tjänsten?",
         "indications_list": [
-          "Svullnad i ansikte eller kropp",
-          "Lymfatisk tröghet och tunga ben",
-          "Försvagat immunförsvar",
-          "Viktminskning eller detoxprogram"
+          "Nytt stänkskydd över diskbänken i köket",
+          "Slitstarkt klinkergolv i hallen eller grovkök",
+          "Plattsättning av väggar och golv i badrum",
+          "Läggning av klinker i uterum"
         ],
-        "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Behandlingen utförs med mycket mjuka, långsamma och rytmiska strykningar längs lymfsystemets banor. Terapeuten börjar med att försiktigt öppna viktiga lymfkörtlar och leder sedan vätskan mot dessa center med vågliknande rörelser. Processen är helt smärtfri, djupt avslappnande och främjar snabb utrensning.",
-        "contraindications_title": "Kontraindikationer",
-        "contraindications_text": "Onkologiska sjukdomar, tromboflebit, sköldkörtelrubbningar, akuta infektioner."
+        "process_title": "Arbetets skeden",
+        "process_text": "Vi grundar underlaget för bra vidhäftning. Vi mäter upp ytan för att få en balanserad kapning vid kanterna. Vi applicerar fix, monterar plattorna med hjälp av nivåsystem för att undvika fogsprång. Därefter fogar vi ytan och avslutar med mjukfog (silikon) i alla innerhörn.",
+        "contraindications_title": "Viktig information",
+        "contraindications_text": "Det nylagda golvet får inte beträdas under ca 24 timmar efter läggning tills fixet har härdat ordentligt."
       },
-      "cupping": {
-        "title": "Koppningsmassage",
-        "desc": "En terapeutisk teknik som kombinerar klassisk massage och vakuumsug med koppar för djupgående muskelavspänning.",
-        "price": "800 SEK",
-        "duration": "60 min",
-        "benefit": "Lindrar kronisk rygg- och nacksmärta, frigör bindväv, förbättrar blodcirkulationen och löser upp blockeringar.",
-        "seo_title": "Koppningsmassage | Djupgående vakuumbehandling",
-        "seo_desc": "Effektiv koppningsmassage (vakuumbehandling) för att öka cirkulationen, lindra ryggsmärta och lösa upp triggerpunkter.",
-        "indications_title": "Indikationer för behandling",
+      "painting": {
+        "title": "Måleriarbeten",
+        "desc": "Spackling, slipning och målning av väggar, tak och snickerier inomhus samt fasadmålning utomhus.",
+        "price": "offert",
+        "duration": "2-7 dagar",
+        "benefit": "Släta väggar utan ojämnheter, rena kanter och en jämn färgton. Vi använder slitstarka och miljövänliga inomhusfärger.",
+        "seo_title": "Målare i Markaryd, Halmstad och Laholm | Måleri",
+        "seo_desc": "Professionella målare för spackling, slipning, tapetsering och målning i Markaryd, Halmstad och Laholm. Inomhus och fasad.",
+        "indications_title": "När behövs tjänsten?",
         "indications_list": [
-          "Kronisk rygg- och nacksmärta",
-          "Tydliga triggerpunkter",
-          "Muskelstelhet och blockeringar",
-          "Försvagat immunförsvar"
+          "Smutsiga, repiga eller blekta väggar och tak",
+          "Nybyggda gipsväggar som behöver spacklas och målas",
+          "Sliten träfasad på huset som behöver skyddas",
+          "Önskan om färgförändring eller tapetsering"
         ],
-        "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Varm naturlig olja appliceras på huden för att kopparna ska glida smidigt. Terapeuten värmer först upp musklerna manuellt, placerar sedan vakuumkoppar och drar dem längs ryggens muskelbanor. Vakuumet går djupt ner i vävnaderna och ökar blodflödet till stela zoner.",
-        "contraindications_title": "Kontraindikationer",
-        "contraindications_text": "Blodsjukdomar, sköra blodkärl, leverfläckar i behandlingsområdet, akuta inflammationer."
+        "process_title": "Arbetets skeden",
+        "process_text": "Vi täcker golv, fönster och möbler noggrant. Vi spacklar skarvar och skruvhål (i två till tre omgångar), slipar ytan jämn och dammsuger rent. Vi grundmålar och målar sedan två lager med täckfärg av hög kvalitet. Vi avslutar med att städa upp arbetsytan.",
+        "contraindications_title": "Viktig information",
+        "contraindications_text": "Inomhusmålning kräver god ventilation och en temperatur över +10 °C. Utomhusmålning kräver torrt väder utan direkt starkt solljus."
       },
-      "hot-stone": {
-        "title": "Massage med heta stenar",
-        "desc": "En exklusiv spabehandling med varma vulkaniska basaltstenar för att ge djup uppvärmning och avslappning.",
-        "price": "1100 SEK",
-        "duration": "90 min",
-        "benefit": "Lindrar helt mental spänning, värmer djupa muskellager, förbättrar sömnen och balanserar nervsystemet.",
-        "seo_title": "Hot Stone Massage | Lyxig stenmassage",
-        "seo_desc": "Lyxig massage med varma lavastenar för djup muskeluppvärmning, stresslindring och energibalansering.",
-        "indications_title": "Indikationer för behandling",
+      "roofing-woodwork": {
+        "title": "Takläggning & träarbeten",
+        "desc": "Renovering av tak samt byggnation av träaltaner, trall, staket och andra utvändiga träkonstruktioner.",
+        "price": "offert",
+        "duration": "3-10 dagar",
+        "benefit": "Ett tätt och säkert tak som skyddar ditt hem i många år, samt en stabil och vacker träaltan byggd av tryckimpregnerat virke.",
+        "seo_title": "Takläggare & altanbygge i Laholm, Halmstad & Skåne",
+        "seo_desc": "We bygger altaner, monterar staket och utför takläggning i Laholm, Halmstad, Ängelholm och övriga Halland/Skåne. Snickare med garanti.",
+        "indications_title": "När behövs tjänsten?",
         "indications_list": [
-          "Djup stress och utmattning",
-          "Kroniska muskelspänningar",
-          "Kalla händer och fötter",
-          "Sömnproblem"
+          "Slitet yttertak med trasiga pannor eller sprucken papp",
+          "Önskan om att bygga en ny altan eller trädäck",
+          "Staket, grindar eller vindskydd som behöver byggas",
+          "Byte av ruttna vindskivor eller fasadpanel"
         ],
-        "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Sessionen inleds med manuell massage med aromatisk olja. Därefter placeras varma basaltstenar på ryggens energipunkter för att avge djup värme. Terapeuten masserar sedan med varma stenar och händer. Värmeterapin löser upp muskelknutor, dämpar stress och ger ett djupt lugn.",
-        "contraindications_title": "Kontraindikationer",
-        "contraindications_text": "Värmekänslighet, högt blodtryck, diabetes, hudutslag."
-      },
-      "turkish-foam": {
-        "title": "Turkisk skummassage",
-        "desc": "En spa-ritual i hamam, som kombinerar exfoliering med en Kese-silkesvante och massage i ett moln av ekologiskt tvålskum.",
-        "price": "1200 SEK",
-        "duration": "90 min",
-        "benefit": "Avlägsnar skonsamt döda hudceller, rengör porerna, rensar ut toxiner och ger en känsla av absolut renhet.",
-        "seo_title": "Turkisk Skummassage | Lyxigt spa-ritual",
-        "seo_desc": "Traditionell skummassage på varm stenbänk. Mild peeling med Kese-vante och avslappnande massage med fluffigt skum av olivoljetvål.",
-        "indications_title": "Indikationer för behandling",
-        "indications_list": [
-          "Behov av djup hudrengöring",
-          "Allmän trötthet och muskelspänningar",
-          "Förberedelse inför solning",
-          "Avslappnande spa-upplevelse"
-        ],
-        "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Utförs i ett hamam på en uppvärmd bänk. Först skrubbas kroppen med en Kese-vante för att ta bort döda hudceller. Därefter täcks kroppen av ett fluffigt olivtvålskum och masseras med lugnande grepp. Ritualen avslutas med varm avsköljning som gör huden silkeslen och hydrerad.",
-        "contraindications_title": "Kontraindikationer",
-        "contraindications_text": "Allergi mot tvålingredienser, öppna hudsår, hjärt-kärlsjukdomar."
-      },
-      "natural-massage": {
-        "title": "Ekologisk massage",
-        "desc": "En mild, föryngrande behandling för ansikte och kropp med 100% ekologiska kallpressade växtoljor.",
-        "price": "900 SEK",
-        "duration": "60 min / 90 min",
-        "benefit": "Lindrar spänningar i ansiktsmusklerna, förbättrar hudtonen, dämpar svullnad och ger djup näring till huden.",
-        "seo_title": "Eko-Ekologisk Massage | Naturlig kroppsvård",
-        "seo_desc": "Mjuk och återbyggande ekologisk massage med 100% naturliga, kallpressade oljor och skräddarsydd aromaterapi.",
-        "indications_title": "Indikationer för behandling",
-        "indications_list": [
-          "Torr och uttorkad hud",
-          "Nervös trötthet och utmattning",
-          "Känslig hud",
-          "Önskan om helt naturlig vård"
-        ],
-        "process_title": "Vad du kan förvänta dig under sessionen",
-        "process_text": "Sessionen kombinerar milda ansikts-, hals- och dekolletagemassagegrepp med aromaterapi. Terapeuten använder naturliga kallpressade oljor utan syntetiska tillsatser, vilket ökar mikrocirkulationen och skulpterar konturerna. Behandlingen lugnar sinnet och återställer hudens lyster.",
-        "contraindications_title": "Kontraindikationer",
-        "contraindications_text": "Allergi mot eteriska oljor, aktiva allergiska hudreaktioner, graviditet."
+        "process_title": "Arbetets skeden",
+        "process_text": "Vid takrenovering river vi det gamla materialet, inspekterar undertaket, lägger ny underlagspapp, monterar bär- och ströläkt samt lägger takpannor eller plåt. Vid altanbygge förbereder vi grunden med plintar, bygger ett stabilt bärverk av reglar, skruvar trall och bygger räcken.",
+        "contraindications_title": "Viktig information",
+        "contraindications_text": "Takläggning och utvändiga träarbeten är starkt väderberoende och utförs bäst under den torra årstiden."
       }
-    },
-    "cost": "Pris",
-    "benefitsTitle": "Hälsofördelar"
+    }
   },
   "reviews": {
     "title": "Vad våra",
-    "accent": "klienter säger",
-    "items": [
+    "accent": "kunder säger",
+    "list": [
       {
-        "name": "Johan Andersson",
-        "text": "Oleh är en fantastisk terapeut. Efter sportmassagen kände jag mig som en ny människa. Mina axlar har aldrig varit så rörliga.",
-        "rating": 5
+        "name": "Johan Persson",
+        "role": "Laholm",
+        "text": "Andrey Bygg installerade nya fönster i hela vårt hus och byggde en fantastisk altan på baksidan. Arbetet utfördes snabbt, rent och med otrolig precision. Mycket nöjd med kvaliteten!"
       },
       {
-        "name": "Sofia Lindqvist",
-        "text": "Massagen med heta stenar var magisk. Den lyxiga och rofyllda atmosfären gjorde upplevelsen helt oförglömlig. Rekommenderas starkt!",
-        "rating": 5
+        "name": "Maria Andersson",
+        "role": "Halmstad",
+        "text": "Vi anlitade Andrey för att montera vårt nya IKEA-kök. Allt monterades perfekt och passades in exakt mot våra sneda väggar. Kontakten var smidig och priset var mycket rimligt."
       },
       {
-        "name": "Erik Bergqvist",
-        "text": "Professionellt bemötande och en oerhört skicklig massör. Lymfmassagen hjälpte mig att bli av med svullnad och trötthet.",
-        "rating": 5
+        "name": "Lars Lindqvist",
+        "role": "Båstad",
+        "text": "Utmärkt plattsättning och renovering av vår gästtoalett. Andrey är mycket noggrann, håller rent efter sig och är punktlig. Jag rekommenderar honom varmt för alla typer av renoveringar."
       }
     ]
   },
   "contacts": {
-    "title": "Kontakta oss",
-    "accent": "boka tid",
-    "subtitle": "Boka din tid online eller kontakta oss via telefon. Vår studio är utrustad med allt som behövs för din komfort.",
-    "address": "Hembesök & sessioner i privat studio",
-    "phone": "+46 737 584 372",
-    "email": "info@rygghjalp.se",
-    "hours": "Mån - Sön: 09:00 - 21:00",
+    "title": "Kontakta",
+    "accent": "oss",
+    "subtitle": "Hör av dig för en kostnadsfri konsultation och offert för ditt byggprojekt.",
+    "phone": "+46 072 268 62 82",
+    "phone_label": "Huvudnummer (Sverige):",
+    "social_phone": "+380 93 575 84 95",
+    "social_phone_label": "Viber / WhatsApp / Telegram:",
+    "email": "info@andreybygg.se",
+    "email_label": "E-post:",
+    "hours": "Mån-Sön: 09:00 - 21:00",
     "formTitle": "Skicka en förfrågan",
-    "formName": "Ditt namn",
-    "formPhone": "Telefonnummer",
-    "formService": "Välj behandling",
-    "formMessage": "Ditt meddelande",
-    "formSubmit": "Skicka förfrågan",
-    "formSuccess": "Tack! Din förfrågan har skickats. Vi kontaktar dig inom kort för att bekräfta din tid.",
-    "formError": "Ett fel uppstod. Kontrollera att alla fält är korrekt ifyllda.",
-    "selectPlaceholder": "Välj en tjänst...",
-    "validation": {
-      "nameRequired": "Namn är obligatoriskt",
-      "phoneRequired": "Telefonnummer är obligatoriskt",
-      "phoneInvalid": "Ange ett giltigt telefonnummer",
-      "serviceRequired": "Vänligen välj en behandling",
-      "dateRequired": "Vänligen välj ett datum för sessionen",
-      "timeRequired": "Vänligen välj en tid för sessionen"
-    },
-    "addressLabel": "Adress",
-    "phoneLabel": "Samtal",
-    "messengersLabel": "Messengers",
-    "emailLabel": "E-post",
-    "socialsLabel": "Sociala medier",
-    "hoursLabel": "Öppettider",
-    "copy": "Kopiera",
-    "copied": "Kopierat!",
-    "copyAddress": "Kopiera adress till urklipp",
-    "directions": "Kontakta oss →",
     "namePlaceholder": "Ditt namn",
-    "messagePlaceholder": "Önskat datum och tid, eller andra önskemål...",
-    "formDate": "Önskat datum",
-    "formTime": "Önskad tid",
-    "street": "Mobil Spatjänst",
-    "city": "Sverige & Norge",
-    "mapLink": "",
-    "seo_title": "Kontakta oss och boka din massagesession online",
-    "seo_desc": "Kontakta RYGGHJÄLP för att boka din tid. Vi erbjuder professionell massage och spabehandlingar i en privat studio eller via hembesök."
+    "emailPlaceholder": "Din e-post",
+    "phonePlaceholder": "Ditt telefonnummer",
+    "servicePlaceholder": "Välj tjänst",
+    "messagePlaceholder": "Beskriv ditt projekt (mått, material, önskad tidsplan)...",
+    "submitBtn": "Skicka meddelande",
+    "successMsg": "Tack! Ditt meddelande har skickats. Vi återkommer till dig så snart som möjligt.",
+    "errorMsg": "Ett fel inträffade. Försök skicka meddelandet igen.",
+    "regions_title": "Verksamhetsområde",
+    "regions_desc": "Vi är baserade i Knäred och utför bygg- och renoveringsarbeten i Laholm, Halmstad, Båstad, Ängelholm, Markaryd samt närliggande områden i Halland och norra Skåne.",
+    "seo_title": "Kontakta Andrey Bygg | Byggfirma i Laholm & Halmstad",
+    "seo_desc": "Kontakta Andrey Bygg för renovering, köksmontering, fönsterbyte och måleri i Laholm, Halmstad, Båstad. Telefon: +460722686282. Få gratis offert."
+  },
+  "footer": {
+    "desc": "Professionella bygg- och renoveringstjänster med fokus på kvalitet, hållbarhet och snygg finish. Vi hjälper dig att förverkliga dina drömmar.",
+    "rights": "Alla rättigheter förbehållna.",
+    "privacy": "Integritetspolicy",
+    "quickLinks": "Snabblänkar"
+  },
+  "privacy": {
+    "title": "Integritetspolicy",
+    "subtitle": "Senast uppdaterad: 24 juni 2026",
+    "backToHome": "Tillbaka till startsidan",
+    "intro": "Andrey Bygg värnar om din personliga integritet. Denna integritetspolicy förklarar hur vi samlar in, använder och skyddar dina personuppgifter när du besöker vår webbplats eller skickar en offertförfrågan via våra formulär.",
+    "section1_title": "1. Vilka uppgifter vi samlar in",
+    "section1_text": "När du använder vårt kontakt- eller offertformulär samlar vi in de uppgifter du själv anger: ditt namn, e-postadress, telefonnummer, vilken tjänst du är intresserad av samt beskrivningen av ditt projekt.",
+    "section2_title": "2. Hur vi använder dina uppgifter",
+    "section2_text": "Vi använder dina insamlade uppgifter uteslutande för att kunna besvara din förfrågan, göra beräkningar, upprätta offerter och kontakta dig angående ditt byggprojekt.",
+    "section3_title": "3. Delning av information",
+    "section3_text": "Vi säljer, handlar eller på annat sätt överför inte dina personuppgifter till tredje part. Uppgifterna används enbart inom Andrey Bygg för att hantera din förfrågan.",
+    "section4_title": "4. Hur vi skyddar dina uppgifter",
+    "section4_text": "Vi vidtar lämpliga säkerhetsåtgärder för att skydda dina personuppgifter mot obehörig åtkomst, ändring eller radering. Vår webbplats använder SSL-kryptering för säker dataöverföring.",
+    "seo_title": "Integritetspolicy — Andrey Bygg",
+    "seo_desc": "Integritetspolicy för Andrey Bygg. Vi skyddar dina personuppgifter och hanterar dem i enlighet med gällande lagstiftning."
   },
   "gallery": {
-    "studio": "Studio",
-    "subtitle": "Ta en titt inuti vår premiummassagestudio. En fristad av lugn, utrustad för din absoluta komfort.",
+    "studio": "arbeten",
+    "subtitle": "Ta en titt på våra nyligen utförda byggprojekt, renoveringar och snickeriarbeten. Vi garanterar precision och kvalitet i varje detalj.",
     "loadMore": "Visa mer",
-    "seo_title": "Bilder från vår massagestudio och spabehandlingar",
-    "seo_desc": "Se bilder på vår lyxiga spastudio och professionella massagebehandlingar. Upplev harmonin och den avslappnade atmosfären hos RYGGHJÄLP."
+    "seo_title": "Bilder på våra bygg- och renoveringsprojekt | Andrey Bygg",
+    "seo_desc": "Utforska galleriet med bilder på köksmontering, badrumsrenovering, fönsterbyten och altanbyggen utförda av Andrey Bygg i Laholm och Halmstad."
   },
-  "breadcrumbs": {
-    "home": "Hem",
-    "services": "Tjänster",
-    "gallery": "Galleri",
-    "contacts": "Kontakter"
-  },
-  "relatedServices": "Du kanske också gillar",
-  "skipToContent": "Hoppa till innehåll",
-  "allServices": "Alla tjänster",
   "notFound": {
     "title": "Sidan hittades inte",
     "description": "Sidan du letar efter finns inte eller har flyttats. Kontrollera URL:en eller återgå till startsidan.",
     "backHome": "Tillbaka till startsidan"
   },
-  "privacy": {
-    "title": "Integritetspolicy",
-    "subtitle": "Behandling av personuppgifter",
-    "intro": "Vi bryr oss om din integritet. Denna integritetspolicy beskriver hur vi samlar in, använder och skyddar informationen du tillhandahåller när du bokar en massagesession.",
-    "section1_title": "1. Vilken information vi samlar in",
-    "section1_text": "När du fyller i bokningsformuläret samlar vi in ditt namn, telefonnummer, vald behandling och eventuella önskemål i meddelandet.",
-    "section2_title": "2. Hur vi använder din information",
-    "section2_text": "Dessa uppgifter används endast för att bekräfta din bokning, kontakta dig och organisera sessionen. Vi delar inte dina uppgifter med tredje part och använder dem inte för marknadsföring.",
-    "section3_title": "3. GDPR-efterlevnad (EU)",
-    "section3_text": "Vår studio ligger i Ukraina, och vi följer dataskyddsförordningen (GDPR) till fullo. Du har rätt att när som helst begära tillgång till, rättelse av eller radering av dina uppgifter.",
-    "section4_title": "4. Kontakta oss",
-    "section4_text": "Om du har några frågor om personuppgiftsbehandling eller vill begära radering, vänligen kontakta oss via e-post: info@rygghjalp.se.",
-    "backToHome": "Tillbaka till startsidan",
-    "seo_title": "Integritetspolicy och behandling av personuppgifter",
-    "seo_desc": "Läs mer om hur RYGGHJÄLP behandlar och skyddar dina personuppgifter vid tidsbokning av massagebehandlingar enligt GDPR-direktivet."
-  },
-  "privacyLink": "Integritetspolicy"
+  "skipToContent": "Hoppa till huvudinnehållet"
 }

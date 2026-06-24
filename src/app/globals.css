@@ -4,14 +4,14 @@
 :root, html.theme-obsidian {
   --background: #080908;
   --background-rgb: 8, 9, 8;
-  --primary: #d4be96;
-  --primary-hover: #e2d2b5;
-  --primary-rgb: 212, 190, 150;
+  --primary: #ff3b30;
+  --primary-hover: #ff453a;
+  --primary-rgb: 255, 59, 48;
   --card-bg: #121312;
   --text-color: #f4f5f4;
   --text-muted: #a3a3a3;
-  --olive-plate: #2e352c;
-  --olive-text: #d4be96;
+  --olive-plate: #2b0a0a;
+  --olive-text: #ff3b30;
   --error: #cf6679;
   --success: #81c784;
   --footer-bg: #050605;
@@ -26,13 +26,13 @@
   --hero-text-color: #f4f5f4;
   --hero-text-muted: #a3a3a3;
    /* Button Styles */
-  --btn-primary-bg-start: #e5d1b1;
-  --btn-primary-bg-end: #c4a97a;
-  --btn-primary-bg-start-hover: #eedbc1;
-  --btn-primary-bg-end-hover: #d1b686;
-  --btn-primary-text: #080908;
-  --btn-primary-shadow: rgba(196, 169, 122, 0.15);
-  --btn-primary-shadow-hover: rgba(196, 169, 122, 0.35);
+  --btn-primary-bg-start: #ff453a;
+  --btn-primary-bg-end: #c32020;
+  --btn-primary-bg-start-hover: #ff5252;
+  --btn-primary-bg-end-hover: #d32f2f;
+  --btn-primary-text: #ffffff;
+  --btn-primary-shadow: rgba(255, 59, 48, 0.15);
+  --btn-primary-shadow-hover: rgba(255, 59, 48, 0.35);
   --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.4) 15%, rgba(var(--background-rgb), 0.55) 50%, rgba(var(--background-rgb), 0.85) 85%, var(--background) 100%);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -42,37 +42,37 @@
 
 /* Alternative Dark Theme: Emerald Zen */
 html.theme-zen {
-  --background: #060907;
-  --background-rgb: 6, 9, 7;
-  --primary: #a3b899;
-  --primary-hover: #b4c9aa;
-  --primary-rgb: 163, 184, 153;
-  --card-bg: #101611;
-  --text-color: #f2f5f2;
-  --text-muted: #99a398;
-  --olive-plate: #1a2517;
-  --olive-text: #a3b899;
+  --background: #0b0f0b;
+  --background-rgb: 11, 15, 11;
+  --primary: #a1887f;
+  --primary-hover: #bcaaa4;
+  --primary-rgb: 161, 136, 127;
+  --card-bg: #121812;
+  --text-color: #f1f5f2;
+  --text-muted: #8fa093;
+  --olive-plate: #1c271d;
+  --olive-text: #a1887f;
   --error: #e57373;
   --success: #81c784;
-  --footer-bg: #030403;
+  --footer-bg: #050705;
   
   /* Glassmorphism */
-  --glass-bg: rgba(6, 9, 7, 0.82);
+  --glass-bg: rgba(11, 15, 11, 0.82);
   --glass-blur: 24px;
   --glass-border: rgba(var(--primary-rgb), 0.12);
   --glass-shadow: rgba(0, 0, 0, 0.7);
-  --card-bg-rgb: 16, 22, 17;
-  --text-color-rgb: 242, 245, 242;
-  --hero-text-color: #f2f5f2;
-  --hero-text-muted: #99a398;
+  --card-bg-rgb: 18, 24, 18;
+  --text-color-rgb: 241, 245, 242;
+  --hero-text-color: #f1f5f2;
+  --hero-text-muted: #8fa093;
    /* Button Styles */
-  --btn-primary-bg-start: #b4c9aa;
-  --btn-primary-bg-end: #a3b899;
-  --btn-primary-bg-start-hover: #c3d8b9;
-  --btn-primary-bg-end-hover: #b2c7a8;
-  --btn-primary-text: #060907;
-  --btn-primary-shadow: rgba(163, 184, 153, 0.15);
-  --btn-primary-shadow-hover: rgba(163, 184, 153, 0.35);
+  --btn-primary-bg-start: #a1887f;
+  --btn-primary-bg-end: #8d6e63;
+  --btn-primary-bg-start-hover: #bcaaa4;
+  --btn-primary-bg-end-hover: #a1887f;
+  --btn-primary-text: #ffffff;
+  --btn-primary-shadow: rgba(161, 136, 127, 0.15);
+  --btn-primary-shadow-hover: rgba(161, 136, 127, 0.35);
   --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.4) 15%, rgba(var(--background-rgb), 0.55) 50%, rgba(var(--background-rgb), 0.85) 85%, var(--background) 100%);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);

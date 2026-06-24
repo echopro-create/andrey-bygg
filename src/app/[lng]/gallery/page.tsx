@@ -24,7 +24,6 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
       languages: {
         sv: '/sv/gallery',
         en: '/en/gallery',
-        no: '/no/gallery',
         ru: '/ru/gallery',
         uk: '/uk/gallery',
       },
@@ -33,8 +32,8 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
       title,
       description,
       url: `${SITE_URL}/${lng}/gallery`,
-      siteName: 'RYGGHJÄLP',
-      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
+      siteName: 'Andrey Bygg',
+      locale: lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
         {
@@ -60,16 +59,16 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
   const dict = await getDictionary(lng);
 
   const images = [
-    { src: '/images/gallery/gallery-1_v2.webp', alt: 'Professional deep tissue back massage therapy' },
-    { src: '/images/gallery/gallery-2_v2.webp', alt: 'Heated volcanic hot stone massage therapy' },
-    { src: '/images/gallery/gallery-3_v2.webp', alt: 'Acupressure foot massage and reflexology treatment' },
-    { src: '/images/gallery/gallery-4_v2.webp', alt: 'Therapeutic arm stretch and joint mobilization' },
-    { src: '/images/gallery/gallery-5_v2.webp', alt: 'Soothing head and scalp massage for stress relief' },
-    { src: '/images/gallery/gallery-6_v2.webp', alt: 'Deep sports massage on calf muscle for recovery' },
-    { src: '/images/gallery/gallery-7_v2.webp', alt: 'Warm organic oil pouring for back massage' },
-    { src: '/images/gallery/gallery-8_v2.webp', alt: 'Detoxifying honey massage treatment on back' },
-    { src: '/images/gallery/gallery-9_v2.webp', alt: 'Intense sports back massage for muscle recovery' },
-    { src: '/images/gallery/gallery-10_v2.webp', alt: 'Relaxing facial massage and temple acupressure' },
+    { src: '/images/gallery/gallery-1_v2.webp', alt: 'Professional installation of modern kitchen cabinets' },
+    { src: '/images/gallery/gallery-2_v2.webp', alt: 'Detailed tiling work with large-format tiles' },
+    { src: '/images/gallery/gallery-3_v2.webp', alt: 'Custom exterior woodwork and deck construction' },
+    { src: '/images/gallery/gallery-4_v2.webp', alt: 'Installation of energy-efficient windows' },
+    { src: '/images/gallery/gallery-5_v2.webp', alt: 'High-quality painting and interior wall renovation' },
+    { src: '/images/gallery/gallery-6_v2.webp', alt: 'Premium bathroom renovation and plumbing' },
+    { src: '/images/gallery/gallery-7_v2.webp', alt: 'Roofing and structural wood restoration' },
+    { src: '/images/gallery/gallery-8_v2.webp', alt: 'Accurate door alignment and installation' },
+    { src: '/images/gallery/gallery-9_v2.webp', alt: 'Custom kitchen countertop assembly' },
+    { src: '/images/gallery/gallery-10_v2.webp', alt: 'Elegant bathroom tiling and grout finish' },
   ];
 
   const imageGallerySchema = {

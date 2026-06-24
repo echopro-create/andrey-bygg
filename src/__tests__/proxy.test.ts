@@ -29,8 +29,8 @@ describe('proxy middleware (locale auto-detection)', () => {
       expect(res.headers.get('x-middleware-next')).toBeDefined();
     });
 
-    it('should pass through /ru/services/classic path', () => {
-      const req = createMockRequest('/ru/services/classic');
+    it('should pass through /ru/services/windows-doors path', () => {
+      const req = createMockRequest('/ru/services/windows-doors');
       const res = proxy(req);
       expect(res.headers.get('x-middleware-next')).toBeDefined();
     });
@@ -76,11 +76,11 @@ describe('proxy middleware (locale auto-detection)', () => {
       expect(res.headers.get('location')).toBe('http://localhost:3000/sv/');
     });
 
-    it('should redirect / to Norwegian when Accept-Language is no', () => {
-      const req = createMockRequest('/', 'no-NO,no;q=0.9');
+    it('should redirect / to Ukrainian when Accept-Language is uk', () => {
+      const req = createMockRequest('/', 'uk-UA,uk;q=0.9');
       const res = proxy(req);
       expect(res.status).toBe(307);
-      expect(res.headers.get('location')).toBe('http://localhost:3000/no/');
+      expect(res.headers.get('location')).toBe('http://localhost:3000/uk/');
     });
 
     it('should redirect /gallery to Russian when Accept-Language is ru', () => {
@@ -130,7 +130,7 @@ describe('proxy middleware (locale auto-detection)', () => {
 
   describe('preserves query parameters', () => {
     it('should preserve query string when redirecting', () => {
-      const url = 'http://localhost:3000/contacts?book=true&service=classic';
+      const url = 'http://localhost:3000/contacts?book=true&service=windows-doors';
       const req = {
         nextUrl: new URL(url),
         url,
@@ -138,7 +138,7 @@ describe('proxy middleware (locale auto-detection)', () => {
       } as unknown as NextRequest;
 
       const res = proxy(req);
-      expect(res.headers.get('location')).toContain('?book=true&service=classic');
+      expect(res.headers.get('location')).toContain('?book=true&service=windows-doors');
     });
   });
 });

@@ -10,18 +10,18 @@ export default function Footer({ dict, lng }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const footerServices = [
-    { slug: 'classic', title: dict.services.items.classic.title },
-    { slug: 'sports', title: dict.services.items.sports.title },
-    { slug: 'hot-stone', title: dict.services.items['hot-stone'].title },
-    { slug: 'lymphatic-drainage', title: dict.services.items['lymphatic-drainage'].title },
+    { slug: 'windows-doors', title: dict.services.items['windows-doors'].title },
+    { slug: 'kitchen-assembly', title: dict.services.items['kitchen-assembly'].title },
+    { slug: 'bathroom-renovation', title: dict.services.items['bathroom-renovation'].title },
+    { slug: 'tiling', title: dict.services.items.tiling.title },
   ];
 
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Link href={`/${lng}`} className="footer-logo" aria-label="RYGGHJÄLP — Home">
-            RYGG<span className="gold-accent">HJÄLP</span>
+          <Link href={`/${lng}`} className="footer-logo" aria-label="Andrey Bygg — Home">
+            ANDREY<span className="gold-accent"> BYGG</span>
           </Link>
           <p className="footer-desc">
             {dict.hero.subtitle}
@@ -65,8 +65,8 @@ export default function Footer({ dict, lng }: FooterProps) {
                   <a href={`tel:${dict.contacts.phone}`} className="hover-gold" style={{ display: 'block' }}>{dict.contacts.phone}</a>
                   <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginTop: '4px' }}>
                     WA/TG/Viber:{' '}
-                    <a href="https://wa.me/4748614204" target="_blank" rel="noopener noreferrer" className="hover-gold">
-                      +47 486 14 204
+                    <a href="https://wa.me/380935758495" target="_blank" rel="noopener noreferrer" className="hover-gold">
+                      +380 93 575 84 95
                     </a>
                   </span>
                 </div>
@@ -91,7 +91,7 @@ export default function Footer({ dict, lng }: FooterProps) {
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
           <p>
-            &copy; {currentYear} RYGGHJÄLP. All rights reserved. {dict.contacts.address}.
+            &copy; {currentYear} Andrey Bygg. All rights reserved. {dict.contacts.address}.
             {' | '}
             <Link href={`/${lng}/privacy`} className="footer-bottom-link" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>
               {dict.privacyLink}
@@ -99,22 +99,13 @@ export default function Footer({ dict, lng }: FooterProps) {
           </p>
           <nav className="footer-socials" aria-label="Social media links">
             <a
-              href="https://www.instagram.com/touroleg/"
+              href="https://www.instagram.com/"
               className="social-link"
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
             >
               IG
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100028476219743"
-              className="social-link"
-              aria-label="Facebook"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              FB
             </a>
           </nav>
         </div>

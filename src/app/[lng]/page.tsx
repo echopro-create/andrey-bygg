@@ -25,7 +25,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       languages: {
         sv: '/sv',
         en: '/en',
-        no: '/no',
         ru: '/ru',
         uk: '/uk',
       },
@@ -52,14 +51,12 @@ export default async function Page({ params }: PageProps) {
   const dict = await getDictionary(lng);
 
   const serviceSlugs = [
-    'classic',
-    'anti-cellulite',
-    'sports',
-    'lymphatic-drainage',
-    'cupping',
-    'hot-stone',
-    'turkish-foam',
-    'natural-massage',
+    'windows-doors',
+    'kitchen-assembly',
+    'bathroom-renovation',
+    'tiling',
+    'painting',
+    'roofing-woodwork',
   ];
 
   const faqSchema = {
@@ -165,7 +162,7 @@ export default async function Page({ params }: PageProps) {
               <div className="olive-background-plate">
                 <Image
                   src="/images/oleg-portrait-new.webp"
-                  alt={dict.about.certTitle ? `Massage Therapist — ${dict.about.certTitle}` : 'Massage Therapist'}
+                  alt={dict.about.certTitle ? `Snickare — ${dict.about.certTitle}` : 'Snickare'}
                   className="about-img"
                   width={1024}
                   height={1365}
@@ -198,7 +195,7 @@ export default async function Page({ params }: PageProps) {
               {dict.about.text3 && <p className="about-paragraph">{dict.about.text3}</p>}
               <div className="experience-metric">
                 <div className="metric-item">
-                  <span className="metric-number">20+</span>
+                  <span className="metric-number">10+</span>
                   <div className="metric-info">
                     <span className="metric-label">{dict.advantages.expTitle}</span>
                   </div>
@@ -207,7 +204,7 @@ export default async function Page({ params }: PageProps) {
                   <span className="metric-number">4</span>
                   <div className="metric-info">
                     <span className="metric-label">{dict.hero.languagesLabel || 'LANGUAGES'}</span>
-                    <span className="metric-languages-list">SV | EN | NO | RU</span>
+                    <span className="metric-languages-list">SV | EN | RU | UK</span>
                   </div>
                 </div>
               </div>
@@ -339,12 +336,11 @@ export default async function Page({ params }: PageProps) {
             </div>
             <div className="reviews-grid">
               {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-              {dict.reviews.items.map((review: any, index: number) => {
+              {dict.reviews.list.map((review: any, index: number) => {
                 const verifiedText = {
                   ru: 'Верифицированный клиент',
                   en: 'Verified client',
                   sv: 'Verifierad klient',
-                  no: 'Verifisert klient',
                   uk: 'Верифікований клієнт',
                 }[lng] || 'Verified client';
 
@@ -364,7 +360,7 @@ export default async function Page({ params }: PageProps) {
                       </div>
 
                       <div className="stars">
-                        {Array.from({ length: review.rating }).map((_, i) => (
+                        {Array.from({ length: review.rating || 5 }).map((_, i) => (
                           <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="star-svg">
                             <defs>
                               <linearGradient id="gold-gradient-star" x1="0%" y1="0%" x2="100%" y2="100%">

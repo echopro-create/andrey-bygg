@@ -14,18 +14,16 @@ interface ServicePageProps {
 }
 
 const serviceSlugs = [
-  'classic',
-  'anti-cellulite',
-  'sports',
-  'lymphatic-drainage',
-  'cupping',
-  'hot-stone',
-  'turkish-foam',
-  'natural-massage',
+  'windows-doors',
+  'kitchen-assembly',
+  'bathroom-renovation',
+  'tiling',
+  'painting',
+  'roofing-woodwork',
 ];
 
 export async function generateStaticParams() {
-  const locales = ['sv', 'en', 'no', 'ru', 'uk'];
+  const locales = ['sv', 'en', 'ru', 'uk'];
   const params: { lng: string; service: string }[] = [];
   for (const lng of locales) {
     for (const service of serviceSlugs) {
@@ -47,7 +45,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
   const title = service.seo_title || service.title;
   const description = service.seo_desc || service.desc;
-  const locales = ['sv', 'en', 'no', 'ru', 'uk'];
+  const locales = ['sv', 'en', 'ru', 'uk'];
 
   return {
     title,
@@ -62,8 +60,8 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
       title,
       description,
       url: `${SITE_URL}/${lng}/services/${serviceSlug}`,
-      siteName: 'RYGGHJÄLP',
-      locale: lng === 'no' ? 'nb_NO' : lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
+      siteName: 'Andrey Bygg',
+      locale: lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
         {
@@ -100,12 +98,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const relatedSlugs = serviceSlugs.filter(slug => slug !== serviceSlug).slice(0, 3);
 
   const relatedTitle = {
-    ru: 'Другие процедуры',
-    en: 'Other treatments',
-    sv: 'Andra behandlingar',
-    no: 'Andre behandlinger',
-    uk: 'Інші процедури',
-  }[lng] || 'Other treatments';
+    ru: 'Другие услуги',
+    en: 'Other services',
+    sv: 'Andra tjänster',
+    uk: 'Інші послуги',
+  }[lng] || 'Other services';
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -113,8 +110,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
     name: service.title,
     description: service.desc,
     provider: {
-      '@type': 'HealthAndBeautyBusiness',
-      name: 'RYGGHJÄLP',
+      '@type': 'ConstructionBusiness',
+      name: 'Andrey Bygg',
       url: `${SITE_URL}/${lng}`,
       address: {
         '@type': 'PostalAddress',
@@ -183,12 +180,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
               {/* Терапевтический эффект */}
               <div className="service-benefit-card glass-card">
                 <div className="benefit-card-header">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="benefit-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#theme-gradient-icon-service)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="benefit-icon">
                     <defs>
-                      <linearGradient id="gold-gradient-icon-service" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#e2d2b5" />
-                        <stop offset="50%" stopColor="#d4be96" />
-                        <stop offset="100%" stopColor="#a38a5e" />
+                      <linearGradient id="theme-gradient-icon-service" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="var(--primary)" />
+                        <stop offset="100%" stopColor="var(--btn-primary-bg-end)" />
                       </linearGradient>
                     </defs>
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -214,7 +210,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                   <ul className="service-indications-list">
                     {service.indications_list.map((ind: string, idx: number) => (
                       <li key={idx} className="indication-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon-service)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="indication-check">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#theme-gradient-icon-service)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="indication-check">
                           <polyline points="20 6 9 17 4 12" />
                         </svg>
                         <span>{ind}</span>
