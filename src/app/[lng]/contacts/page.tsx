@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getDictionary, Locale } from '../../i18n';
 import ContactsClient from './ContactsClient';
-import { SITE_URL } from '@/lib/config';
+import { SITE_URL, SITE_NAME } from '@/lib/config';
 
 interface ContactsPageProps {
   params: Promise<{ lng: string }>;
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
       title,
       description,
       url: `${SITE_URL}/${lng}/contacts`,
-      siteName: 'Andrey Bygg',
+      siteName: SITE_NAME,
       locale: lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
           url: `${SITE_URL}/images/og-image.webp`,
           width: 1200,
           height: 630,
-          alt: 'Andrey Bygg — Professionella byggtjänster i Sverige',
+          alt: `${SITE_NAME} — ${title}`,
         },
       ],
     },

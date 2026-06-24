@@ -12,7 +12,6 @@ interface GalleryImage {
 
 interface GalleryClientProps {
   images: GalleryImage[];
-  closeLabel: string;
   lng: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dict: any;

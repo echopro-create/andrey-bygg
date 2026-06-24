@@ -97,6 +97,17 @@ export interface Dict {
     seo_desc?: string;
     subtitle?: string;
     studio?: string;
+    loadMore?: string;
+    alt1?: string;
+    alt2?: string;
+    alt3?: string;
+    alt4?: string;
+    alt5?: string;
+    alt6?: string;
+    alt7?: string;
+    alt8?: string;
+    alt9?: string;
+    alt10?: string;
   };
   privacy: {
     title: string;

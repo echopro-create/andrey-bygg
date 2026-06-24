@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getDictionary, Locale } from '../../i18n';
 import GalleryClient from './GalleryClient';
-import { SITE_URL } from '@/lib/config';
+import { SITE_URL, SITE_NAME } from '@/lib/config';
 
 interface GalleryPageProps {
   params: Promise<{ lng: string }>;
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
       title,
       description,
       url: `${SITE_URL}/${lng}/gallery`,
-      siteName: 'Andrey Bygg',
+      siteName: SITE_NAME,
       locale: lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
@@ -58,16 +58,16 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
   const dict = await getDictionary(lng);
 
   const images = [
-    { src: '/images/gallery/gallery-1_v2.webp', alt: 'Professional installation of modern kitchen cabinets' },
-    { src: '/images/gallery/gallery-2_v2.webp', alt: 'Detailed tiling work with large-format tiles' },
-    { src: '/images/gallery/gallery-3_v2.webp', alt: 'Custom exterior woodwork and deck construction' },
-    { src: '/images/gallery/gallery-4_v2.webp', alt: 'Installation of energy-efficient windows' },
-    { src: '/images/gallery/gallery-5_v2.webp', alt: 'High-quality painting and interior wall renovation' },
-    { src: '/images/gallery/gallery-6_v2.webp', alt: 'Premium bathroom renovation and plumbing' },
-    { src: '/images/gallery/gallery-7_v2.webp', alt: 'Roofing and structural wood restoration' },
-    { src: '/images/gallery/gallery-8_v2.webp', alt: 'Accurate door alignment and installation' },
-    { src: '/images/gallery/gallery-9_v2.webp', alt: 'Custom kitchen countertop assembly' },
-    { src: '/images/gallery/gallery-10_v2.webp', alt: 'Elegant bathroom tiling and grout finish' },
+    { src: '/images/gallery/gallery-1_v2.webp', alt: (dict.gallery?.alt1 as string) || dict.nav.gallery },
+    { src: '/images/gallery/gallery-2_v2.webp', alt: (dict.gallery?.alt2 as string) || dict.nav.gallery },
+    { src: '/images/gallery/gallery-3_v2.webp', alt: (dict.gallery?.alt3 as string) || dict.nav.gallery },
+    { src: '/images/gallery/gallery-4_v2.webp', alt: (dict.gallery?.alt4 as string) || dict.nav.gallery },
+    { src: '/images/gallery/gallery-5_v2.webp', alt: (dict.gallery?.alt5 as string) || dict.nav.gallery },
+    { src: '/images/gallery/gallery-6_v2.webp', alt: (dict.gallery?.alt6 as string) || dict.nav.gallery },
+    { src: '/images/gallery/gallery-7_v2.webp', alt: (dict.gallery?.alt7 as string) || dict.nav.gallery },
+    { src: '/images/gallery/gallery-8_v2.webp', alt: (dict.gallery?.alt8 as string) || dict.nav.gallery },
+    { src: '/images/gallery/gallery-9_v2.webp', alt: (dict.gallery?.alt9 as string) || dict.nav.gallery },
+    { src: '/images/gallery/gallery-10_v2.webp', alt: (dict.gallery?.alt10 as string) || dict.nav.gallery },
   ];
 
   const imageGallerySchema = {
@@ -101,7 +101,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
           </p>
         </div>
 
-        <GalleryClient images={images} closeLabel="Close" lng={lng} dict={dict} />
+        <GalleryClient images={images} lng={lng} dict={dict} />
       </div>
     </div>
     </>
