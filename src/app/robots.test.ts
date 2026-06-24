@@ -20,8 +20,9 @@ describe('robots.txt generation', () => {
   });
 
   it('should disallow /api/ and /_next/ paths', () => {
-    expect(result.rules.disallow).toContain('/api/');
-    expect(result.rules.disallow).toContain('/_next/');
+    const rules = result.rules as { disallow?: string[] };
+    expect(rules.disallow).toContain('/api/');
+    expect(rules.disallow).toContain('/_next/');
   });
 
   it('should include a sitemap URL', () => {
@@ -31,7 +32,8 @@ describe('robots.txt generation', () => {
   });
 
   it('should not disallow important public pages', () => {
-    const disallow = result.rules.disallow as string[];
+    const rules = result.rules as { disallow?: string[] };
+    const disallow = rules.disallow as string[];
     const importantPaths = ['/', '/sv', '/en', '/no', '/ru', '/uk'];
     for (const path of importantPaths) {
       const blocked = disallow.some((d) => path.startsWith(d.replace(/\/$/, '')));

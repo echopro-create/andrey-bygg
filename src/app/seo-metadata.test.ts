@@ -158,8 +158,9 @@ describe('SEO metadata & structured data completeness', () => {
         expect(schema.email).toBeTruthy();
         expect(schema.priceRange).toBe('$$');
         expect(schema.currenciesAccepted).toBe('SEK');
-        expect(Array.isArray(schema.sameAs)).toBe(true);
-        expect(schema.sameAs.length).toBeGreaterThanOrEqual(1);
+        const sameAs = schema.sameAs as string[];
+        expect(Array.isArray(sameAs)).toBe(true);
+        expect(sameAs.length).toBeGreaterThanOrEqual(1);
 
         const hours = (schema.openingHoursSpecification as Array<Record<string, unknown>>)[0];
         expect(hours.opens).toBe('09:00');

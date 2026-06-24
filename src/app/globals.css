@@ -13,7 +13,9 @@
   --olive-plate: #2b0a0a;
   --olive-text: #ff3b30;
   --error: #cf6679;
+  --error-rgb: 207, 102, 121;
   --success: #81c784;
+  --success-rgb: 129, 199, 132;
   --footer-bg: #050605;
   
   /* Glassmorphism */
@@ -53,7 +55,9 @@ html.theme-zen {
   --olive-plate: #1c271d;
   --olive-text: #a1887f;
   --error: #e57373;
+  --error-rgb: 229, 115, 115;
   --success: #81c784;
+  --success-rgb: 129, 199, 132;
   --footer-bg: #050705;
   
   /* Glassmorphism */
@@ -421,14 +425,14 @@ select.form-control {
 }
 
 .alert-success {
-  background-color: rgba(129, 199, 132, 0.1);
-  border-color: rgba(129, 199, 132, 0.3);
+  background-color: rgba(var(--success-rgb), 0.1);
+  border-color: rgba(var(--success-rgb), 0.3);
   color: var(--success);
 }
 
 .alert-error {
-  background-color: rgba(207, 102, 121, 0.1);
-  border-color: rgba(207, 102, 121, 0.3);
+  background-color: rgba(var(--error-rgb), 0.1);
+  border-color: rgba(var(--error-rgb), 0.3);
   color: var(--error);
 }
 
@@ -711,7 +715,7 @@ select.form-control {
   width: 100%;
   max-width: 360px;
   height: 100vh;
-  background: #080908;
+  background: var(--background);
   border-left: 1px solid rgba(var(--primary-rgb), 0.15);
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
   z-index: 99;
@@ -1915,9 +1919,9 @@ body.mobile-drawer-open .custom-lang-selector {
   text-wrap: pretty;
 }
 
-.contraindications-block {
-  background: rgba(207, 102, 121, 0.03);
-  border: 1px solid rgba(207, 102, 121, 0.15);
+.important-notes-block {
+  background: rgba(var(--primary-rgb), 0.03);
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
   padding: 24px 32px;
   border-radius: 20px;
   margin: 0 auto 32px auto;
@@ -2767,7 +2771,7 @@ body.mobile-drawer-open {
   top: calc(100% + 8px);
   left: 0;
   width: 100%;
-  background: rgba(18, 18, 18, 0.95);
+  background: rgba(var(--card-bg-rgb), 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(var(--primary-rgb), 0.2);
@@ -2860,7 +2864,7 @@ body.mobile-drawer-open {
   top: calc(100% + 8px);
   left: 0;
   width: 320px;
-  background: rgba(18, 18, 18, 0.95);
+  background: rgba(var(--card-bg-rgb), 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(var(--primary-rgb), 0.2);
@@ -3004,7 +3008,7 @@ body.mobile-drawer-open {
 
 .datepicker-day-btn.is-selected {
   background-color: var(--primary) !important;
-  color: #121212 !important;
+  color: var(--background) !important;
   font-weight: 600;
 }
 
