@@ -2326,7 +2326,7 @@ body.mobile-drawer-open .custom-lang-selector {
 
 .contacts-panel-title {
   font-size: 1.8rem;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   color: var(--text-color);
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -2343,7 +2343,7 @@ body.mobile-drawer-open .custom-lang-selector {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  padding: 20px 0;
+  padding: 16px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: transform var(--transition-smooth), border-color var(--transition-smooth);
 }
@@ -2434,7 +2434,7 @@ body.mobile-drawer-open .custom-lang-selector {
 }
 
 .contacts-map-card {
-  height: 480px;
+  height: 420px;
   border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.06);
   position: relative;

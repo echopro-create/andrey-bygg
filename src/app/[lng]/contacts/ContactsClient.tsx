@@ -59,7 +59,7 @@ export default function ContactsClient({ dict }: { dict: Record<string, unknown>
   return (
     <div className="contacts-page section-spacing">
       <div className="container">
-        <div className="section-header text-center reveal" style={{ marginBottom: '60px' }}>
+        <div className="section-header text-center reveal" style={{ marginBottom: '32px' }}>
           <h1 className="section-title">
             {title} <span className="gold-accent">{accent}</span>
           </h1>
