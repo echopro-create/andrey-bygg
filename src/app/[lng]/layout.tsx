@@ -1,5 +1,6 @@
 import { Cormorant_Garamond, Outfit } from 'next/font/google';
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import { getDictionary, Locale } from '../i18n';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -130,7 +131,7 @@ export async function generateMetadata({
     icons: {
       icon: [
         { url: '/favicon.ico', sizes: '32x32' },
-        { url: '/favicon.svg', type: 'image/svg+xml' },
+        { url: '/icon.svg', type: 'image/svg+xml' },
       ],
       apple: [
         { url: '/apple-touch-icon.png', sizes: '180x180' },
@@ -194,7 +195,9 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
       suppressHydrationWarning
     >
       <head>
-        <script
+        <Script
+          id="theme-initializer"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
