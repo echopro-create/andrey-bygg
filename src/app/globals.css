@@ -33,7 +33,7 @@
   --btn-primary-text: #ffffff;
   --btn-primary-shadow: rgba(255, 59, 48, 0.15);
   --btn-primary-shadow-hover: rgba(255, 59, 48, 0.35);
-  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.35) 15%, rgba(var(--background-rgb), 0.5) 40%, rgba(var(--background-rgb), 0.6) 60%, rgba(var(--background-rgb), 0.75) 85%, var(--background) 100%);
+  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.65) 15%, rgba(var(--background-rgb), 0.75) 40%, rgba(var(--background-rgb), 0.8) 60%, rgba(var(--background-rgb), 0.9) 85%, var(--background) 100%);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
