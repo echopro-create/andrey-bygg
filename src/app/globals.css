@@ -2305,7 +2305,7 @@ body.mobile-drawer-open .custom-lang-selector {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 64px;
-  align-items: center;
+  align-items: stretch;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -2318,6 +2318,8 @@ body.mobile-drawer-open .custom-lang-selector {
 .contacts-details-panel {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
   padding: 10px 0;
   position: relative;
 }
@@ -2334,7 +2336,7 @@ body.mobile-drawer-open .custom-lang-selector {
   display: flex;
   flex-direction: column;
   gap: 0;
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 
 .info-item-row-interactive {
@@ -2495,6 +2497,10 @@ body.mobile-drawer-open .custom-lang-selector {
   .contacts-grid {
     grid-template-columns: 1fr;
     gap: 56px;
+  }
+  .contacts-details-panel {
+    height: auto;
+    gap: 32px;
   }
   .info-item-row-interactive:hover {
     transform: none;

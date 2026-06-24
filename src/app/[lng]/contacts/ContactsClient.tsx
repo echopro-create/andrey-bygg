@@ -119,7 +119,7 @@ export default function ContactsClient({ dict }: { dict: Record<string, unknown>
                     </a>
                     {socialPhone && (
                       <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                        {(contacts.social_phone_label as string) || 'WhatsApp/Telegram/Viber'}:{' '}
+                        {(contacts.social_phone_label as string) || 'WhatsApp/Telegram/Viber:'}{' '}
                         <a
                           href={`https://wa.me/${socialPhone.replace(/\D/g, '')}`}
                           target="_blank"
