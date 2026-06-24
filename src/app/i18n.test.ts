@@ -26,7 +26,7 @@ describe('i18n dictionary loader', () => {
 
     // Assert
     expect(dict).toBeDefined();
-    expect(dict.nav.about).toBe('Om oss');
+    expect(dict.nav.about).toBe('Om\u00A0oss');
     expect(dict.nav.services).toBe('Tjänster');
   });
 
@@ -39,7 +39,7 @@ describe('i18n dictionary loader', () => {
 
     // Assert
     expect(dict).toBeDefined();
-    expect(dict.nav.about).toBe('О нас');
+    expect(dict.nav.about).toBe('О\u00A0нас');
   });
 
   it('should load Ukrainian dictionary successfully', async () => {
@@ -51,7 +51,7 @@ describe('i18n dictionary loader', () => {
 
     // Assert
     expect(dict).toBeDefined();
-    expect(dict.nav.about).toBe('Про нас');
+    expect(dict.nav.about).toBe('Про\u00A0нас');
   });
 
   describe('SEO standards verification (2026)', () => {
