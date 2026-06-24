@@ -10,7 +10,8 @@ interface FooterProps {
 export default function Footer({ dict, lng }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
-  const footerServices = serviceSlugs.slice(0, 4).map((slug) => ({
+  // Выводим все 6 услуг для максимального СЕО веса внутренних страниц
+  const footerServices = serviceSlugs.map((slug) => ({
     slug,
     title: dict.services.items[slug].title,
   }));
@@ -22,15 +23,49 @@ export default function Footer({ dict, lng }: FooterProps) {
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
+        {/* 1. Блок бренда */}
         <div className="footer-brand">
           <Link href={`/${lng}`} className="footer-logo" aria-label="Andrey Bygg — Home">
             ANDREY<span className="gold-accent"> BYGG</span>
           </Link>
           <p className="footer-desc">
-            {dict.hero.subtitle}
+            {dict.footer?.desc}
           </p>
         </div>
 
+        {/* 2. Быстрые ссылки для навигации */}
+        <nav className="footer-nav-col" aria-label="Quick links">
+          <h4 className="footer-title">{dict.footer?.quickLinks || 'Menu'}</h4>
+          <ul className="footer-list">
+            <li>
+              <Link href={`/${lng}`} className="footer-link">
+                {lng === 'ru' ? 'Главная' : lng === 'uk' ? 'Головна' : 'Hem'}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lng}#about`} className="footer-link">
+                {dict.nav.about}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lng}#services`} className="footer-link">
+                {dict.nav.services}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lng}#gallery`} className="footer-link">
+                {dict.nav.gallery}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lng}#contacts`} className="footer-link">
+                {dict.nav.contacts}
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* 3. Список всех услуг (SEO перелинковка) */}
         <nav className="footer-links" aria-label="Services navigation">
           <h4 className="footer-title">{dict.nav.services}</h4>
           <ul className="footer-list">
@@ -41,14 +76,10 @@ export default function Footer({ dict, lng }: FooterProps) {
                 </Link>
               </li>
             ))}
-            <li>
-              <Link href={`/${lng}#services`} className="footer-link">
-                All services →
-              </Link>
-            </li>
           </ul>
         </nav>
 
+        {/* 4. Контактная информация */}
         <div className="footer-info">
           <h4 className="footer-title">{dict.nav.contacts}</h4>
           <address style={{ fontStyle: 'normal' }}>
@@ -96,12 +127,11 @@ export default function Footer({ dict, lng }: FooterProps) {
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
           <p>
-            &copy; {currentYear} Andrey Bygg. {dict.contacts.regions_desc || ''}.
-            {' | '}
-            <Link href={`/${lng}/privacy`} className="footer-bottom-link" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>
-              {dict.footer?.privacy || 'Privacy Policy'}
-            </Link>
+            &copy; {currentYear} Andrey Bygg. {dict.footer?.rights || 'All rights reserved.'}
           </p>
+          <Link href={`/${lng}/privacy`} className="footer-bottom-link" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>
+            {dict.footer?.privacy || 'Privacy Policy'}
+          </Link>
         </div>
       </div>
     </footer>

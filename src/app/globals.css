@@ -2608,8 +2608,8 @@ body.mobile-drawer-open .custom-lang-selector {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1.5fr 1fr 1.25fr 1.25fr;
+  gap: 40px;
   padding-bottom: 60px;
 }
 
@@ -2696,6 +2696,13 @@ body.mobile-drawer-open .custom-lang-selector {
 }
 
 .social-link:hover { color: var(--primary); }
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
 
 @media (max-width: 768px) {
   .footer-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
