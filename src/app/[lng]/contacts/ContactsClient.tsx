@@ -327,7 +327,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
 
       <div className="contacts-info-column reveal">
         <div className="glass-card contacts-info-card">
-          <h3 className="info-box-title">RYGGHJÄLP</h3>
+          <h3 className="info-box-title">ANDREY BYGG</h3>
 
           <div className="info-items">
             <div className="info-item-row">
@@ -423,8 +423,8 @@ function ContactsForm({ dict }: ContactsClientProps) {
           <div className="minimal-map-card">
             <Image
               src="/images/contacts-bg.webp"
-              alt="Luxury spa background"
-              className="spa-ambient-img"
+              alt="Andrey Bygg background"
+              className="contacts-ambient-img"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               quality={75}
@@ -436,7 +436,7 @@ function ContactsForm({ dict }: ContactsClientProps) {
                 <p>{dict.contacts.city}</p>
               </div>
               <a
-                href="https://wa.me/4748614204"
+                href="https://wa.me/380935758495"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary map-directions-btn"

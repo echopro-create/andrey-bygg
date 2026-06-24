@@ -57,7 +57,7 @@ function categorizeImage(filePath: string): keyof typeof MAX_FILE_SIZES {
   if (relativePath.startsWith('services/')) return 'service';
   if (relativePath.startsWith('gallery/')) return 'gallery';
   if (relativePath.includes('hero')) return 'hero';
-  if (relativePath.includes('portrait') || relativePath.includes('oleg-about')) return 'portrait';
+  if (relativePath.includes('portrait')) return 'portrait';
   if (relativePath.includes('contacts')) return 'contacts';
   if (relativePath.includes('og-')) return 'og';
   return 'hero'; // default

@@ -113,13 +113,13 @@ export async function submitBooking(formData: BookingData) {
 
     if (!response.ok) {
       const errText = await response.text();
-      console.error('[RyggHjälp] Telegram API Error response:', errText);
+      console.error('[Andrey Bygg] Telegram API Error response:', errText);
       return { success: false, error: 'Failed to send notification via Telegram API.' };
     }
 
     return { success: true, demo: false };
   } catch (error: unknown) {
-    console.error('[RyggHjälp] Exception while sending Telegram notification:', error);
+    console.error('[Andrey Bygg] Exception while sending Telegram notification:', error);
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown network error.',

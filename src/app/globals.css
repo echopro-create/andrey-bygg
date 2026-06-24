@@ -1,4 +1,4 @@
-/* Design System & Global Styles for RyggHjälp */
+/* Design System & Global Styles for Andrey Bygg */
 
 /* Default Theme: Obsidian */
 :root, html.theme-obsidian {
@@ -2392,7 +2392,7 @@ body.mobile-drawer-open .custom-lang-selector {
   margin-top: auto;
 }
 
-.minimal-map-card img.spa-ambient-img {
+.minimal-map-card img.contacts-ambient-img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -2403,7 +2403,7 @@ body.mobile-drawer-open .custom-lang-selector {
   transition: transform var(--transition-smooth), filter var(--transition-smooth);
 }
 
-.minimal-map-card:hover img.spa-ambient-img {
+.minimal-map-card:hover img.contacts-ambient-img {
   transform: scale(1.05);
   filter: brightness(0.85) contrast(1.15);
 }
