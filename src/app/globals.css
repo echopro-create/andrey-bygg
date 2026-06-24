@@ -35,7 +35,7 @@
   --btn-primary-text: #ffffff;
   --btn-primary-shadow: rgba(255, 59, 48, 0.15);
   --btn-primary-shadow-hover: rgba(255, 59, 48, 0.35);
-  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.4) 15%, rgba(var(--background-rgb), 0.55) 50%, rgba(var(--background-rgb), 0.85) 85%, var(--background) 100%);
+  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.3) 15%, rgba(var(--background-rgb), 0.5) 50%, rgba(var(--background-rgb), 0.8) 75%, var(--background) 95%, var(--background) 100%);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
@@ -77,7 +77,7 @@ html.theme-zen {
   --btn-primary-text: #ffffff;
   --btn-primary-shadow: rgba(161, 136, 127, 0.15);
   --btn-primary-shadow-hover: rgba(161, 136, 127, 0.35);
-  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.4) 15%, rgba(var(--background-rgb), 0.55) 50%, rgba(var(--background-rgb), 0.85) 85%, var(--background) 100%);
+  --hero-overlay: linear-gradient(to bottom, var(--background) 0%, rgba(var(--background-rgb), 0.3) 15%, rgba(var(--background-rgb), 0.5) 50%, rgba(var(--background-rgb), 0.8) 75%, var(--background) 95%, var(--background) 100%);
   
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
