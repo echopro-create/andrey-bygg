@@ -67,10 +67,10 @@ export async function submitBooking(formData: BookingData) {
   const sanitizedTime = formData.time ? formData.time.replace(/[<>]/g, '').trim().slice(0, 30) : '';
 
   const text = `
-🔔 *New booking at RyggHjälp!*
+🔔 *New booking at Andrey Bygg!*
 👤 *Name:* ${sanitizedName}
 📞 *Phone:* ${sanitizedPhone}
-💆‍♂️ *Service:* ${sanitizedService}
+🛠️ *Service:* ${sanitizedService}
 📅 *Date:* ${sanitizedDate || '—'}
 🕒 *Time:* ${sanitizedTime || '—'}
 ✉️ *Message:* ${sanitizedMessage || '—'}
@@ -78,7 +78,7 @@ export async function submitBooking(formData: BookingData) {
 
   if (!token || !chatId) {
     console.warn(
-      '⚠️ [RyggHjälp Warning] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not configured in .env.\n' +
+      '⚠️ [Andrey Bygg Warning] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not configured in .env.\n' +
       'Booking processed in demo mode.\n' +
       'Submission data:',
       {
