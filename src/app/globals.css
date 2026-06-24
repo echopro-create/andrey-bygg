@@ -2,6 +2,7 @@
 
 /* Default Theme: Obsidian */
 :root, html.theme-obsidian {
+  --header-height: 80px;
   --background: #080908;
   --background-rgb: 8, 9, 8;
   --primary: #ff3b30;
@@ -60,6 +61,11 @@ html {
 
 #about, #services {
   scroll-margin-top: 100px;
+}
+
+#main-content {
+  min-height: calc(100vh - var(--header-height, 80px));
+  padding-top: var(--header-height, 80px);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -225,19 +231,11 @@ section[id] {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
   section[id] {
     scroll-margin-top: 80px;
-  }
-}
-
-.main-content {
-  min-height: calc(100vh - 80px);
-  padding-top: 80px;
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    padding-top: 64px;
   }
 }
 

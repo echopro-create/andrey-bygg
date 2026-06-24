@@ -67,6 +67,78 @@ export default function Header({ dict }: HeaderProps) {
     };
   }, [pathname]);
 
+  // Плавный скролл к якорям для кроссбраузерной совместимости (особенно Safari)
+  useEffect(() => {
+    const handleAnchorClick = (e: MouseEvent) => {
+      const targetLink = (e.target as HTMLElement).closest('a');
+      if (!targetLink) return;
+
+      const href = targetLink.getAttribute('href');
+      if (!href) return;
+
+      if (href.startsWith('#') || href.includes('#')) {
+        try {
+          const url = new URL(targetLink.href);
+          if (url.pathname === window.location.pathname) {
+            const hash = url.hash;
+            if (!hash) return;
+            
+            const element = document.querySelector(hash);
+            if (element) {
+              e.preventDefault();
+              const headerHeight = window.innerWidth > 768 ? 80 : 64;
+              const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+              const offsetPosition = elementPosition - headerHeight - 24; // 24px комфортный отступ
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',
+              });
+
+              window.history.pushState(null, '', hash);
+              setActiveHash(hash);
+            }
+          }
+        } catch {
+          // Игнорируем некорректные URL
+        }
+      }
+    };
+
+    // Скролл при первоначальной загрузке страницы с хэшем
+    const scrollToInitialHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          setTimeout(() => {
+            const headerHeight = window.innerWidth > 768 ? 80 : 64;
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - headerHeight - 24;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth',
+            });
+            setActiveHash(hash);
+          }, 100);
+        }
+      }
+    };
+
+    // Сброс скролла на 0 при переходе на новую страницу без хэша (предотвращает баги Safari)
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+
+    document.addEventListener('click', handleAnchorClick);
+    const timer = setTimeout(scrollToInitialHash, 350);
+
+    return () => {
+      document.removeEventListener('click', handleAnchorClick);
+      clearTimeout(timer);
+    };
+  }, [pathname]);
+
   const languages = [
     { code: 'sv', label: 'Svenska' },
     { code: 'en', label: 'English' },

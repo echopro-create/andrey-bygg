@@ -197,7 +197,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
         <ScrollRevealInit />
 
-        <main id="main-content" className="main-content">
+        <main id="main-content">
           {children}
         </main>
 
