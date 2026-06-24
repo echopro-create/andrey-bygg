@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getDictionary, Locale } from '../../../i18n';
-import { SITE_URL, serviceSlugs } from '@/lib/config';
+import { SITE_URL, SITE_NAME, serviceSlugs, locales } from '@/lib/config';
 
 interface ServicePageProps {
   params: Promise<{
@@ -13,9 +13,8 @@ interface ServicePageProps {
 }
 
 export async function generateStaticParams() {
-  const allLocales = ['sv', 'en', 'ru', 'uk'];
   const params: { lng: string; service: string }[] = [];
-  for (const lng of allLocales) {
+  for (const lng of locales) {
     for (const service of serviceSlugs) {
       params.push({ lng, service });
     }
@@ -35,7 +34,6 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
   const title = service.seo_title || service.title;
   const description = service.seo_desc || service.desc;
-  const allLocales = ['sv', 'en', 'ru', 'uk'];
 
   return {
     title,
@@ -43,14 +41,14 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     alternates: {
       canonical: `/${lng}/services/${serviceSlug}`,
       languages: Object.fromEntries(
-        allLocales.map((alt) => [alt, `/${alt}/services/${serviceSlug}`])
+        locales.map((alt) => [alt, `/${alt}/services/${serviceSlug}`])
       ),
     },
     openGraph: {
       title,
       description,
       url: `${SITE_URL}/${lng}/services/${serviceSlug}`,
-      siteName: 'Andrey Bygg',
+      siteName: SITE_NAME,
       locale: lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [

@@ -146,6 +146,9 @@ describe('Image Performance Tests', () => {
       path.join(__dirname, '../../src/app/[lng]/layout.tsx'),
       path.join(__dirname, '../../src/app/globals.css'),
       path.join(__dirname, '../../src/app/[lng]/privacy/page.tsx'),
+      path.join(__dirname, '../../src/app/sitemap.ts'),
+      path.join(__dirname, '../../src/lib/config.ts'),
+      path.join(__dirname, '../../src/components/Footer.tsx'),
     ];
 
     it('every image should be referenced in source code', () => {

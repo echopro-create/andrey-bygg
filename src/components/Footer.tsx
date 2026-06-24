@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Dict } from '@/lib/config';
+import { serviceSlugs } from '@/lib/config';
 
 interface FooterProps {
   dict: Dict;
@@ -9,12 +10,10 @@ interface FooterProps {
 export default function Footer({ dict, lng }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
-  const footerServices = [
-    { slug: 'windows-doors', title: dict.services.items['windows-doors'].title },
-    { slug: 'kitchen-assembly', title: dict.services.items['kitchen-assembly'].title },
-    { slug: 'bathroom-renovation', title: dict.services.items['bathroom-renovation'].title },
-    { slug: 'tiling', title: dict.services.items.tiling.title },
-  ];
+  const footerServices = serviceSlugs.slice(0, 4).map((slug) => ({
+    slug,
+    title: dict.services.items[slug].title,
+  }));
 
   const regionText = dict.contacts.regions_desc as string || 'Laholm, Halmstad, Båstad, Ängelholm, Markaryd — Halland & Skåne, Sweden';
   const socialPhone = (dict.contacts.social_phone as string) || '';

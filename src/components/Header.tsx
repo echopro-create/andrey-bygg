@@ -78,12 +78,18 @@ export default function Header({ dict }: HeaderProps) {
 
   useEffect(() => {
     if (mobileMenuOpen) {
+      const scrollY = window.scrollY;
+      document.body.style.top = `-${scrollY}px`;
       document.body.classList.add('mobile-drawer-open');
     } else {
+      const scrollY = parseInt(document.body.style.top || '0', 10);
       document.body.classList.remove('mobile-drawer-open');
+      document.body.style.top = '';
+      window.scrollTo(0, Math.abs(scrollY));
     }
     return () => {
       document.body.classList.remove('mobile-drawer-open');
+      document.body.style.top = '';
     };
   }, [mobileMenuOpen]);
 

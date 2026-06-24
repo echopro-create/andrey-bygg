@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getDictionary, Locale } from '../../i18n';
 import { Metadata } from 'next';
-import { SITE_URL } from '@/lib/config';
+import { SITE_URL, locales } from '@/lib/config';
 
 interface PrivacyPageProps {
   params: Promise<{
@@ -25,7 +25,6 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
 
   const title = dict.privacy.seo_title || dict.privacy.title;
   const description = dict.privacy.seo_desc || dict.privacy.subtitle;
-  const locales = ['sv', 'en', 'ru', 'uk'];
 
   return {
     title,

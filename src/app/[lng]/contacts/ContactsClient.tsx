@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { submitBooking } from '../../actions';
 import { CustomSelect, CustomDatePicker } from './CustomFormComponents';
+import { serviceSlugs } from '@/lib/config';
 
 interface ContactsFormProps {
   dict: Record<string, unknown>;
@@ -116,15 +117,10 @@ function ContactsForm({ dict }: ContactsFormProps) {
     return { value: timeString, label: timeString };
   });
 
-  const servicesList = [
-    { value: 'windows-doors', label: (servicesItems['windows-doors']?.title as string) || '' },
-    { value: 'kitchen-assembly', label: (servicesItems['kitchen-assembly']?.title as string) || '' },
-    { value: 'bathroom-renovation', label: (servicesItems['bathroom-renovation']?.title as string) || '' },
-    { value: 'tiling', label: (servicesItems.tiling?.title as string) || '' },
-    { value: 'painting', label: (servicesItems.painting?.title as string) || '' },
-    { value: 'roofing-woodwork', label: (servicesItems['roofing-woodwork']?.title as string) || '' },
-    { value: 'other', label: labels.otherQuestions || 'Other questions' },
-  ];
+  const servicesList = serviceSlugs.map((slug) => ({
+    value: slug,
+    label: (servicesItems[slug]?.title as string) || '',
+  }));
 
   const initialService = (() => {
     const param = searchParams.get('service');

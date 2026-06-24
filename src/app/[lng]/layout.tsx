@@ -5,7 +5,7 @@ import { getDictionary, Locale } from '../i18n';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollRevealInit from '@/components/ScrollRevealInit';
-import { SITE_URL, SITE_NAME, localeMap } from '@/lib/config';
+import { SITE_URL, SITE_NAME, localeMap, locales } from '@/lib/config';
 import '../globals.css';
 
 const cormorant = Cormorant_Garamond({
@@ -23,7 +23,7 @@ const outfit = Outfit({
 });
 
 export async function generateStaticParams() {
-  return [{ lng: 'sv' }, { lng: 'en' }, { lng: 'ru' }, { lng: 'uk' }];
+  return locales.map((lng) => ({ lng }));
 }
 
 export const viewport: Viewport = {
@@ -42,16 +42,8 @@ export async function generateMetadata({
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const localizedTitles: Record<string, string> = {
-    sv: 'Andrey Bygg | Professionell Bygg & Renovering i Sverige',
-    en: 'Andrey Bygg | Professional Construction & Renovation in Sweden',
-    ru: 'Andrey Bygg | Профессиональное строительство и ремонт в Швеции',
-    uk: 'Andrey Bygg | Професійне будівництво та ремонт у Швеції',
-  };
-  const titleDefault = localizedTitles[lng] || localizedTitles.sv;
-  const descriptionDefault =
-    dict.hero.subtitle ||
-    'Professionella byggtjänster och renovering i Halland och Skåne.';
+  const titleDefault = `${SITE_NAME} | ${dict.hero.title} ${dict.hero.accent}`;
+  const descriptionDefault = dict.hero.subtitle;
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -74,9 +66,9 @@ export async function generateMetadata({
       'utvändiga träarbeten',
       'Andrey Bygg',
     ],
-    authors: [{ name: 'Andrey Bygg' }],
-    creator: 'Andrey Bygg',
-    publisher: 'Andrey Bygg',
+    authors: [{ name: SITE_NAME }],
+    creator: SITE_NAME,
+    publisher: SITE_NAME,
     formatDetection: {
       email: false,
       address: false,
@@ -208,7 +200,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
       </head>
       <body>
         <a href="#main-content" className="skip-link">
-          {dict.skipToContent || 'Skip to content'}
+          {dict.skipToContent}
         </a>
 
         <Header dict={dict} />

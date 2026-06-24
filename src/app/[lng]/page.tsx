@@ -76,6 +76,20 @@ export default async function Page({ params }: PageProps) {
       <div className="home-page">
         {/* 1. Hero Section */}
         <section className="hero-section">
+          {/* Background Image Wrapper for Scroll-driven Parallax */}
+          <div className="hero-bg-wrapper">
+            <Image
+              src="/images/hero-bg.webp"
+              alt="Andrey Bygg Construction Background"
+              fill
+              priority
+              quality={85}
+              sizes="100vw"
+              className="hero-bg-image"
+            />
+            <div className="hero-bg-overlay" />
+          </div>
+
           <div className="container hero-container">
             <div className="hero-content reveal">
               <h1 className="hero-title">

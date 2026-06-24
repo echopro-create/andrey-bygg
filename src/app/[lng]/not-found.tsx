@@ -30,14 +30,13 @@ export default async function NotFound({ params }: NotFoundProps) {
           404
         </h1>
         <h2 className="section-title" style={{ marginBottom: '24px' }}>
-          {dict.notFound?.title || 'Page not found'}
+          {dict.notFound.title}
         </h2>
         <p style={{ color: 'var(--text-muted)', marginBottom: '40px', lineHeight: 1.6 }}>
-          {dict.notFound?.description ||
-            'The page you are looking for does not exist or has been moved. Please check the URL or return to the homepage.'}
+          {dict.notFound.description}
         </p>
         <Link href={`/${lng}`} className="btn btn-primary">
-          {dict.notFound?.backHome || 'Back to Home'}
+          {dict.notFound.backHome}
         </Link>
       </div>
     </div>
