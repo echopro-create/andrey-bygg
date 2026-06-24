@@ -63,6 +63,7 @@ function ContactsForm({ dict }: ContactsFormProps) {
       servicePlaceholder: 'Välj tjänst...',
       datePlaceholder: 'Välj datum...',
       timePlaceholder: 'Välj tid...',
+      otherQuestions: 'Övriga frågor',
     },
     en: {
       formName: 'Name',
@@ -74,6 +75,7 @@ function ContactsForm({ dict }: ContactsFormProps) {
       servicePlaceholder: 'Select service...',
       datePlaceholder: 'Select date...',
       timePlaceholder: 'Select time...',
+      otherQuestions: 'Other questions',
     },
     ru: {
       formName: 'Имя',
@@ -85,6 +87,7 @@ function ContactsForm({ dict }: ContactsFormProps) {
       servicePlaceholder: 'Выберите услугу...',
       datePlaceholder: 'Выберите дату...',
       timePlaceholder: 'Выберите время...',
+      otherQuestions: 'Другие вопросы',
     },
     uk: {
       formName: "Ім'я",
@@ -96,6 +99,7 @@ function ContactsForm({ dict }: ContactsFormProps) {
       servicePlaceholder: 'Виберіть послугу...',
       datePlaceholder: 'Виберіть дату...',
       timePlaceholder: 'Виберіть час...',
+      otherQuestions: 'Інші питання',
     },
   };
 
@@ -119,6 +123,7 @@ function ContactsForm({ dict }: ContactsFormProps) {
     { value: 'tiling', label: (servicesItems.tiling?.title as string) || '' },
     { value: 'painting', label: (servicesItems.painting?.title as string) || '' },
     { value: 'roofing-woodwork', label: (servicesItems['roofing-woodwork']?.title as string) || '' },
+    { value: 'other', label: labels.otherQuestions || 'Other questions' },
   ];
 
   const initialService = (() => {
