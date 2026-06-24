@@ -21,6 +21,16 @@ export default function Header({ dict }: HeaderProps) {
   const currentLng = (params.lng as string) || 'sv';
 
   const [activeHash, setActiveHash] = useState('');
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // IntersectionObserver для скролла к секциям
   useEffect(() => {
@@ -132,7 +142,7 @@ export default function Header({ dict }: HeaderProps) {
   };
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
         <Link href={`/${currentLng}`} className="logo" onClick={closeMenu} aria-label="Andrey Bygg — Home">
           ANDREY<span className="gold-accent"> BYGG</span>
