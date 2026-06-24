@@ -1131,6 +1131,13 @@ body.mobile-drawer-open .custom-lang-selector {
   text-wrap: balance;
 }
 
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
 .text-center {
   text-align: center;
 }
