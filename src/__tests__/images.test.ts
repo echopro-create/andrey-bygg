@@ -8,7 +8,7 @@ const IMAGES_DIR = path.join(__dirname, '../../public/images');
 const MAX_FILE_SIZES = {
   service: 150 * 1024,      // 150KB
   gallery: 180 * 1024,      // 180KB
-  hero: 200 * 1024,        // 200KB
+  hero: 450 * 1024,        // 450KB
   portrait: 180 * 1024,     // 180KB
   contacts: 150 * 1024,    // 150KB
   og: 200 * 1024,           // 200KB
@@ -18,7 +18,7 @@ const MAX_FILE_SIZES = {
 const MAX_DIMENSIONS = {
   service: { width: 1024, height: 1024 },
   gallery: { width: 1024, height: 1024 },
-  hero: { width: 1920, height: 1080 },
+  hero: { width: 2880, height: 1620 },
   portrait: { width: 1024, height: 1365 },
   contacts: { width: 1024, height: 1024 },
   og: { width: 1200, height: 1024 },
