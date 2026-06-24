@@ -188,12 +188,6 @@ export default function ContactsClient({ dict }: { dict: Record<string, unknown>
                 loading="lazy"
                 style={{ objectFit: 'contain' }}
               />
-              <div className="map-card-footer">
-                <div className="map-footer-text">
-                  <h6>Halland & Skåne</h6>
-                  <p>Sweden</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
