@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: GalleryPageProps): Promise<Me
   const dict = await getDictionary(lng);
 
   const title = dict.gallery?.seo_title || dict.nav.gallery;
-  const description = dict.gallery?.seo_desc || dict.gallery?.subtitle || 'Take a look at our completed construction, renovation, and carpentry projects.';
+  const description = dict.gallery?.seo_desc || dict.gallery?.subtitle || '';
 
   return {
     title,

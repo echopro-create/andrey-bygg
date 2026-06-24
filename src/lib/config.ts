@@ -77,6 +77,7 @@ export interface Dict {
     address?: string;
     hours?: string;
     regions_desc?: string;
+    regions_title?: string;
     title?: string;
     accent?: string;
     subtitle?: string;

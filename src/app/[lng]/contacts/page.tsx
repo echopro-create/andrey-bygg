@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: ContactsPageProps): Promise<M
   const dict = await getDictionary(lng);
 
   const title = dict.contacts.seo_title || `${dict.contacts.title} ${dict.contacts.accent}`;
-  const description = dict.contacts.seo_desc || dict.contacts?.subtitle || 'Book your session online or reach out via phone.';
+  const description = dict.contacts.seo_desc || dict.contacts?.subtitle || '';
 
   return {
     title,
@@ -57,61 +57,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
   const lng = resolvedParams.lng as Locale;
   const dict = await getDictionary(lng);
 
-  const businessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ConstructionBusiness',
-    name: 'Andrey Bygg',
-    description: dict.contacts?.subtitle || 'Professionella byggtjänster i Sverige.',
-    url: `${SITE_URL}/${lng}/contacts`,
-    telephone: dict.contacts.phone,
-    email: dict.contacts.email,
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'SE',
-    },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: [
-          'Monday',
-          'Tuesday',
-          'Wednesday',
-          'Thursday',
-          'Friday',
-          'Saturday',
-          'Sunday',
-        ],
-        opens: '09:00',
-        closes: '21:00',
-      },
-    ],
-    priceRange: '$$',
-    currenciesAccepted: 'SEK',
-    paymentAccepted: 'Cash, Credit Card, Swish',
-    sameAs: [],
-  };
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
-      />
-      <div className="contacts-page section-spacing">
-      <div className="container">
-        <div className="section-header text-center reveal" style={{ marginBottom: '60px' }}>
-          <h1 className="section-title">
-            {dict.contacts.title} <span className="gold-accent">{dict.contacts.accent}</span>
-          </h1>
-          <p className="section-subtitle" style={{ maxWidth: '600px', margin: '0 auto' }}>
-            {dict.contacts?.subtitle ||
-              'Book your session online or reach out via phone. Our studio is equipped with everything needed for your comfort.'}
-          </p>
-        </div>
-
-        <ContactsClient dict={dict as unknown as Record<string, unknown>} />
-      </div>
-    </div>
-    </>
+    <ContactsClient dict={dict as unknown as Record<string, unknown>} />
   );
 }

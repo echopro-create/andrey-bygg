@@ -188,7 +188,12 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                document.documentElement.classList.add('theme-obsidian');
+                var theme = localStorage.getItem('theme');
+                if (theme === 'obsidian' || theme === 'zen') {
+                  document.documentElement.classList.add('theme-' + theme);
+                } else {
+                  document.documentElement.classList.add('theme-obsidian');
+                }
               })();
             `,
           }}

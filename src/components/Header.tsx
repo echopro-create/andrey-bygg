@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { usePathname, useRouter, useParams } from 'next/navigation';
 import { useState, useEffect, useRef, useTransition } from 'react';
 import type { Dict } from '@/lib/config';
+import type { Theme } from '@/utils/theme';
+import { getNextTheme } from '@/utils/theme';
 
 interface HeaderProps {
   dict: Dict;
@@ -21,6 +23,10 @@ export default function Header({ dict }: HeaderProps) {
   const currentLng = (params.lng as string) || 'sv';
 
   const [activeHash, setActiveHash] = useState('');
+  const [theme, setTheme] = useState<Theme>(() => {
+    try { const s = localStorage.getItem('theme'); if (s === 'zen') return 'zen'; } catch { /* SSR */ }
+    return 'obsidian';
+  });
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -31,6 +37,11 @@ export default function Header({ dict }: HeaderProps) {
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.remove('theme-obsidian', 'theme-zen');
+    document.documentElement.classList.add(`theme-${theme}`);
+  }, [theme]);
 
   // IntersectionObserver для скролла к секциям
   useEffect(() => {
@@ -119,7 +130,7 @@ export default function Header({ dict }: HeaderProps) {
 
   const navLinks = [
     { href: `/${currentLng}#about`, label: dict.nav.about },
-    { href: `/${currentLng}#services`, label: dict.nav.services },
+    { href: `/${currentLng}/services`, label: dict.nav.services },
     { href: `/${currentLng}/gallery`, label: dict.nav.gallery },
     { href: `/${currentLng}/contacts`, label: dict.nav.contacts },
   ];
@@ -210,6 +221,21 @@ export default function Header({ dict }: HeaderProps) {
               </div>
             )}
           </div>
+
+          <button
+            onClick={() => {
+              const next = getNextTheme(theme);
+              setTheme(next);
+              document.documentElement.classList.remove('theme-obsidian', 'theme-zen');
+              document.documentElement.classList.add(`theme-${next}`);
+              localStorage.setItem('theme', next);
+            }}
+            className="theme-toggle-btn"
+            aria-label={`Switch to ${theme === 'obsidian' ? 'zen' : 'obsidian'} theme`}
+            title={`Switch to ${theme === 'obsidian' ? 'zen' : 'obsidian'} theme`}
+          >
+            {theme === 'obsidian' ? '☀' : '☾'}
+          </button>
 
           <Link
             href={`/${currentLng}/contacts?book=true`}
