@@ -23,14 +23,15 @@ export default function Header({ dict }: HeaderProps) {
   const currentLng = (params.lng as string) || 'sv';
 
   const [activeHash, setActiveHash] = useState('');
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof localStorage !== 'undefined') {
-      const s = localStorage.getItem('theme');
-      if (s === 'obsidian' || s === 'zen') return s;
-    }
-    return 'obsidian';
-  });
+  const [theme, setTheme] = useState<Theme>('obsidian');
   const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('theme');
+    if (stored === 'obsidian' || stored === 'zen') {
+      setTheme(stored);
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
