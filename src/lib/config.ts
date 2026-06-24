@@ -44,6 +44,7 @@ export interface Dict {
     accent?: string;
     readMore?: string;
     duration?: string;
+    priceFrom?: string;
     bookService?: string;
     benefitsTitle?: string;
     items: Record<string, {

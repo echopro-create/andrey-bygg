@@ -1767,7 +1767,7 @@ body.mobile-drawer-open .custom-lang-selector {
   position: relative;
   z-index: 2;
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 1.6;
   border-radius: 24px;
   border: 1px solid rgba(var(--primary-rgb), 0.08);
   overflow: hidden;
@@ -1777,13 +1777,44 @@ body.mobile-drawer-open .custom-lang-selector {
 .service-detail-img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4/5;
+  aspect-ratio: 1.6;
   object-fit: cover;
   transition: transform 6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .service-detail-img-frame:hover .service-detail-img {
   transform: scale(1.05);
+}
+
+.service-cta-card {
+  margin-top: 32px;
+  padding: 32px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(var(--text-color-rgb), 0.03) 0%, rgba(var(--text-color-rgb), 0.01) 100%);
+  border: 1px solid rgba(var(--primary-rgb), 0.12);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.cta-card-title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.cta-card-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.cta-card-btn {
+  width: 100%;
 }
 
 .service-detail-info-wrapper {
@@ -1898,7 +1929,7 @@ body.mobile-drawer-open .custom-lang-selector {
 }
 
 .book-btn-wrapper {
-  display: flex;
+  display: none;
   justify-content: center;
   width: 100%;
   padding-top: 16px;
@@ -2070,6 +2101,12 @@ body.mobile-drawer-open .custom-lang-selector {
   .service-detail-image-wrapper {
     max-width: 480px;
     margin: 0 auto;
+  }
+  .service-cta-card {
+    display: none;
+  }
+  .book-btn-wrapper {
+    display: flex;
   }
   .related-services-grid {
     grid-template-columns: repeat(2, 1fr);

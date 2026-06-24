@@ -153,13 +153,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
           {/* Шапка услуги: на всю ширину страницы */}
           <div className="service-detail-header reveal">
             <h1 className="service-detail-title">{service.title}</h1>
-          
-
-        </div>
+          </div>
 
         <div className="service-detail-content-wrap reveal">
           <div className="service-detail-grid">
-            {/* Левая колонка: Изображение + Показания */}
+            {/* Левая колонка: Изображение + Карточка действия */}
             <div className="service-grid-left">
               <div className="service-detail-image-wrapper">
                 <div className="service-detail-glow"></div>
@@ -169,7 +167,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     alt={service.title}
                     className="service-detail-img"
                     width={768}
-                    height={960}
+                    height={480}
                     fetchPriority="high"
                     priority
                     quality={85}
@@ -179,6 +177,22 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 </div>
               </div>
 
+              {/* Карточка действия для десктопов */}
+              <div className="service-cta-card glass-card reveal">
+                <h3 className="cta-card-title">{dict.services.bookService}</h3>
+                <p className="cta-card-text">
+                  {lng === 'ru' ? 'Мы проконсультируем вас по всем вопросам, приедем на бесплатный замер и составим подробную смету.' :
+                   lng === 'sv' ? 'Vi svarar на dina frågor, kommer på ett kostnadsfritt hembesök och tar fram en detaljerad offert.' :
+                   lng === 'uk' ? 'Ми проконсультуємо вас з усіх питань, приїдемо на безкоштовний замір та складемо детальну кошторис.' :
+                   'We will answer your questions, come for a free site visit and prepare a detailed estimate.'}
+                </p>
+                <Link
+                  href={`/${lng}/contacts?service=${serviceSlug}&book=true`}
+                  className="btn btn-primary cta-card-btn"
+                >
+                  {dict.services.bookService}
+                </Link>
+              </div>
             </div>
 
             {/* Правая колонка: Описание + Эффект + Процесс + Показания */}
