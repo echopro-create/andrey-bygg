@@ -61,6 +61,6 @@ export function proxy(request: NextRequest) {
 export const config = {
   matcher: [
     // Применяем proxy ко всем путям, кроме статики и внутренних путей Next.js
-    '/((?!_next/static|_next/image|favicon.ico|images|api).*)',
+    '/((?!_next|images|api|favicon\\.ico|.*\\..*).*)',
   ],
 };

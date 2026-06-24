@@ -54,7 +54,7 @@ describe('SEO static files', () => {
     });
 
     it('should have a start_url', () => {
-      expect(manifest.start_url).toBe('/');
+      expect(manifest.start_url).toBe('/sv');
     });
   });
 
@@ -77,8 +77,8 @@ describe('SEO static files', () => {
       expect(fs.existsSync(path.join(PUBLIC_DIR, 'favicon.ico'))).toBe(true);
     });
 
-    it('should have favicon.svg', () => {
-      expect(fs.existsSync(path.join(PUBLIC_DIR, 'favicon.svg'))).toBe(true);
+    it('should have icon.svg', () => {
+      expect(fs.existsSync(path.join(PUBLIC_DIR, 'icon.svg'))).toBe(true);
     });
 
     it('should have apple-touch-icon.png', () => {

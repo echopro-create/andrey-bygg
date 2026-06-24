@@ -1009,7 +1009,7 @@ body.mobile-drawer-open .custom-lang-selector {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 60px 0 40px;
+    padding: 60px 0 80px;
   }
   .hero-title {
     font-size: 2.5rem;
@@ -3031,9 +3031,8 @@ body.mobile-drawer-open {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    animation: none !important;
+    transition: none !important;
     scroll-behavior: auto !important;
   }
 }

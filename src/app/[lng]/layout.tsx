@@ -197,10 +197,6 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
             __html: `
               (function() {
                 document.documentElement.classList.add('theme-obsidian');
-                var meta = document.createElement('meta');
-                meta.name = 'theme-color';
-                meta.content = '#080908';
-                document.head.appendChild(meta);
               })();
             `,
           }}

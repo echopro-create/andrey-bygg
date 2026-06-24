@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import { locales } from '@/lib/config';
 
 interface ErrorProps {
   error: Error & { digest?: string };
@@ -43,7 +44,7 @@ export default function Error({ error, reset }: ErrorProps) {
 
   const params = useParams();
   const rawLng = params?.lng;
-  const lng = (typeof rawLng === 'string' && ['ru', 'en', 'sv', 'uk'].includes(rawLng) ? rawLng : 'sv') as 'ru' | 'en' | 'sv' | 'uk';
+  const lng = (typeof rawLng === 'string' && (locales as readonly string[]).includes(rawLng) ? rawLng : 'sv') as typeof locales[number];
   const t = translations[lng] || translations.sv;
 
   return (
