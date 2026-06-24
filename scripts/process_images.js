@@ -5,8 +5,8 @@ const path = require('path');
 const HERO_SRC = '/Users/illia/.gemini/antigravity/brain/08499c6d-9e56-47a0-903c-805612083193/hero_bg_altan_1782334608586.png';
 const PORTRAIT_SRC = '/Users/illia/.gemini/antigravity/brain/08499c6d-9e56-47a0-903c-805612083193/builder_portrait_tiler_1782334621381.png';
 
-const HERO_DST = path.join(__dirname, '..', 'public', 'images', 'hero-bg.webp');
-const PORTRAIT_DST = path.join(__dirname, '..', 'public', 'images', 'builder-portrait.webp');
+const HERO_DST = path.join(__dirname, '..', 'public', 'images', 'hero-bg-v3.webp');
+const PORTRAIT_DST = path.join(__dirname, '..', 'public', 'images', 'builder-portrait-v3.webp');
 
 async function processHero() {
   console.log('Processing Hero background...');
