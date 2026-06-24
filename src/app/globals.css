@@ -895,11 +895,7 @@ body.mobile-drawer-open .custom-lang-selector {
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
-  
-  /* Scroll-driven animation */
-  animation: hero-scroll-zoom linear;
-  animation-timeline: scroll(root);
-  animation-range: start 0% exit 100%;
+  will-change: transform, opacity;
 }
 
 .hero-bg-image {
@@ -927,16 +923,6 @@ body.mobile-drawer-open .custom-lang-selector {
   z-index: 2;
 }
 
-@keyframes hero-scroll-zoom {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(1.18);
-    opacity: 0.35;
-  }
-}
 
 .hero-container {
   display: flex;

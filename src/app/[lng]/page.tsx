@@ -155,6 +155,41 @@ export default async function Page({ params }: PageProps) {
               </div>
             </div>
           </div>
+
+          {/* Cross-browser Scroll-driven Parallax and Zoom using requestAnimationFrame */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function() {
+                  var wrapper = document.querySelector('.hero-bg-wrapper');
+                  if (!wrapper) return;
+                  
+                  var ticking = false;
+                  var lastScrollY = 0;
+                  
+                  function updateAnimation() {
+                    var zoom = 1 + (lastScrollY * 0.00025);
+                    var opacity = 1 - (lastScrollY * 0.001);
+                    
+                    var finalZoom = Math.min(1.18, zoom);
+                    var finalOpacity = Math.max(0.35, opacity);
+                    
+                    wrapper.style.transform = 'scale(' + finalZoom + ') translateZ(0)';
+                    wrapper.style.opacity = finalOpacity;
+                    ticking = false;
+                  }
+                  
+                  window.addEventListener('scroll', function() {
+                    lastScrollY = window.scrollY;
+                    if (!ticking) {
+                      window.requestAnimationFrame(updateAnimation);
+                      ticking = true;
+                    }
+                  }, { passive: true });
+                })();
+              `
+            }}
+          />
         </section>
 
         {/* 2. About Master Section */}
