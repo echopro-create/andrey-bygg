@@ -183,8 +183,6 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
       suppressHydrationWarning
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
@@ -199,7 +197,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
         <ScrollRevealInit />
 
-        <main id="main-content">
+        <main id="main-content" className="main-content">
           {children}
         </main>
 

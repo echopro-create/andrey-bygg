@@ -93,11 +93,9 @@ export default async function Page({ params }: PageProps) {
               alt="BYGG I SYD"
               fill
               priority
-              fetchPriority="high"
-              quality={80}
+              quality={85}
               sizes="100vw"
               className="hero-bg-image"
-              style={{ backgroundColor: '#080908' }}
             />
             <div className="hero-bg-overlay" />
           </div>
@@ -211,11 +209,10 @@ export default async function Page({ params }: PageProps) {
                   src="/images/builder-portrait.webp"
                   alt={dict.about.certTitle ? `Snickare — ${dict.about.certTitle}` : 'Snickare'}
                   className="about-img"
-                  width={800}
-                  height={1067}
-              fetchPriority="high"
-              priority
-              loading="eager"
+                  width={1024}
+                  height={1365}
+                  fetchPriority="high"
+                  priority
                   quality={85}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
@@ -223,7 +220,7 @@ export default async function Page({ params }: PageProps) {
                 <div className="certificate-badge">
                   <span className="cert-gold-star">★</span>
                   <div className="cert-badge-text">
-                    <h3 className="certificate-title">{dict.about.certTitle}</h3>
+                    <h5>{dict.about.certTitle}</h5>
                     <p>{dict.about.certSubtitle}</p>
                   </div>
                 </div>
@@ -282,10 +279,10 @@ export default async function Page({ params }: PageProps) {
                         src={`/images/services/${slug}.webp`}
                         alt={service.title}
                         className="service-card-img"
-                        width={512}
-                        height={320}
+                        width={768}
+                        height={480}
                         loading="lazy"
-              quality={85}
+                        quality={80}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{ objectFit: 'cover' }}
                       />
