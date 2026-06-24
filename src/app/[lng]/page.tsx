@@ -78,8 +78,6 @@ export default async function Page({ params }: PageProps) {
         <section className="hero-section">
           <div className="container hero-container">
             <div className="hero-content reveal">
-              <div className="hero-pill-tag">{dict.hero.badge}</div>
-
               <h1 className="hero-title">
                 {dict.hero.title} <span className="gold-accent">{dict.hero.accent}</span>
               </h1>
