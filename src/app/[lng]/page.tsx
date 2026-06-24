@@ -211,8 +211,9 @@ export default async function Page({ params }: PageProps) {
                   className="about-img"
                   width={800}
                   height={1067}
-                  fetchPriority="high"
-                  priority
+              fetchPriority="high"
+              priority
+              loading="eager"
                   quality={85}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
