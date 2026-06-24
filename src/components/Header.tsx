@@ -29,6 +29,7 @@ export default function Header({ dict }: HeaderProps) {
   useEffect(() => {
     const stored = localStorage.getItem('theme');
     if (stored === 'obsidian' || stored === 'zen') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTheme(stored);
     }
   }, []);
