@@ -759,7 +759,7 @@ body.mobile-drawer-open .custom-lang-selector {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 200px;
+  padding: 100px 0 120px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -943,7 +943,7 @@ body.mobile-drawer-open .custom-lang-selector {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 60px 0 80px;
+    padding: 60px 0 50px;
   }
   .hero-title {
     font-size: 2.5rem;
@@ -2761,6 +2761,9 @@ body.mobile-drawer-open .custom-lang-selector {
   .info-list li { justify-content: flex-start; }
   .footer-bottom-content { flex-direction: column; gap: 16px; text-align: center; }
   .footer-bottom-links { flex-direction: column; gap: 12px; }
+  .site-footer {
+    padding-top: 48px;
+  }
 }
 
 @media (max-width: 500px) {
