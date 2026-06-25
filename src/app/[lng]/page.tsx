@@ -225,33 +225,39 @@ export default async function Page({ params }: PageProps) {
                 </div>
               </div>
             </div>
-            <div className="about-text-content reveal">
-              <h2 className="section-title">
-                {dict.about.title} <span className="gold-accent">{dict.about.accent}</span>
-              </h2>
-              {dict.about.quote && (
-                <blockquote className="about-quote">
-                  {dict.about.quote}
-                </blockquote>
-              )}
-              <div className="about-paragraphs">
-                <p className="about-paragraph">{dict.about.text1}</p>
-                <p className="about-paragraph">{dict.about.text2}</p>
-                {dict.about.text3 && <p className="about-paragraph">{dict.about.text3}</p>}
-              </div>
-              <div className="experience-metric">
-                <div className="metric-item">
-                  <span className="metric-number">10+</span>
-                  <div className="metric-info">
-                    <span className="metric-label">{dict.advantages.expTitle}</span>
-                  </div>
+            <h2 className="section-title reveal">
+              {dict.about.title} <span className="gold-accent">{dict.about.accent}</span>
+            </h2>
+            {dict.about.quote && (
+              <blockquote className="about-quote reveal">
+                {dict.about.quote}
+              </blockquote>
+            )}
+            <p className="about-paragraph reveal">{dict.about.text1}</p>
+            <p className="about-paragraph reveal">{dict.about.text2}</p>
+            {dict.about.text3 && <p className="about-paragraph reveal">{dict.about.text3}</p>}
+            <div className="about-metrics-minimal reveal">
+              <div className="minimal-metric-item">
+                <span className="metric-huge-number">10+</span>
+                <div className="metric-info-block">
+                  <h4 className="metric-info-title">{dict.about.metricExpTitle}</h4>
+                  <p className="metric-info-desc">{dict.about.metricExpDesc}</p>
                 </div>
-                <div className="metric-item">
-                  <span className="metric-number">4</span>
-                  <div className="metric-info">
-                    <span className="metric-label">{dict.hero.languagesLabel || 'LANGUAGES'}</span>
-                    <span className="metric-languages-list">SV | EN | RU | UK</span>
-                  </div>
+              </div>
+              
+              <div className="minimal-metric-item">
+                <span className="metric-huge-number">4</span>
+                <div className="metric-info-block">
+                  <h4 className="metric-info-title">{dict.about.metricLangTitle}</h4>
+                  <p className="metric-info-desc">{dict.about.metricLangDesc}</p>
+                </div>
+              </div>
+              
+              <div className="minimal-metric-item">
+                <span className="metric-huge-number">100%</span>
+                <div className="metric-info-block">
+                  <h4 className="metric-info-title">{dict.about.metricQualTitle}</h4>
+                  <p className="metric-info-desc">{dict.about.metricQualDesc}</p>
                 </div>
               </div>
             </div>
