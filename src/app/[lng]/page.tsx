@@ -316,12 +316,12 @@ export default async function Page({ params }: PageProps) {
                 <h2 className="section-title text-left">
                   {dict.advantages.title} <span className="gold-accent">{dict.advantages.accent}</span>
                 </h2>
-                <p className="advantages-philosophie">
-                  {lng === 'ru' ? 'Мы строим на века, совмещая традиционную шведскую точность, экологичные материалы и прозрачный контроль на каждом этапе работы.' : 
-                   lng === 'sv' ? 'Vi bygger för framtiden genom att kombinera svensk precision, hållbara material och full transparens i varje skede.' :
-                   lng === 'uk' ? 'Ми будуємо на віки, поєднуючи традиційну шведську точність, екологічні матеріали та прозорий контроль на кожному етапі.' :
-                   'We build for the future, combining Swedish precision, sustainable materials, and full transparency at every stage.'}
-                </p>
+                <p className="advantages-philosophie">{dict.advantages.philosophie1}</p>
+                {dict.advantages.philosophie2 && (
+                  <p className="advantages-philosophie" style={{ marginTop: '16px' }}>
+                    {dict.advantages.philosophie2}
+                  </p>
+                )}
               </div>
               <div className="advantages-right-list">
                 <div className="advantage-row reveal">
