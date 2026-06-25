@@ -1247,16 +1247,15 @@ body.mobile-drawer-open .custom-lang-selector {
 }
 
 .advantages-left-col {
-  position: sticky;
-  top: 140px;
 }
 
 .advantages-philosophie {
   color: var(--text-muted);
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.7;
   margin-top: 24px;
-  max-width: 380px;
+  max-width: 460px;
 }
 
 .advantages-right-list {
