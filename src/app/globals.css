@@ -2,26 +2,26 @@
 
 /* Default Theme: Obsidian */
 :root, html.theme-obsidian {
-  --background: #07150c;
-  --background-rgb: 7, 21, 12;
+  --background: #061b13;
+  --background-rgb: 6, 27, 19;
   --primary: #ff3b30;
   --primary-hover: #ff453a;
   --primary-rgb: 255, 59, 48;
-  --card-bg: #0d2216;
+  --card-bg: #0c271d;
   --text-color: #f4f5f4;
   --text-muted: #a3a3a3;
   --error: #cf6679;
   --error-rgb: 207, 102, 121;
   --success: #81c784;
   --success-rgb: 129, 199, 132;
-  --footer-bg: #040c07;
+  --footer-bg: #030f0a;
   
   /* Glassmorphism */
   --glass-bg: rgba(var(--background-rgb), 0.82);
   --glass-blur: 24px;
   --glass-border: rgba(var(--primary-rgb), 0.12);
   --glass-shadow: rgba(0, 0, 0, 0.6);
-  --card-bg-rgb: 13, 34, 22;
+  --card-bg-rgb: 12, 39, 29;
   --text-color-rgb: 244, 245, 244;
   --hero-text-color: #f4f5f4;
   --hero-text-muted: #a3a3a3;
