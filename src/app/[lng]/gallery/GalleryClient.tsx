@@ -54,7 +54,7 @@ export default function GalleryClient({ images, lng, dict }: GalleryClientProps)
                   height={isVertical ? 1024 : 800}
                   loading={index < 3 ? undefined : 'lazy'}
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={85}
+                  quality={70}
                   style={{ objectFit: 'cover' }}
                 />
                 <div className="gallery-item-hover">

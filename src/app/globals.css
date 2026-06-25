@@ -3360,3 +3360,29 @@ body.mobile-drawer-open {
   opacity: 0;
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Web Vitals: content-visibility optimization */
+.about-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+.advantages-grid-layout {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+.services-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+.reviews-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+.contacts-container {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
