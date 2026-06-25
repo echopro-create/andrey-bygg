@@ -311,17 +311,27 @@ export default async function Page({ params }: PageProps) {
         {/* 4. Advantages Section */}
         <section className="advantages-section section-spacing">
           <div className="container">
-            <div className="section-header text-center reveal">
-              <h2 className="section-title">
-                {dict.advantages.title} <span className="gold-accent">{dict.advantages.accent}</span>
-              </h2>
-            </div>
-            <div className="advantages-grid">
-              <div className="advantage-card reveal">
-                <div className="advantage-card-inner">
-                  <div className="advantage-number">01</div>
-                  <div className="advantage-icon-wrapper">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="advantage-svg">
+            <div className="advantages-split-grid">
+              <div className="advantages-left-col reveal">
+                <h2 className="section-title text-left">
+                  {dict.advantages.title} <span className="gold-accent">{dict.advantages.accent}</span>
+                </h2>
+                <p className="advantages-philosophie">
+                  {lng === 'ru' ? 'Мы строим на века, совмещая традиционную шведскую точность, экологичные материалы и прозрачный контроль на каждом этапе работы.' : 
+                   lng === 'sv' ? 'Vi bygger för framtiden genom att kombinera svensk precision, hållbara material och full transparens i varje skede.' :
+                   lng === 'uk' ? 'Ми будуємо на віки, поєднуючи традиційну шведську точність, екологічні матеріали та прозорий контроль на кожному етапі.' :
+                   'We build for the future, combining Swedish precision, sustainable materials, and full transparency at every stage.'}
+                </p>
+              </div>
+              <div className="advantages-right-list">
+                <div className="advantage-row reveal">
+                  <div className="advantage-row-num">01</div>
+                  <div className="advantage-row-body">
+                    <h3 className="advantage-row-title">{dict.advantages.expTitle}</h3>
+                    <p className="advantage-row-desc">{dict.advantages.expDesc}</p>
+                  </div>
+                  <div className="advantage-row-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="advantage-svg">
                       <defs>
                         <linearGradient id="gold-gradient-icon" x1="0%" y1="0%" x2="100%" y2="100%">
                           <stop offset="0%" stopColor="#e2d2b5" />
@@ -335,40 +345,38 @@ export default async function Page({ params }: PageProps) {
                       <circle cx="12" cy="11" r="0.8" fill="url(#gold-gradient-icon)" />
                     </svg>
                   </div>
-                  <h3 className="advantage-title">{dict.advantages.expTitle}</h3>
-                  <p className="advantage-desc">{dict.advantages.expDesc}</p>
                 </div>
-              </div>
 
-              <div className="advantage-card reveal">
-                <div className="advantage-card-inner">
-                  <div className="advantage-number">02</div>
-                  <div className="advantage-icon-wrapper">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="advantage-svg">
+                <div className="advantage-row reveal">
+                  <div className="advantage-row-num">02</div>
+                  <div className="advantage-row-body">
+                    <h3 className="advantage-row-title">{dict.advantages.indTitle}</h3>
+                    <p className="advantage-row-desc">{dict.advantages.indDesc}</p>
+                  </div>
+                  <div className="advantage-row-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="advantage-svg">
                       <path d="M12 21c-2.5-3-7-4-9-1.5 0 0 2-6.5 9-8.5 7 2 9 8.5 9 8.5-2-2.5-6.5-1.5-9 1.5z" />
                       <path d="M12 21c-1.5-4-4.5-7-7-6.5 0 0 2.5-4.5 7-5.5 4.5 1 7 5.5 7 5.5-2.5-.5-5.5 2.5-7 6.5z" />
                       <path d="M12 12c-1-3-3-5-5-4.5 0 0 2-3 5-3.5 3 .5 5 3.5 5 3.5-2-.5-4 1.5-5 4.5z" />
                       <path d="M12 7V3" />
                     </svg>
                   </div>
-                  <h3 className="advantage-title">{dict.advantages.indTitle}</h3>
-                  <p className="advantage-desc">{dict.advantages.indDesc}</p>
                 </div>
-              </div>
 
-              <div className="advantage-card reveal">
-                <div className="advantage-card-inner">
-                  <div className="advantage-number">03</div>
-                  <div className="advantage-icon-wrapper">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="advantage-svg">
+                <div className="advantage-row reveal">
+                  <div className="advantage-row-num">03</div>
+                  <div className="advantage-row-body">
+                    <h3 className="advantage-row-title">{dict.advantages.atmTitle}</h3>
+                    <p className="advantage-row-desc">{dict.advantages.atmDesc}</p>
+                  </div>
+                  <div className="advantage-row-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient-icon)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="advantage-svg">
                       <ellipse cx="12" cy="19" rx="6" ry="2.5" />
                       <ellipse cx="12" cy="14" rx="4.5" ry="2" />
                       <ellipse cx="12" cy="9.5" rx="3" ry="1.5" />
                       <path d="M9 6c0-1.5 1-2 1-3M15 6c0-1.5-1-2-1-3M12 6c0-1.5 1-2.5 1-3.5" />
                     </svg>
                   </div>
-                  <h3 className="advantage-title">{dict.advantages.atmTitle}</h3>
-                  <p className="advantage-desc">{dict.advantages.atmDesc}</p>
                 </div>
               </div>
             </div>

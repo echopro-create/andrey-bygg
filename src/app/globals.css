@@ -1239,49 +1239,79 @@ body.mobile-drawer-open .custom-lang-selector {
   margin-top: 40px;
 }
 
-.advantage-card {
-  position: relative;
-  border-radius: 0;
-  overflow: visible;
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 32px;
-  box-shadow: none;
-  transition: var(--transition-luxury);
+.advantages-split-grid {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 80px;
+  align-items: start;
 }
 
-.advantage-card-inner {
-  padding: 0;
+.advantages-left-col {
+  position: sticky;
+  top: 140px;
+}
+
+.advantages-philosophie {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 24px;
+  max-width: 380px;
+}
+
+.advantages-right-list {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
-.advantage-number {
-  position: absolute;
-  top: -30px;
-  right: 0;
+.advantage-row {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: var(--transition-luxury);
+  position: relative;
+}
+
+.advantage-row:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.advantage-row-num {
   font-family: var(--font-title);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 300;
   color: var(--primary);
-  opacity: 0.35;
+  opacity: 0.4;
+  min-width: 60px;
   transition: var(--transition-smooth);
 }
 
-.advantage-icon-wrapper {
-  width: 48px;
-  height: 48px;
-  border-radius: 0;
-  background: transparent;
-  border: none;
+.advantage-row-body {
+  flex-grow: 1;
+  padding-right: 40px;
+}
+
+.advantage-row-title {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.advantage-row-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.advantage-row-icon {
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
-  justify-content: start;
-  margin-bottom: 20px;
+  justify-content: center;
   transition: var(--transition-luxury);
 }
 
@@ -1289,45 +1319,18 @@ body.mobile-drawer-open .custom-lang-selector {
   transition: var(--transition-luxury);
 }
 
-.advantage-title {
-  font-family: var(--font-title);
-  font-size: 1.35rem;
-  font-weight: 400;
-  color: var(--text-color);
-  margin-bottom: 14px;
-  letter-spacing: 0.02em;
-  text-wrap: balance;
+/* Hover-эффекты преимуществ */
+.advantage-row:hover {
+  border-bottom-color: rgba(226, 210, 181, 0.3);
 }
 
-.advantage-desc {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  text-wrap: pretty;
+.advantage-row:hover .advantage-row-num {
+  opacity: 1;
+  transform: translateX(4px);
 }
 
-/* Эффекты наведения (Hover) */
-.advantage-card:hover {
-  transform: translateY(-4px);
-  border-top-color: rgba(226, 210, 181, 0.4);
-  background: transparent;
-  box-shadow: none;
-}
-
-.advantage-card:hover .advantage-number {
-  opacity: 0.8;
-  transform: scale(1.05);
-}
-
-.advantage-card:hover .advantage-icon-wrapper {
-  background: transparent;
-  border: none;
-  transform: translateY(-2px);
-  box-shadow: none;
-}
-
-.advantage-card:hover .advantage-svg {
-  transform: rotate(5deg) scale(1.05);
+.advantage-row:hover .advantage-row-icon {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .services-grid {
@@ -1458,6 +1461,10 @@ body.mobile-drawer-open .custom-lang-selector {
   margin-top: 40px;
 }
 
+.reviews-grid:hover .review-card {
+  opacity: 0.45;
+}
+
 .review-card {
   position: relative;
   border-radius: 0;
@@ -1467,8 +1474,20 @@ body.mobile-drawer-open .custom-lang-selector {
   -webkit-backdrop-filter: none;
   border: none;
   box-shadow: none;
-  padding: 0 40px;
+  padding: 0 48px;
   transition: var(--transition-luxury);
+}
+
+.reviews-grid:hover .review-card:hover {
+  opacity: 1;
+}
+
+.review-card:first-child {
+  padding-left: 0;
+}
+
+.review-card:last-child {
+  padding-right: 0;
 }
 
 .review-card:not(:first-child) {
@@ -1596,7 +1615,8 @@ body.mobile-drawer-open .custom-lang-selector {
   .hero-title { font-size: 2.8rem; }
   .about-container { grid-template-columns: 1fr; gap: 50px; }
   .about-image-wrapper { max-width: 380px; margin: 0 auto; width: 100%; }
-  .advantages-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .advantages-split-grid { grid-template-columns: 1fr; gap: 48px; }
+  .advantages-left-col { position: relative; top: 0; }
   .reviews-grid { grid-template-columns: 1fr; gap: 0; }
   .review-card { padding: 40px 0; border-left: none !important; }
   .review-card:not(:first-child) { border-top: 1px solid rgba(255, 255, 255, 0.08); }
@@ -1649,14 +1669,20 @@ body.mobile-drawer-open .custom-lang-selector {
   }
   
   /* Advantages Centering */
-  .advantage-card-inner {
-    text-align: left;
-    align-items: flex-start;
-    display: flex;
+  .advantage-row {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0;
   }
-  .advantage-icon-wrapper {
-    margin: 0 0 20px 0;
+  .advantage-row-num {
+    margin-bottom: 12px;
+  }
+  .advantage-row-body {
+    padding-right: 0;
+    margin-bottom: 16px;
+  }
+  .advantage-row-icon {
+    align-self: flex-start;
   }
   
   /* Reviews Centering */
@@ -1692,7 +1718,7 @@ body.mobile-drawer-open .custom-lang-selector {
 }
 
 @media (max-width: 640px) {
-  .advantages-grid { grid-template-columns: 1fr; gap: 40px; }
+  .advantages-split-grid { gap: 32px; }
   .reviews-grid { grid-template-columns: 1fr; }
 }
 
