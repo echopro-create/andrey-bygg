@@ -1460,9 +1460,6 @@ body.mobile-drawer-open .custom-lang-selector {
   margin-top: 40px;
 }
 
-.reviews-grid:hover .review-card {
-  opacity: 0.45;
-}
 
 .review-card {
   position: relative;
@@ -1477,9 +1474,6 @@ body.mobile-drawer-open .custom-lang-selector {
   transition: var(--transition-luxury);
 }
 
-.reviews-grid:hover .review-card:hover {
-  opacity: 1;
-}
 
 .review-card:first-child {
   padding-left: 0;
@@ -1583,7 +1577,6 @@ body.mobile-drawer-open .custom-lang-selector {
 
 /* Эффекты наведения (Hover) */
 .review-card:hover {
-  transform: translateY(-4px);
   background: transparent;
   box-shadow: none;
 }
