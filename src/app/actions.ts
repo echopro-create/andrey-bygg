@@ -67,7 +67,7 @@ export async function submitBooking(formData: BookingData) {
   const sanitizedTime = formData.time ? formData.time.replace(/[<>]/g, '').trim().slice(0, 30) : '';
 
   const text = `
-🔔 *New booking at Andrey Bygg!*
+🔔 *New booking at BYGG I SYD!*
 👤 *Name:* ${sanitizedName}
 📞 *Phone:* ${sanitizedPhone}
 🛠️ *Service:* ${sanitizedService}
@@ -78,7 +78,7 @@ export async function submitBooking(formData: BookingData) {
 
   if (!token || !chatId) {
     console.warn(
-      '⚠️ [Andrey Bygg Warning] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not configured in .env. ' +
+      '⚠️ [BYGG I SYD Warning] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not configured in .env. ' +
       'Booking processed in demo mode.'
     );
     return {
@@ -104,13 +104,13 @@ export async function submitBooking(formData: BookingData) {
 
     if (!response.ok) {
       const errText = await response.text();
-      console.error('[Andrey Bygg] Telegram API Error response:', errText);
+      console.error('[BYGG I SYD] Telegram API Error response:', errText);
       return { success: false, error: 'Failed to send notification via Telegram API.' };
     }
 
     return { success: true, demo: false };
   } catch (error: unknown) {
-    console.error('[Andrey Bygg] Exception while sending Telegram notification:', error);
+    console.error('[BYGG I SYD] Exception while sending Telegram notification:', error);
     return {
       success: false,
       error: 'Failed to send notification. Please try again later.',
