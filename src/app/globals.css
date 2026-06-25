@@ -1649,14 +1649,24 @@ body.mobile-drawer-open .custom-lang-selector {
   }
   .about-metrics-minimal {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 24px;
+  }
+  .minimal-metric-item {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 16px;
   }
   .metric-huge-number {
     font-size: 2.6rem;
+    min-width: 75px;
+    text-align: right;
+    flex-shrink: 0;
+    line-height: 1.1;
   }
-  .minimal-metric-item {
-    gap: 8px;
+  .metric-info-block {
+    align-items: flex-start;
   }
   
   /* Advantages Centering */
