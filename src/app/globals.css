@@ -1156,9 +1156,9 @@ body.mobile-drawer-open .custom-lang-selector {
 .about-metrics-minimal {
   clear: both;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 32px;
   margin-top: 24px;
   width: 100%;
 }
@@ -1174,8 +1174,9 @@ body.mobile-drawer-open .custom-lang-selector {
 .minimal-metric-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
   flex: 1;
   transition: var(--transition-luxury);
 }
@@ -1198,6 +1199,7 @@ body.mobile-drawer-open .custom-lang-selector {
 .metric-info-block {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .metric-info-title {
@@ -1217,6 +1219,7 @@ body.mobile-drawer-open .custom-lang-selector {
   line-height: 1.45;
   margin-top: 6px;
   max-width: 250px;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
@@ -1624,15 +1627,15 @@ body.mobile-drawer-open .custom-lang-selector {
     -ms-hyphens: none;
   }
   .about-metrics-minimal {
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: row;
     gap: 32px;
   }
   @media (max-width: 768px) {
     .about-metrics-minimal {
       flex-direction: column;
-      align-items: flex-start;
-      gap: 24px;
+      align-items: center;
+      gap: 28px;
     }
   }
   
