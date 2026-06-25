@@ -9,7 +9,6 @@ export interface BookingData {
   message: string;
   date?: string;
   time?: string;
-  _csrf?: string;
 }
 
 export async function submitBooking(formData: BookingData) {

@@ -119,17 +119,37 @@ export default function ContactsClient({ dict }: { dict: Record<string, unknown>
                       {phone}
                     </a>
                     {socialPhone && (
-                      <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                        {(contacts.social_phone_label as string) || 'WhatsApp/Telegram/Viber:'}{' '}
-                        <a
-                          href={`https://wa.me/${socialPhone.replace(/\D/g, '')}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover-gold link-gold"
-                        >
-                          {socialPhone}
-                        </a>
-                      </span>
+                      <div className="contacts-socials-row">
+                        <span className="contacts-socials-label">
+                          {(contacts.social_phone_label as string) || 'WhatsApp/Telegram:'}
+                        </span>
+                        <div className="contacts-socials-links">
+                          <a
+                            href={`https://wa.me/${socialPhone.replace(/\D/g, '')}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="contacts-social-link whatsapp"
+                            title="WhatsApp"
+                            aria-label="WhatsApp"
+                          >
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                          </a>
+                          <a
+                            href={`https://t.me/+${socialPhone.replace(/\D/g, '')}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="contacts-social-link telegram"
+                            title="Telegram"
+                            aria-label="Telegram"
+                          >
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                     )}
                   </div>
                 </div>

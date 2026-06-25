@@ -350,31 +350,6 @@ section[id] {
   to { transform: rotate(360deg); }
 }
 
-/* Theme Toggle */
-.theme-toggle-btn {
-  background: rgba(var(--text-color-rgb), 0.05);
-  border: 1px solid rgba(var(--text-color-rgb), 0.1);
-  color: var(--primary);
-  padding: 8px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: var(--transition-smooth);
-}
-
-.theme-toggle-btn:hover {
-  background: rgba(var(--primary-rgb), 0.1);
-  border-color: var(--primary);
-  transform: translateY(-1px);
-}
-
 /* ------------------ Header ------------------ */
 .site-header {
   position: fixed;
@@ -923,8 +898,6 @@ body.mobile-drawer-open .custom-lang-selector {
   font-size: 0.7rem;
   font-weight: 400;
   color: rgba(244, 245, 244, 0.6);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -1220,23 +1193,6 @@ body.mobile-drawer-open .custom-lang-selector {
   margin-top: 6px;
   max-width: 250px;
   text-align: center;
-}
-
-@media (max-width: 600px) {
-  .experience-metric {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .metric-item {
-    max-width: 100%;
-  }
-}
-
-.advantages-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: 40px;
 }
 
 .advantages-split-grid {
@@ -3175,7 +3131,7 @@ body.mobile-drawer-open {
 
 .datepicker-current-month {
   color: var(--text-color);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 1.05rem;
   letter-spacing: 0.5px;
@@ -3384,11 +3340,6 @@ body.mobile-drawer-open {
   contain-intrinsic-size: auto 600px;
 }
 
-.advantages-grid-layout {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 800px;
-}
-
 .services-section {
   content-visibility: auto;
   contain-intrinsic-size: auto 800px;
@@ -3399,7 +3350,52 @@ body.mobile-drawer-open {
   contain-intrinsic-size: auto 500px;
 }
 
-.contacts-container {
+
+/* Contacts Page: Social links styling */
+.contacts-socials-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.contacts-socials-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.contacts-socials-links {
+  display: flex;
+  gap: 8px;
+}
+
+.contacts-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-color);
+  transition: var(--transition-fast);
+}
+
+.contacts-social-link:hover {
+  background-color: rgba(255, 59, 48, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Service details: lazy rendering of heavy sub-sections */
+.service-faq-section {
   content-visibility: auto;
   contain-intrinsic-size: auto 600px;
+}
+
+.related-services-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
 }

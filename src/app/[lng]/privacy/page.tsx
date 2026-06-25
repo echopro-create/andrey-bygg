@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getDictionary, Locale } from '../../i18n';
 import { Metadata } from 'next';
-import { SITE_URL, locales } from '@/lib/config';
+import { SITE_URL, SITE_NAME, locales } from '@/lib/config';
 
 interface PrivacyPageProps {
   params: Promise<{
@@ -10,12 +10,7 @@ interface PrivacyPageProps {
 }
 
 export async function generateStaticParams() {
-  return [
-    { lng: 'sv' },
-    { lng: 'en' },
-    { lng: 'ru' },
-    { lng: 'uk' },
-  ];
+  return locales.map((lng) => ({ lng }));
 }
 
 export async function generateMetadata({ params }: PrivacyPageProps): Promise<Metadata> {
@@ -39,7 +34,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
       title,
       description,
       url: `${SITE_URL}/${lng}/privacy`,
-      siteName: 'BYGG I SYD',
+      siteName: SITE_NAME,
       locale: lng === 'sv' ? 'sv_SE' : lng === 'ru' ? 'ru_RU' : lng === 'uk' ? 'uk_UA' : 'en_US',
       type: 'website',
       images: [
