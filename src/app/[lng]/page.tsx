@@ -103,13 +103,13 @@ export default async function Page({ params }: PageProps) {
 
           <div className="container hero-container">
             <div className="hero-content">
-              <h1 className="hero-title">
+              <h1 className="hero-title animate-fade-in-up">
                 {dict.hero.title} <span className="gold-accent">{dict.hero.accent}</span>
               </h1>
 
-              <p className="hero-subtitle">{dict.hero.subtitle}</p>
+              <p className="hero-subtitle animate-fade-in-up" style={{ animationDelay: '150ms' }}>{dict.hero.subtitle}</p>
 
-              <div className="hero-actions">
+              <div className="hero-actions animate-fade-in-up" style={{ animationDelay: '300ms' }}>
                 <Link href={`/${lng}/contacts?book=true`} className="btn btn-primary">
                   {dict.hero.bookBtn}
                 </Link>
@@ -122,7 +122,7 @@ export default async function Page({ params }: PageProps) {
 
           {/* Floating Metrics Bar */}
           <div className="container hero-metrics-container">
-            <div className="hero-metrics-bar glass-card">
+            <div className="hero-metrics-bar glass-card animate-fade-in-up" style={{ animationDelay: '450ms' }}>
               <div className="metric-col">
                 <div className="metric-icon-small">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -238,7 +238,7 @@ export default async function Page({ params }: PageProps) {
             {dict.about.text3 && <p className="about-paragraph reveal">{dict.about.text3}</p>}
             <div className="about-metrics-minimal reveal">
               <div className="minimal-metric-item">
-                <span className="metric-huge-number">10+</span>
+                <span className="metric-huge-number" data-target-num="10" data-suffix="+">10+</span>
                 <div className="metric-info-block">
                   <h4 className="metric-info-title">{dict.about.metricExpTitle}</h4>
                   <p className="metric-info-desc">{dict.about.metricExpDesc}</p>
@@ -246,7 +246,7 @@ export default async function Page({ params }: PageProps) {
               </div>
               
               <div className="minimal-metric-item">
-                <span className="metric-huge-number">4</span>
+                <span className="metric-huge-number" data-target-num="4">4</span>
                 <div className="metric-info-block">
                   <h4 className="metric-info-title">{dict.about.metricLangTitle}</h4>
                   <p className="metric-info-desc">{dict.about.metricLangDesc}</p>
@@ -254,7 +254,7 @@ export default async function Page({ params }: PageProps) {
               </div>
               
               <div className="minimal-metric-item">
-                <span className="metric-huge-number">100%</span>
+                <span className="metric-huge-number" data-target-num="100" data-suffix="%">100%</span>
                 <div className="metric-info-block">
                   <h4 className="metric-info-title">{dict.about.metricQualTitle}</h4>
                   <p className="metric-info-desc">{dict.about.metricQualDesc}</p>
@@ -452,6 +452,54 @@ export default async function Page({ params }: PageProps) {
             </div>
           </div>
         </section>
+        
+        {/* About Counters Animation Script */}
+        <Script id="about-counters-script">
+          {`
+            (function() {
+              var elements = document.querySelectorAll('.metric-huge-number[data-target-num]');
+              if (!elements.length) return;
+
+              var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                  if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                  }
+                });
+              }, { threshold: 0.1 });
+
+              elements.forEach(function(el) {
+                // Инициализируем начальное состояние перед анимацией
+                var suffix = el.getAttribute('data-suffix') || '';
+                el.textContent = '0' + suffix;
+                observer.observe(el);
+              });
+
+              function animateCounter(el) {
+                var target = parseInt(el.getAttribute('data-target-num'), 10);
+                var suffix = el.getAttribute('data-suffix') || '';
+                var duration = 1500; // 1.5 секунды
+                var startTime = null;
+
+                function step(timestamp) {
+                  if (!startTime) startTime = timestamp;
+                  var progress = Math.min((timestamp - startTime) / duration, 1);
+                  // Easing: easeOutQuad
+                  var easeProgress = progress * (2 - progress);
+                  var currentVal = Math.floor(easeProgress * target);
+                  el.textContent = currentVal + suffix;
+                  if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                  } else {
+                    el.textContent = target + suffix;
+                  }
+                }
+                window.requestAnimationFrame(step);
+              }
+            })();
+          `}
+        </Script>
       </div>
     </>
   );
